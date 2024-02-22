@@ -1,0 +1,154 @@
+\documentclass[11pt]{memoir}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{amsthm}%
+\usepackage{graphicx}
+\usepackage{dsfont}
+\usepackage[hidelinks]{hyperref} %hyperlink
+\usepackage{subcaption} %NON SO SE SERVE
+\usepackage{enumitem} %enumerazioni con le i
+\usepackage{booktabs} %tabelle più belle
+\usepackage{placeins} %forza le immagini in posizione
+\usepackage{mathabx}
+\usepackage{mathtools}
+\usepackage{epsfig}
+\usepackage{caption} %caption fuori da ambienti float
+\usepackage{appendix} %appendice per i codici
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{xcolor} %per colorare il testo
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\H{\mathbb{H}}
+\def\A{\mathbb{A}\mathrm{d}\mathbb{S}}
+\def\D{\mathbb{D}}
+\def\S{\R\textup{P}^1}
+\def\AS{\widetilde{\mathbb{A}\mathrm{d}\mathbb{S}}{}}
+\def\1{\mathds{1}}
+\def\PSL{\text{PSL}(2,\R)}
+\def\T{\R\text{P}^1\times\R\text{P}^1}
+\def\CF{\mathcal{C}(\Lambda_\varphi)}
+\def\hf{T_{\text{Id}}^{1,+}}
+\newcommand\norm[1]{\lVert#1\rVert}
+\newcommand\red[1]{\textcolor{red}{#1}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter] % reset theorem numbering for each chapter
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{lemma}[theorem]{Lemma} % same for example numbers
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{plain}
+\newtheorem{observation}[theorem]{Remark}
+\renewcommand*{\proofname}{Proof}
+\newcommand\restr[2]{\ensuremath{\left.#1\right|_{#2}}}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\newtheoremstyle{mystyleNormalFont}% name
+  {0.5 cm}% Space above
+  {0.5 cm}% Space below
+  {\normalfont}% Body font
+  {}% Indent amount
+  {\bfseries}% Theorem head font
+  {:}%Punctuation after theorem head
+  {3mm}%Space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}% theorem head spec
+
+  \theoremstyle{mystyleNormalFont}
+ \newtheorem{example}[theorem]{Example}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\makeatletter
+\makeatother
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathrsfs}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{amsmath,amsthm}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{tikz-cd}
+\usepackage{csquotes}
+\usepackage{lscape}
+\tikzcdset{
+    startcode/.style={
+        start anchor={[xshift=0.35cm]south west}
+        },
+    endcode/.style={
+        end anchor={[xshift=0.35cm]north west}
+    }
+}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage{varwidth}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage[colorinlistoftodos]{todonotes}
+\addbibresource{refs.bib}
+\usetikzlibrary{arrows}
+\newcommand{\encadrer}[1]{{%
+  
+  \fbox{%
+    \begin{varwidth}{\dimexpr\linewidth-2\fboxsep-2\fboxrule}
+      #1%
+    \end{varwidth}%
+  }
+  \par}%
+}
+
+
+
+\chapterstyle{veelo}
+\checkandfixthelayout
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+\include{titolo}
+
+\par\vfill\break
+
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+\begin{flushright}
+
+
+\end{flushright}
+\vspace{\stretch{2}}
+\cleardoublepage
+
+\clearpage
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\thispagestyle{empty}
+%\listoffigures
+
+\thispagestyle{empty}
+%\include{legenda}
+
+%\include{ringraziamenti}
+\include{Introduzione}
+\include{Capitolo1}
+\include{Capitolo2}
+\include{Capitolo3}
+\include{Capitolo4}
+\include{Capitolo5}
+%\include{conclusione}
+%\appendix
+%\include{appendice}
+\printbibliography
+\end{document}
