@@ -1,3 +1,48 @@
 \chapter{Anti-de Sitter space in dimension (2+1)}
 
 \section{The $\PSL$-model}
+In dimension three there is a special model which endows Anti-de Sitter space with a Lie group structure.
+Consider the vector space $\mathcal{M}(2,\R)$ of $2 \times 2$ matrices with real entries and the quadratic form $q= -det$ that has signature $(2,2)$.
+This gives an identification between $(\mathcal{M}(2,\R), -det)$ and $(\R^{2,2},q_{2,2})$, unique up to composition by elements in $O(2,2)$, and under this isomorphism $\H^{2,1}$ is identified with the Lie group $SL(2,\R)$.\\
+$SL(2,\R)\times SL(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
+\[
+    (A,B) \cdot X := AXB^{-1}    
+\]
+preserving the quadratic form $q = -det$. Therefore it induces a representation
+\[
+    SL(2,\R)\times SL(2,\R) \to O(\mathcal{M}(2,\R),q).
+\]
+The kernel of this representation is given by $K=\{ (\1,\1),(-\1,-\1) \}$, and by dimensional argument it is the connected component of the identity:
+\[
+    \text{Isom}_0(\H^{2,1}) \cong SO_0(\mathcal{M}(2,\R),q) \cong SL(2,\R)\times SL(2,\R) / K.
+\]
+Using this modle there is a natural identification of $\A^{2,1}$ with the Lie group $\PSL$ and
+\[
+    \text{Isom}_0(\A^{2,1}) \cong \PSL \times \PSL
+\]
+acting by left and right multiplication on $\PSL$.
+The stabilizer of the identity in $\text{Isom}_0(\A^{2,1})$ is the diagonal subgroup $\Delta < \PSL \times \PSL$\\
+
+\section{The boundary of $\PSL$}
+From the identification between $\A^{2,1}$ and $\PSL$ we obtain an identification of $\partial \A^{2,1}$ with the boundary of $\PSL$ into $P(\mathcal{M}(2,\R))$, which is the projectivization of rank 1 matrices:
+\[
+    \partial \A^{2,1} = \{ [X] \in P(\mathcal{M}(2,\R)) \ | \ rank(X)=1 \}.
+\]
+We have a homeomorphism
+\begin{align}
+    \partial \A^{2,1} \to \T \\
+    [X] \to (\text{Im}X, \text{Ker}X)
+\end{align}
+equivariant under the action on $\A^{2,1}$ of $\PSL \times \PSL$.\\
+
+\begin{lemma}
+The inversion map $\iota [X] = [X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y) \to (y,x)$ on $\partial \A^{2,1} \cong \T$.
+\end{lemma}
+\begin{proof}
+The map $\iota$ is equivariant with respect to the isomorphism of $\PSL \times \PSL$ that switches the two factors.
+To show that it is an time-reversing isometry it thus suffices to check the differential at the identity, which is clearly $d_\1 \iota = -\1$.\\
+To check the second claim we observe that for an invertible $2 \times 2$ matrix we have $(detX)X^{-1} = (trX)\1 - X$ by Cayley-Hamilton theorem, so that projectively $[X^{-1}]=[(trX) \1 - X]$ along the boundary.
+This shows that the inversion map on $\A^{2,1}$ extends to the transormation $[X] \to [(trX)\1 - X]$ along the boundary.
+Let $X$ be a rank 1 matrix, it is traceless if and only if $X^2 =0$, that is, if and only if $\text{Ker}X=\text{Im}X$, and in this case the statement is easily proven.
+If $trX \neq 0$ then $X$ is diagonalizable with eigenvalues $0$ and $trX$. Moreover $\text{Ker}X$ and $\text{Im}X$ are the corresponding eigenspaces and it is easily seen that $\text{Ker}((trX)\1 -X) = \text{Im}X$ and $\text{Im}((trX)\1 -X) = \text{Ker}X$.
+\end{proof}
