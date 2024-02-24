@@ -33,16 +33,30 @@ We have a homeomorphism
     \partial \A^{2,1} \to \T \\
     [X] \to (\text{Im}X, \text{Ker}X)
 \end{align}
-equivariant under the action on $\A^{2,1}$ of $\PSL \times \PSL$.\\
-
+equivariant under the action of $\PSL \times \PSL$, acting on $\partial\A^{2,1}$ as the natural extension of the action on $\A^{2,1}$, and by left multiplication on $\T$.\\
+The equivariance is easily checked observing that $\text{Im}(AXB^{-1}) = A \cdot \text{Im}(X)$ and $\text{Ker}(AXB^{-1}) = B \cdot \text{Ker}(X)$.
 \begin{lemma}
-The inversion map $\iota [X] = [X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y) \to (y,x)$ on $\partial \A^{2,1} \cong \T$.
+    The inversion map $\iota [X] = [X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y) \to (y,x)$ on $\partial \A^{2,1} \cong \T$.
 \end{lemma}
 \begin{proof}
-The map $\iota$ is equivariant with respect to the isomorphism of $\PSL \times \PSL$ that switches the two factors.
-To show that it is an time-reversing isometry it thus suffices to check the differential at the identity, which is clearly $d_\1 \iota = -\1$.\\
-To check the second claim we observe that for an invertible $2 \times 2$ matrix we have $(detX)X^{-1} = (trX)\1 - X$ by Cayley-Hamilton theorem, so that projectively $[X^{-1}]=[(trX) \1 - X]$ along the boundary.
-This shows that the inversion map on $\A^{2,1}$ extends to the transormation $[X] \to [(trX)\1 - X]$ along the boundary.
-Let $X$ be a rank 1 matrix, it is traceless if and only if $X^2 =0$, that is, if and only if $\text{Ker}X=\text{Im}X$, and in this case the statement is easily proven.
-If $trX \neq 0$ then $X$ is diagonalizable with eigenvalues $0$ and $trX$. Moreover $\text{Ker}X$ and $\text{Im}X$ are the corresponding eigenspaces and it is easily seen that $\text{Ker}((trX)\1 -X) = \text{Im}X$ and $\text{Im}((trX)\1 -X) = \text{Ker}X$.
+    The map $\iota$ is equivariant with respect to the isomorphism of $\PSL \times \PSL$ that switches the two factors.
+    To show that it is an time-reversing isometry it thus suffices to check the differential at the identity, which is clearly $d_\1 \iota = -\1$.\\
+    To check the second claim we observe that for an invertible $2 \times 2$ matrix we have $(detX)X^{-1} = (trX)\1 - X$ by Cayley-Hamilton theorem, so that projectively $[X^{-1}]=[(trX) \1 - X]$ along the boundary.
+    This shows that the inversion map on $\A^{2,1}$ extends to the transormation $[X] \to [(trX)\1 - X]$ along the boundary.
+    Let $X$ be a rank 1 matrix, it is traceless if and only if $X^2 =0$, that is, if and only if $\text{Ker}X=\text{Im}X$, and in this case the statement is easily proven.
+    If $trX \neq 0$ then $X$ is diagonalizable with eigenvalues $0$ and $trX$. Moreover $\text{Ker}X$ and $\text{Im}X$ are the corresponding eigenspaces and it is easily seen that $\text{Ker}((trX)\1 -X) = \text{Im}X$ and $\text{Im}((trX)\1 -X) = \text{Ker}X$.
 \end{proof}
+
+Using the half-plane model for the hyperbolic space $\H^2$, $\S$ is identified to the boundaty at infinity $\partial \H^2$ and $\PSL$ corresponds to $Isom_0(\H^2)$, which acts on $\S$ in the canonical way.
+Therefore one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \partial \H^2$ and we can interpret the convergence to $\partial \A^{2,1}$ in the following way:\\
+\begin{lemma}
+    A sequence $[X_n] \in \A^{2,1}$ converges to $(x,y) \in \partial \A^{2,1} \cong \T$ if and only if for every $p\in\H^2$, $X_n(p) \to x$ and $X_n^{-1}(p) \to y$.
+\end{lemma}
+
+\begin{proof}
+    \red{no proof per ora}
+\end{proof}
+
+\red{vedere se aggiungere cose sul left e right ruling}
+
+\section{Geodesics in $\PSL$}
