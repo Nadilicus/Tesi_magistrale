@@ -60,3 +60,44 @@ Therefore one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \parti
 \red{vedere se aggiungere cose sul left e right ruling}
 
 \section{Geodesics in $\PSL$}
+Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroup of $\A^{2,1}$
+(the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}). We get the following:
+\begin{itemize}
+    \item Timelike geodesics are, up to conjugacy, of the form
+    \[ \begin{pmatrix}
+        \text{cos}(t) & -\text{sin}(t) \\
+        \text{sin}(t) & \text{cos}(t)
+    \end{pmatrix} \]
+    under the identification of $\PSL$ with $Isom(\H^2)$ they are elliptic one-parameter groups fixing a point in $\H^2$.
+    \item Spacelike geodesics are, up to conjugacy
+    \[ \begin{pmatrix}
+        \text{cosh}(t) & \text{sinh}(t) \\
+        \text{sinh}(t) & \text{cosh}(t)
+    \end{pmatrix} \]
+    these are hyperbolic one-parameter groups fixing two points in the boundary of $\H^2$
+    \item Lightlike geodesics are the parabolic one-parameter groups conjugate to
+    \[ \begin{pmatrix}
+        1 & t \\
+        0 & 1
+    \end{pmatrix} \]
+\end{itemize}
+
+\noindent\textit{Timelike geodesics}.
+To get a complete description of timelike geodesics it suffices to let the isometry group of $\A^{2,1}$ act on geodesics through the identity.
+\begin{proposition}
+    There is a homeomorphism between the space of timelike geodesics of $\A^{2,1}$ and $\H^2 \times \H^2$.
+    The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
+\end{proposition}
+\begin{proof}
+    \red{mettere proof}
+\end{proof}
+
+\noindent\textit{Spacelike geodesics}.
+Let $l$ be a geodesic of $\H^2$. The one-parameter group of hyperbolic transormation fixing $l$ as an oriented geodesic is a spacelike geodesic through the identity.
+\begin{proposition}
+    There is a homeomorphism between the space of oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial \H^2 \times \partial \H^2 \smallsetminus \Delta$. 
+    The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
+\end{proposition}
+\begin{proof}
+    \red{mettere proof}
+\end{proof}
