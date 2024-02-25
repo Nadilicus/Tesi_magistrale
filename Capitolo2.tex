@@ -28,15 +28,55 @@ Let us define
 Since $\{ \pm \1 \}$ is the center of $O(n,2)$, $\A^{n,1}$ has maximal isometry group and is therefore a model of constant sectional curvature $-1$.
 It can also be shown that the center of the isometry group of $\A^{n,1}$ is trivial, or equivalently that $\A^{n,1}$ is the quotient of its universal covering by the center of its isometry group. 
 It follows that it is the \emph{minimal} model of AdS geometry, in the sense that any other model is a covering of $\A^{n,1}$.\\
-By definition $\A^{n,1}$ is identified with the subset of $\mathbb{R} P^{n+1}$ given by the timelike direction of $\R^{n+2}$:
+By definition $\A^{n,1}$ is identified with the subset of $\mathbb{R} \text{P}^{n+1}$ given by the timelike direction of $\R^{n+2}$:
 \[
-\A^{n,1} = \{ \left[ x \right]\in \mathbb{R} P^{n+1} \ | \ q_{n,2}<0  \}.
+\A^{n,1} = \{ \left[ x \right]\in \mathbb{R} \text{P}^{n+1} \ | \ q_{n,2}<0  \}.
 \]
 Like in hyperbolic geometry, the boundary of $\A^{n,2}$ is the projectivization of the set of lightlike vectors in $\R^{n,2}$:
 \[
-\partial\A^{n,1} = \{ \left[ x \right]\in \mathbb{R} P^{n+1} \ | \ q_{n,2}=0  \}.
+\partial\A^{n,1} = \{ \left[ x \right]\in \mathbb{R} \text{P}^{n+1} \ | \ q_{n,2}=0  \}.
 \]
 Isometries of $\A^{n,1}$ induce projective transformation which preserve $\partial \A^{n,1}$.\\
+
+\textit{The conformal Lorentzian structure of the boundary}.
+In analogy with hyperbolic geometry we shall equip $\partial \A^{n,1}$ with a conformal Lorentzian structure that extends the conformal Lorentzian structure defined on $\A^{n,1}$.\\
+Given $\ell= span(x) \in \R \text{P}^{n+1}$, the tangent space at $\ell$ has the canonical identification
+\[
+    T_{\ell}\R\text{P}^{n+1} \cong \text{Hom}(\ell,\R^{n+2}/\ell).
+\]
+When $\ell$ is timelike the quotient $\R^{n+2}/\ell$ is canonically identified with $\ell^\perp$. For any local section $\sigma : \A^{n,1} \to \R^{n,2}$ of the canonical projection one can define a metric over $T\A^{n,1}$ by
+\[
+    \langle \langle f,g \rangle \rangle_\sigma = \langle f(\sigma[x]),g(\sigma[x]) \rangle_n,2
+\]
+for $f,g \in T_{[x]}\A^{n,1} \cong \text{Hom}(\ell,\ell^\perp)$.
+If the section $\sigma$ has image in $\H^{n,1}$, then the aforementioned metric coincides with the pull-back of the metric over $\R^{n,2}$, since the differential of $\sigma $ identifies $T_{[x]}\A^{n,1}=T_x\H^{n,1}=x^\perp$. For a general section the identification does not hold, but we can recover a conformal metric via the formula: 
+\[
+    \langle \langle f,g \rangle \rangle_{\lambda\sigma}=\lambda^2\langle \langle f,g \rangle \rangle_{\sigma}
+\]
+for any function $\lambda$.\\
+When $\ell$ is lightlike there is no way to define a natural metric on $\R^{n,2}/\ell$. However, let
+\[
+    \mathbb{L} = \{ x\in\R^{n,2} \ | \ q_{n,2}=0 \}
+\]
+be the space of lightlike vectors, then $T_x \mathbb{L}$ is $\ell^\perp$ and contains $\ell$.
+In fact $T_\ell \partial\A^{n,1}$ is canonically identified $\text{Hom}(\ell, \ell^\perp / \ell)$. 
+The bilinear form of $\R^{n,2},$ when restricted to $\ell^{\perp},$ induces a non degenerate bilinear form of signature $(n-1,1)$ on $\ell^\perp/\ell.$
+We will denote such a restriction as $\langle v,w\rangle_{\ell^{\perp}/\ell}.$ \\
+We can now define a metric on $\partial\A^{n,1}$ for any section $\sigma:\partial\A^{n,1}\to \mathbb{L}$ of the canonical projection by the formula:
+\[
+    ((f,g))_{\sigma}=\langle f(\sigma[x]),g(\sigma[x])\rangle_{\ell^{\perp}/\ell},
+\]
+for all $f,g\in \text{Hom}(\ell, \ell^\perp/\ell).$ This metric can be viewed as the pull-back of the metric: 
+\[
+    ((f,g))_\sigma=\langle \sigma_*(f), \sigma_{\ast} (g)\rangle_{n,2},
+\] 
+since the degenerate metric on $T_x\mathbb{L}=\ell^\perp$ is, by construction, the pull-back of the metric of $\ell^{\perp}/\ell$ by the projection along the degenerate direction $\ell$.\\ 
+The relation valid for the metric on $\A^{n,1}$ also holds for the metric on $\partial\A^{n,1}$, that is: 
+\[
+    ((f,g))_{\lambda\sigma}=\lambda^2((f,g))_{\sigma},
+\] 
+and therefore the induced conformal class over $T\partial\A^{n,1}$ is well defined and independent of the choice of $\sigma$ and equips the tangent space of the boundary with a conformal Lorentzian metric. 
+Let $\sigma$ be a section of the projection $\pi:\R^{n,2}\to \R\text{P}^{n+1}$ defined in a neighborhood $U$ of a point $x\in\partial\A^{n,1}$. By construction the metric $((\cdot,\cdot))_\sigma$ over $\partial\A^{n,1}\cap U$ is the limit, as $y\to x$ for $y\in\A^{n,1}\cap U,$ of the conformal metric associated to $\sigma$ defined over $\A^{n,1}\cap U$.\\
 
 \red{Forse aggiungere la metrica al bordo}
 
@@ -66,7 +106,7 @@ if $q_{n,2}(v)= 1$ and
 \] 
 if $q_{n,2}(v)= -1$.\\
 
-\textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}P^{n+1}$. From the study of geodesics in the quadric model follows that
+\textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model follows that
 \begin{itemize}
     \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$, are closed non-trivial loops and have length $\pi$,
     \item Spacelike geodesics correspond to lines that meet $\partial\A^{n,1}$ transversally in two points. They have infinite length, 
