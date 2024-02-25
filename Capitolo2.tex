@@ -78,8 +78,6 @@ The relation valid for the metric on $\A^{n,1}$ also holds for the metric on $\p
 and therefore the induced conformal class over $T\partial\A^{n,1}$ is well defined and independent of the choice of $\sigma$ and equips the tangent space of the boundary with a conformal Lorentzian metric. 
 Let $\sigma$ be a section of the projection $\pi:\R^{n,2}\to \R\text{P}^{n+1}$ defined in a neighborhood $U$ of a point $x\in\partial\A^{n,1}$. By construction the metric $((\cdot,\cdot))_\sigma$ over $\partial\A^{n,1}\cap U$ is the limit, as $y\to x$ for $y\in\A^{n,1}\cap U,$ of the conformal metric associated to $\sigma$ defined over $\A^{n,1}\cap U$.\\
 
-\red{Forse aggiungere la metrica al bordo}
-
 \section{The Poincaré model for the universal cover}
 Notice that $\H^{n,1}$ is not simply connected, being homeomorphic to $\R^n \times S^1$. Therefore $\A^{n,1}$ is not simply connected either, being its double quotient.
 Hence we aim to construct a simply connected model of Anti-de Sitter geometry, that is the universal cover of $\H^{n,1}$ and $\A^{n,1}$.
@@ -88,6 +86,22 @@ Let $\H^n$ be the hyperboloid model of hyperbolic space. Then
 \pi(y,t) = (y_1 , \cdots , y_n, y_{n+1} \cos(t) , y_{n+2} \sin(t))
 \]
 is a map $\pi : \H^n \times \R \to \H^{n,1}$ that is a covering with deck transformation of the form $(y,t) \to (y, t+2k\pi)$ for $k \in \Z$. Composing $\pi$ with the double quotient the universal cover for the projective model $\A^{n,1}$ is clearly  $\AS ^{n,1} :=  \H^n \times \R$.\\
+Pulling back the metric of $\H^{n,1}$ over $\H^n \times \R$ we get a simply connected Lorentzian manifold of constant curvature $-1$.
+The metric of $\AS^{n,1}$ is a warped product of the form
+\[
+    \pi^*g_{\H^{n,1}}= g_{\H^n} - y^2_{n+1}dt^2.
+\]
+In this setting we have a central extension, that is a non split short exact sequence
+\[
+    0 \to \Z \to \text{Isom}\AS^{n,1} \to O(n,2) \to 1.
+\]
+This tells us that $\AS^{n,1}$ has maximal isometry group, hence we have found a simply connected model for AdS geometry.
+Using the Poincaré model of the hyperbolic space (namely $\D^n$), $\AS^{n,1}$ has the model $\D^n \times \R$ equipped with the metric
+\[
+    \frac{4}{(1-r^2)^2} (dx_1^2 + \cdots + dx_n^2) - \Big( \frac{1+r^2}{1-r^2} \Big)^2 dt^2.
+\]
+
+\textit{The conformal metric of the boundary}.
 
 \section{Geodesics}
 \textit{In the quadric model}. Given $x\in \H^{n,1}$ and $v \in T_x \H^{n,1}$ we want to determine the geodesic through $x$ with speed $v$.
