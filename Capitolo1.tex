@@ -1,1 +1,56 @@
-\chapter{Lorentzian geometry}
+\chapter{Preliminaries on Lorentzian geometry}
+
+\red{aggiungere intro}
+
+A \textit{Lorentzian metric} on a manifold of dimension $n+1$ is a non degenerate symmetric 2-tensor $g$ of signature $(n,1)$.
+A \textit{Lorentzian manifold} is a connected manifold $M$ equipped with a Lorentzian metric $g$.\\
+We say that a vector $0\neq v \in TM$ is \textit{spacelike, lightlike, timelike} if $g(v,v)$ is respectively positive, zero or negative.
+More generally we say that a linear subspace $V \in T_x M$ is \textit{spacelike, lightlike, timelike} if the restriction of $g_x$ to $V$ is positive definite, degenerate or indefinite, respectively.\\
+The set of lightlike vectors, together with the null vector, disconnect the tangent space $T_x M$ into three regions: two convex open cones formed by timelike vectors and the region of spacelike vectors.
+As a consequence the set of timelike vectors in $TM$ is either connected or has two connected componets.
+In the latter case $M$ is said to be \textit{time-orientable}, and a \textit{time orientation} is a choice of one of these components.
+Vectors in the chosen component are said to be \textit{future-directed}, and vectors in the other component are said to be \textit{past-directed}.
+In analogy with tangent vectors, a differetiable curve is \textit{spacelike, lightlike, timelike} if the tangent vector is respectively spacelike, lightlike or timelike at every point.
+
+\section{Maximal isometry group and geodesic completeness}
+Lorentzian manifolds of constant curvature $K$ are loally isometric, more precisely
+\begin{lemma}
+    Let $M$ and $N$ be Lorentzian manifolds of constant curvature $K$. Every linear isometry $L: T_x M \to T_y N$ extends to an isometry $f: U \to V$ where $U$ and $V$ are neighborhoods of $x$ and $y$ respectively. Any two extensions $f:U\to V$ and $f' : U' \to V'$ coincide on $U \cap U'$. Moreover, if $M$ is simply connected and $N$ is geodesically complete $L$ extends to a local isometry $f:M\to N$.
+\end{lemma}
+As in the Riemannian case the proof is a consequence of the classical Cartan-Ambrose-Hicks Theorem (for a reference see \cite{piccione2005single}).\\
+As a consequence of the lemma
+\begin{corollary}
+    Let $M$ and $N$ be simply connected, geodesically complete Lorentzian manifolds of constant curvature $K$. Then any linear isometry $L: T_x M \to T_y N$ extends to a global isometry $f: M \to N$. In particular there is a unique simply connected, geodesically complete Lorentzian manifold of constant curvature $K$ up to isometries.
+\end{corollary}
+\noindent In Chapter \ref{chapter:2} and \ref{chapter:3} we will construct explicit models for $K=-1$.\\
+Another consequence is that the group of isometries $\text{Isom}(M)$ can be realized as a subset of $\text{ISO}(T_{x_o}, TM)$, where $x_0 \in M$ and $\text{ISO}(T_{x_o}, TM)$ is the fiber bundle over $M$ whose fiber over $x$ is the space of linear isometries of $T_{x_0}M$ into $T_xM$.
+It follows that the maximal dimension of $\text{Isom}M$ is $\text{dim}(O(n+1)) + n +1 = (n+1)(n+2)/2$.\\
+\begin{definition}
+    A Lorentzian manifold M has \textit{maximal isometry group} if the action of Isom(M) is transitive and for every $x\in M$ every linear isometry $L: T_xM \to T_xM$ extends to an isometry of M.\\
+    Equivalently $M$ has maximal isometry group if $\text{Isom}(M) \subset \text{ISO}(T_xM, TM)$ is a bijection.
+\end{definition}
+It follows that if $M$ has maximal isometry group the dimension of the isometry group is maximal.\\
+From the corollary it follows that every simply connected Lorentzian manifold $M$ has maximal isometry group if it is geodesically complete and has constant curvature . The converse holds:
+\begin{lemma}
+    If $M$ is a Lorentzian manifold with maximal isometry group then $M$ has constant sectional curvature and is geodesically complete.
+\end{lemma}
+\begin{proof}
+    \red{aggiungere proof}
+\end{proof}
+For simply connected Lorentzian manifold there is the following classification result:
+\begin{proposition}
+    Let $M_K$ be a simply connected Lorentzian manifold of constant curvature $K$ with maximal isometry group. If $M$ is a Lorentzian manifold of constant curvature $K$ then:
+    \begin{itemize}
+        \item M is geodesically complete if and only if there is a local isometry $p:M_K \to M$ which is a universal covering.
+        \item M has maximal isometry group if and only if $\text{Aut}(p:M_K \to M)$ is normal in $\text{Isom}M_K$
+    \end{itemize}
+\end{proposition} 
+\begin{proof}
+    \red{aggiungere proof}
+\end{proof}
+It follows that any isometry between connected open subsets of a Lorentzian manifold $M$ with
+maximal isometry group extends to a global isometry. In particular if $M_K$ is a Lorentzian
+manifold of constant sectional curvature $K$ with maximal isometry group, than any Lorentzian
+manifold $M$ of constant sectional curvature $K$ admits a natural $(\text{Isom}(M_K),M_K)$-structure
+whose charts are isometries between open subsets of $M$ and open subsets of $M_K$.
+We will refer to Lorentzian manifolds of constant sectional curvature $K$ with maximal isometry group as models of constant sectional curvature $K$. In the following chapters we will study several models of constant sectional curvature $-1$ called models of Anti-de Sitter geometry.
