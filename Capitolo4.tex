@@ -1,1 +1,57 @@
-\chapter{Mess' Work}\label{chapterr4}
+\chapter{Globally hyperbolic spacetime}\label{chapter:4}
+From now on we will only work with Lorentzian manifold of dimension $(2+1)$.
+
+\section{Achronal and acausal set}
+\red{veloce intro}
+
+\begin{definition}
+    A subset $X \subset \AS^{2,1} \cup \partial\AS^{2,1}$ is \textit{achronal} (resp. \textit{acausal}) is no pair of points in $X$ are connected by timelike (resp. causal) lines in $\AS^{2,1}$
+\end{definition}
+Consider the Poincaré model $\D\times\R$ of $\AS^{2,1}$ with the metric $g_{\mathbb{S}^2} - dt^2$. The following lemma gives a charecterization of achronal/acausal set:
+\begin{lemma}
+    A subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ is achronal (resp. acausal) if and only if it is the graph of a function $\text{f} : D \to \R$ that is 1-Lipschitz (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2}$, where $D$ denotes the projection of $X$ to the $\D$ factor.
+\end{lemma} 
+\begin{proof}
+    \red{mettere proof}
+\end{proof}
+
+The following definitions will we fundamental in the study of hyperbolic spacetimes.
+\begin{definition}
+    Let $X$ be an achronal domain in $\AS^{2,1} \cup \partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset $\Omega(X) \subset \AS^{2,1}$ of points which are connected to $X$ by no causal path.
+\end{definition}
+\begin{definition}
+    An \textit{achronal meridian} is a subset $\Lambda$ of $\partial\AS^{2,1}$ that os the graph of a 1-Lipschitz function $f: \partial\D\to\R$.
+\end{definition}
+%Def di acausal set in \AS e \A (magari diretto come grafico)
+%Lemma di caratt. degli acausal set come grafico
+%def di invisible domain 
+%def di achronal meridian
+
+% Def di spacelike surface
+% Spacelike surfaces sono acausal
+%def di domain of dependence e globally hyperbolic spacetime
+%prop 4.4.6
+%prop 4.5.5
+%vedere se aggiungere cose sulla convessità della sezione 4.6
+
+\begin{definition}
+    Given a surface $S$ and a Lorentzian manifold $(M,g)$, a $C^1$ immersion $\sigma : S \to M$ is \textit{spacelike} if the pull-back metric $\sigma^* g$ is a Riemannian metric. In this setting $\sigma(S)$ is said to be a \textit{spacelike surface}.
+\end{definition}
+
+\begin{definition}
+    A \textit{globally hyperbolic spacetime} is a Lorentzian manifold that admits a spacelike surface that meets every casual curve. This surface is callled \textit{Cauchy surface}. 
+\end{definition}
+Globally hyperbolic spacetime have strong geometric property we summarize in the following theorem:
+\begin{theorem}
+    Let $M$ be a globally hyperbolic spacetime, then
+    \begin{itemize}
+        \item Any two Cauchy surfaces are diffeomorphic.
+        \item There  exists a submersion $\tau : M \to \R$ whose fibers are Cauchy surfaces.
+        \item $M$ is diffeomorphic to $\Sigma \times \R$ where $\Sigma$ is a Cauchy surface.
+    \end{itemize}
+\end{theorem}
+
+%studiamo MGH al variare del genere della superficie di Cauchy. Ci interessiamo solo di genere >1. Se genere =0 non ci sono globally hyperbolic spacetime.
+%Prop 5.1.3, Def 5.1.4 MGH, Cor 5.1.5
+%sezione 5.4 e 5.5 su MGH di genere >1
+%sezione 6 tutta direi, poi cose sulle foliazioni 
