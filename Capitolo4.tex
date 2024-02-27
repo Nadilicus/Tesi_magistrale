@@ -1,8 +1,14 @@
 \chapter{Globally hyperbolic spacetime}\label{chapter:4}
 From now on we will only work with Lorentzian manifold of dimension $(2+1)$.
 
+%Def di acausal set in \AS e \A (magari diretto come grafico)
+%Lemma di caratt. degli acausal set come grafico
+% Def di spacelike surface
+% Spacelike surfaces sono acausal
+%def di invisible domain 
+%def di achronal meridian
 \section{Achronal and acausal set}
-\red{veloce intro}
+\red{veloce intro, magari mettere alcuni risultati senza dim}
 
 \begin{definition}
     A subset $X \subset \AS^{2,1} \cup \partial\AS^{2,1}$ is \textit{achronal} (resp. \textit{acausal}) is no pair of points in $X$ are connected by timelike (resp. causal) lines in $\AS^{2,1}$
@@ -15,31 +21,42 @@ Consider the Poincaré model $\D\times\R$ of $\AS^{2,1}$ with the metric $g_{\ma
     \red{mettere proof}
 \end{proof}
 
-The following definitions will we fundamental in the study of hyperbolic spacetimes.
 \begin{definition}
-    Let $X$ be an achronal domain in $\AS^{2,1} \cup \partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset $\Omega(X) \subset \AS^{2,1}$ of points which are connected to $X$ by no causal path.
+    Given a surface $S$ and a Lorentzian manifold $(M,g)$, a $C^1$ immersion $\sigma : S \to M$ is \textit{spacelike} if the pull-back metric $\sigma^* g$ is a Riemannian metric. In this setting $\sigma(S)$ is said to be a \textit{spacelike surface}.
+\end{definition}
+A spacelike surface is locally acausal, if the immersion is proper we have the following global result:
+\begin{lemma}
+    Any properly embedded surface in $\AS^{2,1}$ is acausal
+\end{lemma}
+\begin{proof}
+    \red{mettere proof}
+\end{proof}
+
+\begin{definition}
+    Let $X$ be an achronal set in $\AS^{2,1} \cup \partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset $\Omega(X) \subset \AS^{2,1}$ of points which are connected to $X$ by no causal path.
 \end{definition}
 \begin{definition}
     An \textit{achronal meridian} is a subset $\Lambda$ of $\partial\AS^{2,1}$ that os the graph of a 1-Lipschitz function $f: \partial\D\to\R$.
 \end{definition}
-%Def di acausal set in \AS e \A (magari diretto come grafico)
-%Lemma di caratt. degli acausal set come grafico
-%def di invisible domain 
-%def di achronal meridian
+The iportance of these definitions will be evident in the following sections.
+The invisible domain of a achronal meridian will be fundamental tool in the study of hyperbolic spacetimes.
+ 
 
-% Def di spacelike surface
-% Spacelike surfaces sono acausal
 %def di domain of dependence e globally hyperbolic spacetime
 %prop 4.4.6
 %prop 4.5.5
 %vedere se aggiungere cose sulla convessità della sezione 4.6
 
+%studiamo MGH al variare del genere della superficie di Cauchy. Ci interessiamo solo di genere >1. Se genere =0 non ci sono globally hyperbolic spacetime.
+%Prop 5.1.3, Def 5.1.4 MGH, Cor 5.1.5
+\section{Globally hyperbolic spacetime}
 \begin{definition}
-    Given a surface $S$ and a Lorentzian manifold $(M,g)$, a $C^1$ immersion $\sigma : S \to M$ is \textit{spacelike} if the pull-back metric $\sigma^* g$ is a Riemannian metric. In this setting $\sigma(S)$ is said to be a \textit{spacelike surface}.
-\end{definition}
-
-\begin{definition}
-    A \textit{globally hyperbolic spacetime} is a Lorentzian manifold that admits a spacelike surface that meets every casual curve. This surface is callled \textit{Cauchy surface}. 
+    Given an achronal sebset $X$ in a Lorentzian manifold $(M,g)$, the \textit{domain of dependance} of $X$ is the set
+    \[
+        \mathcal{D}(X)= \{ p \in M \ | \ every inextensible causal curve hrough p meet X \}.
+    \]
+    We say that $X$ is a \textit{Cauchy surface} of $M$ if $\mathcal{D}(X)=M$.\\
+    A spacetime $M$ is \textit{globally hyperbolic} if it admits a Cauchy surface.
 \end{definition}
 Globally hyperbolic spacetime have strong geometric property we summarize in the following theorem:
 \begin{theorem}
@@ -50,8 +67,53 @@ Globally hyperbolic spacetime have strong geometric property we summarize in the
         \item $M$ is diffeomorphic to $\Sigma \times \R$ where $\Sigma$ is a Cauchy surface.
     \end{itemize}
 \end{theorem}
+The aim of this section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We'll be interested in hyperbolic surface therefore we'll study only the case $n\geq 2$.\\
+\textit{Remark}. It can be shown that spacelike surfaces in $\A^{2,1}$ are properly embedded and diffeomorphic to $\R^2$.
+In particular there are no globally hyperbolic Anti-de Sitter spacetime of genus zero (\cite{bonsanteseppi}).
+\red{magari aggiungere effetivamente questo pezzo}
+\begin{proposition}
+    Let $M$ be a globally hyperbolic Anti-de Sitter spacetime of genus $n\geq 1$. Then
+    \begin{itemize}
+        \item The developing map $dev: \widetilde{M} \to\A^{2,1}$ is injective.
+        \item If $\Sigma$ is a Cauchy surface of $M$, then the image of dev is contained in $\Omega(\Lambda)$ where $\Lambda$ is the boundary of $dev(\widetilde{\Sigma})$.
+        \item If $\rho : \pi_1(M) \to \text{Isom}(\A^{2,1})$ is the holonomy representetion, $\rho(\pi_1(M))$ acts freely and properly discontinuously on $\Omega(\Lambda)$ and $\Omega(\Lambda) / \rho(\pi_1(M))$ is a globally hyperbolic spacetime containig $M$.
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    \red{mettere proof}
+\end{proof}
+\begin{definition}
+    A globally hyperbolic Anti-de Sitter spacetime $(M,g)$ is said to be \textit{maximal} if any isometric embedding of $(M,g)$ into a globally hyperbolic Anti-de Sitter spacetime $(M',g')$ which sends a Cauchy surface of $(M,g)$ to a Cauchy surface of $(M'.g')$ is surjective.
+\end{definition}
+Following from the previous proposition we have:
+\begin{corollary}
+    A globally hyperbolic Anti-de Sitter spacetime $M$ is maximal if and only if $\widetilde{M}$ is isometric to the invisible domain of a proper achronal meridian in $\A^{2,1}$.
+\end{corollary}
 
-%studiamo MGH al variare del genere della superficie di Cauchy. Ci interessiamo solo di genere >1. Se genere =0 non ci sono globally hyperbolic spacetime.
-%Prop 5.1.3, Def 5.1.4 MGH, Cor 5.1.5
 %sezione 5.4 e 5.5 su MGH di genere >1
+\section{Genus $n\geq 2$}
+Let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
+\begin{definition}
+    A representetion $\rho: \pi_1(\Sigma_n) \to \PSL$ is \textit{positive Fuchsian} if there is a $\rho$-equivariant orientation-preserving homeomorphism $\delta : \widetilde{\Sigma_n}\to\H^2$.
+\end{definition}
+The following classical result in Teich\"uller theory is essential for the construction of MGH spacetime of genus $n\geq 2$.
+\begin{lemma}
+    Given two positive Fuchsian representetion $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$, any $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\H^2$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\S$. Moreover, its extension $\varphi : \S\to\S$ is the unique $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\S$.
+\end{lemma}
+By $(\rho_l, \rho_r)$-equivariance of $\varphi$ we mean that for every $\gamma \in \pi_1(\Sigma_n)$:
+\[
+    \varphi \circ \rho_l(\gamma) = \rho_r(\gamma)\circ\varphi.
+\]
+Given two positive Fuchsian representetion $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$ we will consider the associated representetion in Anti-de Sitter geometry given by
+\[
+    \rho = (\rho_l, \rho_r) : \pi_1(\Sigma_n) \to \text{Isom}_0(\A^{2,1}) \cong \PSL \times \PSL.
+\]
+In this setting we define $\Lambda(\rho)$ as the graph of $\varphi: \S\to\S$ defined by $\rho$, and $\Omega_\rho := \Omega(\Lambda(\rho))$ its invisible domain in $\A^{2,1}$.
+\begin{proposition}
+    The domain $\Omega_\rho$ is invariant under the isometric action of $\pi(\Sigma_n)$ on $\A^{2,1}$ induced by $\rho$. Moreover $\pi_1(\Sigma_n)$ acts freely and properly discontinuously on $\Omega_\rho$ and the quotient is a MGH spacetime of genus $n$ and holonomy $\rho$.
+\end{proposition}
+\begin{proof}
+    \red{metter proof}
+\end{proof}
+$\Lambda(rho)$ is also the unique achronal meridian in $\partial\A^{2,1}$ invariant under the acrion of $\pi(\Sigma_n)$ induced by $\rho$ making $M_\rho = \Omega_\rho / \pi_1(\Sigma_n)$ the unique spacetime with holonomy $\rho$.
 %sezione 6 tutta direi, poi cose sulle foliazioni 
