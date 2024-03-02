@@ -1,12 +1,33 @@
 \chapter{Minimal Lagrangian diffeomorphism}
 
-\section{CMC foliation}
-A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
-
-
-
+\red{aggiungiere intro?}
+\section{Foliations}
+A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.\\
+\begin{theorem}\label{thm:CMC_foliation}
+    Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$.
+\end{theorem}
+A smoothly embedded spacelike surface $S$ has \textit{constant Gaussian curvature} if $\text{det}B$ is constant. We consider the case in which the Gaussian curvature $K$ is positive. A CGC surface results to be either locally convex or locally concave, where this distinction depends on the time orientation. 
+\begin{theorem}\label{thm:CGC_foliation}
+    Let $M$ be a MGH Anti-de Sitter manifold with compact Cauchy surface. Then each connected component of $M \setminus C(M)$ is uniquely foliated bt closed CGC surfaces, where the Gaussian curvature $K$ varies in $(0,\infty)$.
+\end{theorem}
+The proofs of theorems \ref{thm:CMC_foliation} and \ref{thm:CGC_foliation} can be found in \cite{barbot2004constant} and \cite{barbot2008prescribing} respectively. Moreover in \cite{barbot2008prescribing} one can find what we mean by $C(M)$, namely the convex core of $M$.
+\begin{observation}
+    For every $H$ the CMC is surface is unique, as an application of the maximum principle. Moreover the CMC foliation is determined by a time function $\tau:M\to\R$, which is a function stricly increasing along future-directed causal curve whose fibers are the CMC surfaces. Analogously, for every $K$ the CGC surface is unique in its connected component, and the foliation is determined by a time function whose fibers are CGC surfaces.
+\end{observation}
+Using the normal evolution
+\[
+    \sigma_t(x) = \text{exp}_{\sigma(x)} (t\nu(x))
+\]
+one can also find a relation between CMC and CGC surfaces:
+\begin{proposition}
+    Let $\sigma: S \to\A^{2,1}$ be an immersion of constant Gaussian curvature $K>0$. Then the normal evolution $\sigma_{t_K}$ on the convex side of $\sigma$, for time $t_K=\text{arctan}(K^{1/2})$, is an immersion of constant mean curvature $H=K^{-1/2}(K-1)$.
+\end{proposition}
+\red{forse mettere proof}
+Using this construction and the uniqueness of CMC surfaces, one find that each surface $\Sigma_H$ of constant mean curvature $H$ has two equidistant surfaces of constant Gaussian curvature $K_+$ and $K_-$, one convex in the past of $\Sigma_H$, the othe concave in its future.
 
 \section{Minimal Lagrangian diffeomorphism}
+
+\red{da finire}
 \begin{definition}
     Let $h$ and $h'$ be two hyperbolic metrics on the closed surface $S$. A diffeomorphism $f: (S,h) \to (S,h')$ is \textit{minimal Lagrangian} if its graph is a minimal Lagrangian submanifold of $S\times S$ with respect to the product metric $h \oplus h'$ and the symplectic form $\pi_l^*\omega_h - \pi_r^* \omega_{h'}$. 
 \end{definition}
