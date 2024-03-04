@@ -2,6 +2,7 @@
 
 \red{Numerare equazioni, aggiungiere riferimenti}\\
 \red{nelle prime sezioni vanno aggiunte ancora cose}\\
+\red{aggiungiere le def in $\A^{2,1}$ e dire che è uguale a farlo in $\AS^2,1$}\\
 From now on we will only work with Lorentzian manifold of dimension $(2+1)$.
 
 %Def di acausal set in \AS e \A (magari diretto come grafico)
@@ -126,4 +127,18 @@ One can also prove that if $M$ is a time-oriented MGH spacetime it is of the for
     Let $M$ be an oriented, time-oriented, globally hyperbolic spacetime of genus $n\geq 2$ and let us endow a Cauchy $\Sigma$ with the orientation induced by the future normal vector. Then the left and right components of the holonomy $\rho=(\rho_l,\rho_r): \pi_1(\Sigma)\to\PSL\times\PSL$ are positive Fuchsian representetion.
 \end{proposition}
 
-%sezione 6 tutta direi, poi cose sulle foliazioni 
+
+We conclude by stating the classification result. Let the \emph{deformation space} of MGH spacetimes of genus $n$ be:
+$$\mathcal{MGH}(\Sigma_n)=\{g\text{ MGH AdS metric on }\Sigma_r\times\R\}/\mathrm{Diff}_0(\Sigma_n\times\R)~,$$
+where the group of diffeomorphisms isotopic to the identity acts by pull-back. The holonomy map takes value in the space of representations of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ and is well-defined on the quotient $\mathcal{MGH}(\Sigma_r)$.
+We proved that the left and right components of the holonomy of elements of $\mathcal{MGH}(\Sigma_n)$ are positive Fuchsian representations, and the space of these representations up to conjugacy is identified with the Teichm\"uller space of $\Sigma_n$
+\[
+    \mathcal{T}(\Sigma_n)\cong\{\rho:\pi_1(\Sigma_n)\to\PSL\text{ positive Fuchsian representations}\}/\PSL~.
+\]
+Therefore the holonomy map can be considered as a map 
+from $\mathcal{MGH}(\Sigma_n)$ with values in $\mathcal{T}(\Sigma_n)\times\mathcal{T}(\Sigma_n)$.
+Hence, we can summarize this section with the following theorem of Mess.
+
+\begin{theorem} \label{thm:classification rgeq2}
+The holonomy map $$\rho:\mathcal{MGH}(\Sigma_n)\to\mathcal{T}(\Sigma_n)\times\mathcal{T}(\Sigma_n)$$ is a homeomorphism.
+\end{theorem}
