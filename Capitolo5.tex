@@ -27,11 +27,11 @@ The first and second fundamental form of an immersion $\sigma$ satisfy constrain
 \]
 The Codazzi equation tells us that
 \[
-    d^{nabla^\I}B=0,
+    d^{\nabla^\I}B=0,
 \]
-where $d^{nabla^\I}$ is the operator defined by
+where $d^{\nabla^\I}$ is the operator defined by
 \[
-    (d^{nabla^\I}B)(V,W) = \nabla^\I_V(B(W)) - \nabla^\I_W(B(V)) - B([V,W]).
+    (d^{\nabla^\I}B)(V,W) = \nabla^\I_V(B(W)) - \nabla^\I_W(B(V)) - B([V,W]).
 \]
 Sometimes is also written in the equivalent form 
 \[
@@ -89,6 +89,7 @@ The Gauss map $G_\sigma$ is natural with respect to the action of the isometry g
 \begin{example}\label{ex:dual1}
     In Lemma \ref{lem:dual plane} we gave an isometric embedding of $\H^2$ in $\A^{2,1}$ with image the plane $P_{\text{Id}}$ dual to the identity. This isometric embedding was defined by sending $p\in\H^2$ to the unique order-two element in $\PSL$ fixing $p$, which by definition lies on the geodesic $L_{p,p}$. Moreover the geodesic $L_{p,p}$ is orthogonal to $P_{\text{Id}}$. Hence the Gauss map associated to this isometric embedding of $\H^2$ is just $p\mapsto (p,p).$
 \end{example}
+Geodesic leaving from $\1$ with velocity $\nu(p)$ meets $P_\1$ orthogonally at $\text{exp}((\pi/2)\nu(p))$, therefore, using Example \ref{ex:dual1}, one can recover the following:
 
 \begin{lemma}\label{lem:Gaussid}
     Given a spacelike immersion $\sigma:S\to\A^{2,1}$, with future unit normal vector field $\nu$, if $\sigma(p)=\text{Id}$, then 
@@ -96,10 +97,10 @@ The Gauss map $G_\sigma$ is natural with respect to the action of the isometry g
         G_\sigma(p)=G_{P_\text{Id}}(\exp(\frac{\pi}{2}\nu(p))).
     \end{equation}
 \end{lemma}
-\begin{proof}
-    \red{mettere proof}
+%\begin{proof}
+%    \red{mettere proof}
     %It is a consequence of Example \ref{ex:dual1}. We need to observe that the geodesic leaving from Id with velocity $\nu(p)$ meets orthogonally $P_\text{Id}$ at $\exp((\pi/2)\nu(p)).$
-\end{proof}
+%\end{proof}
 
 Now we denote with $\hf\A^{2,1}$ the hyperboloid of future unit timelike vectors in $T_{\text{Id}}\A^{2,1}$ and consider the following map: 
 \[
@@ -120,21 +121,17 @@ provided that $\sigma(p)=\text{Id}.$\\ Via Lemma \ref{lem:Gaussid} and the natur
 \end{lemma}
 
 \begin{proof}
-    \red{mettere proof  }
-    %If $\sigma(p)=\text{Id}$, then the equality holds true by Equation \refeq{eq:Gaussfix}. For the general case, the immersion $\sigma^{\prime} =(\text{Id},\sigma(p))\circ\sigma$ has the property that $\sigma^{\prime}(p)=\text{Id}$, and the future normal vector at $\sigma^{\prime} (p)$ equals $\nu^{\prime} (p)=(R_{\sigma(p)^{-1}}))_{\ast} (\nu(p))$. Therefore: 
-    %\[
-    %    G_{\sigma^{\prime} }(p)=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))))).
-    %\]
-
-    %Now by the naturality of the Gauss map it follows, 
-        
-    %\begin{align*}
-    %    G_\sigma(p)&=(\text{Id},\sigma(p)^{-1})\cdot G_{\sigma^{\prime}}(p) \\
-    %    &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\sigma(p)^{-1}\circ\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))))) \\
-    %    &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((L_{\sigma(p)^{-1}})_{\ast} (\nu(p))))).
-    %\end{align*}
-        
-    %here in the last line we used that Fix is equivariant with respect to the adjoint action on the hyperboloid $\hf\A^{2.1}$.
+    If $\sigma(p)=\text{Id}$, then the equality holds true by Equation \refeq{eq:Gaussfix}. For the general case, the immersion $\sigma^{\prime} =(\text{Id},\sigma(p))\circ\sigma$ is such that $\sigma^{\prime}(p)=\text{Id}$, and the future normal vector at $\sigma^{\prime} (p)$ equals $\nu^{\prime} (p)=(R_{\sigma(p)^{-1}}))_{\ast} (\nu(p))$. Therefore: 
+    \[
+        G_{\sigma^{\prime} }(p)=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))))).
+    \]
+    Now by the naturality of the Gauss map it follows,     
+    \begin{align*}
+        G_\sigma(p)&=(\text{Id},\sigma(p)^{-1})\cdot G_{\sigma^{\prime}}(p) \\
+        &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\sigma(p)^{-1}\circ\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p))))) \\
+        &=(\text{Fix}((R_{\sigma(p)^{-1}})_{\ast} (\nu(p)),\text{Fix}((L_{\sigma(p)^{-1}})_{\ast} (\nu(p))))).
+    \end{align*}
+    where we used that Fix is equivariant with respect to the adjoint action on the hyperboloid $\hf\A^{2.1}$.
 \end{proof}
 
 \begin{observation}
@@ -184,7 +181,7 @@ When $\Pi_l$ and $\Pi_r$ are only locally injective, but not globally, we still 
 \end{equation}
 where $\omega_{\H^2}$ is the hyperbolic area form. 
 This result has been proved in several works with different methods: see \cite{bonsante2017equivariant}, \cite{Seppi_2017}. Moreover the Lagrangian condition is \emph{locally} the only obstruction to inverting this construction, that is, to realizing an immersed surfaces in $\H^2\times\H^2$ locally as the image of the Gauss map of a spacelike immersion in $\A^{2,1}$.
-\item Finally, given a spacelike immersion $\sigma$,  the normal evolution of $\sigma$ is defined as 
+\item Given a spacelike immersion $\sigma$,  the normal evolution of $\sigma$ is defined as 
 \[
     \sigma_t(x)=\exp_{\sigma(x)}(t\nu(x))~,
 \]
