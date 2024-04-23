@@ -1,6 +1,6 @@
 \chapter{Anti-de Sitter Space} \label{chapter:2}
 
-\red{Numerare equazioni, aggiungiere riferimenti}\\
+\red{Aggiungere figure, rivedere cose}\\
 In this chapter we construct models of Anti-de Sitter geometry, pointing out analogies with the models of hyperbolic space.
 
 \section{The quadric model}
@@ -17,10 +17,10 @@ that is a smooth connected submanifold of $\R^{n,2}$ of dimension $n+1$. The tan
 \[
 x^\perp = \{ y\in\R^{n,2} \ | \ \langle x,y \rangle=0 \}.
 \]
-The restriction of the symmetric form $\langle \cdot , \cdot \rangle$ to $T\H^{n,1}$ induced a Lorentzian metric on $\H^{n,1}$ with sectional curvature $-1$.\\
+The restriction of the symmetric form $\langle \cdot , \cdot \rangle$ to $T\H^{n,1}$ induces a Lorentzian metric on $\H^{n,1}$.\\
 We remark that the hyperbolic space $\H^n$ is isometrically embedded in $\H^{n,1}$ as the submanifold defined by $x_{n+2}=0,\ x_{n+1}>0$.\\
 The group $O(n,2)$ acts by isometries on $\H^{n,1}$. In particular if $x\in H^{n,1}$ and $v_1, \cdots , v_{n+1}$ is an orthonormal basis of $T_x \H^{n,1}$ then the linear transformation sending the standard basis to the basis $\ v_1,\cdots,v_{n+1},x \ $ is in $O(n,2)$. This shows that the action of $O(n,2)$ on $\H^{n,1}$ is transitive and the stabilizer of a point $x$ acts transitively on the space of orthonormal basis of $T_x\H^{n,1}$. 
-These facts imply that $\H^{n,1}$ has maximal isometry group and that the isometry group is $O(n,2)$.\\
+These facts imply that $\H^{n,1}$ has maximal isometry group and that the isometry group is $O(n,2)$ and, by Lemma \ref{lem:constant curvature}, $\H^{n,1}$ has constant curvature equal to $-1$.\\
 
 \section{The Klein model}
 Let us define
@@ -48,7 +48,7 @@ Given $\ell= span(x) \in \R \text{P}^{n+1}$, the tangent space at $\ell$ has the
 \]
 When $\ell$ is timelike the quotient $\R^{n+2}/\ell$ is canonically identified with $\ell^\perp$. For any local section $\sigma : \A^{n,1} \to \R^{n,2}$ of the canonical projection one can define a metric over $T\A^{n,1}$ by
 \[
-    \langle \langle f,g \rangle \rangle_\sigma = \langle f(\sigma[x]),g(\sigma[x]) \rangle_n,2
+    \langle \langle f,g \rangle \rangle_\sigma = \langle f(\sigma[x]),g(\sigma[x]) \rangle_{n,2}
 \]
 for $f,g \in T_{[x]}\A^{n,1} \cong \text{Hom}(\ell,\ell^\perp)$.
 If the section $\sigma$ has image in $\H^{n,1}$, then the aforementioned metric coincides with the pull-back of the metric over $\R^{n,2}$, since the differential of $\sigma $ identifies $T_{[x]}\A^{n,1}=T_x\H^{n,1}=x^\perp$. For a general section the identification does not hold, but we can recover a conformal metric via the formula: 
@@ -122,7 +122,7 @@ if $q_{n,2}(v)= 1$ and
 \] 
 if $q_{n,2}(v)= -1$.\\
 
-\textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model follows that
+\noindent \textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model follows that
 \begin{itemize}
     \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$, are closed non-trivial loops and have length $\pi$,
     \item Spacelike geodesics correspond to lines that meet $\partial\A^{n,1}$ transversally in two points. They have infinite length, 
@@ -131,7 +131,7 @@ if $q_{n,2}(v)= -1$.\\
 In particular the light cone through a point $\left[ x \right] \in \A^{n,1}$ coincides with the cone of lines through $\left[ x \right]$ tangent to $\partial \A^{n,1}$.\\
 In an affine chart, timelike geodesics corresponds to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one-sheeted hyperboloid, or are asymptotic to it (tangent at infinity).\\
 
-\textit{Totally geodesic subspaces}. Let us briefly discuss more in general totally geodesics subspaces. By an argument analogous to the case of geodesics, totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1$. The negative index of $W$ can be either $2$ or $1$, for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty.
+\noindent \textit{Totally geodesic subspaces}. Let us briefly discuss more in general totally geodesics subspaces. By an argument analogous to the case of geodesics, totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1$. The negative index of $W$ can be either $2$ or $1$, for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty.
 We have several cases
 \begin{itemize}
     \item If $W$ has signature $(k-1,2)$, then $P(W)\cap\A^{n,1}$  is isometric to $\A^{k-1,1}$.
@@ -139,16 +139,16 @@ We have several cases
     \item If $W$ is degenerate, then $P(W)\cap\A^{n,1}$ is a lightlike subspace foliated by lightlike geodesics tangent to the same point of $\partial\A^{n,1}$. 
 \end{itemize}
 
-\textit{In the universal cover}. In the universal cover $\AS^{n,1}$ geodesics are the lifts of the geodesics of $\H^{n,1}$ or $\A^{n,1}$. Every lightlike or spacelike geodesic in $\H^{n,1}$ and $\A^{n,1}$ is topologically a line, therefore it has a countable number of lifts to $\AS^{n,1}$, On the other hand timelike geodesics $\H^{n,1}$ and $\A^{n,1}$ are topologically circles and are in bijection with timelike geodesics of $\AS^{n,1}$.\\
+\noindent \textit{In the universal cover}. In the universal cover $\AS^{n,1}$ geodesics are the lifts of the geodesics of $\H^{n,1}$ or $\A^{n,1}$. Every lightlike or spacelike geodesic in $\H^{n,1}$ and $\A^{n,1}$ is topologically a line, therefore it has a countable number of lifts to $\AS^{n,1}$, On the other hand timelike geodesics $\H^{n,1}$ and $\A^{n,1}$ are topologically circles and are in bijection with timelike geodesics of $\AS^{n,1}$.\\
 Using the Poincaré model we can give an explicit description of lightlike geodesics. In fact, in Lorentzian geometry not only the nature of a vector is conformally invariant but also unparametrized lightlike geodesics are a conformal property (\cite{Gallot}, Proposition 2.131): 
  \begin{theorem}\label{ConformalMetric} If two Lorentzian metrics $g,g^{\prime} $ on a manifold $M$ are conformal, then they have the same unparametrized lightlike geodesics.
  \end{theorem}
 
- Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent -and often more easy to manage in calculation- metric given by:
+ Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric, and often more easy to manage in calculation, given by:
  \begin{equation}\label{emispherical}
      \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
  \end{equation} 
- Now we observe that the first term in Equation \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We will call such a metric hemispherical and will denote it by $g_{\mathbb{S}^n}$. Notice that the boundary of $\D^n$ is an equator for the hemispherical metric, and in fact it is the only equator completely contained in $(\D^n\cup\partial\D^n,g_{\mathbb{S}^n})$, a justification to the fact that we will refer to it as \textit{the} equator.\\
+ Now we observe that the first term in Equation \ref{emispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We call such a metric hemispherical and we denote it by $g_{\mathbb{S}^n}$. Notice that the boundary of $\D^n$ is an equator for the hemispherical metric, and in fact it is the only equator completely contained in $(\D^n\cup\partial\D^n,g_{\mathbb{S}^n})$, a justification to the fact that we refer to it as \textit{the} equator.\\
  As a consequence, unparametrized lightlike geodesics of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the condition that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
  \[
      t-t_0=d_{\mathbb{S}^n}(p,p_0)

@@ -1,6 +1,5 @@
 \chapter{Preliminaries on Lorentzian geometry}
 
-\red{aggiungiere riferimenti}\\
 The scope of this introductory chapter is to briefly recall basic facts about Lorentzian manifold as later on we will concetrate on Lorentzian manifolds with constant sectional curvature $K=-1$.
 We will show that, as in Riemannian geometry, Lorentzian manifold of constant sectional curvature are locally isometric. We will focus on Lorentzian manifold with maximal isometry group and we will show that generally there are manifolds with maximal isometry group that are not simply connected.
 \section{Basic definitions}
@@ -43,13 +42,13 @@ It follows that the maximal dimension of $\text{Isom}M$ is $\text{dim}(O(n+1)) +
     Equivalently $M$ has maximal isometry group if $\text{Isom}(M) \subset \text{ISO}(T_xM, TM)$ is a bijection.
 \end{definition}
 It follows that if $M$ has maximal isometry group the dimension of the isometry group is maximal.\\
-From the corollary it follows that every simply connected Lorentzian manifold $M$ has maximal isometry group if it is geodesically complete and has constant curvature . The converse holds:
-\begin{lemma}
+From the corollary it follows that every simply connected Lorentzian manifold $M$ has maximal isometry group if it is geodesically complete and has constant curvature. The converse holds:
+\begin{lemma}\label{lem:constant curvature}
     If $M$ is a Lorentzian manifold with maximal isometry group then $M$ has constant sectional curvature and is geodesically complete.
 \end{lemma}
 
 \begin{proof}
-    Fixex a point $x\in M$, the identity component of $\text{O}(T_x M)\simeq \text{O}(n,1)$ acts transitively on spacelike planes, therefore there is a constant $K$ such that Equation \ref{sectionalcurvature} holds for every pair $(u,v)$ of vectors tangent at $x$ which generate a spacelike plane. Now, for every point $x\in M$ both sides of Equation \ref{sectionalcurvature} are polynomial in $u,v \in T_xM$. Since the set of pairs $(u,v)$ which generate spacelike planes is open in $T_{x}M\times T_{x}M$, Equation \ref{sectionalcurvature} must hold for every pair of vectors $u,v \in T_xM$. Since Isom($M$) acts transitively on $M$, it follows that $M$ the sectional curvature is constant.\\
+    Fix a point $x\in M$, the identity component of $\text{O}(T_x M)\simeq \text{O}(n,1)$ acts transitively on spacelike planes, therefore there is a constant $K$ such that Equation \ref{sectionalcurvature} holds for every pair $(u,v)$ of vectors tangent at $x$ which generate a spacelike plane. Now, for every point $x\in M$ both sides of Equation \ref{sectionalcurvature} are polynomial in $u,v \in T_xM$. Since the set of pairs $(u,v)$ which generate spacelike planes is open in $T_{x}M\times T_{x}M$, Equation \ref{sectionalcurvature} must hold for every pair of vectors $u,v \in T_xM$. Since Isom($M$) acts transitively on $M$, it follows that $M$ the sectional curvature is constant.\\
     Let us now show that the manifold is geodesically complete. Suppose $\gamma$ is a parametrized geodesic with $\gamma(0)=x$ and $\gamma^{\prime} (0)=v\in T_xM,$ which is defined for a finite time $T>0.$ Let $T_0=T-\epsilon>0.$ By assumption one can find an isometry $f:M\to M$ such that $f(x)=\gamma(T_0)$ and $df_x(v)=\gamma^{\prime}(T_0).$ Then $t\to f\circ\gamma(t-T_0)$ is a parametrized geodesic which provides a continuation of $\gamma$ beyond $T$.
 \end{proof}
 
@@ -59,7 +58,7 @@ For simply connected Lorentzian manifold there is the following classification r
     Let $M_K$ be a simply connected Lorentzian manifold of constant curvature $K$ with maximal isometry group. If $M$ is a Lorentzian manifold of constant curvature $K$ then:
     \begin{itemize}
         \item M is geodesically complete if and only if there is a local isometry $p:M_K \to M$ which is a universal covering.
-        \item M has maximal isometry group if and only if $\text{Aut}(p:M_K \to M)$ is normal in $\text{Isom}M_K$
+        \item M has maximal isometry group if and only if $\text{Aut}(p:M_K \to M)$ is normal in $\text{Isom}(M_K)$
     \end{itemize}
 \end{proposition} 
 
