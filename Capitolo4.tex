@@ -98,7 +98,7 @@ Following from Proposition \ref{prop:GH_geometry} we have:
 
 %sezione 5.4 e 5.5 su MGH di genere >1
 \section{Genus $n\geq 2$}
-Let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
+The purpose of this section is to classify all MGH spacetime of genus $n\geq 2$. Therefore, let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
 \begin{definition}
     A representetion $\rho: \pi_1(\Sigma_n) \to \PSL$ is \textit{positive Fuchsian} if there is a $\rho$-equivariant orientation-preserving homeomorphism $\delta : \widetilde{\Sigma_n}\to\H^2$.
 \end{definition}
@@ -166,14 +166,25 @@ Now we prove that the MHG constructed in Proposition \ref{prop:MGH_example} are 
         \xi^-_l(\alpha) \leq \xi^-_l(\beta) \leq \xi^+_l(\beta) \leq \xi^+_l(\alpha),
     \]
     which contradicts equation \ref{eq:order}.
-    \red{finire}
 \end{proof}
-One can also prove that if $M$ is a time-oriented MGH spacetime it is of the form $M_\rho$. More precisely:
+We proved that given a pair $\rho = (\rho_l,\rho_r)$ of positive Fuchsian representations of $\pi_1(\Sigma_n)$ the MGH spacetime $M_\rho := \Omega_\rho / \rho(\pi_1(Sigma_n))$ is the unique MGH spacetime with holonomy $\rho$.\\
+The last step for the classification result is that given a MGH spacetime, the left and right components of the holonomy are necessarely positive Fuchsian.
+
+\begin{observation}\label{rem:bundle}
+    By a result of Goldman \cite{goldman1980discontinuous}, a representetion $\rho$ is positive Fuchsian if and only if the associated flat $\S$ bundle $E_\rho$, constructed as the quotient of $\widetilde{\Sigma}_n \times \S$ by the diagonal action of $\pi_1(\Sigma_n)$ given by deck transformation on the first factor and by $\rho$ on the second factor, has Euler class $2-2n$. This is also equivalent to the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_n$.
+\end{observation}
 \begin{proposition}
     Let $M$ be an oriented, time-oriented, globally hyperbolic spacetime of genus $n\geq 2$ and let us endow a Cauchy surface $\Sigma$ with the orientation induced by the future normal vector. Then the left and right components of the holonomy $\rho=(\rho_l,\rho_r): \pi_1(\Sigma)\to\PSL\times\PSL$ are positive Fuchsian representetion.
 \end{proposition}
 \begin{proof}
-    \red{mettere proof}
+    By remark \ref{rem:bundle} we have to prove that the $\S$-flat bundles with holonomy $\rho_l$ and $\rho_r$ are isomorphic to the unit tangent bundle. We focus on $\rho_l$, the proof for $\rho_r$ is analogous.\\
+    Define $\Phi_l : T^1 \widetilde{\Sigma} \to \widetilde{\Sigma} \times \S$ in the following way: for an element $(x,v) \in T^1 \widetilde{\Sigma}$ let
+    \[
+        \xi(x,v) = (\xi^l(x,v), \xi^r(x,v)) \in \T
+    \]
+    be the end-point of the spacelike geodesic ray $exp_x(tv)$ in $\A^{2,1}$, for positive $t$. We define $\Phi_l(x,v)=(x, \xi^l(x,v))$. This map is clearly continuous, proper,
+    equivariant and fiber preserving.\\
+    To prove that it is bijective it is sufficient to notice that for any $x \in \widetilde{\Sigma}$ the map $\xi_x : T^1_x \widetilde{\Sigma} \to \T$ is an embedding with image the boundary of the totally geodesic plane tangent to $\widetilde{\Sigma}$ at $x$. This boundary is the graph of an orientation-preserving map of $\S$, so the projection $v \to \xi^l(x,v)$ is bijective. Moreover, by the choice of the orientation on $\Sigma$, the orientation on $T^1_x \widetilde{\Sigma}$ corresponds to the orientation induced on $\xi_x (T^1_x \widetilde{\Sigma})$ as graph of an orientation-preserving homeomorphism.
 \end{proof}
 
 We conclude this section by stating the classification result. Let the \emph{deformation space} of MGH spacetimes of genus $n$ be:
