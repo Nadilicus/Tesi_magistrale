@@ -150,7 +150,22 @@ Now we prove that the MHG constructed in Proposition \ref{prop:MGH_example} are 
     Let $\gamma$ be a non-trivial element in $\pi_1(\Sigma_n)$. $\rho_l(\gamma)$ and $\rho_r(\gamma)$ are necessarely hyperbolic elements in $\PSL$, being $\Sigma_n$ compact, and we denote by $\xi^+_l(\gamma)$ and $\xi^+_r(\gamma)$ their attractive fixed points respectively. We have that $\xi^+_r(\gamma) = \varphi(\xi^+_l(\gamma))$, hence
     \[
         (\xi^+_l(\gamma), \xi^+_r(\gamma)) \in \Lambda(\rho).
-    \] 
+    \]
+    Now, the curve $\Lambda$ must meet the leaf of the left ruling of $\partial \A^{2,1}$
+    \[
+        \lambda_{\xi^+_r(\gamma)} = \{ (x, \xi^+_r(\gamma)) \ | \ x\in \S \}
+    \]
+    in a point $(x_0, \xi^+_r(\gamma))$. Then $(\rho_l(\gamma)^k \cdot x_0 ,\xi^+_r(\gamma)) \in \Lambda$ for $k>0$ and, if $x_0\neq \xi^-_l(\gamma)$, passing to the limit on $k$ we have that $(\xi^+_l(\gamma),\xi^+_r(\gamma))$ lies in $\Lambda$.\\
+    To conclude assume by contradiction that for every $\gamma \in \pi_1(\Sigma_n)$ the point $(\xi^-_l(\gamma),\xi^+_r(\gamma))$ lies in $\Lambda$. Take $\alpha , \beta \in \pi_1(\Sigma_n)$ so that the axis of $\rho_l(\alpha)$ and $\rho_l(\beta)$ do not intersect. We may assume that the cyclic order of the end points of those axis is
+    \begin{equation}\label{eq:order}
+        \xi^+_l(\alpha) < \xi^+_l(\beta) < \xi^-_l(\beta) < \xi^-_l(\alpha).
+    \end{equation}
+    Since $\xi^\pm_r(\alpha) = \varphi(\xi^\pm_l(\alpha))$ and $\xi^\pm_r(\beta) = \varphi(\xi^\pm_l(\beta))$, equation \ref{eq:order} holds if we replace $\rho_l$ with $\rho_r$.
+    On the other hand we assumed that $\Lambda$ contains $(\xi^+_l(\alpha), \xi^-_r(\alpha))$, $(\xi^+_l(\beta), \xi^-_r(\beta))$, $(\xi^-_l(\beta), \xi^+_r(\beta))$, $(\xi^-_l(\alpha), \xi^+_r(\alpha))$. By achronality of $\Lambda$, the cyclic order of the first and second components must be the same, hence
+    \[
+        \xi^-_l(\alpha) \leq \xi^-_l(\beta) \leq \xi^+_l(\beta) \leq \xi^+_l(\alpha),
+    \]
+    which contradicts equation \ref{eq:order}.
     \red{finire}
 \end{proof}
 One can also prove that if $M$ is a time-oriented MGH spacetime it is of the form $M_\rho$. More precisely:
