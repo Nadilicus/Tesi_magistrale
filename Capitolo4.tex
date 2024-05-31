@@ -2,8 +2,9 @@
 
 \red{Numerare equazioni, aggiungiere riferimenti}\\
 \red{nelle prime sezioni vanno aggiunte ancora cose}\\
-\red{aggiungiere le def in $\A^{2,1}$ e dire che è uguale a farlo in $\AS^2,1$}\\
-From now on we will only work with Lorentzian manifold of dimension $(2+1)$.
+\red{aggiungiere le def in $\A^{2,1}$ e dire che è uguale a farlo in $\AS^{2,1}$}\\
+From now on we will only work with Lorentzian manifold of dimension $(2+1)$.\\
+The aim of this section is to classify maximal globally hyperbolic spacetime with compact Cauchy surface of genus $n\geq 2$.
 
 %Def di acausal set in \AS e \A (magari diretto come grafico)
 %Lemma di caratt. degli acausal set come grafico
@@ -17,25 +18,46 @@ From now on we will only work with Lorentzian manifold of dimension $(2+1)$.
 \begin{definition}
     A subset $X \subset \AS^{2,1} \cup \partial\AS^{2,1}$ is \textit{achronal} (resp. \textit{acausal}) is no pair of points in $X$ are connected by timelike (resp. causal) lines in $\AS^{2,1}$
 \end{definition}
-Consider the Poincaré model $\D\times\R$ of $\AS^{2,1}$ with the metric $g_{\mathbb{S}^2} - dt^2$. The following lemma gives a charecterization of achronal/acausal set:
+Consider the Poincaré model $\D\times\R$ of $\AS^{2,1}$ equipped with the hemispherical metric $g_{\mathbb{S}^2} - dt^2$ introduced in \ref{hemispherical}. The following lemma gives a charecterization of achronal/acausal set:
 \begin{lemma}
-    A subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ is achronal (resp. acausal) if and only if it is the graph of a function $\text{f} : D \to \R$ that is 1-Lipschitz (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2}$, where $D$ denotes the projection of $X$ to the $\D$ factor.
+    A subset $X$ of $\AS^{2,1} \cup \partial\AS^{2,1}$ is achronal (resp. acausal) if and only if it is the graph of a function $\text{f} : D \to \R$ that is 1-Lipschitz (resp. strictly 1-Lipschitz) with respect to the distance induced by the hemispherical metric $g_{\mathbb{S}^2}$. Here $D$ denotes the projection of $X$ to the $\D$ factor.
 \end{lemma} 
 \begin{proof}
-    \red{mettere proof}
+    Assume that $X$ is an achronal set. The restriction of the projection $\pi_\D : \D \times \R \to \D$ to $X$ is injective, since vertical lines in the Poincaré model are timelike. So $X$ can be regarded as the graph of a function $f : D \to\R$. Imposing that $(x,f(x))$ and $(y,f(y))$ are not related by a timelike curve we can deduce that
+    \begin{equation} \label{eq:achronal}
+        |f(x) - f(y)| \leq d_{\mathcal{S}^2}(x,y),
+    \end{equation}
+    where $d_{\mathcal{S}^2}$ is the hemispherical distance. The same argument shows that the graph of a 1-Lipschitz function defined on some subset of $\D$ is achronal.\\
+    Moreover, two points $(x,t)$ and $(y,s)$ are on the same lightlike geodesic if and only if $|t-s| =  d_{\mathcal{S}^2}(x,y)$. Therefore $X$ is acausal if and only if the inequality in \ref{eq:achronal} is strict.
 \end{proof}
-
+A 1-Lipschitz funzion on a region $D \subset \D$ extends uniquely to the boundary of $D$. As a consequence of the previous lemma we have:\\
+\begin{lemma}
+    An achronal subset $X$ in $\A^{2,1}$ is properly embedded if and only if it is a global graph over $\D$. In this case it extends uniquely to the graph of a 1-Lipschitz function over $\D \cup \partial \D$.
+\end{lemma}
+In the following we refer to an achronal subset $X$ in $\A^{2,1}$ which is the graph of a 1-Lipschitz function defined on a domain of $\D$ as an \textit{achronal surface}. Recall the following definition
 \begin{definition}
     Given a surface $S$ and a Lorentzian manifold $(M,g)$, a $C^1$ immersion $\sigma : S \to M$ is \textit{spacelike} if the pull-back metric $\sigma^* g$ is a Riemannian metric. In this setting $\sigma(S)$ is said to be a \textit{spacelike surface}.
 \end{definition}
-A spacelike surface is locally acausal, if the immersion is proper we have the following global result:
+A spacelike surface is locally acausal, but there are examples of spacelike surface which are not even achronal. A spacelike surface is acausal when it is properly embedded in $\AS^{2,1}$. 
 \begin{lemma}
-    Any properly embedded surface in $\AS^{2,1}$ is acausal.
+    Let $S$ be a properly embedded achronal surface of $\AS^{2,1} \cup \partial\AS^{2,1}$. If a lightlike geodesic segment $\gamma$ joins two points of $S$ then $\gamma$ is contained in $S$.
 \end{lemma}
 \begin{proof}
-    \red{mettere proof}
+    Let $f^S:\overline{\D} \to \R$ be the function 1-Lipschitz defining $S$. If $\gamma$ joins $(x,f^S(x))$ and $(y,f^S(y))$ then (up to switching the role of $x$ and $y$) $f^S(y) = f^S(x) + d_{\mathcal{S}^2}(x,y)$. Moreover $\gamma$ consists of points of the form $(z,f^S(x) + d_{\mathcal{S}^2}(x,z))$, for $z$ lying on the $g_{\mathcal{S}^2}$-geodesic segment joining $x$ to $y$. By achronality of $S$ we have:
+    \[
+        f^S(z) - f^S(x) \leq d_{\mathcal{S}^2}(x,z)
+    \]
+    and 
+    \[
+        f^S(x) - f^S(z) \leq d_{\mathcal{S}^2}(z,y) = d_{\mathcal{S}^2}(x,y) - d_{\mathcal{S}^2}(x,z),
+    \]
+    which implies that $f^S(z) \geq f^(x) + d_{\mathcal{S}^2}(x,z)$. Therefore we can conclude $f^S(z) = f^(x) + d_{\mathcal{S}^2}(x,z)$, proving that $\gamma$ is contained in $S$.
 \end{proof}
 
+
+
+
+\section{Invisible domain}
 \begin{definition}
     Let $X$ be an achronal set in $\AS^{2,1} \cup \partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset $\Omega(X) \subset \AS^{2,1}$ of points which are connected to $X$ by no causal path.
 \end{definition}
@@ -53,7 +75,7 @@ The invisible domain of a achronal meridian will be fundamental tool in the stud
 
 %studiamo MGH al variare del genere della superficie di Cauchy. Ci interessiamo solo di genere >1. Se genere =0 non ci sono globally hyperbolic spacetime.
 %Prop 5.1.3, Def 5.1.4 MGH, Cor 5.1.5
-\section{Globally hyperbolic spacetime}
+\section{Domain of dependance}
 \red{Aggiungere veloce intro forse, sezioni 4.4 e 4.5 va messo tutto}
 \begin{definition}
     Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$, the \textit{domain of dependance} of $X$ is the set
@@ -73,6 +95,9 @@ Globally hyperbolic spacetime have strong geometric property we summarize in the
 \end{theorem}
 \red{forse mettere remark su $\AS^{2,1}$ non è globally hyperbolic}\\
 The aim of this section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We will be interested mainly in the case $n\geq 2$ cause later on we will study MGH spacetime whose Cauchy surface is a closed hyperbolic surface.\\ 
+
+
+\section{Globally hyperbolic spacetime}
 \begin{observation}
     It can be shown that given $\sigma :S \to\A^{2,1}$ spacelike immersion where $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$.
     In particular there are no globally hyperbolic Anti-de Sitter spacetime of genus zero (\cite{bonsanteseppi}).
@@ -106,7 +131,7 @@ As a direct consequence of Proposition \ref{prop:GH_geometry} we have:
 \end{corollary}
 
 %sezione 5.4 e 5.5 su MGH di genere >1
-\section{Genus $n\geq 2$}
+\section{Genus $n\geq 2$ classification}
 The purpose of this section is to classify all MGH spacetime of genus $n\geq 2$. Therefore, let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
 \begin{definition}
     A representetion $\rho: \pi_1(\Sigma_n) \to \PSL$ is \textit{positive Fuchsian} if there is a $\rho$-equivariant orientation-preserving homeomorphism $\delta : \widetilde{\Sigma_n}\to\H^2$.
