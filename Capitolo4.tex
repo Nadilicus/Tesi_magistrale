@@ -13,7 +13,7 @@ The aim of this section is to classify maximal globally hyperbolic spacetime wit
 %def di invisible domain 
 %def di achronal meridian
 \section{Achronal and acausal set}
-\red{veloce intro, magari mettere alcuni risultati con o senza dim}
+\red{veloce intro}
 
 \begin{definition}
     A subset $X \subset \AS^{2,1} \cup \partial\AS^{2,1}$ is \textit{achronal} (resp. \textit{acausal}) is no pair of points in $X$ are connected by timelike (resp. causal) lines in $\AS^{2,1}$
@@ -39,7 +39,7 @@ In the following we refer to an achronal subset $X$ in $\A^{2,1}$ which is the g
     Given a surface $S$ and a Lorentzian manifold $(M,g)$, a $C^1$ immersion $\sigma : S \to M$ is \textit{spacelike} if the pull-back metric $\sigma^* g$ is a Riemannian metric. In this setting $\sigma(S)$ is said to be a \textit{spacelike surface}.
 \end{definition}
 A spacelike surface is locally acausal, but there are examples of spacelike surface which are not even achronal. A spacelike surface is acausal when it is properly embedded in $\AS^{2,1}$. 
-\begin{lemma}
+\begin{lemma}\label{lem:lightlike}
     Let $S$ be a properly embedded achronal surface of $\AS^{2,1} \cup \partial\AS^{2,1}$. If a lightlike geodesic segment $\gamma$ joins two points of $S$ then $\gamma$ is contained in $S$.
 \end{lemma}
 \begin{proof}
@@ -53,8 +53,21 @@ A spacelike surface is locally acausal, but there are examples of spacelike surf
     \]
     which implies that $f^S(z) \geq f^(x) + d_{\mathcal{S}^2}(x,z)$. Therefore we can conclude $f^S(z) = f^(x) + d_{\mathcal{S}^2}(x,z)$, proving that $\gamma$ is contained in $S$.
 \end{proof}
-
-
+Given a function $f: \overline{\D}\to\R$, we define its oscillation as 
+\[
+    osc(f):= \max_{y\in\overline{\D}} f(y) - \min_{y\in\overline{\D}} f(y).
+\]
+\begin{lemma}
+    Let $S$ be a properly embedded achronal surface, defined as the graph of $f^S:\overline{\D} \to \R$, then $osc(f^S) \leq \pi$. Moreover $osc(f^S)= \pi$ if and only if $S$ is a lightlike plane.
+\end{lemma}
+\begin{proof}
+    As $f^S$ is 1-Lipschitz and the diameter of $\D$ for $g_{\mathcal{S}^2}$ is $\pi$, then $osc(f^S)$ is bounded by $\pi$. Moreover, if $osc(f^S)=\pi$ then there are two antipodal points $y,y'\in \partial \D$ such that $f^S(y')=f^S(y) + \pi$. Recall that the lightlike plane with past and future points $(y,f^S(y))$ and $(y',f^S(y)+\pi)$ is
+    \[
+        P = \{ (x,t) \ | \ t=f^S(y) + d_{\mathcal{S}^2}(x,y) \}
+    \]
+    and it is foliated by lightlike geodesics joining $(y,f^S(y))$ to $(y',f^S(y)+\pi)$. By Lemma \ref{lem:lightlike}, $P$ is included in $S$. Since $P$ and $S$ are both global graphs over $\overline{\D}$, $S=P$.
+\end{proof}
+    
 
 
 \section{Invisible domain}
