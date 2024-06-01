@@ -1,17 +1,8 @@
 \chapter{Globally hyperbolic spacetime}\label{chapter:4}
 
-\red{Numerare equazioni, aggiungiere riferimenti}\\
-\red{nelle prime sezioni vanno aggiunte ancora cose}\\
-\red{aggiungiere le def in $\A^{2,1}$ e dire che è uguale a farlo in $\AS^{2,1}$}\\
 From now on we will only work with Lorentzian manifold of dimension $(2+1)$.\\
 The aim of this section is to classify maximal globally hyperbolic spacetime with compact Cauchy surface of genus $n\geq 2$.
 
-%Def di acausal set in \AS e \A (magari diretto come grafico)
-%Lemma di caratt. degli acausal set come grafico
-% Def di spacelike surface
-% Spacelike surfaces sono acausal
-%def di invisible domain 
-%def di achronal meridian
 \section{Achronal and acausal set}
 \red{veloce intro}
 
@@ -57,7 +48,7 @@ Given a function $f: \overline{\D}\to\R$, we define its oscillation as
 \[
     osc(f):= \max_{y\in\overline{\D}} f(y) - \min_{y\in\overline{\D}} f(y).
 \]
-\begin{lemma}
+\begin{lemma}\label{lem:osc}
     Let $S$ be a properly embedded achronal surface, defined as the graph of $f^S:\overline{\D} \to \R$, then $osc(f^S) \leq \pi$. Moreover $osc(f^S)= \pi$ if and only if $S$ is a lightlike plane.
 \end{lemma}
 \begin{proof}
@@ -74,22 +65,48 @@ Given a function $f: \overline{\D}\to\R$, we define its oscillation as
 \begin{definition}
     Let $X$ be an achronal set in $\AS^{2,1} \cup \partial\AS^{2,1}$, the \textit{invisible domain} of $X$ is the subset $\Omega(X) \subset \AS^{2,1}$ of points which are connected to $X$ by no causal path.
 \end{definition}
+By a result of McShane \cite{mcshane1934extension} any 1-Lipschitz function on a subset of a metric space admits a 1-Lipschitz extension everywhere. Hence any achronal set is a subset of a properly embedded achronal surface.
+Given an achronal set $X$ defined as $f^X : D \to \R$ there are two particular extensions called \textit{extremal extensions}:
+\[
+\begin{array}{cc}
+    f_-^X(y)= \sup_{x\in D}\{ f^X(x)-d_{\mathcal{S}^2}(x,y) \} & f_+^X(y)= \inf_{x\in D}\{ f^X(x)+d_{\mathcal{S}^2}(x,y) \}
+\end{array}
+\]
+\begin{lemma}\label{lem:extremal extension}
+    Let $X$ be a closed achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ and let $S_\pm (X)$ be the graphs of the extremal extensions $f^X_\pm$.
+    \begin{itemize}
+        \item \red{capire quali dei 3 punti sono utili}
+    \end{itemize}
+\end{lemma}
+\red{vedere i remark}
+
+\section{Achronal meridians}
 \begin{definition}
-    An \textit{achronal meridian} is a subset $\Lambda$ of $\partial\AS^{2,1}$ that os the graph of a 1-Lipschitz function $f: \partial\D\to\R$.
+    An \textit{achronal meridian} in $\AS^{2,1}$ is a subset $\Lambda$ of $\partial\AS^{2,1}$ that is the graph of a 1-Lipschitz function $f: \partial\D\to\R$.
 \end{definition}
 The iportance of these definitions will be evident in the following sections.
 The invisible domain of a achronal meridian will be fundamental tool in the study of hyperbolic spacetimes.
- 
-
-%def di domain of dependence e globally hyperbolic spacetime
-%prop 4.4.6
-%prop 4.5.5
-%vedere se aggiungere cose sulla convessità della sezione 4.6
-
-%studiamo MGH al variare del genere della superficie di Cauchy. Ci interessiamo solo di genere >1. Se genere =0 non ci sono globally hyperbolic spacetime.
-%Prop 5.1.3, Def 5.1.4 MGH, Cor 5.1.5
+\begin{lemma}
+    Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then $S_+(\Lambda) \cap \S_-(\Lambda)=\Lambda$. Moreover there is an achronal properly embedded surface in $\Omega(\Lambda)$ whose boundary in $\partial\AS^{2,1}$ is $\Lambda$.
+\end{lemma}
+\begin{proof}
+    By Lemma \ref{lem:osc} the maximal oscillation of $f:\partial \to \R$ that defines $\Lambda$ is smaller than $\pi$. If a lightlike geodesic connects $(x,f(x))$ to $(y,f(y))$ then $x$ and $y$ are not atipodal. Then they are connected by a unique lenght-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x,f(x))$ to $(y,f(y))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{lem:extremal extension} we conclude that $S_+(\Lambda)$ and $S_-(\Lambda)$ do not meet in $\AS^{2,1}$ and $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda$.\\
+    To conclude, the function $(f_- + f_+) /2$ is 1-Lipschitz and defines an achronal properly embedded surface contained in $\Omega(\Lambda)$ whose boundary is $\Lambda$.
+\end{proof}
+To conclude this section let us state two results on the invisible domain of an achronal meridian in $\partial\AS^{2,1}$:
+\begin{proposition}
+    Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then
+    \begin{itemize}
+        \item $x \in \AS^{2,1}$ lies in $\Omega(\Lambda)$ if and only if $\Lambda$ is contained in the interior of the Dirichlet region $R_x$.
+        \item The lenght of the intersection of $\Omega(\Lambda)$ with any timelike geodesic of $\AS^{2,1}$ is at most $\pi$. A timelike geodesic whose intersection with $\Omega(\Lambda)$ has length $\pi$ if and only if $\Lambda$ is the boundary at infinity of a spacelike plane.
+    \end{itemize}
+\end{proposition}
+Following from this proposition we have:
+\begin{proposition}
+    Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. The invisible domain $\Omega(\Lambda)$ is contained in a Dirichlet region. Moreover the closure of $\Omega(\Lambda)$ is contained in a Dirichlet region unless $\Lambda$ is the boundary of a spacelike plane.
+\end{proposition}
 \section{Domain of dependance}
-\red{Aggiungere veloce intro forse, sezioni 4.4 e 4.5 va messo tutto}
+\red{Aggiungere veloce intro forse}
 \begin{definition}
     Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$, the \textit{domain of dependance} of $X$ is the set
     \[
@@ -106,11 +123,40 @@ Globally hyperbolic spacetime have strong geometric property we summarize in the
         \item $M$ is diffeomorphic to $\Sigma \times \R$ where $\Sigma$ is a Cauchy surface.
     \end{itemize}
 \end{theorem}
-\red{forse mettere remark su $\AS^{2,1}$ non è globally hyperbolic}\\
-The aim of this section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We will be interested mainly in the case $n\geq 2$ cause later on we will study MGH spacetime whose Cauchy surface is a closed hyperbolic surface.\\ 
+\begin{observation}
+    $\AS^{2,1}$ is not globally hyperbolic. In fact if $X$ is achronal it is contained in the graph of a 1-Lipschitz function $f: \overline{\D} \to \R$. If $t_0 > \sup f$ and $\xi \in \partial\D$ then any lightlike ray with past end-point $(\xi,t_0)$ does not intersect $X$.
+\end{observation}
+\begin{lemma}
+    Given an achronal meridian $\Lambda$ in $\partial\AS^{2,1}$, any Cauchy surface in $\Omega(\Lambda)$ is properly embedded with boundary at infinity $\Lambda$.
+\end{lemma}
+\begin{proof}
+    Let $S$ be a Cauchy surface in $\Omega(\Lambda)$, then for every $x\in \D$ the vertical line through $x$ in the Poincaré model meets $\Omega(\Lambda)$ and its intersection with $\Omega(\Lambda)$ meet $S$ by definition of Cauchy surface. Then $S$ is a graph over $\D$, proving $S$ is properly embedded, with $\partial S = \Lambda$.
+\end{proof}
+\begin{proposition}
+    Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. If $S$ is a properly embedded surface in $\Omega(\Lambda)$ then $\mathcal{D}(S) = \Omega(\Lambda)$. In particular $\Omega(\Lambda)$ is a globally hyperbolic spacetime. 
+\end{proposition}
+\begin{proof}
+    Take any inextensible causal path through $x\in \Omega(\Lambda)$. Its future end-point is in $S_+(\Lambda)$ since, by definition of $\Omega(\Lambda)$, $x$ cannot be connected to $\Lambda$ by a causal path. The same argument shows that the past end-point is in $S_-(\Lambda)$. Since the inextensible causal path meets both $S_+(\Lambda)$ and $S_-(\Lambda)$, then it must meet $S$, hence $x\in \mathcal{D}(S)$.\\
+    Conversely, if $x$ is not in $\Omega(\Lambda)$ then one can find an inextensible causal path joining $x$ to $\Lambda$. Therefore $x$ is not in $\mathcal{D}(S)$.
+\end{proof}
+As a consequence of this Proposition we have that the domain of dependance of a properly embedded surface in $\AS^{2,1}$ only depends on the boundary at infinity:
+\begin{corollary}
+    If $S$ and $S'$ are properly embedded spacelike surface in $\AS^{2,1}$ then $\mathcal{D}(S) = \mathcal{D}(S')$ if and only if $\partial S = \partial S'$.
+\end{corollary}
+
+\section{Properly achronal set in $\A^{2,1}$}
+As $\A^{2,1}$ contains closed timelike lines, it does not contain any achronal subset. Therefore we have to adapt the definition to work in $A^{2,1}$:
+\begin{definition}
+    A subset $X$ of $\A^{2,1} \cup \partial\A^{2,1}$ is a \textit{proper achronal subset} if there exists a spacelike plane $P$ such that $X$ is contained in $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ and is an achronal subset of $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$.
+\end{definition}
+The definition makes sense since $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ does not contain closed causal curves. Moreover $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ simply connected, so it admits an isometric embedding into $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image is a Dirichlet region. Therefore, if $X$ is a proper achronal set in $\A^{2,1} \cup \partial\A^{2,1}$ it admits a section to $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image $\widetilde{X}$ is achronal. Conversely if $\widetilde{X}$ is an achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ different from the boundary of a lightlike plane then, by Lemma \ref{lem:osc}, it is contained in a Dirichlet region whose projection to $\A^{2,1} \cup \partial\A^{2,1}$ sends $\widetilde{X}$ to a proper achronal subset.\\
+The following example will be extensively used later.
+
+\red{Qui mancano ancora robe importanti}
 
 
 \section{Globally hyperbolic spacetime}
+The aim of this section and the following section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We will be interested mainly in the case $n\geq 2$ cause later on we will study MGH spacetime whose Cauchy surface is a closed hyperbolic surface.\\ 
 \begin{observation}
     It can be shown that given $\sigma :S \to\A^{2,1}$ spacelike immersion where $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$.
     In particular there are no globally hyperbolic Anti-de Sitter spacetime of genus zero (\cite{bonsanteseppi}).
@@ -187,7 +233,7 @@ In this setting we define $\Lambda(\rho)$ as the graph of $\varphi: \S\to\S$ def
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{dynamics.png}
-    \caption{\red{mettere caption e rivedere positiong della figura}}
+    \caption{\red{mettere caption e rivedere positioning della figura}}
 \end{figure}
 Now we prove that the MHG constructed in Proposition \ref{prop:MGH_example} are all the MGH spacetime of genus $n$.
 \begin{lemma}
