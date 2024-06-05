@@ -36,7 +36,7 @@ We have a homeomorphism
 \end{align}
 equivariant under the action of $\PSL \times \PSL$, acting on $\partial\A^{2,1}$ as the natural extension of the action on $\A^{2,1}$, and by left multiplication on $\T$.\\
 The equivariance is easily checked observing that $\text{Im}(AXB^{-1}) = A \cdot \text{Im}(X)$ and $\text{Ker}(AXB^{-1}) = B \cdot \text{Ker}(X)$.
-\begin{lemma}
+\begin{lemma}\label{lem:inversion}
     The inversion map $\iota [X] = [X]^{-1}$ is a time-reversing isometry of $\A^{2,1}$ which induces the homeomorphism $(x,y) \to (y,x)$ on $\partial \A^{2,1} \cong \T$.
 \end{lemma}
 \begin{proof}
@@ -48,17 +48,43 @@ The equivariance is easily checked observing that $\text{Im}(AXB^{-1}) = A \cdot
     If $trX \neq 0$ then $X$ is diagonalizable with eigenvalues $0$ and $trX$. Moreover $\text{Ker}X$ and $\text{Im}X$ are the corresponding eigenspaces and it is easily seen that $\text{Ker}((trX)\1 -X) = \text{Im}X$ and $\text{Im}((trX)\1 -X) = \text{Ker}X$.
 \end{proof}
 
-Using the half-plane model for the hyperbolic space $\H^2$, $\S$ is identified to the boundaty at infinity $\partial \H^2$ and $\PSL$ corresponds to $Isom_0(\H^2)$, which acts on $\S$ in the canonical way.
+Using the half-plane model for the hyperbolic space $\H^2$, $\S$ is identified to the boundaty at infinity $\partial \H^2$ and $\PSL$ corresponds to $\text{Isom}_0(\H^2)$, which acts on $\S$ in the canonical way.
 Therefore one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \partial \H^2$ and we can interpret the convergence to $\partial \A^{2,1}$ in the following way:
 \begin{lemma} \label{lem:convergence}
     A sequence $[X_n] \in \A^{2,1}$ converges to $(x,y) \in \partial \A^{2,1} \cong \T$ if and only if for every $p\in\H^2$, $X_n(p) \to x$ and $X_n^{-1}(p) \to y$.
 \end{lemma}
 
 \begin{proof}
-    \red{no proof per ora}
+    It suffices to check that the condition holds for some $p\in\H^2$ since the action of $\PSL$ on $\H^2$ is isometric. Therefore we can take $p=i\in\H^2$. Assume $\left[ X_n \right]$ converges projectively to $\left[ X \right] \in \A^{2,1}$. This means that there is a sequence of real number such that
+    \[
+       \lambda_n X_n = \lambda_n
+       \begin{pmatrix}
+            a_n & b_n \\ c_n & d_n
+        \end{pmatrix} \to
+        \begin{pmatrix}
+            a & b \\ c & d
+        \end{pmatrix} =X.
+    \]
+    Without loss of generality, we can assume $\lambda_n a_n \to a \neq 0$. Then 
+    \[
+        X(i) = \lim_{n\to \infty} \lambda_n \frac{a_n i + b_n}{c_n i + d_n} = \frac{ai +b}{ci+d} = \frac{ai + b}{ ci + \frac{bc}{a}} = \frac{a(ai+b)}{c(ai+b)} = \frac{a}{c}.
+    \]
+    Using the identification between $\S$ and $\R \cup \{ \infty \} = \partial_\infty \H^2$ we have that $\frac{a}{c} = \text{Im}(X)$. The convergence of $X_n^{-1}(i) \to \text{Ker}(X)$ follows from Lemma \ref{lem:inversion}.
 \end{proof}
 
-\red{aggiungere cose sul left e right ruling e la roba sulle proiezioni dx e sx}
+In this dimension $\partial\A^{2,1}$ is double ruled quadric. Given any $(x_0,y_0) \in \partial\A^{2,1}$ we refer to
+\[
+    \lambda_{y_0} := \{ (x,y_0) \ | \ x \in\S \}
+\]
+as the \textit{left ruling} through $(x_0,y_0)$, and similarly we refer to
+\[
+    \mu_{x_0} := \{ (x_0,y) \ | \ y \in\S \}
+\]
+as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings describe projective lines in $\mathbb{R}P^3$ which is cointained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1}$.
+\begin{proposition}
+    Let $\pi_l, \pi_r : \T \to\S$ be the canonical projections and $d\theta$ the angular form on $\R$. Then the symmetric product $\pi_l^*(d\theta)\pi_r^*(d\theta)$ is in the conformal class of $\partial\A^{2,1}$.
+\end{proposition}
+Therefore a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation preserving function, and timelike when it is locally the graph of an orientation reversing function.
 
 \section{Geodesics in $\PSL$}
 Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroup of $\A^{2,1}$
