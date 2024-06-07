@@ -1,6 +1,5 @@
 \chapter{Anti-de Sitter space in dimension (2+1)} \label{chapter:3}
 
-\red{Numerare equazioni, aggiungiere riferimenti}
 \section{The $\PSL$-model}
 In dimension three there is a special model which endows Anti-de Sitter space with a Lie group structure.
 Consider the vector space $\mathcal{M}(2,\R)$ of $2 \times 2$ matrices with real entries and the quadratic form $q= -det$ that has signature $(2,2)$.
@@ -30,10 +29,10 @@ From the identification between $\A^{2,1}$ and $\PSL$ we obtain an identificatio
     \partial \A^{2,1} = \{ [X] \in P(\mathcal{M}(2,\R)) \ | \ rank(X)=1 \}.
 \]
 We have a homeomorphism
-\begin{align}
+\begin{align*}
     \partial \A^{2,1} \to \T \\
     [X] \to (\text{Im}X, \text{Ker}X)
-\end{align}
+\end{align*}
 equivariant under the action of $\PSL \times \PSL$, acting on $\partial\A^{2,1}$ as the natural extension of the action on $\A^{2,1}$, and by left multiplication on $\T$.\\
 The equivariance is easily checked observing that $\text{Im}(AXB^{-1}) = A \cdot \text{Im}(X)$ and $\text{Ker}(AXB^{-1}) = B \cdot \text{Ker}(X)$.
 \begin{lemma}\label{lem:inversion}
@@ -81,7 +80,7 @@ as the \textit{left ruling} through $(x_0,y_0)$, and similarly we refer to
     \mu_{x_0} := \{ (x_0,y) \ | \ y \in\S \}
 \]
 as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings describe projective lines in $\mathbb{R}P^3$ which is cointained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1}$.
-\begin{proposition}
+\begin{proposition} \label{prop:angular}
     Let $\pi_l, \pi_r : \T \to\S$ be the canonical projections and $d\theta$ the angular form on $\R$. Then the symmetric product $\pi_l^*(d\theta)\pi_r^*(d\theta)$ is in the conformal class of $\partial\A^{2,1}$.
 \end{proposition}
 Therefore a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation preserving function, and timelike when it is locally the graph of an orientation reversing function.

@@ -1,11 +1,11 @@
 \chapter{Globally hyperbolic spacetime}\label{chapter:4}
 
 From now on we will only work with Lorentzian manifold of dimension $(2+1)$.\\
-The aim of this section is to classify maximal globally hyperbolic spacetime with compact Cauchy surface of genus $n\geq 2$.
+The aim of this section is to classify maximal globally hyperbolic spacetime with compact Cauchy surface of genus $n\geq 2$. To do so we have to study causal properties of Anti-de Sitter geometry and isometric actions, which constitute the fundamental setup for the proofs of Mess' classification results.\\
+Here we will first study achronal sets in the conformal compactification of Anti-de Sitter space, a notion that makes sense in the universal cover $\AS^{2,1}$, and then adapt the notion
+for subsets of $\A^{2,1}$. We will also introduce the fundamental notions of invisible domain and of domain of dependence, and describe their properties.
 
 \section{Achronal and acausal set}
-\red{veloce intro}
-
 \begin{definition}
     A subset $X \subset \AS^{2,1} \cup \partial\AS^{2,1}$ is \textit{achronal} (resp. \textit{acausal}) is no pair of points in $X$ are connected by timelike (resp. causal) lines in $\AS^{2,1}$
 \end{definition}
@@ -69,16 +69,25 @@ By a result of McShane \cite{mcshane1934extension} any 1-Lipschitz function on a
 Given an achronal set $X$ defined as $f^X : D \to \R$ there are two particular extensions called \textit{extremal extensions}:
 \[
 \begin{array}{cc}
-    f_-^X(y)= \sup_{x\in D}\{ f^X(x)-d_{\mathcal{S}^2}(x,y) \} & f_+^X(y)= \inf_{x\in D}\{ f^X(x)+d_{\mathcal{S}^2}(x,y) \}
+    f_-^X(y)= \sup_{x\in D}\{ f^X(x)-d_{\mathcal{S}^2}(x,y) \}, & f_+^X(y)= \inf_{x\in D}\{ f^X(x)+d_{\mathcal{S}^2}(x,y) \}
 \end{array}
 \]
 \begin{lemma}\label{lem:extremal extension}
     Let $X$ be a closed achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ and let $S_\pm (X)$ be the graphs of the extremal extensions $f^X_\pm$.
     \begin{itemize}
-        \item \red{capire quali dei 3 punti sono utili}
+        \item The properly embedded surface $S_-(X)$ and $S_+(X)$ are achronal with $S_\pm(X) \subset \overline{\text{I}^\pm (S_\mp(X))}$, and $\Omega(X) = \text{I}^+(S_-(X)) \cap \text{I}^-(S_+(X))$.
+        \item Every achronal subset containing $X$ is contained in $S_-(X)\cup\Omega(X)\cup S_+(X)$.
+        \item Every point in $S_\pm(X)$ is connected to $X$ by at least one lightlike geodesic segment which is entirely contained in $S_\pm(X)$. Moreover $S_+(X) \cap S_-(X)$ is the union of $X$ and all lightlike geodesic segments joining points of $X$.
     \end{itemize}
 \end{lemma}
-\red{vedere i remark}
+
+\begin{observation}
+    $S_-(X)\cup\Omega(X)\cup S_+(X)$ is the set of points connected to any point of $X$ by spacelike or lightlike geodesic. In particular $\Omega(X)$ consists of points connected to any point of X by a spacelike geodesic.
+\end{observation}
+\begin{observation}
+    The intersection of any properly embedded achronal surface containing
+    $X$ with $S_\pm(X)$ is a union of lightlike geodesic segments with an endpoint in $X$. In particular any properly embedded acausal surface containing $X$ is contained in the region $\Omega(X)$.
+\end{observation}
 
 \section{Achronal meridians}
 \begin{definition}
@@ -90,7 +99,7 @@ The invisible domain of a achronal meridian will be fundamental tool in the stud
     Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then $S_+(\Lambda) \cap \S_-(\Lambda)=\Lambda$. Moreover there is an achronal properly embedded surface in $\Omega(\Lambda)$ whose boundary in $\partial\AS^{2,1}$ is $\Lambda$.
 \end{lemma}
 \begin{proof}
-    By Lemma \ref{lem:osc} the maximal oscillation of $f:\partial \to \R$ that defines $\Lambda$ is smaller than $\pi$. If a lightlike geodesic connects $(x,f(x))$ to $(y,f(y))$ then $x$ and $y$ are not atipodal. Then they are connected by a unique lenght-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x,f(x))$ to $(y,f(y))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{lem:extremal extension} we conclude that $S_+(\Lambda)$ and $S_-(\Lambda)$ do not meet in $\AS^{2,1}$ and $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda$.\\
+    By Lemma \ref{lem:osc} the maximal oscillation of $f:\partial\D \to \R$ that defines $\Lambda$ is smaller than $\pi$. If a lightlike geodesic connects $(x,f(x))$ to $(y,f(y))$ then $x$ and $y$ are not atipodal. Then they are connected by a unique lenght-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x,f(x))$ to $(y,f(y))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{lem:extremal extension} we conclude that $S_+(\Lambda)$ and $S_-(\Lambda)$ do not meet in $\AS^{2,1}$ and $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda$.\\
     To conclude, the function $(f_- + f_+) /2$ is 1-Lipschitz and defines an achronal properly embedded surface contained in $\Omega(\Lambda)$ whose boundary is $\Lambda$.
 \end{proof}
 To conclude this section let us state two results on the invisible domain of an achronal meridian in $\partial\AS^{2,1}$:
@@ -106,7 +115,6 @@ Following from this proposition we have:
     Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. The invisible domain $\Omega(\Lambda)$ is contained in a Dirichlet region. Moreover the closure of $\Omega(\Lambda)$ is contained in a Dirichlet region unless $\Lambda$ is the boundary of a spacelike plane.
 \end{proposition}
 \section{Domain of dependance}
-\red{Aggiungere veloce intro forse}
 \begin{definition}
     Given an achronal subset $X$ in a Lorentzian manifold $(M,g)$, the \textit{domain of dependance} of $X$ is the set
     \[
@@ -155,7 +163,7 @@ We now focus on proper achronal meridians of $\partial\A^{2,1}$, which are prope
     Let $\varphi: \S \to \S$ be an orientation preserving homeomorphism. Then the graph of $\varphi$, $\Lambda_\varphi \subset \T \simeq \partial\A^{2,1}$ is a proper achronal subset and any lift $\widetilde{\Lambda}_\varphi$ is an achronal meridian in $\partial\AS^{2,1}$.
 \end{lemma}
 \begin{proof}
-    $\Lambda_\varphi$ is locally achronal. In fact let $U$ and $V$ be intervals around $x$ and $\varphi(x)$ and $\theta_1$, $\theta_2$ positive coordinates on $U$ and $V$ respectively. By Proposition \red{3.2.3}, timelike curves $\gamma(t)=(\gamma_1(t),\gamma_2(t))$ in $U\times V$ are characterized by the property that $\theta_1'(\gamma_1(t))\theta_2'(\gamma_2(t)) < 0$. Therefore, by the assumption that $\varphi$ is orientation preserving, points in $\Lambda_\varphi \cap U\times V$ are not related by a timelike curve contained in $U \times V$.\\
+    $\Lambda_\varphi$ is locally achronal. In fact let $U$ and $V$ be intervals around $x$ and $\varphi(x)$ and $\theta_1$, $\theta_2$ positive coordinates on $U$ and $V$ respectively. By Proposition \ref{prop:angular}, timelike curves $\gamma(t)=(\gamma_1(t),\gamma_2(t))$ in $U\times V$ are characterized by the property that $\theta_1'(\gamma_1(t))\theta_2'(\gamma_2(t)) < 0$. Therefore, by the assumption that $\varphi$ is orientation preserving, points in $\Lambda_\varphi \cap U\times V$ are not related by a timelike curve contained in $U \times V$.\\
     Now let us prove that there exists a spacelike plane $P$ such that $\Lambda_\varphi \cap \overline{P} = \emptyset$, and therefore that $\Lambda_\varphi$ is properly achronal. Consider the identification $\S \simeq \R \cup \{ \infty \}$ and take $\varphi_0 \in \PSL$ such that $\varphi_0^{-1} \varphi (0) = 1$, $\varphi_0^{-1} \varphi (1) = \infty$ and $\varphi_0^{-1} \varphi (\infty) = 0$. $\varphi_0^{-1} \varphi$ sends the intervals $(\infty, 0)$, $(0,1)$ and $(1,\infty)$ respectively to $(0,1)$, $(1,\infty)$, $(\infty, 0)$, thus $\varphi_0^{-1} \varphi$ has no fixed points. This means that the graph of $\varphi$ does not meet the graph of $\varphi_0$, which is the asymptotic boundary of a spacelike plane $P_{\varphi_0^{-1}}$.\\
     Let now $\widetilde{\Lambda}_\varphi$ be a lift of $\Lambda_{\varphi}$ to $\partial\AS^{2,1}$. As $\Lambda_\varphi$ is contained in a simply connected region of $\A^{2,1} \cup \partial\A^{2,1}$, $\widetilde{\Lambda}_\varphi$ is a closed locally achronal curve in $\partial\AS^{2,1}$. The projection $\widetilde{\Lambda}_\varphi \to \partial\D$ is locally injective and $\widetilde{\Lambda}_\varphi$ is compact, hence the map is a covering. On the other hand, since $\Lambda_\varphi$ is homotopic to the boundary of a plane in $\partial\A^{2,1}$, $\widetilde{\Lambda}_\varphi$ is homotopic to $\partial\D$ in $\partial\AS^{2,1}$. Therefore the projection $\widetilde{\Lambda}_\varphi \to \partial\D$ is bijective and it follows that $\widetilde{\Lambda}_\varphi$ is achronal.
 \end{proof}
@@ -217,7 +225,7 @@ The aim of this section and the following section is to study maximal globally h
     \end{itemize}
 \end{proposition}
 \begin{proof}
-    Let $\widetilde{dev}: \widetilde{M} \to \AS^{2,1}$ be a lift of \textit{dev} to the universal cover. By theorem \ref{GH_structure}, the spacetime $M$ adimits a foliation by smooth spacelike surface $(\Sigma_t)_{t\in\R}$ of genus $n\geq 1$, such that $\Sigma_t$ is contained in the future cone of $\Sigma_{t'}$ for $t > t'$. Let $\widetilde{\Sigma}_t$ be the foliation on $\widetilde{M}$ obtained lifting the one on $M$. Since $\Sigma_t$ is closed, the metric induced on $\Sigma_t$ is complete, and so is the one on $\widetilde{\Sigma}_t$. By \red{Lemma 5.1.1 o il remark qui sopra} we have that $\widetilde{dev}$ to $\widetilde{\Sigma}_t$ is a proper embedding, since $\widetilde{dev}$ is a local isometry.\\
+    Let $\widetilde{dev}: \widetilde{M} \to \AS^{2,1}$ be a lift of \textit{dev} to the universal cover. By theorem \ref{GH_structure}, the spacetime $M$ adimits a foliation by smooth spacelike surface $(\Sigma_t)_{t\in\R}$ of genus $n\geq 1$, such that $\Sigma_t$ is contained in the future cone of $\Sigma_{t'}$ for $t > t'$. Let $\widetilde{\Sigma}_t$ be the foliation on $\widetilde{M}$ obtained lifting the one on $M$. Since $\Sigma_t$ is closed, the metric induced on $\Sigma_t$ is complete, and so is the one on $\widetilde{\Sigma}_t$. By \red{Lemma 5.1.1 o il remark qui sopra, la referenza dipende da cosa si decide per il remark} we have that $\widetilde{dev}$ to $\widetilde{\Sigma}_t$ is a proper embedding, since $\widetilde{dev}$ is a local isometry.\\
     Assume now by contradiction that $\widetilde{\Sigma}_t \cap \widetilde{\Sigma}_{t'} \neq \emptyset$ for $t \geq t'$. This means that there is $x \in \widetilde{\Sigma}_t$ such that $\widetilde{dev}(x) \in \widetilde{dev}(\widetilde{\Sigma}_{t'})$. By assumption $x$ is connected to $\widetilde{\Sigma}_{t'}$ by a timelike arc $\eta$ in $\widetilde{M}$ and $\widetilde{dev}$ is therefore a timelike arc in $\AS^{2,1}$ with end-points in $\widetilde{dev}(\widetilde{\Sigma}_{t'})$, which contradicts the achronality of $\widetilde{dev}(\widetilde{\Sigma}_{t'})$. This prove that $\widetilde{dev}$ is injective. Moreover we conclude that $\widetilde{dev}(\widetilde{\Sigma}_t)$ is a Cauchy surface of $\widetilde{dev}(\widetilde{M})$. Therefore, by Proposition \ref{prop:surface in ads}, $\widetilde{dev}(\widetilde{M}) \subset \mathcal{D}(\widetilde{dev}(\widetilde{\Sigma}_t)) = \Omega(\widetilde{\Lambda})$, where $\widetilde{\Lambda}$ is the boundary at infinity of $\widetilde{dev}(\widetilde{\Sigma}_t)$, which proves the second point.\\
     The map $\widetilde{dev}$ is $\widetilde{\rho}$-equivariant, for a representation $\widetilde{\rho} : \pi_1(M) \to \text{Isom}(\AS^{2,1})$ which is a lift of the holonomy of $M$. As $\widetilde{dev}$ is $\widetilde{\rho}$-invariant, the so are $\widetilde{\Lambda}$ and $\Omega(\widetilde{\Lambda})$. Now we shall prove that the action of $\pi_1(M)$ on $\Omega(\widetilde{\Lambda})$ given by $\widetilde{\rho}$ is proper. This also proves that the action is free since $\pi_1(M)$ has no torsion.\\
     If $K$ is a relatively compact set in $\Omega(\widetilde{\Lambda})$ then
