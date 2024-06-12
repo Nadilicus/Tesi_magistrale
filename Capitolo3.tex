@@ -124,11 +124,21 @@ To get a complete description of timelike geodesics it suffices to let the isome
     The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
 \end{proposition}
 \begin{proof}
-    \red{mettere proof}
+    We define the homeomorphism as follows. Given a pair $(p,q) \in \H^2\times\H^2$ associate to it the set
+    \[
+        L_{p,q} = \{X \in \PSL \ | X \cdot q = p\}.
+    \]
+    
+    By a previous discussion, geodesics through the identity are of the form $L_{p,p}$ for some $p\in\H^2$. The action of $(A,B) \in \PSL \times \PSL$ sends $L_{p,q}$ to $L_{A\cdot p, B\cdot q}$ which implies that the map is equivariant under the action of $\PSL\times\PSL$, that $L_{p,q}$ is an unparametrized timelike geodesic and that all unparametrized timelike geodesics are of this form. This shows in particular that the map defined is surjective.
+    Suppose now that $L_{p,q} = L{p',q'}$ for some $(p,q) \neq (p',q')$. In particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $p'$ to $q'$, which is unique since it fixes two points in $\H^2$. This gives a contradiction and therefore the map is injective.
 \end{proof}
 
 \noindent\textit{Spacelike geodesics}.
-Let $l$ be a geodesic of $\H^2$. The one-parameter group of hyperbolic transormation fixing $l$ as an oriented geodesic is a spacelike geodesic through the identity.
+Let $l$ be a geodesic of $\H^2$. The one-parameter group of hyperbolic transormation fixing $l$ as an oriented geodesic is a spacelike geodesic through the identity. By an argument similar to the previous proposition, one proves that every spacelike geodesic is of the form
+\[
+    L_{l,j} = \{ X \in\PSL \ | \ X \cdot j = l \text{as oriented geodesics} \}
+\]
+where $l$ and $j$ are oriented geodesics of $\H^2$. \red{finire}
 \begin{proposition}
     There is a homeomorphism between the space of oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial \H^2 \times \partial \H^2 \ \setminus \ \Delta$. 
     The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
