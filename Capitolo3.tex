@@ -1,5 +1,4 @@
 \chapter{Anti-de Sitter space in dimension (2+1)} \label{chapter:3}
-\red{aggiungiere la connessione qua}
 
 \section{The $\PSL$-model}
 In dimension three there is a special model which endows Anti-de Sitter space with a Lie group structure.
@@ -86,6 +85,44 @@ as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings des
 \end{proposition}
 Therefore a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation preserving function, and timelike when it is locally the graph of an orientation reversing function.
 
+\section{Levi-Civita connection and cross-product}
+Any Lie group $G$ is equipped with two natural connection, the \textit{left-invariant connection} $D^l$ and the \textit{right-invariant connection} $D^r$. For example, $D^l$ is uniquely determined by the condition that left-invariant vector fields are parallel, and is left-invariant in the sense that
+\[
+    (L_g)_*(D^l_V W) = D^l_{(L_g)_*(V)} (L_g)_*(W),
+\]
+where $L_g :G \to G$ is the left multiplication by $g$. The connection $D^l$ at a point $g\in G$ can be expressed as
+\[
+    D^l_V W = \left. \frac{d}{dt} \right|_{t=0} (L_{g \gamma(t)^{-1}})_* (W_{\gamma(t)})
+\]
+where $\gamma(t)$ is a path with $\gamma(0) = g$ and $\gamma'(0) = V$.
+In an analogous way one define the right-invariant connection $D^r$. Both connections $D^l$ and $D^r$ are flat and compatible with any metric which is left-invariant or right-invariant respectively. But this connections are not torsion-fre, by computation one obtain that
+\[
+    \tau^l (V,W) = - \left[ V,W \right]
+\]
+and
+\[
+    \tau^r (V,W) = \left[ V,W \right].
+\]
+A direct computation also shows that
+\[
+    D^r_V W - D^l_V W = \left[ V,W \right].
+\]
+Now, given a bi-invariant pseudo-Riemannian metric on $G$, its Levi-Civita connection $\nabla$ can be expressed via $D^l$ and $D^r$ as 
+\[
+    \nabla_V W = \frac{1}{2} (D^l_V W + D^r_V W).
+\]
+In our case, $\PSL$ is equipped with a natural Lorentzian cross-product which can be used to rewrite the expression for the Levi-Civita connection. The cross-product on $\PSL$ is a $T \A^{2,1}$-valued 2-form $(V,W) \to V \boxtimes W$, which is defined by the equality
+\[
+    \langle V \boxtimes W , U \rangle = \Omega(V,W,U),
+\]
+where $\langle \cdot, \cdot \rangle$ is the Anti-de Sitter metric and $\Omega$ is the associated volume form. In this setting
+\[
+    \left[ V,W \right] = -2 V \boxtimes W.
+\]
+This permits to rewrite the expression for the Levi-Civita connection of leftinvariant vector fields as
+\[
+    \nabla_V W = - V \boxtimes W = D^l_V W - V \boxtimes W = D^r_V W + V \boxtimes W.
+\]
 \section{Geodesics in $\PSL$}
 Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroup of $\A^{2,1}$
 (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}). We get the following:
