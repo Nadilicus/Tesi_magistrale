@@ -60,7 +60,7 @@ Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an
     where $\I$, $\II$, $\III$ are the first, second and third fundamental form of $\sigma$ and third fundamental form is defined as $\III(\cdot,\cdot)=\I(B(\cdot),B(\cdot))$.
 \end{lemma}
 \begin{proof}
-    \red{mettere proof}
+    \red{mettere proof?}
 \end{proof}
 Therefore, given a pair $(\I,\II)$, the expression \ref{eq:tub metric} provides a Lorentzian metric of constant curvature $-1$ on an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, and thus a germ of immersion of $S$ into and AdS spacetime with immersion data $(\I,\II)$. We conclude the above discussion with the following:
 \red{da rivedere l'uso di $S$ e $\widetilde{S}$ sembra mal posto nel paper}
@@ -78,11 +78,11 @@ Therefore, the embedding data $(\I,\II)$ permit to recover the pair of elements 
 \section{Gauss map}
 We can now define the Gauss map for spacelike surfaces in $\A^{2,1}$. Recall that the space of timelike geodesics in $\A^{2,1}$ is identified with $\H^2\times\H^2$, where the identification maps a geodesic of the form
 \[
-    L_{(p,q)}=\{ X \in\PSL \ | \ X \cdot q = p \}
+    L_{p,q}=\{ X \in\PSL \ | \ X \cdot q = p \}
 \]
 to the pair $(p,q) \in \H^2\times\H^2$. 
 \begin{definition}
-    Let $\sigma :S \to\A^{2,1}$ a spacelike immersion. The \textit{Gauss map} $G_\sigma : S \to \H^2 \times \H^2$ is defined as $G_\sigma(x) = (p,q)$ such that $L_{(p,q)}$ is the timelike orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$.\\
+    Let $\sigma :S \to\A^{2,1}$ a spacelike immersion. The \textit{Gauss map} $G_\sigma : S \to \H^2 \times \H^2$ is defined as $G_\sigma(x) = (p,q)$ such that $L_{p,q}$ is the timelike orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$.\\
     The components of the Gauss map, denoted by $\Pi_l, \Pi_r : S \to \A^{2,1}$, are called \textit{left} and \textit{right projections}. 
 \end{definition}
 The Gauss map $G_\sigma$ is natural with respect to the action of the isometry group, meaning that $G_{f\circ\sigma} = f \cdot G_\sigma$ for every $f \in\text{Isom}_0(\A^{2,1}) = \PSL\times\PSL$. The Gauss map is also invariant by reparametrization, in the sense that $G_{\sigma \circ \phi} = G_\sigma \circ \phi$ for a diffeomorphism $\phi:S'\to S$. Hence it makes sense to talk about the Gauss map of a spacelike surface in $\A^{2,1}$.
@@ -135,27 +135,18 @@ provided that $\sigma(p)=\text{Id}.$\\ Via Lemma \ref{lem:Gaussid} and the natur
     where we used that Fix is equivariant with respect to the adjoint action on the hyperboloid $\hf\A^{2.1}$.
 \end{proof}
 
-\begin{observation}
-    Under the identification given by Fix, the left and right projections can be interpreted in the following way. Given $p\in S$, $\Pi_l(p)$ is the parallel transport in Id of the future unit vector $\nu(p)$ at $\sigma(p)$ with respect to the right-invariant connection $D^r$. The right projection is then obtained using the left-invariant connection. 
-\end{observation}
-
-
-\begin{observation}\label{DiafGauss}
-    In the work of Mess, we can find yet a different interpretation of the Gauss map. Given $p\in S$, one can find a unique left isometry $f_l(p)$ and a unique right isometry $f_r(p),$ sending the tangent plane $P$ to the image of $\sigma$ at $\sigma(p)$ to $P_{\text{Id}}$. Indeed the isometries $f_l(p)$ and $f_r(p)$ are simply obtained by left and right multiplication by the inverse of dual point of the tangent plane $P$, namely $\zeta(p)=\exp_{\sigma(p)}((\pi/2)\nu(p))$. Using the identification of the dual plane $P_{\text{Id}}$ with $\H^2$, provided in Lemma \ref{lem:dual plane}, $\Pi_l(p)$ and $\Pi_r(p)$ are the image of $\sigma(p)$ under the right and left isometries, respectively:
-    \[
-        \Pi_l(p)=f_r(p)\circ\sigma(p)=(\text{Id},\zeta(p))\cdot \sigma(p)\;\text{and}\;\Pi_r(p)=f_l\circ\sigma(p)=(\zeta(p)^{-1},\text{Id})\cdot\sigma(p).
-    \]
-\end{observation}
-
-
 We want now to prove formulae which express the pull-back of the hyperbolic metrics by the left and right projections. When applying these formulae to the embedding data of a surface in an MGH Cauchy compact Anti-de Sitter spacetime $(M,g)$, we obtain a pair of hyperbolic metrics whose isotopy classes are the parameters of $(M,g)$
 in $\mathcal{T}(S)\times\mathcal{T}(S).$
 
 \begin{proposition}\label{prop:left right pull-back metric}
     Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion, let $\Pi_l,\Pi_r:S\to\H^2$ be the left and right projections and let $g_{\H^2}$ be the hyperbolic metric. Then
-    \begin{equation}
-        \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot)\;\text{and}\;\Pi_r^*(g_{\H^2})=I((\text{id}+\mathcal{J}B)\cdot,(\text{id}+\mathcal{J}B)\cdot),
-    \end{equation}
+    \[
+        \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot),
+    \]
+        and
+    \[
+        \Pi_r^*(g_{\H^2})=I((\text{id}+\mathcal{J}B)\cdot,(\text{id}+\mathcal{J}B)\cdot),
+    \]
     where $I$ is the first fundamental form of $\sigma$, $\mathcal{J}$ its associated almost-complex structure, and $B$ the shape operator.
 \end{proposition}
 
