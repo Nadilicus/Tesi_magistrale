@@ -114,7 +114,7 @@ In terms of the map $\text{Fix},$ Equation \refeq{eq:Gaussid} reads as:
 \end{equation}
 provided that $\sigma(p)=\text{Id}.$\\ Via Lemma \ref{lem:Gaussid} and the naturality, we can recover a different description of the Gauss map. Recalling the structure of Lie group of $\A^{2,1}\simeq\PSL$ we will denote by $R_{\gamma } $ and $L_{\gamma} $ the right and left multiplication by $\gamma\in\PSL$ respectively. 
 
-\begin{lemma}
+\begin{lemma}\label{lem:gauss fix}
     Given a spacelike immersion $\sigma: S\to \A^{2.1}$ with future unit normal vector field $\nu$,
     \[
         G_\sigma(p)=(\text{Fix}((R_{\sigma(p)^{-1}})_* (\nu(p)),\text{Fix}((L_{\sigma(p)^{-1}})_* (\nu(p)))).
@@ -138,6 +138,10 @@ provided that $\sigma(p)=\text{Id}.$\\ Via Lemma \ref{lem:Gaussid} and the natur
 We want now to prove formulae which express the pull-back of the hyperbolic metrics by the left and right projections. When applying these formulae to the embedding data of a surface in an MGH Cauchy compact Anti-de Sitter spacetime $(M,g)$, we obtain a pair of hyperbolic metrics whose isotopy classes are the parameters of $(M,g)$
 in $\mathcal{T}(S)\times\mathcal{T}(S).$
 
+\begin{observation}\label{rem:parallel transport}
+    Under the identification given by Fix, the left and right projections can be interpreted in the following way. Given $p\in S$, $\Pi_l(p)$ is the parallel transport in Id of the future unit vector $\nu(p)$ at $\sigma(p)$ with respect to the right-invariant connection $D^r$. The right projection is then obtained using the left-invariant connection. 
+\end{observation}
+
 \begin{proposition}\label{prop:left right pull-back metric}
     Let $\sigma:S\to\A^{2,1}$ be a spacelike immersion, let $\Pi_l,\Pi_r:S\to\H^2$ be the left and right projections and let $g_{\H^2}$ be the hyperbolic metric. Then
     \[
@@ -151,7 +155,35 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
 \end{proposition}
 
 \begin{proof}
-    \red{Mettere proof?}
+    Let us check the formula for $\Pi_r$, the proof is analogous for $\Pi_l$. By Lemma \ref{lem:gauss fix}
+    \[
+        \Pi_r(x) = \text{Fix}((L_{\sigma(x)^{-1}})_*(\nu(x))).
+    \]
+    Since Fix is an isometry $\Pi_r g_{\H^2}$ equal s the pull-back of the Anti-de Sitter metric through the map defined by $\widehat{\Pi}_r(x) = (L_{\sigma(x)^{-1}})_*(\nu(x))$.\\
+    Let $X_1, \cdots, X_n$ be a orthonarmal basis of left-invariant vector fields on $T\A^{2,1}$. Then the unit normal vector can be expressed as $\nu(x) = \sum_i \nu_i(x) X_i (\sigma(x))$. By Remark \ref{rem:parallel transport}
+    \[
+        \widehat{\Pi}_r(x) = \sum_i \nu_i(x) X_i (\1).
+    \]
+    Differentiating we have
+    \[
+        d \widehat{\Pi}_r(v) = \sum_i  d \nu_i(v) X_i (\1).
+    \]
+    On the other hand, since left-invariant vector field are parallel for the left-invariant connection $D^l$, we have
+    \[
+        D^l_v \nu = \sum_i  d \nu_i(v) X_i (\sigma(x)).
+    \]
+    The last two identities show that
+    \[
+        \Pi_r^* g_{\H^2}(v,w) = g_{\A^{2,1}}(d \widehat{\Pi}_r(v),d \widehat{\Pi}_r(w)) = g_{\A^{2,1}} (D^l_v \nu, D^l_w \nu).
+    \]
+    Recalling that $\nabla_V W = D^l_V W - V \boxtimes W$ and $\left[ V,W \right] = -2 V \boxtimes W$, we have that
+    \[
+        D^l_v \nu = \nabla_v \nu + v \boxtimes \nu = B(v) - \nu \boxtimes v = (B- \mathcal{J})v.
+    \]
+    We can therefore conclude that
+    \[
+        \Pi_r^* g_{\H^2}(v,w) = \I ((B - \mathcal{J})v, (B - \mathcal{J})w) = \I((id + \mathcal{J}B)v, (id + \mathcal{J}B)w).
+    \]
 \end{proof}
 We collect here some consequences and remarks around Proposition \ref{prop:left right pull-back metric}.
 \begin{itemize}[leftmargin=0.5cm]
@@ -180,4 +212,4 @@ This result has been proved in several works with different methods: see \cite{b
 where $\nu$ is the future unit normal vector field. In general $\sigma_t$ may fail to be an immersion for $|t|$ large. When it is an immersion, the computation of the metric in Lemma \ref{lem:tub metric} shows that the image of $\sigma_t$ at $x$ is orthogonal to the geodesic $\gamma(t)=\exp_{\sigma(x)}(t\nu(x))$. In other words, the Gauss map of $\sigma_t$ is equal to the Gauss map of $\sigma$. Hence with respect to the previous point, given a spacelike immersion which have the same  Lagrangian submanifold of $\H^2\times\H^2$ as Gauss map image.
 \end{itemize}
 
-\red{ aggiungiere l'osservazione finale sulla metrica}
+\red{ aggiungiere l'osservazione finale sulla metrica e rivedere la parte sulle conseguenze}
