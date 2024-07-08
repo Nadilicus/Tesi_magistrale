@@ -188,18 +188,18 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
 \end{proof}
 We collect here some consequences and remarks around Proposition \ref{prop:left right pull-back metric}.
 \begin{itemize}[leftmargin=0.5cm]
-\item Proposition \ref{prop:left right pull-back metric} shows that the differential of the left and right projections essentially has the expression 
+\item Proposition \ref{prop:left right pull-back metric} shows that,up to post-composing with an isometry sending the image of $d_x\sigma$ to a fixed copy of $\H^2$, the differential of the left and right projections essentially has the expression 
 \[
-    d_x\sigma\circ(B\pm\JJ)~,
+    d_x\sigma\circ(B\pm\JJ)~.
 \]
-up to post-composing with an isometry sending the image of $d_x\sigma$ to a fixed copy of $\H^2$. Since $B$ is $\I$-symmetric, $\JJ\circ B$ is traceless, and therefore 
+Since $B$ is $\I$-symmetric $\JJ\circ B$ is traceless, and therefore 
 \begin{equation}\label{eq:deteminant differential projections}
 \det(B\pm\JJ)=1+\det B=-K_\I~.
 \end{equation}
 This shows that $\Pi_l$ is a local diffeomorphism at a point $x$ if and only if $\Pi_r$ is, which is the case if and only if the intrinsic curvature of $\I$ at $x$ is different from $0$.
 \item Since the trace of $B\pm\JJ$ equals $2$, the differentials of $\Pi_l$ and $\Pi_r$ have either rank 2 or rank 1. (In fact, by \eqref{eq:deteminant differential projections}, when the differential of $\Pi_l$ has rank 1, the same holds for the differential of $\Pi_r$.) Hence the differential of the Gauss map $G:S\to\H^2\times\H^2$ is always non-singular.
-\item If an immersed surface has the property that the curvature of the first fundamental form never vanishes, and if moreover $\Pi_l$ and $\Pi_r$ are globally injective, then the image of $G$ is the graph of a  diffeomorphism $F_\sigma$ between two subsets of $\H^2$,  called the \emph{associated map}. From Equation \eqref{eq:deteminant differential projections}, the Jacobians of $\Pi_l$ and $\Pi_r$ are equal, hence the associated map is area-preserving.
-When $\Pi_l$ and $\Pi_r$ are only locally injective, but not globally, we still obtain an area-preserving local diffeomorphism $F_\sigma$ which is now defined between two hyperbolic surfaces, not globally isometric to subsets of $\H^2$.
+\item If an immersed surface has the property that the curvature of the first fundamental form never vanishes, and if $\Pi_l$ and $\Pi_r$ are globally injective, then the image of $G$ is the graph of a  diffeomorphism $F_\sigma$ between two subsets of $\H^2$,  called the \emph{associated map}. From Equation \eqref{eq:deteminant differential projections}, the Jacobians of $\Pi_l$ and $\Pi_r$ are equal, hence the associated map is area-preserving.
+When $\Pi_l$ and $\Pi_r$ are only locally injective, but not globally, we still obtain an area-preserving local diffeomorphism $F_\sigma$ which is now defined between two hyperbolic surfaces.
 \item More generally, as a consequence of the previous points, the image of $G$ is always a \emph{Lagrangian submanifold} in $\H^2\times\H^2$ with respect to the symplectic form 
 \begin{equation} \label{eq symplectic form}
 \Omega=\pi_l^*\omega_{\H^2}-\pi_r^*\omega_{\H^2}~,
@@ -210,7 +210,15 @@ This result has been proved in several works with different methods: see \cite{b
 \[
     \sigma_t(x)=\exp_{\sigma(x)}(t\nu(x))~,
 \]
-where $\nu$ is the future unit normal vector field. In general $\sigma_t$ may fail to be an immersion for $|t|$ large. When it is an immersion, the computation of the metric in Lemma \ref{lem:tub metric} shows that the image of $\sigma_t$ at $x$ is orthogonal to the geodesic $\gamma(t)=\exp_{\sigma(x)}(t\nu(x))$. In other words, the Gauss map of $\sigma_t$ is equal to the Gauss map of $\sigma$. Hence with respect to the previous point, given a spacelike immersion which have the same  Lagrangian submanifold of $\H^2\times\H^2$ as Gauss map image.
+where $\nu$ is the future unit normal vector field. When it is an immersion, the computation of the metric in Lemma \ref{lem:tub metric} shows that the image of $\sigma_t$ at $x$ is orthogonal to the geodesic $\gamma(t)=\exp_{\sigma(x)}(t\nu(x))$. In other words, the Gauss map of $\sigma_t$ is equal to the Gauss map of $\sigma$. 
 \end{itemize}
 
-\red{ aggiungiere l'osservazione finale sulla metrica e rivedere la parte sulle conseguenze}
+We conclude this section with the following:
+
+\begin{proposition}
+    Let $S$ be a surface with a Riemannian metric $\I$. Let $A$ be a $(1,1)$-tensor which is $\I$-symmetric and $\I$-Codazzi, which means that $d^{\nabla^{\I}} A=0$. Then the curvature of $g= \I(A \cdot, A \cdot)$ is given by
+    \[
+        K_g = \frac{K_\I}{det(A)}.
+    \]
+\end{proposition}
+For a proof see \cite{Krasnov_2007}. If we apply the proposition to the tensors $id \pm \mathcal{J} \circ B$, equation \ref{eq:deteminant differential projections} shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate. are always hyperbolic.
