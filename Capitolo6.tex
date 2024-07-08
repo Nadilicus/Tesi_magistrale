@@ -1,30 +1,34 @@
 \chapter{Minimal Lagrangian diffeomorphism}
 
-\red{aggiungiere intro?}
-\section{Foliations}
-\red{Forse togliere le cose sulle foliazioni e mettere solo l'esistenta di una superficie massimale con bordo un achronal meridian dato equivariante per la metrica (che quindi ci dà l'esistenza al quoziente)}\\
-A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.\\
+\red{Minimal surfaces and particles in 3-manifolds lemma 3.3: ad ogni superficie massimale si può associare un unico GHM spacetime}
+
+
+\red{aggiungere intro?}
+\section{CMC Surfaces}
+A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
-    Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$.
+    Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
 \end{theorem}
-A smoothly embedded spacelike surface $S$ has \textit{constant Gaussian curvature} if $\text{det}B$ is constant. We consider the case in which the Gaussian curvature $K$ is positive. A CGC surface results to be either locally convex or locally concave, where this distinction depends on the time orientation. 
-\begin{theorem}\label{thm:CGC_foliation}
-    Let $M$ be a MGH Anti-de Sitter manifold with compact Cauchy surface. Then each connected component of $M \setminus C(M)$ is uniquely foliated by closed CGC surfaces, where the Gaussian curvature $K$ varies in $(0,\infty)$.
-\end{theorem}
-The proofs of theorems \ref{thm:CMC_foliation} and \ref{thm:CGC_foliation} can be found in \cite{barbot2004constant} and \cite{barbot2008prescribing} respectively. Moreover in \cite{barbot2008prescribing} one can find what we mean by $C(M)$, namely the convex core of $M$.
-\begin{observation}
-    For every $H$ the CMC is surface is unique, as an application of the maximum principle. Moreover the CMC foliation is determined by a time function $\tau:M\to\R$, which is a function stricly increasing along future-directed causal curve whose fibers are the CMC surfaces. Analogously, for every $K$ the CGC surface is unique in its connected component, and the foliation is determined by a time function whose fibers are CGC surfaces.
-\end{observation}
+The proof of theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existance of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
 Using the normal evolution
 \[
     \sigma_t(x) = \text{exp}_{\sigma(x)} (t\nu(x))
 \]
-one can also find a relation between CMC and CGC surfaces:
+one can find a relation between CMC and CGC surfaces:
 \begin{proposition}
     Let $\sigma: S \to\A^{2,1}$ be an immersion of constant Gaussian curvature $K>0$. Then the normal evolution $\sigma_{t_K}$ on the convex side of $\sigma$, for time $t_K=\text{arctan}(K^{1/2})$, is an immersion of constant mean curvature $H=K^{-1/2}(K-1)$.
 \end{proposition}
-\red{forse mettere proof}\\
-Using this construction and the uniqueness of CMC surfaces, one find that each surface $\Sigma_H$ of constant mean curvature $H$ has two equidistant surfaces of constant Gaussian curvature $K_+$ and $K_-$, one convex in the past of $\Sigma_H$, the othe concave in its future.
+\begin{proof}
+    By Lemma \ref{lem:tub metric} the first fundamental form $\I_t$ of $\sigma_t$ is given by
+    \[
+        \I_t(\cdot, \cdot) = \I((\cos(t)id + \sin(t)B)\cdot, (\cos(t)id + \sin(t)B)\cdot).
+    \]
+    Let us denote by $B_t$ the shape operato of $\I_t$. By Remark \ref{prop:Gaussian curvature} we have
+    \[
+        K_I = \frac{K_{\I_t}}{det(\cos(t)id - \sin(t)B_t)} = - \frac{1+detB_t}{det(\cos^2(t) + \sin^2(t)det B_t -\cos(t) \sin(t)tr B_t)}.
+    \]
+    Hence $K_I$ is constant if and only if $tr B_t = 2/ \tan(2t)$, that happens for $\tan(t) = 1 / \sqrt{K}$.
+\end{proof}
 
 \section{Minimal Lagrangian diffeomorphism}
 
