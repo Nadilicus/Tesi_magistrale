@@ -5,16 +5,17 @@
 
 \red{aggiungere intro?}
 \section{CMC Surfaces}
-A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
+A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
     Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
 \end{theorem}
 The proof of theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existance of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
+\red{vedere il remark 7.1.3 per bene}\\
 Using the normal evolution
 \[
     \sigma_t(x) = \text{exp}_{\sigma(x)} (t\nu(x))
 \]
-one can find a relation between CMC and CGC surfaces:
+one can find a relation between CMC and constanc Gaussian curvature (CGC) surfaces, namely surfaces where the determinant of the shape operator is constant:
 \begin{proposition}
     Let $\sigma: S \to\A^{2,1}$ be an immersion of constant Gaussian curvature $K>0$. Then the normal evolution $\sigma_{t_K}$ on the convex side of $\sigma$, for time $t_K=\text{arctan}(K^{1/2})$, is an immersion of constant mean curvature $H=K^{-1/2}(K-1)$.
 \end{proposition}
@@ -25,9 +26,9 @@ one can find a relation between CMC and CGC surfaces:
     \]
     Let us denote by $B_t$ the shape operato of $\I_t$. By Remark \ref{prop:Gaussian curvature} we have
     \[
-        K_I = \frac{K_{\I_t}}{det(\cos(t)id - \sin(t)B_t)} = - \frac{1+detB_t}{det(\cos^2(t) + \sin^2(t)det B_t -\cos(t) \sin(t)tr B_t)}.
+        K_I = \frac{K_{\I_t}}{\text{det}(\cos(t)id - \sin(t)B_t)} = - \frac{1+\text{det}B_t}{\cos^2(t) + \sin^2(t)\text{det} B_t -\cos(t) \sin(t)\text{tr} B_t}.
     \]
-    Hence $K_I$ is constant if and only if $tr B_t = 2/ \tan(2t)$, that happens for $\tan(t) = 1 / \sqrt{K}$.
+    Hence $K_I$ is constant if and only if $\text{tr} B_t = 2/ \tan(2t)$, that happens for $\tan(t) = 1 / \sqrt{K_\I}$.
 \end{proof}
 
 \section{Minimal Lagrangian diffeomorphism}
