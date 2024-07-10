@@ -16,7 +16,7 @@ Using the normal evolution
     \sigma_t(x) = \text{exp}_{\sigma(x)} (t\nu(x))
 \]
 one can find a relation between CMC and constanc Gaussian curvature (CGC) surfaces, namely surfaces where the determinant of the shape operator is constant:
-\begin{proposition}
+\begin{proposition} \label{prop:cmc to cgc}
     Let $\sigma: S \to\A^{2,1}$ be an immersion of constant Gaussian curvature $K>0$. Then the normal evolution $\sigma_{t_K}$ on the convex side of $\sigma$, for time $t_K=\text{arctan}(K^{1/2})$, is an immersion of constant mean curvature $H=K^{-1/2}(K-1)$.
 \end{proposition}
 \begin{proof}
@@ -30,13 +30,20 @@ one can find a relation between CMC and constanc Gaussian curvature (CGC) surfac
     \]
     Hence $K_I$ is constant if and only if $\text{tr} B_t = 2/ \tan(2t)$, that happens for $\tan(t) = 1 / \sqrt{K_\I}$.
 \end{proof}
+\red{da rivedere, tanti conti}
 
 \section{Minimal Lagrangian diffeomorphism}
 
 \red{da finire}
 \begin{definition}
-    Let $h$ and $h'$ be two hyperbolic metrics on the closed surface $S$. A diffeomorphism $f: (S,h) \to (S,h')$ is \textit{minimal Lagrangian} if its graph is a minimal Lagrangian submanifold of $S\times S$ with respect to the product metric $h \oplus h'$ and the symplectic form $\pi_l^*\omega_h - \pi_r^* \omega_{h'}$. 
+    Let $h$ and $h'$ be two hyperbolic metrics on the closed surface $S$. A smooth map $f: (S,h) \to (S,h')$ is \textit{minimal Lagrangian} if its graph is a minimal Lagrangian submanifold of $S\times S$ with respect to the product metric $h \oplus h'$ and the symplectic form $\pi_l^*\omega_h - \pi_r^* \omega_{h'}$. 
 \end{definition}
 
-\red{la convessità di alcune cose ci dà che B è def positivo e quindi che le proiezioni sono diffeo loc (se non sbaglio)}
+\red{|||}
+Consider the GMH spacetime $M$ whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
+First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc} $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+\red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
+By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
+To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. \red{da finire}
+\red{|||}
 %Sep17,  BS10
