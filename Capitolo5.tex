@@ -1,6 +1,6 @@
 \chapter{Gauss map and spacelike immersion}
 
-\red{Numerare equazioni, aggiungiere riferimenti}
+\red{Espandere, mettere dim di eq di Gauss Codazzi}
 \section{Spacelike surface in $\A^{2,1}$}
 In this section we will briefly talk about geometric property of immersed spacelike surfaces, that is the analogous of the theory for the Euclidean space.\\
 Let us denote with $\nabla$ the Levi-Civita connection of the Lorentzian metric of $\A^{2,1}$. Given a spacelike immersion $\sigma: S\to\A^{2,1}$ the pull-back metric $\I = \sigma^*(g_{\A^{2,1}})$ is called \textit{first fundamental form} of $\sigma$.
@@ -185,6 +185,7 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
     \[
         \Pi_r^* g_{\H^2}(v,w) = \I ((B - \mathcal{J})v, (B - \mathcal{J})w) = \I((id + \mathcal{J}B)v, (id + \mathcal{J}B)w).
     \]
+    \red{da rivedere la fine, l'apparizione di $\I$ non mi convince}
 \end{proof}
 We collect here some consequences and remarks around Proposition \ref{prop:left right pull-back metric}.
 \begin{itemize}[leftmargin=0.5cm]
@@ -197,7 +198,7 @@ Since $B$ is $\I$-symmetric $\JJ\circ B$ is traceless, and therefore
 \det(B\pm\JJ)=1+\det B=-K_\I~.
 \end{equation}
 This shows that $\Pi_l$ is a local diffeomorphism at a point $x$ if and only if $\Pi_r$ is, which is the case if and only if the intrinsic curvature of $\I$ at $x$ is different from $0$.
-\item Since the trace of $B\pm\JJ$ equals $2$, the differentials of $\Pi_l$ and $\Pi_r$ have either rank 2 or rank 1. (In fact, by \eqref{eq:deteminant differential projections}, when the differential of $\Pi_l$ has rank 1, the same holds for the differential of $\Pi_r$.) Hence the differential of the Gauss map $G:S\to\H^2\times\H^2$ is always non-singular.
+\item Since the trace of $id\pm\JJ B$ equals $2$, the differentials of $\Pi_l$ and $\Pi_r$ have either rank 2 or rank 1. (In fact, by \eqref{eq:deteminant differential projections}, when the differential of $\Pi_l$ has rank 1, the same holds for the differential of $\Pi_r$.) Hence the differential of the Gauss map $G:S\to\H^2\times\H^2$ is always non-singular.
 \item If an immersed surface has the property that the curvature of the first fundamental form never vanishes, and if $\Pi_l$ and $\Pi_r$ are globally injective, then the image of $G$ is the graph of a  diffeomorphism $F_\sigma$ between two subsets of $\H^2$,  called the \emph{associated map}. From Equation \eqref{eq:deteminant differential projections}, the Jacobians of $\Pi_l$ and $\Pi_r$ are equal, hence the associated map is area-preserving.
 When $\Pi_l$ and $\Pi_r$ are only locally injective, but not globally, we still obtain an area-preserving local diffeomorphism $F_\sigma$ which is now defined between two hyperbolic surfaces.
 \item More generally, as a consequence of the previous points, the image of $G$ is always a \emph{Lagrangian submanifold} in $\H^2\times\H^2$ with respect to the symplectic form 
