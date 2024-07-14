@@ -9,26 +9,29 @@ A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (
 \begin{theorem}\label{thm:CMC_foliation}
     Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
 \end{theorem}
-The proof of theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existance of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
-\red{vedere il remark 7.1.3 per bene}\\
-Using the normal evolution
+The proof of theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
+Given a spacelike immersion $\sigma$, by Lemma \ref{lem:tub metric}
 \[
-    \sigma_t(x) = \text{exp}_{\sigma(x)} (t\nu(x))
+    B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B).
 \]
-one can find a relation between CMC and constanc Gaussian curvature (CGC) surfaces, namely surfaces where the determinant of the shape operator is constant:
+Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$, by direct computation one find that
+\begin{equation} \label{eq:eigenvalues}
+    \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \ \ \ \ \ \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
+\end{equation}
+In general one can find a relation between CMC and constanc Gaussian curvature (CGC) surfaces, namely surfaces where the determinant of the shape operator is constant, see \cite{chen2017constantmeancurvaturefoliation}. Here we show a weaker result which will prove useful in the proof of the main result:
 \begin{proposition} \label{prop:cmc to cgc}
-    Let $\sigma: S \to\A^{2,1}$ be an immersion of constant Gaussian curvature $K>0$. Then the normal evolution $\sigma_{t_K}$ on the convex side of $\sigma$, for time $t_K=\text{arctan}(K^{1/2})$, is an immersion of constant mean curvature $H=K^{-1/2}(K-1)$.
+    Let $\sigma: S \to\A^{2,1}$ be a maximal surface. Then the normal evolution $\sigma_{t}$ at the time $t= \pi / 4$ is an immersion of constant Gaussian curvature $K = -2$.
 \end{proposition}
 \begin{proof}
-    By Lemma \ref{lem:tub metric} the first fundamental form $\I_t$ of $\sigma_t$ is given by
+    By Equation \ref{eq:eigenvalues} the Gaussian curvature at $x$ is given by
     \[
-        \I_t(\cdot, \cdot) = \I((\cos(t)id + \sin(t)B)\cdot, (\cos(t)id + \sin(t)B)\cdot).
+        K_t(x) = \frac{\lambda(x)\mu(x) + \lambda(x)\tan(t) + \mu(x)\tan(t) + \tan^2(t)}{1 - \lambda(x)\tan(t)- \mu(x)\tan(t) + \lambda(x)\mu(x)\tan^2(t)}.
     \]
-    Let us denote by $B_t$ the shape operato of $\I_t$. By Remark \ref{prop:Gaussian curvature} we have
+    Since $sigma$ gives a maximal surface, we have $\mu(x) = -\lambda(x)$ and therefore
     \[
-        K_I = \frac{K_{\I_t}}{\text{det}(\cos(t)id - \sin(t)B_t)} = - \frac{1+\text{det}B_t}{\cos^2(t) + \sin^2(t)\text{det} B_t -\cos(t) \sin(t)\text{tr} B_t}.
+        K_t(x) = \frac{\lambda(x)\mu(x) + \tan^2(t)}{1 + \lambda(x)\mu(x)\tan^2(t)}
     \]
-    Hence $K_I$ is constant if and only if $\text{tr} B_t = 2/ \tan(2t)$, that happens for $\tan(t) = 1 / \sqrt{K_\I}$.
+    \red{i conti non stanno tornando}
 \end{proof}
 \red{fare la prop al contrario, per superfici massimali}
 
