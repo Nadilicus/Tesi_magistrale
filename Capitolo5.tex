@@ -6,24 +6,24 @@ In this section we will briefly talk about geometric property of immersed spacel
 Let us denote with $\nabla$ the Levi-Civita connection of the Lorentzian metric of $\A^{2,1}$. Given a spacelike immersion $\sigma: S\to\A^{2,1}$ the pull-back metric $\I = \sigma^*(g_{\A^{2,1}})$ is called \textit{first fundamental form} of $\sigma$.
 The tangent bundle $TS$ is naturally identified to a subbundle of the pull-back $\sigma^*(TM)$, therefore we can define its normal bundle $N_\sigma$. Using the decomposition
 \[
-    \sigma^* TM = TS \oplus N_\sigma,
+    \sigma^* TM = TS \oplus N_\sigma \ ,
 \]
-the pull-back of the Levi-Civita connection $\nabla$, restricted to sections tangent to $S$ splits as the sum of the Levi-Civita connection of the first fundamental form $\I$ and a symmetric $2-form$ with value in $N_\sigma$. Given the time-orientability, we take the future-directed unit normal vector field $\nu$ of $S$. The Levi-Civita connection $\nabla^\I$ of the first fundamental form $\I$ of S is defined by the relation:
+the pull-back of the Levi-Civita connection $\nabla$, restricted to sections tangent to $S$ splits as the sum of the Levi-Civita connection of the first fundamental form $\I$ and a symmetric $2$-form with value in $N_\sigma$. Given the time-orientability, we take the future-directed unit normal vector field $\nu$ of $S$. The Levi-Civita connection $\nabla^\I$ of the first fundamental form $\I$ of S is defined by the relation
+\begin{equation} \label{eq:levi}
+    \nabla_V W= \nabla^\I_V W + \II(V,W)\nu \ ,
+\end{equation} 
+where the $(2,0)$-tensor $\II$ is called \textit{second fundamental form} of $\sigma$ and is defined as $\II(V,W)=\langle \nu, \nabla_V W \rangle$. The \textit{shape  operator} of $\sigma$ is a $(1,1)$-tensor $B$ defined as
 \[
-    \nabla_V W= \nabla^\I_V W + \II(V,W)\nu,
-\] 
-where the $(2,0)$-tensor $\II$ is called \textit{second fundamental form} of $\sigma$. The \textit{shape  operator} of $\sigma$ is a $(1,1)$-tensor $B$ defined as
-\[
-    B(V) = - \nabla_V N.
+    B(V) = \nabla_V \nu \ ,
 \]
-The shape operator is related to the second fundamental form by
+which is well defined in $TS$ since $\langle \nu,\nu \rangle \cong 1$. The shape operator is related to the second fundamental form by
 \[
-    \II(V,W) = \I(B(V),W).
+    \II(V,W) = \I(B(V),W) \ .
 \]
 In particular, $B$ is diagonalisable and its eigenvalues are colled principal curvatures.\\
 The first and second fundamental form of an immersion $\sigma$ satisfy constraint equations known as the \textit{Gauss-Codazzi equations}. More precisely the Gauss equation consists of the identity
 \[
-    K_\I = -1 - \text{det}B.
+    K_\I = -1 - \text{det}B \ .
 \]
 The Codazzi equation tells us that
 \[
@@ -37,6 +37,30 @@ Sometimes is also written in the equivalent form
 \[
     (\nabla^\I_V \II)(W,U) = (\nabla^\I_W \II)(V,U).
 \]
+
+\red{||||||}
+Let us prove this, supposing $S\subset \A^{2,1}$ for easier computation. Let $R$ and $R^\I$ be the Riemann curvature tensor on $\A^{2,1}$ and $S$ respectively. We denote by $X^\top$ and $X^\perp$ the tangent and normal part of $X$ with respect to $S$. Using Equation \ref{eq:levi} we have
+\[
+    (\nabla_X \nabla_Y Z)^\top = \nabla^I_X \nabla^I_Y Z + \II(Y,Z) \nabla_X \nu \ ,
+\] 
+and
+\[
+    (\nabla_{\left[ X,Y \right]} Z)^\top = \nabla^I_{\left[ X,Y \right]} Z \ .
+\]
+Therefore we have
+\[
+\begin{split}
+    \langle R(X,Y)Z,W \rangle & = \langle R^I(X,Y)Z,W \rangle + \langle \II(Y,Z) \nabla_X \nu,  W \rangle - \langle \II(X,Z) \nabla_Y \nu, W \rangle \\
+    & = \langle R^I(X,Y)Z,W \rangle - \langle \II(Y,Z) \nu, \nabla_X W \rangle + \langle \II(X,Z) \nu, \nabla_Y W \rangle \\
+    & = \langle R^I(X,Y)Z,W \rangle - \II(Y,Z) \II(X,W) + \II(X,Z) \II(Y,W) \ .
+\end{split}
+\]
+Then we conclude that
+\[
+   -1 = K_{\A^{2,1}} = K_I + \det(\I^{-1}\II) = K_I + \det B \ .
+\]
+\red{||||||}
+
 As in the Euclidean space, the embedding data $I$ and $\II$ of a simply connected surface determines the immersion uniquely up to isometries of $\A^{2,1}$
 \begin{theorem}\label{thm:immersion of simply connected surface}
     Let $S$ be a simply connected surface, let $\I$ be a Riemannian metric on $S$ and $\II$ be a symmetric $(2,0)$-tensor on $S$. If $\I$ and $\II$ satisfy the Gauss-Codazzi equations, then there exists a spacelike immersion $\sigma:S \to\A^{2,1}$ having $\I$ and $\II$ as first and second fundamental form. Moreover if $\sigma$ and $\sigma'$ are two such immersions, then there exists a time-preserving isometry $\varphi$ of $\A^{2,1}$ such that $\sigma' = \varphi \circ \sigma$.
