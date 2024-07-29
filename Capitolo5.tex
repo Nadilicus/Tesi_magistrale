@@ -1,6 +1,5 @@
 \chapter{Gauss map and spacelike immersion}
 
-\red{Espandere, mettere dim di eq di Gauss Codazzi}
 \section{Spacelike surface in $\A^{2,1}$}
 In this section we will briefly talk about geometric property of immersed spacelike surfaces, that is the analogous of the theory for the Euclidean space.\\
 Let us denote with $\nabla$ the Levi-Civita connection of the Lorentzian metric of $\A^{2,1}$. Given a spacelike immersion $\sigma: S\to\A^{2,1}$ the pull-back metric $\I = \sigma^*(g_{\A^{2,1}})$ is called \textit{first fundamental form} of $\sigma$.
@@ -114,7 +113,7 @@ Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an
     Then
     \[
     \begin{split}
-        \I_t (v,w)& = \langle d(sigma_t)_x (v), d(sigma_t)_x (w) \rangle \\
+        \I_t (v,w)& = \langle d(\sigma_t)_x (v), d(\sigma_t)_x (w) \rangle \\
         & = \langle \cos(t)d\sigma_x (v) + \sin(t)d\nu_x (v), \cos(t)d\sigma_x (w) + \sin(t)d\nu_x (w) \rangle \\
         & = \I(\cos(t) v + \sin(t) B(v), \cos(t) w + \sin(t) B(w) ).
     \end{split}
@@ -131,7 +130,6 @@ Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an
     where $\I$, $\II$, $\III$ are the first, second and third fundamental form of $\sigma$ and third fundamental form is defined as $\III(\cdot,\cdot)=\I(B(\cdot),B(\cdot))$.
 \end{corollary}
 Therefore, given a pair $(\I,\II)$, the equation \ref{eq:tub metric} provides a Lorentzian metric of constant curvature $-1$ on an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, and thus a germ of immersion of $S$ into and AdS spacetime with immersion data $(\I,\II)$. We conclude the above discussion with the following:
-\red{da rivedere l'uso di $S$ e $\widetilde{S}$ sembra mal posto nel paper}
 \begin{proposition}\label{thm:immersion data classification}
     Given a surface $S$, there are natural identifications between the following spaces:
     \begin{itemize}
@@ -288,4 +286,4 @@ We conclude this section with the following:
         K_g = \frac{K_\I}{det(A)}.
     \]
 \end{proposition}
-For a proof see \cite{Krasnov_2007}. Applying the proposition to the tensors $id \pm \mathcal{J} \circ B$, equation \ref{eq:deteminant differential projections} shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate. are always hyperbolic.
+For a proof see \cite{Krasnov_2007}. Applying the proposition to the tensors $id \pm \mathcal{J} \circ B$, Equation (\ref{eq:deteminant differential projections}) shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate, are always hyperbolic.
