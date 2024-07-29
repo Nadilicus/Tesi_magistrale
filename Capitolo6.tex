@@ -1,9 +1,7 @@
 \chapter{Minimal Lagrangian diffeomorphism}
 
-\red{Minimal surfaces and particles in 3-manifolds lemma 3.3: ad ogni superficie massimale si può associare un unico GHM spacetime}
-
-
 \red{aggiungere intro?}
+
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
@@ -47,13 +45,9 @@ Consider the GMH spacetime $M$ whose holonomy $\rho = (\rho_l, \rho_r)$ induces 
 First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc} $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
 \red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
 By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
-\red{La parte sull'armonicità non mi torna}
-
-%To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, the proof is the same for $\Pi_r$. To see this we can write the target metric
-%\[
-%    \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
-%\]
-%where we used that $B$ is traceless and therefore $\mathcal{J}B$ is $\I$-symmetric.
-\red{da finire}
+To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, the proof is the same for $\Pi_r$. To see this we can write the target metric
+\[
+    \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
+\]
+where we used that $B$ is traceless and therefore $\mathcal{J}B$ is $\I$-symmetric. Moreover $\mathcal{J} B$ is $I$-Codazzi. By \red{lemms} $- 2\I(\mathcal{J}B \cdot, \cdot)$ is the real part of the Hopf differential of $\Pi_l$ which is holomorphic since $\mathcal{J}B$ is $I$-Codazzi. Hence, by \red{lemma harmonic iff HQD} we have that $\Pi_l$ is harmonic.
 \red{|||}
-%Sep17,  BS10
