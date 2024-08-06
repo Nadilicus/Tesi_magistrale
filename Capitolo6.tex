@@ -2,6 +2,36 @@
 
 \red{aggiungere intro? aggiungiere sezione su mappe armoniche e minimali}
 
+\section{Harmonic and minimal maps}
+In this section we will briefly introduce harmonic and minimal maps, which will prove useful in the proof of the main theorem.\\
+For this purpose let $(M,g)$ and $(N,h)$ be Riemannian manifolds. In local coordinates the metric tensors $g$ and $h$ are given by $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots, m}$ and $(h_{ij})_{i,j= 1,\cdots,n}$. Moreover let $(g^{\alpha \beta}) = (g_{\alpha \beta})^{-1}$ be the inverse metric tensor on $M$ and let $\Gamma^k_{ij}$ be the Christoffel symbols of the Levi Civita connection of $N$.\\
+\begin{definition}
+    The \textit{energy density} of a map $f:M \to N$ is defined as
+    \begin{equation}
+        e(f)(x) := \frac{1}{2} g^{\alpha \beta}(x)h_{ij}(f(x)) \frac{\partial f^i (x)}{\partial x^\alpha}  \frac{\partial f^j (x)}{\partial x^\beta} \ .
+    \end{equation}
+    The \textit{energy} of $f$ is
+    \begin{equation}
+        E(f) := \int_M e(f)dM
+    \end{equation}
+    where $dM = \sqrt{det(g)} dx^1 \wedge \cdots \wedge dx^m$ is the volume form on $M$.
+\end{definition}
+\begin{observation}
+    Intrinsically $e(f)$ is the trace (up to the factor $\frac{1}{2}$) of $f^* h$ with respect to $g$, and therefore its value on $x$ does not depend on the choices of local coordinates.
+\end{observation}
+\begin{definition}
+    A map $f:M\to N$ is \textit{harmonic} if it is a critical point of the energy functional.
+\end{definition}
+As an harmonics map are critical points of $E$, a direct computation of
+\[
+    \frac{d}{dt}E(f+ t\varphi) |_{t=0} = 0
+\]
+shows that harmonic maps are the solutions of
+\begin{equation}
+    \frac{1}{\sqrt{det(g)}} \frac{\partial}{\partial x^\alpha}(\sqrt{det(g)} g^{\alpha\beta} \frac{\partial f^i}{\partial x^\beta}) + g^{\alpha\beta}(x) \Gamma^k_{ij}(f(x)) \frac{\partial f^i}{\partial x^\alpha}  \frac{\partial f^j}{\partial x^\beta} = 0 \ .
+\end{equation}
+We turn now our attention to the case where $M$ is a compact Riemannian surface.
+
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
