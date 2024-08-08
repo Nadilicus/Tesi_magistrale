@@ -1,6 +1,6 @@
-\chapter{Gauss map and spacelike immersion}
+\chapter{Gauss map and spacelike immersions}
 
-\section{Spacelike surface in $\A^{2,1}$}
+\section{Spacelike surfaces in $\A^{2,1}$}
 In this section we will briefly talk about geometric property of immersed spacelike surfaces, that is the analogous of the theory for the Euclidean space.\\
 Let us denote with $\nabla$ the Levi-Civita connection of the Lorentzian metric of $\A^{2,1}$. Given a spacelike immersion $\sigma: S\to\A^{2,1}$ the pull-back metric $\I = \sigma^*(g_{\A^{2,1}})$ is called \textit{first fundamental form} of $\sigma$.
 The tangent bundle $TS$ is naturally identified to a subbundle of the pull-back $\sigma^*(TM)$, therefore we can define its normal bundle $N_\sigma$. Using the decomposition
@@ -15,7 +15,7 @@ where the $(2,0)$-tensor $\II$ is called \textit{second fundamental form} of $\s
 \[
     B(V) = \nabla_V \nu \ ,
 \]
-which is well defined in $TS$ since $\langle \nu,\nu \rangle \cong 1$. The shape operator is related to the second fundamental form by
+which is well defined in $TS$ since $\langle \nu,\nu \rangle \cong -1$. The shape operator is related to the second fundamental form by
 \[
     \II(V,W) = \I(B(V),W) \ .
 \]
@@ -36,25 +36,25 @@ In particular, $B$ is diagonalisable and its eigenvalues are called principal cu
     \]
 \end{theorem}
 \begin{proof}
-    For easier computation suppose $S \subset \A^{2,1}$. Denote by $X^\top$ and $X^\perp$ the tangent and normal part of $X$ with respect to $TS$. Using Equation \ref{eq:levi} we have
+    For easier computation suppose $S \subset \A^{2,1}$. For a $X\in T\A^{2,1}$, denote by $X^\top$ and $X^\perp$ the tangent and normal part of $X$ with respect to $TS$. Using Equation \ref{eq:levi} we have
         \[
         (\nabla_X \nabla_Y Z)^\top = \nabla^I_X \nabla^I_Y Z + \II(Y,Z) \nabla_X \nu \ ,
     \] 
     \[
-        (\nabla_X \nabla_Y Z)^\perp = \II(X, \nabla_Y Z) \nu + \partial_X (\II (Y,Z)) \nu \ ,
+        (\nabla_X \nabla_Y Z)^\perp = \II(X, \nabla^I_Y Z) \nu + \partial_X (\II (Y,Z)) \nu \ ,
     \] 
     and
     \[
         (\nabla_{\left[ X,Y \right]} Z)^\top = \nabla^I_{\left[ X,Y \right]} Z \ ,
     \]
     \[
-        (\nabla_{\left[ X,Y \right]} Z)^\perp = \II(\left[ X,Y \right], Z) \nu = \II(\nabla_X Y,Z) \nu - \II(\nabla_Y X,Z)\nu \ .
+        (\nabla_{\left[ X,Y \right]} Z)^\perp = \II(\left[ X,Y \right], Z) \nu = \II(\nabla^I_X Y,Z) \nu - \II(\nabla^I_Y X,Z)\nu \ .
     \]
-    Computiting the tangential part of the Riemann tensor we have
+    Computing the tangential part of the Riemann tensor we have
     \[
     \begin{split}
         \langle R(X,Y)Z,W \rangle & = \langle R^I(X,Y)Z,W \rangle + \langle \II(Y,Z) \nabla_X \nu,  W \rangle - \langle \II(X,Z) \nabla_Y \nu, W \rangle \\
-        & = \langle R^I(X,Y)Z,W \rangle - \langle \II(Y,Z) \nu, \nabla_X W \rangle + \langle \II(X,Z) \nu, \nabla_Y W \rangle \\
+        & = \langle R^I(X,Y)Z,W \rangle - \langle \II(Y,Z) \nu, \nabla^I_X W \rangle + \langle \II(X,Z) \nu, \nabla^I_Y W \rangle \\
         & = \langle R^I(X,Y)Z,W \rangle - \II(Y,Z) \II(X,W) + \II(X,Z) \II(Y,W) \ .
     \end{split}
     \]
@@ -66,11 +66,11 @@ In particular, $B$ is diagonalisable and its eigenvalues are called principal cu
     \[
     \begin{split}
         0 = \langle R(X,Y)Z,\nu \rangle & = 
-        \partial_Y (\II (X,Z)) -\II(\nabla_Y X,Z) -\II(X, \nabla_Y Z) -\partial_X (\II (Y,Z)) \\ 
-        & + \II(\nabla_X Y,Z)+\II(Y, \nabla_X Z) = (\nabla_Y \II)(X,Z) - (\nabla_X \II)(Y,Z).
+        \partial_Y (\II (X,Z)) -\II(\nabla^I_Y X,Z) -\II(X, \nabla^I_Y Z) -\partial_X (\II (Y,Z)) \\ 
+        & + \II(\nabla^I_X Y,Z)+\II(Y, \nabla^I_X Z) = (\nabla^I_Y \II)(X,Z) - (\nabla^I_X \II)(Y,Z).
     \end{split}
     \]
-    where we used that the normal part of the Riemann tensor is null when the sectional curvature is constant.
+    where we used that the normal part of the Riemann tensor is null when the sectional curvature is constant (Equation \ref{sectionalcurvature}).
 \end{proof}
 
 As in the Euclidean space, the embedding data $I$ and $\II$ of a simply connected surface determines the immersion uniquely up to isometries of $\A^{2,1}$
@@ -80,14 +80,14 @@ As in the Euclidean space, the embedding data $I$ and $\II$ of a simply connecte
 
 \section{Germs of spacelike immersions}
 Let us now consider che case in which $S$ is an oriented surface, not necessarily simply connected. Let $\sigma: S \to(M,g)$ a spacelike immersion where $(M,g)$ is an oriented AdS spacetime.
-As in the previous section, we can associate to $\sigma$ the pair $(\I,\II)$ of first and second  fundamental form, where $\II$ is  computed with respect to the unit normal vector $\nu$ of $\sigma$.
+As in the previous section, we can associate to $\sigma$ the pair $(\I,\II)$ of first and second  fundamental form, where $\II$ is  computed with respect to the unit future pointing normal vector $\nu$ of $\sigma$.
 We will always assume that the orientation of $S$ and $\nu$ are compatible with the one on $M$.\\
 We want to prove that the pair $(\I,\II)$ depends only on the \textit{germ} of $\sigma$, which is defined as follow:
 \begin{definition}
     A \textit{germ} of a spacelike immersion of $S$ into an AdS spacetime is an equivalent class of spacelike immersions $\sigma:S \to(M,g)$ by the following relation: $\sigma:S \to(M,g)$ and $\sigma':S \to(M',g')$ are equivalent if there exist open subsets $U \supset \sigma(S)$ in $M$ and $U' \supset \sigma'(S)$ in $M'$ and a time-preserving isometry $f:(U,g)\to(U',g')$ such that $\sigma' = f \circ \sigma$.
 \end{definition}
-Given a pair $(\I,\II)$ on $S$ and $\pi: \widetilde{S}\to S$ a universal cover, one can take the pair $(\pi^*\I, \pi^*\II)$ on $\widetilde{S}$ that clearly satisfy the Gauss-Codazzi equations. By the existence part of Theorem \ref{thm:immersion of simply connected surface} there exists a spacelike immersion $\widetilde{\sigma}: \widetilde{S} \to\A^{2,1}$ having immersion data $(\pi^*\I, \pi^*\II)$. As a concequence of the uniqueness part of Theorem \ref{thm:immersion of simply connected surface} we have that associeted to $\widetilde{\sigma}$ there is a map $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$ such that for every $\gamma \in \pi_1(S)$, $\widetilde{\sigma} \circ \gamma = \rho(\gamma) \circ \widetilde{\sigma}$. Moreover changing $\widetilde{\sigma}$ by post-composition with an isometry $f$ of $\A^{2,1}$ has the effect of conjugating $\rho$ by $f$.\\
-Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, by mapping $(x,t)$ to the point $\gamma(t)$ on the timelike geodesic $\gamma$ such that $\gamma(0)=\sigma(p)$ and $\gamma'(0)$ is the future normal vector of $\sigma$ at $x$.
+Given a pair $(\I,\II)$ on $S$ and $\pi: \widetilde{S}\to S$ a universal cover, one can take the pair $(\pi^*\I, \pi^*\II)$ on $\widetilde{S}$ that clearly satisfies the Gauss-Codazzi equations. By the existence part of Theorem \ref{thm:immersion of simply connected surface} there exists a spacelike immersion $\widetilde{\sigma}: \widetilde{S} \to\A^{2,1}$ having immersion data $(\pi^*\I, \pi^*\II)$. As a concequence of the uniqueness part of Theorem \ref{thm:immersion of simply connected surface} we have that associeted to $\widetilde{\sigma}$ there is a map $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$ such that for every $\gamma \in \pi_1(S)$, $\widetilde{\sigma} \circ \gamma = \rho(\gamma) \circ \widetilde{\sigma}$. Moreover changing $\widetilde{\sigma}$ by post-composition with an isometry $f$ of $\A^{2,1}$ has the effect of conjugating $\rho$ by $f$.\\
+Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, by mapping $(x,t)$ to the point $\gamma(t)$ on the timelike geodesic $\gamma$ such that $\gamma(0)=\sigma(p)$ and $\gamma'(0)$ is the future unit normal vector $\nu$ of $\sigma$ at $x$.
 
 \begin{lemma}\label{lem:tub metric}
     Given a spacelike immersion $\sigma:S\to \A^{2,1}$, the pull-back of the ambient metric by means of the map $\sigma_t : x \to exp_{\sigma(x)}(t\nu(x))$ is given by 
@@ -113,7 +113,7 @@ Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an
         & = \I(\cos(t) v + \sin(t) B(v), \cos(t) w + \sin(t) B(w) ).
     \end{split}
     \]
-    The formula for $\II_t$ follows from the fact that $\II_t = \frac{1}{2} \frac{d \I_t}{d t}$, and the formula for $B_t$ follows frome $B_t = I_t^{-1} \II_t$. 
+    The formula for $\II_t$ follows from the fact that $\II_t = \frac{1}{2} \frac{d \I_t}{d t}$, and the formula for $B_t$ follows from $B_t = I_t^{-1} \II_t$. 
 \end{proof}
 
 
@@ -124,17 +124,17 @@ Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an
     \end{equation}
     where $\I$, $\II$, $\III$ are the first, second and third fundamental form of $\sigma$ and third fundamental form is defined as $\III(\cdot,\cdot)=\I(B(\cdot),B(\cdot))$.
 \end{corollary}
-Therefore, given a pair $(\I,\II)$, the equation \ref{eq:tub metric} provides a Lorentzian metric of constant curvature $-1$ on an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, and thus a germ of immersion of $S$ into and AdS spacetime with immersion data $(\I,\II)$. We conclude the above discussion with the following:
+Therefore, given a pair $(\I,\II)$, Equation \ref{eq:tub metric} provides a Lorentzian metric of constant curvature $-1$ on an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, and thus a germ of immersion of $S$ into an AdS spacetime with immersion data $(\I,\II)$. We conclude the above discussion with the following:
 \begin{proposition}\label{thm:immersion data classification}
     Given a surface $S$, there are natural identifications between the following spaces:
     \begin{itemize}
         \item The space of pairs $(\I,\II)$ on $S$ which are solutions of the Gauss-Codazzi equations,
         \item The space of germs of spacelike immersions of $S$ into Anti-de Sitter manifolds,
-        \item The space of spacelike immersions of $\widetilde{S}$ into $\A^{2,1}$, equivariant with respect to a representation $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$, up to the action of $\text{Isom}_0\A^{2,1}$ by post-composition.
+        \item The space of spacelike immersions of $\widetilde{S}$ into $\A^{2,1}$, equivariant with respect to a representation $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$, up to the action of $\text{Isom}_0(\A^{2,1})$ by post-composition.
     \end{itemize}
 \end{proposition}
-When $S$ is a closed surface the equivariant immersion $\widetilde{\sigma}$ is necessarily an embedding, which can be extended to an embedding of $\widetilde{S}\times\R$ into a domain of dependence in $\A^{2,1}$. The representation $\rho:\pi_1(S) \to \PSL \times \PSL$ coincides with the holonomy of the MGH spacetime $(M,g) \cong \widetilde{S}\times\R$, after identifying $\pi_1(S)$ with $\pi_1(M)$, and therefore $\rho$ consists of a pair $(\rho_l,\rho_r)$ of positive Fuchsian representation.\\
-Therefore, the embedding data $(\I,\II)$ permit to recover the pair of elements in $\mathcal{T}(S)\times\mathcal{T}(S)$ which parametrizes MGH Anti-de Sitter manifolds with compact Cauchy surfaces.
+When $S$ is a closed surface the equivariant immersion $\widetilde{\sigma}$ is necessarily an embedding, which can be extended to an embedding of $\widetilde{S}\times\R$ into a domain of dependence in $\A^{2,1}$. The representation $\rho:\pi_1(S) \to \PSL \times \PSL$ coincides with the holonomy of the MGH spacetime $(M,g) \cong \widetilde{S}\times\R$, after identifying $\pi_1(S)$ with $\pi_1(M)$, and therefore $\rho$ consists of a pair $(\rho_l,\rho_r)$ of positive Fuchsian representations.\\
+Therefore, the embedding data $(\I,\II)$ permits to recover the pair of elements in $\mathcal{T}(S)\times\mathcal{T}(S)$ which parametrizes MGH Anti-de Sitter manifolds with compact Cauchy surfaces.
 
 \section{Gauss map} \label{sec:gauss map}
 We can now define the Gauss map for spacelike surfaces in $\A^{2,1}$. Recall that the space of timelike geodesics in $\A^{2,1}$ is identified with $\H^2\times\H^2$, where the identification maps a geodesic of the form
@@ -143,13 +143,13 @@ We can now define the Gauss map for spacelike surfaces in $\A^{2,1}$. Recall tha
 \]
 to the pair $(p,q) \in \H^2\times\H^2$. 
 \begin{definition}
-    Let $\sigma :S \to\A^{2,1}$ a spacelike immersion. The \textit{Gauss map} $G_\sigma : S \to \H^2 \times \H^2$ is defined as $G_\sigma(x) = (p,q)$ such that $L_{p,q}$ is the timelike orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$.\\
+    Let $\sigma :S \to\A^{2,1}$ be a spacelike immersion. The \textit{Gauss map} $G_\sigma : S \to \H^2 \times \H^2$ is defined as $G_\sigma(x) = (p,q)$ such that $L_{p,q}$ is the timelike geodesic orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$.\\
     The components of the Gauss map, denoted by $\Pi_l, \Pi_r : S \to \A^{2,1}$, are called \textit{left} and \textit{right projections}. 
 \end{definition}
 The Gauss map $G_\sigma$ is natural with respect to the action of the isometry group, meaning that $G_{f\circ\sigma} = f \cdot G_\sigma$ for every $f \in\text{Isom}_0(\A^{2,1}) = \PSL\times\PSL$. The Gauss map is also invariant by reparametrization, in the sense that $G_{\sigma \circ \phi} = G_\sigma \circ \phi$ for a diffeomorphism $\phi:S'\to S$. Hence it makes sense to talk about the Gauss map of a spacelike surface in $\A^{2,1}$.
 
 \begin{example}\label{ex:dual1}
-    In Lemma \ref{lem:dual plane} we gave an isometric embedding of $\H^2$ in $\A^{2,1}$ with image the plane $P_{\text{Id}}$ dual to the identity. This isometric embedding was defined by sending $p\in\H^2$ to the unique order-two element in $\PSL$ fixing $p$, which by definition lies on the geodesic $L_{p,p}$. Moreover the geodesic $L_{p,p}$ is orthogonal to $P_{\text{Id}}$. Hence the Gauss map associated to this isometric embedding of $\H^2$ is just $p\mapsto (p,p).$
+    In Lemma \ref{lem:dual plane} we gave an isometric embedding of $\H^2$ in $\A^{2,1}$ with image the plane $P_{\1}$ dual to the identity. This isometric embedding was defined by sending $p\in\H^2$ to the unique order-two element in $\PSL$ fixing $p$, which by definition lies on the geodesic $L_{p,p}$. Moreover the geodesic $L_{p,p}$ is orthogonal to $P_{\1}$. Hence the Gauss map associated to this isometric embedding of $\H^2$ is just $p\mapsto (p,p).$
 \end{example}
 Geodesic leaving from $\1$ with velocity $\nu(p)$ meets $P_\1$ orthogonally at $\text{exp}((\pi/2)\nu(p))$, therefore, using Example \ref{ex:dual1}, one can recover the following:
 
@@ -220,8 +220,8 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
     \[
         \Pi_r(x) = \text{Fix}((L_{\sigma(x)^{-1}})_*(\nu(x))).
     \]
-    Since Fix is an isometry $\Pi_r g_{\H^2}$ equal s the pull-back of the Anti-de Sitter metric through the map defined by $\widehat{\Pi}_r(x) = (L_{\sigma(x)^{-1}})_*(\nu(x))$.\\
-    Let $X_1, \cdots, X_n$ be a orthonarmal basis of left-invariant vector fields on $T\A^{2,1}$. Then the unit normal vector can be expressed as $\nu(x) = \sum_i \nu_i(x) X_i (\sigma(x))$. By Remark \ref{rem:parallel transport}
+    Since Fix is an isometry $\Pi^*_r g_{\H^2}$ equals the pull-back of the Anti-de Sitter metric through the map defined by $\widehat{\Pi}_r(x) = (L_{\sigma(x)^{-1}})_*(\nu(x))$.\\
+    Let $X_1, \cdots, X_3$ be an orthonarmal basis of left-invariant vector fields on $T\A^{2,1}$. Then the unit normal vector can be expressed as $\nu(x) = \sum_i \nu_i(x) X_i (\sigma(x))$. By Remark \ref{rem:parallel transport}
     \[
         \widehat{\Pi}_r(x) = \sum_i \nu_i(x) X_i (\1).
     \]
