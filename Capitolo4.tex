@@ -42,7 +42,7 @@ A spacelike surface is locally acausal, but there are examples of spacelike surf
     \[
         f^S(x) - f^S(z) \leq d_{\mathcal{S}^2}(z,y) = d_{\mathcal{S}^2}(x,y) - d_{\mathcal{S}^2}(x,z),
     \]
-    which implies that $f^S(z) \geq f^(x) + d_{\mathcal{S}^2}(x,z)$. Therefore we can conclude $f^S(z) = f^(x) + d_{\mathcal{S}^2}(x,z)$, proving that $\gamma$ is contained in $S$.
+    which implies that $f^S(z) \geq f^S(x) + d_{\mathcal{S}^2}(x,z)$. Therefore we can conclude $f^S(z) = f^S(x) + d_{\mathcal{S}^2}(x,z)$, proving that $\gamma$ is contained in $S$.
 \end{proof}
 Given a function $f: \overline{\D}\to\R$, we define its oscillation as 
 \[
@@ -73,7 +73,7 @@ Given an achronal set $X$ defined as $f^X : D \to \R$ there are two particular e
 \end{array}
 \]
 \begin{lemma}\label{lem:extremal extension}
-    Let $X$ be a closed achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ and let $S_\pm (X)$ be the graphs of the extremal extensions $f^X_\pm$.
+    Let $X$ be a closed achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ and let $S_\pm (X)$ be the graphs of the extremal extensions $f^X_\pm$:
     \begin{itemize}
         \item The properly embedded surface $S_-(X)$ and $S_+(X)$ are achronal with $S_\pm(X) \subset \overline{\text{I}^\pm (S_\mp(X))}$, and $\Omega(X) = \text{I}^+(S_-(X)) \cap \text{I}^-(S_+(X))$.
         \item Every achronal subset containing $X$ is contained in $S_-(X)\cup\Omega(X)\cup S_+(X)$.
@@ -93,13 +93,13 @@ Given an achronal set $X$ defined as $f^X : D \to \R$ there are two particular e
 \begin{definition}
     An \textit{achronal meridian} in $\AS^{2,1}$ is a subset $\Lambda$ of $\partial\AS^{2,1}$ that is the graph of a 1-Lipschitz function $f: \partial\D\to\R$.
 \end{definition}
-The iportance of these definitions will be evident in the following sections.
-The invisible domain of a achronal meridian will be fundamental tool in the study of hyperbolic spacetimes.
+The importance of these definitions will be evident in the following sections.
+The invisible domain of a achronal meridian will be a fundamental tool in the study of hyperbolic spacetimes.
 \begin{lemma}
-    Let $\Lambda$ an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then $S_+(\Lambda) \cap \S_-(\Lambda)=\Lambda$. Moreover there is an achronal properly embedded surface in $\Omega(\Lambda)$ whose boundary in $\partial\AS^{2,1}$ is $\Lambda$.
+    Let $\Lambda$ be an achronal meridian in $\partial\AS^{2,1}$ different from the boundary of a lightlike plane. Then $S_+(\Lambda) \cap S_-(\Lambda)=\Lambda$. Moreover there is an achronal properly embedded surface in $\Omega(\Lambda)$ whose boundary in $\partial\AS^{2,1}$ is $\Lambda$.
 \end{lemma}
 \begin{proof}
-    By Lemma \ref{lem:osc} the maximal oscillation of $f:\partial\D \to \R$ that defines $\Lambda$ is smaller than $\pi$. If a lightlike geodesic connects $(x,f(x))$ to $(y,f(y))$ then $x$ and $y$ are not atipodal. Then they are connected by a unique lenght-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x,f(x))$ to $(y,f(y))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{lem:extremal extension} we conclude that $S_+(\Lambda)$ and $S_-(\Lambda)$ do not meet in $\AS^{2,1}$ and $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda$.\\
+    By Lemma \ref{lem:osc} the maximal oscillation of $f:\partial\D \to \R$ that defines $\Lambda$ is smaller than $\pi$. If a lightlike geodesic connects $(x,f(x))$ to $(y,f(y))$ then $x$ and $y$ are not antipodal. Then they are connected by a unique length-minimizing geodesic in $\overline{\D}$ for the hemispherical metric, which lies in $\partial\D$. So the lightlike line connecting $(x,f(x))$ to $(y,f(y))$ is contained in $\partial\AS^{2,1}$. By Lemma \ref{lem:extremal extension} we conclude that $S_+(\Lambda)$ and $S_-(\Lambda)$ do not meet in $\AS^{2,1}$ and $S_+(\Lambda)\cap S_-(\Lambda)=\Lambda$.\\
     To conclude, the function $(f_- + f_+) /2$ is 1-Lipschitz and defines an achronal properly embedded surface contained in $\Omega(\Lambda)$ whose boundary is $\Lambda$.
 \end{proof}
 To conclude this section let us state two results on the invisible domain of an achronal meridian in $\partial\AS^{2,1}$:
@@ -153,12 +153,12 @@ As a consequence of this Proposition we have that the domain of dependance of a 
 \end{corollary}
 
 \section{Properly achronal set in $\A^{2,1}$}
-As $\A^{2,1}$ contains closed timelike lines, it does not contain any achronal subset. Therefore we have to adapt the definition to work in $A^{2,1}$:
+As $\A^{2,1}$ contains closed timelike lines, it does not contain any achronal subset. Therefore we have to adapt the definition to work in $\A^{2,1}$:
 \begin{definition}
     A subset $X$ of $\A^{2,1} \cup \partial\A^{2,1}$ is a \textit{proper achronal subset} if there exists a spacelike plane $P$ such that $X$ is contained in $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ and is an achronal subset of $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$.
 \end{definition}
-The definition makes sense since $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ does not contain closed causal curves. Moreover $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ simply connected, so it admits an isometric embedding into $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image is a Dirichlet region. Therefore, if $X$ is a proper achronal set in $\A^{2,1} \cup \partial\A^{2,1}$ it admits a section to $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image $\widetilde{X}$ is achronal. Conversely if $\widetilde{X}$ is an achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ different from the boundary of a lightlike plane then, by Lemma \ref{lem:osc}, it is contained in a Dirichlet region whose projection to $\A^{2,1} \cup \partial\A^{2,1}$ sends $\widetilde{X}$ to a proper achronal subset.\\
-We now focus on proper achronal meridians of $\partial\A^{2,1}$, which are proper achronal embedded circles of the boundary of $\A^{2,1}$. The following example of proper achronal meridian will be extensively used later to classify maximal globally hyperbolic spacetime.
+The definition makes sense since $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ does not contain closed causal curves. Moreover $\A^{2,1} \cup \partial\A^{2,1} \setminus \overline{P}$ is simply connected, so it admits an isometric embedding into $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image is a Dirichlet region. Therefore, if $X$ is a proper achronal set in $\A^{2,1} \cup \partial\A^{2,1}$ it admits a section to $\AS^{2,1} \cup \partial\AS^{2,1}$ whose image $\widetilde{X}$ is achronal. Conversely if $\widetilde{X}$ is an achronal subset of $\AS^{2,1} \cup \partial\AS^{2,1}$ different from the boundary of a lightlike plane then, by Lemma \ref{lem:osc}, it is contained in a Dirichlet region whose projection to $\A^{2,1} \cup \partial\A^{2,1}$ sends $\widetilde{X}$ to a proper achronal subset.\\
+We now focus on proper achronal meridians of $\partial\A^{2,1}$, which are proper achronal embedded circles of the boundary of $\A^{2,1}$. The following example of proper achronal meridian will be extensively used later to classify maximal globally hyperbolic spacetimes.
 \begin{lemma}
     Let $\varphi: \S \to \S$ be an orientation preserving homeomorphism. Then the graph of $\varphi$, $\Lambda_\varphi \subset \T \simeq \partial\A^{2,1}$ is a proper achronal subset and any lift $\widetilde{\Lambda}_\varphi$ is an achronal meridian in $\partial\AS^{2,1}$.
 \end{lemma}
@@ -173,13 +173,13 @@ We now focus on proper achronal meridians of $\partial\A^{2,1}$, which are prope
 \end{observation}
 
 \begin{proposition}\label{prop:invisible in ads}
-    Let $\Lambda$ be a proper achronal meridina in $\partial\A^{2,1}$ and denote by $\widetilde{\Lambda}$ any lift to $\partial\AS^{2,1}$. Then the universal cover of $\A^{2,1}$ maps $\Omega(\widetilde{\Lambda})$ injectively to the domain
+    Let $\Lambda$ be a proper achronal meridian in $\partial\A^{2,1}$ and denote by $\widetilde{\Lambda}$ any lift to $\partial\AS^{2,1}$. Then the universal cover of $\A^{2,1}$ maps $\Omega(\widetilde{\Lambda})$ injectively to the domain
     \[
         \Omega(\Lambda) := \{ x\in \A^{2,1} \ | \ P_x \cap \Lambda = \emptyset \}.
     \]
 \end{proposition}
 \begin{proof}
-    By Proposition \ref{prop:invisible2} is contained in a Dirichlet region $R_{\widetilde{x}}$, hence the restriction of $p : \AS^{2,1} \to \A^{2,1}$ to $\Omega(\widetilde{\Lambda})$ is injective and its image is contained in $p(R_{\widetilde{x}})$ which is the complement in $\A^{2,1} \cup \partial\A^{2,1}$ of the spacelike plane $P_x$ dual to $x=p(\widetilde{x})$. By the first point of Proposition \ref{prop:invisible1} one can pick any $\widetilde{x} \in \Omega(\widetilde{\Lambda})$, which shows that $p(\Omega(\widetilde{\Lambda}))$ is contained in $\Omega(\Lambda) := \{ x\in \A^{2,1} \ | \ P_x \cap \Lambda = \emptyset \}$.\\
+    By Proposition \ref{prop:invisible2} $\Omega(\Lambda)$ is contained in a Dirichlet region $R_{\widetilde{x}}$, hence the restriction of $p : \AS^{2,1} \to \A^{2,1}$ to $\Omega(\widetilde{\Lambda})$ is injective and its image is contained in $p(R_{\widetilde{x}})$ which is the complement in $\A^{2,1} \cup \partial\A^{2,1}$ of the spacelike plane $P_x$ dual to $x=p(\widetilde{x})$. By the first point of Proposition \ref{prop:invisible1} one can pick any $\widetilde{x} \in \Omega(\widetilde{\Lambda})$, which shows that $p(\Omega(\widetilde{\Lambda}))$ is contained in $\Omega(\Lambda) := \{ x\in \A^{2,1} \ | \ P_x \cap \Lambda = \emptyset \}$.\\
     For the converse inclusion, let $x \in \A^{2,1}$ be a point whose dual plane $P_x$ does not meet $\Lambda$. $p^{-1}(P_x)$ disconnect $\AS^{2,1} \cup \partial\AS^{2,1}$ in a disjoint union of Dirichlet regions centered at the preimages of $x$. $\widetilde{\Lambda}$ is contained in exacly one such region, say $R_{\widetilde{x}}$, and $\widetilde{x} \in \Omega(\widetilde{\Lambda})$ by the first point of Proposition \ref{prop:invisible1}. This implies thet $x = p(\widetilde{x})$ lies in $p(\Omega(\widetilde{\Lambda}))$.
 \end{proof}
 When $\Lambda$ is the graph of an orientation preserving homeomorphism $\varphi : \S \to \S$, there is yet another characterization of $\Omega(\Lambda)$ using the identification $\A^{2,1} \simeq \PSL$.
@@ -194,7 +194,7 @@ When $\Lambda$ is the graph of an orientation preserving homeomorphism $\varphi 
     Let $\sigma : S \to \A^{2,1}$ be a proper spacelike immersion. Then
     \begin{itemize}
         \item $\sigma$ is a proper embedding
-        \item $\sigma$ lifts to a properembedding $\widetilde{\sigma}: S \to \AS^{2,1}$
+        \item $\sigma$ lifts to a proper embedding $\widetilde{\sigma}: S \to \AS^{2,1}$
         \item The boundary at infinity of $\sigma(S)$ is a proper achronal meridian $\Lambda$ in $\partial\A^{2,1}$
         \item $\mathcal{D}(\sigma(S)) = \Omega(\Lambda)$
     \end{itemize}
@@ -202,7 +202,7 @@ When $\Lambda$ is the graph of an orientation preserving homeomorphism $\varphi 
 \begin{proof}
     Denote by $\widehat{S}$ the covering of $S$ admitting a lift $\widehat{\sigma}: \widehat{S} \to \H^{2,1}$. Either $\widehat{S}=S$ or it is a $2:1$ covering. In both cases $\widehat{\sigma}$ is a proper immersion.\\
     Consider now the identification $\pi : \H^2 \times \S \to \H^{2,1}$. The induced projection $pr:\H^{2,1} \to \H^2$ is a proper fibration with timelike fibers. In particular $\widehat{\sigma}$ is trasverse to the fibers of $pr$, and it follows that $pr \circ \widehat{\sigma}: \widehat{S} \to \H^2$ is a proper local diffeomorphisms, hence a covering map. Since $\H^2$ is simply connected, we can deduce that $pr \circ \widehat{\sigma}: \widehat{S} \to \H^2$ is a homeomorphism, $\widehat{\sigma}$ is an embedding, and $\widehat{S}$ is homeomorphic to the plane.\\
-    In particular we can lift $\widehat{\sigma}$ to the universal cover $\widetilde{\sigma}: \widehat{S}\to\AS^{2,1}$, which is still a proper spacelike embedding. By Lemma \ref{lem:1-lip} and Lemma \ref{lem:global 1-lip} the image of $\widetilde{\sigma}$ os an achronal surface whose boundary is an achronal meridian, and by Lemma \ref{lem:osc} it is contained in a Dirichlet region. It follows that $\widetilde{\sigma}(\widehat{S})$ is contained in a Dirichlet domain of the covering map $\H^{2,1}\to\A^{2,1}$, on which we know that the covering map is injective. In particular $\sigma$ is also injective, hence $\widehat{S}=S$ and this concludes the proof.
+    In particular we can lift $\widehat{\sigma}$ to the universal cover $\widetilde{\sigma}: \widehat{S}\to\AS^{2,1}$, which is still a proper spacelike embedding. By Lemma \ref{lem:1-lip} and Lemma \ref{lem:global 1-lip} the image of $\widetilde{\sigma}$ is an achronal surface whose boundary is an achronal meridian, and by Lemma \ref{lem:osc} it is contained in a Dirichlet region. It follows that $\widetilde{\sigma}(\widehat{S})$ is contained in a Dirichlet domain of the covering map $\H^{2,1}\to\A^{2,1}$, on which we know that the covering map is injective. In particular $\sigma$ is also injective, hence $\widehat{S}=S$ and this concludes the proof.
 \end{proof}
 We have the following analogue version of Corollary in $\A^{2,1}$:
 \begin{corollary}
@@ -210,7 +210,7 @@ We have the following analogue version of Corollary in $\A^{2,1}$:
 \end{corollary}
 
 \section{Globally hyperbolic spacetime}
-The aim of this section and the following section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We will be interested mainly in the case $n\geq 2$ cause later on we will study MGH spacetime whose Cauchy surface is a closed hyperbolic surface.\\ 
+The aim of this section and the following section is to study maximal globally hyperbolic (MGH) Anti-de Sitter spacetimes containing a compact Cauchy surface of genus $n$ (in short we say that the globally hyperbolic spacetime has genus $n$). We will be interested mainly in the case $n\geq 2$ because later on we will study MGH spacetime whose Cauchy surface is a closed hyperbolic surface.\\ 
 \begin{observation} \label{rem:genus 0}
     It can be shown that given $\sigma :S \to\A^{2,1}$ spacelike immersion where $\sigma^*(g_{\A^{2,1}})$ is a complete Riemannian metric, then $\sigma$ is a proper embedding and $S$ is diffeomorphic to $\R^2$.
     In particular there are no globally hyperbolic Anti-de Sitter spacetime of genus zero (\cite{bonsanteseppi}).
@@ -221,11 +221,11 @@ The aim of this section and the following section is to study maximal globally h
     \begin{itemize}
         \item The developing map $dev: \widetilde{M} \to\A^{2,1}$ is injective.
         \item If $\Sigma$ is a Cauchy surface of $M$, then the image of dev is contained in $\Omega(\Lambda)$ where $\Lambda$ is the boundary of $dev(\widetilde{\Sigma})$.
-        \item If $\rho : \pi_1(M) \to \text{Isom}(\A^{2,1})$ is the holonomy representetion, $\rho(\pi_1(M))$ acts freely and properly discontinuously on $\Omega(\Lambda)$ and $\Omega(\Lambda) / \rho(\pi_1(M))$ is a globally hyperbolic spacetime containing $M$.
+        \item If $\rho : \pi_1(M) \to \text{Isom}(\A^{2,1})$ is the holonomy representation, $\rho(\pi_1(M))$ acts freely and properly discontinuously on $\Omega(\Lambda)$ and $\Omega(\Lambda) / \rho(\pi_1(M))$ is a globally hyperbolic spacetime containing $M$.
     \end{itemize}
 \end{proposition}
 \begin{proof}
-    Let $\widetilde{dev}: \widetilde{M} \to \AS^{2,1}$ be a lift of \textit{dev} to the universal cover. By theorem \ref{GH_structure}, the spacetime $M$ adimits a foliation by smooth spacelike surface $(\Sigma_t)_{t\in\R}$ of genus $n\geq 1$, such that $\Sigma_t$ is contained in the future cone of $\Sigma_{t'}$ for $t > t'$. Let $\widetilde{\Sigma}_t$ be the foliation on $\widetilde{M}$ obtained lifting the one on $M$. Since $\Sigma_t$ is closed, the metric induced on $\Sigma_t$ is complete, and so is the one on $\widetilde{\Sigma}_t$. By \ref{rem:genus 0} we have that $\widetilde{dev}$ to $\widetilde{\Sigma}_t$ is a proper embedding, since $\widetilde{dev}$ is a local isometry.\\
+    Let $\widetilde{dev}: \widetilde{M} \to \AS^{2,1}$ be a lift of \textit{dev} to the universal cover. By Theorem \ref{GH_structure}, the spacetime $M$ admits a foliation by smooth spacelike surfaces $(\Sigma_t)_{t\in\R}$ of genus $n\geq 1$, such that $\Sigma_t$ is contained in the future cone of $\Sigma_{t'}$ for $t > t'$. Let $\widetilde{\Sigma}_t$ be the foliation on $\widetilde{M}$ obtained lifting the one on $M$. Since $\Sigma_t$ is closed, the metric induced on $\Sigma_t$ is complete, and so is the one on $\widetilde{\Sigma}_t$. By Remark \ref{rem:genus 0} we have that the restriction of $\widetilde{dev}$ to $\widetilde{\Sigma}_t$ is a proper embedding, since $\widetilde{dev}$ is a local isometry.\\
     Assume now by contradiction that $\widetilde{\Sigma}_t \cap \widetilde{\Sigma}_{t'} \neq \emptyset$ for $t \geq t'$. This means that there is $x \in \widetilde{\Sigma}_t$ such that $\widetilde{dev}(x) \in \widetilde{dev}(\widetilde{\Sigma}_{t'})$. By assumption $x$ is connected to $\widetilde{\Sigma}_{t'}$ by a timelike arc $\eta$ in $\widetilde{M}$ and $\widetilde{dev}$ is therefore a timelike arc in $\AS^{2,1}$ with end-points in $\widetilde{dev}(\widetilde{\Sigma}_{t'})$, which contradicts the achronality of $\widetilde{dev}(\widetilde{\Sigma}_{t'})$. This prove that $\widetilde{dev}$ is injective. Moreover we conclude that $\widetilde{dev}(\widetilde{\Sigma}_t)$ is a Cauchy surface of $\widetilde{dev}(\widetilde{M})$. Therefore, by Proposition \ref{prop:surface in ads}, $\widetilde{dev}(\widetilde{M}) \subset \mathcal{D}(\widetilde{dev}(\widetilde{\Sigma}_t)) = \Omega(\widetilde{\Lambda})$, where $\widetilde{\Lambda}$ is the boundary at infinity of $\widetilde{dev}(\widetilde{\Sigma}_t)$, which proves the second point.\\
     The map $\widetilde{dev}$ is $\widetilde{\rho}$-equivariant, for a representation $\widetilde{\rho} : \pi_1(M) \to \text{Isom}(\AS^{2,1})$ which is a lift of the holonomy of $M$. As $\widetilde{dev}$ is $\widetilde{\rho}$-invariant, the so are $\widetilde{\Lambda}$ and $\Omega(\widetilde{\Lambda})$. Now we shall prove that the action of $\pi_1(M)$ on $\Omega(\widetilde{\Lambda})$ given by $\widetilde{\rho}$ is proper. This also proves that the action is free since $\pi_1(M)$ has no torsion.\\
     If $K$ is a relatively compact set in $\Omega(\widetilde{\Lambda})$ then
@@ -245,44 +245,44 @@ As a direct consequence of Proposition \ref{prop:GH_geometry} we have:
 
 %sezione 5.4 e 5.5 su MGH di genere >1
 \section{Genus $n\geq 2$ classification}
-The purpose of this section is to classify all MGH spacetime of genus $n\geq 2$. Therefore, let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
+The purpose of this section is to classify all maximal globally hyperbolic (MGH) spacetimes of genus $n\geq 2$. Therefore, let $\Sigma_n$ be an oriented surface of genus $n\geq 2$.
 \begin{definition}
-    A representetion $\rho: \pi_1(\Sigma_n) \to \PSL$ is \textit{positive Fuchsian} if there is a $\rho$-equivariant orientation-preserving homeomorphism $\delta : \widetilde{\Sigma_n}\to\H^2$.
+    A representation $\rho: \pi_1(\Sigma_n) \to \PSL$ is \textit{positive Fuchsian} if there is a $\rho$-equivariant orientation-preserving homeomorphism $\delta : \widetilde{\Sigma_n}\to\H^2$.
 \end{definition}
-The following classical result in Teich\"uller theory is essential for the construction of MGH spacetime of genus $n\geq 2$.
+The following classical result in Teichm\"uller theory is essential for the construction of MGH spacetimes of genus $n\geq 2$.
 \begin{lemma}
-    Given two positive Fuchsian representetion $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$, any $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\H^2$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\S$. Moreover, its extension $\varphi : \S\to\S$ is the unique $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\S$.
+    Given two positive Fuchsian representations $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$, any $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\H^2$ extends continuously to an orientation-preserving homeomorphism of $\H^2\cup\S$. Moreover, its extension $\varphi : \S\to\S$ is the unique $(\rho_l, \rho_r)$-equivariant orientation-preserving homeomorphism of $\S$.
 \end{lemma}
 By $(\rho_l, \rho_r)$-equivariance of $\varphi$ we mean that for every $\gamma \in \pi_1(\Sigma_n)$:
 \begin{equation} \label{eq:equivariance}
     \varphi \circ \rho_l(\gamma) = \rho_r(\gamma)\circ\varphi.
 \end{equation}
-Given two positive Fuchsian representetion $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$ we will consider the associated representetion in Anti-de Sitter geometry given by
+Given two positive Fuchsian representations $\rho_l, \rho_r : \pi_1(\Sigma_n) \to \PSL$ we will consider the associated representation in Anti-de Sitter geometry given by
 \[
     \rho = (\rho_l, \rho_r) : \pi_1(\Sigma_n) \to \text{Isom}_0(\A^{2,1}) \cong \PSL \times \PSL.
 \]
 In this setting we define $\Lambda(\rho)$ as the graph of $\varphi: \S\to\S$ defined by $\rho$, and $\Omega_\rho := \Omega(\Lambda(\rho))$ its invisible domain in $\A^{2,1}$.
 \begin{proposition} \label{prop:MGH_example}
-    The domain $\Omega_\rho$ is invariant under the isometric action of $\pi(\Sigma_n)$ on $\A^{2,1}$ induced by $\rho$. Moreover $\pi_1(\Sigma_n)$ acts freely and properly discontinuously on $\Omega_\rho$ and the quotient is a MGH spacetime of genus $n$ and holonomy $\rho$.
+    The domain $\Omega_\rho$ is invariant under the isometric action of $\pi_1(\Sigma_n)$ on $\A^{2,1}$ induced by $\rho$. Moreover $\pi_1(\Sigma_n)$ acts freely and properly discontinuously on $\Omega_\rho$ and the quotient is a MGH spacetime of genus $n$ and holonomy $\rho$.
 \end{proposition}
 \begin{proof}
     By construction of $\varphi$, for any $(x, \varphi(x)) \in \Lambda(\rho)$ and $\gamma \in \pi_1(\Sigma_n)$ we have that 
     \[
         \rho(\gamma) \cdot(x,\varphi(x)) = (\rho_l(\gamma) \cdot x, \rho_r(\gamma) \cdot \varphi(x)) = (\rho_l(\gamma) \cdot x,  \varphi(\rho_l(\gamma)\cdot x)) \in \Lambda(\rho), 
     \]
-    proving the invariance of $\Lambda(\rho)$ by the action of $\pi_1(\Sigma_n)$. By corollary \ref{cor:invisible in ads} $\Omega_\rho$ is the set of $x \in \PSL$ such that $x\circ \varphi$ have no fixed point on $\S$. The invariance of $\Omega_\rho$ follows by the fact that
+    proving the invariance of $\Lambda(\rho)$ by the action of $\pi_1(\Sigma_n)$. By Corollary \ref{cor:invisible in ads}, $\Omega_\rho$ is the set of $x \in \PSL$ such that $x\circ \varphi$ have no fixed point on $\S$. The invariance of $\Omega_\rho$ follows by the fact that
     \[
         (\rho_l(\gamma) \circ x \circ \rho_r^{-1} ) \circ \varphi = (\rho_l(\gamma) \circ x \circ \varphi \circ \rho_l^{-1})
     \]
     acts freely on $\S$ if $x \circ \varphi$  does.\\
     We now show that the action of $\rho$ is properly discontinuous on $\Omega_\rho$. This will also show that the action is free, since $\pi_1(\Sigma_n)$ has no torsion.
-    For this purpose let $K$ be a compact set in $\Omega_\rho$, take a sequence $x_n \in K$ and a sequence $\gamma_n \in \pi_1(\Sigma_n)$ not definitively consastant. We claim that up to a subsequence $(\rho(\gamma_n)\cdot x_n)$ converges to some $(\xi_+, \varphi(\xi_+)) \in \Lambda(\rho)$.\\
-    Recall that since Fuchsian representations act cocompactly on $\H^2$, the sequence $\rho_l(\gamma_n)$ has no converging subsequence in $\PSL$. Up to taking subsequence, there exist $\xi_-,\xi_+ \in \S$ such that $\rho_l(\gamma_n)^{\pm 1}(\xi) \to \xi_\pm$ for all $\xi \neq \xi_\mp$ and the convergence is uniform on compact sets of $(\H^2 \cup \S) \setminus \{\xi_\pm \}$. By equivariance (\ref{eq:equivariance}), the same holds for $\rho_r(\gamma_n)$ whare $\xi_\pm$ is replaced by $\varphi (\xi_\pm)$.\\
+    For this purpose let $K$ be a compact set in $\Omega_\rho$, take a sequence $x_n \in K$ and a sequence $\gamma_n \in \pi_1(\Sigma_n)$ not definitively constant. We claim that up to a subsequence $(\rho(\gamma_n)\cdot x_n)$ converges to some $(\xi_+, \varphi(\xi_+)) \in \Lambda(\rho)$.\\
+    Recall that since Fuchsian representations act cocompactly on $\H^2$, the sequence $\rho_l(\gamma_n)$ has no converging subsequence in $\PSL$. Up to taking subsequence, there exist $\xi_-,\xi_+ \in \S$ such that $\rho_l(\gamma_n)^{\pm 1}(\xi) \to \xi_\pm$ for all $\xi \neq \xi_\mp$ and the convergence is uniform on compact sets of $(\H^2 \cup \S) \setminus \{\xi_\pm \}$. By equivariance (\ref{eq:equivariance}), the same holds for $\rho_r(\gamma_n)$ where $\xi_\pm$ is replaced by $\varphi (\xi_\pm)$.\\
     To apply the criterion on convergence of Lemma \ref{lem:convergence} pick $p\in \H^2$. By the dinamical property above, for any $\delta >0$ one can find $n_0$ such that $\rho_r(\gamma_n)^{-1}(p)$ is in the $\delta$-neighborhood $U_\delta$ of $\varphi(\xi_-)$ (for the Euclidean metric on the closed disc).
     Since $x_n$ lies in the compact $K$, we can assume that it converges to $x_\infty \in \Omega_\rho$, hence $x_\infty \circ \varphi$ has no fixed point, and in particular $x_\infty \circ \varphi(\xi_-) \neq \xi_-$.
     Up to taking $\delta$ sufficiently small and $n_0$ large, $x_n(U_\delta)$ lies in a neighborhood $V_\epsilon$ of $x_\infty \circ \varphi(\xi_-)$ such that the closure of $V_\epsilon$ does not contain $\xi_-$.
     By construction $x_n \circ \rho_r(\gamma_n)^{-1}(p) \in V_\epsilon$ and by the uniform convergence on compact sets on the complement of $\xi_-$, $(\rho(\gamma_n) \cdot x_n) (p) = \rho_l(\gamma_n)\circ x_n \circ \rho_r(\gamma_n)^{-1}(p)$ converges to $\xi_+$. The same argument shows that $(\rho(\gamma_n) \circ x_n)^{-1}(p) = \rho_r(\gamma_n)\circ x_n \circ \rho_l(\gamma_n)^{-1}(p)$ converges to $\varphi(\xi_+)$. By Lemma \ref{lem:convergence} we conclude that $(\rho(\gamma_n)\cdot x_n)$ converges to $(\xi_+, \varphi(\xi_+)) \in \Lambda(\rho)$.\\
-    Now we prove that the quotient of $\Omega_\rho$ by the action of $\rho(\pi_1(\Sigma_n))$ is a MGH spacetime. The past and future boundary components $\partial_\pm C(\Lambda(\rho))$ arre contained in $\Omega_\rho$ since $\Lambda(\rho)$ is the graph of an orientation-preserving homeomorphism. Hence they are $\rho$-inveriant properly embedded Cauchy surfaces in $\Omega_\rho$ and project to Cauchy surfaces of the quotient by the action of $\rho(\pi_1(\Sigma_n))$, which are homeomorphic to $\Sigma_n$. By proposition \ref{prop:GH_geometry} and Corollory \ref{cor:MGH}, $\Omega_\rho / \rho(\pi_1(\Sigma_n))$ is a MGH spacetime.
+    Now we prove that the quotient of $\Omega_\rho$ by the action of $\rho(\pi_1(\Sigma_n))$ is a MGH spacetime. The past and future boundary components $\partial_\pm C(\Lambda(\rho))$ are contained in $\Omega_\rho$ since $\Lambda(\rho)$ is the graph of an orientation-preserving homeomorphism. Hence they are $\rho$-invariant properly embedded Cauchy surfaces in $\Omega_\rho$ and project to Cauchy surfaces of the quotient by the action of $\rho(\pi_1(\Sigma_n))$, which are homeomorphic to $\Sigma_n$. By Proposition \ref{prop:GH_geometry} and Corollory \ref{cor:MGH}, $\Omega_\rho / \rho(\pi_1(\Sigma_n))$ is a MGH spacetime.
 \end{proof}
 %\begin{figure}
 %    \centering
@@ -291,7 +291,7 @@ In this setting we define $\Lambda(\rho)$ as the graph of $\varphi: \S\to\S$ def
 %\end{figure}
 Now we prove that the MHG constructed in Proposition \ref{prop:MGH_example} are all the MGH spacetime of genus $n$.
 \begin{lemma}
-    Let $\rho=(\rho_l,\rho_r)$ be a pair of positive Fuchsian representetion, and $\varphi :\S \to \S$ be the unique $(\rho_l,\rho_r)$-equivariant orientation-preserving homeomorphism of $\S$. Then $\Lambda(\rho)$ is the unique proper achronal meridian in $\partial \A^{2,1}$ invariant under the action of $\rho(\pi_1(\Sigma_n))$.
+    Let $\rho=(\rho_l,\rho_r)$ be a pair of positive Fuchsian representations, and $\varphi :\S \to \S$ be the unique $(\rho_l,\rho_r)$-equivariant orientation-preserving homeomorphism of $\S$. Then $\Lambda(\rho)$ is the unique proper achronal meridian in $\partial \A^{2,1}$ invariant under the action of $\rho(\pi_1(\Sigma_n))$.
 \end{lemma}
 \begin{proof} 
     Let $\Lambda$ be a proper achronal meridian invariant under the action of $\rho(\pi_1(\Sigma_n))$. We claim $\Lambda \cap \Lambda(\rho)$ is not empty.\\
@@ -303,29 +303,29 @@ Now we prove that the MHG constructed in Proposition \ref{prop:MGH_example} are 
     \[
         \lambda_{\xi^+_r(\gamma)} = \{ (x, \xi^+_r(\gamma)) \ | \ x\in \S \}
     \]
-    in a point $(x_0, \xi^+_r(\gamma))$. Then $(\rho_l(\gamma)^k \cdot x_0 ,\xi^+_r(\gamma)) \in \Lambda$ for $k>0$ and, if $x_0\neq \xi^-_l(\gamma)$, passing to the limit on $k$ we have that $(\xi^+_l(\gamma),\xi^+_r(\gamma))$ lies in $\Lambda$.\\
+    in a point $(x_0, \xi^+_r(\gamma))$. Then $(\rho_l(\gamma)^k \cdot x_0 ,\xi^+_r(\gamma)) \in \Lambda$ for $k>0$ and, if $x_0\neq \xi^-_l(\gamma)$, passing to the limit on $k$, we have that $(\xi^+_l(\gamma),\xi^+_r(\gamma))$ lies in $\Lambda$.\\
     To conclude assume by contradiction that for every $\gamma \in \pi_1(\Sigma_n)$ the point $(\xi^-_l(\gamma),\xi^+_r(\gamma))$ lies in $\Lambda$. Take $\alpha , \beta \in \pi_1(\Sigma_n)$ so that the axis of $\rho_l(\alpha)$ and $\rho_l(\beta)$ do not intersect. We may assume that the cyclic order of the end points of those axis is
     \begin{equation}\label{eq:order}
         \xi^+_l(\alpha) < \xi^+_l(\beta) < \xi^-_l(\beta) < \xi^-_l(\alpha).
     \end{equation}
-    Since $\xi^\pm_r(\alpha) = \varphi(\xi^\pm_l(\alpha))$ and $\xi^\pm_r(\beta) = \varphi(\xi^\pm_l(\beta))$, equation \ref{eq:order} holds if we replace $\rho_l$ with $\rho_r$.
+    Since $\xi^\pm_r(\alpha) = \varphi(\xi^\pm_l(\alpha))$ and $\xi^\pm_r(\beta) = \varphi(\xi^\pm_l(\beta))$, Equation \ref{eq:order} holds if we replace $\rho_l$ with $\rho_r$.
     On the other hand we assumed that $\Lambda$ contains $(\xi^+_l(\alpha), \xi^-_r(\alpha))$, $(\xi^+_l(\beta), \xi^-_r(\beta))$, $(\xi^-_l(\beta), \xi^+_r(\beta))$, $(\xi^-_l(\alpha), \xi^+_r(\alpha))$. By achronality of $\Lambda$, the cyclic order of the first and second components must be the same, hence
     \[
         \xi^-_l(\alpha) \leq \xi^-_l(\beta) \leq \xi^+_l(\beta) \leq \xi^+_l(\alpha),
     \]
-    which contradicts equation \ref{eq:order}.
+    which contradicts Equation \ref{eq:order}.
 \end{proof}
-We proved that given a pair $\rho = (\rho_l,\rho_r)$ of positive Fuchsian representations of $\pi_1(\Sigma_n)$ the MGH spacetime $M_\rho := \Omega_\rho / \rho(\pi_1(Sigma_n))$ is the unique MGH spacetime with holonomy $\rho$.\\
+We proved that given a pair $\rho = (\rho_l,\rho_r)$ of positive Fuchsian representations of $\pi_1(\Sigma_n)$ the MGH spacetime $M_\rho := \Omega_\rho / \rho(\pi_1(\Sigma_n))$ is the unique MGH spacetime with holonomy $\rho$.\\
 The last step for the classification result is that given a MGH spacetime, the left and right components of the holonomy are necessarely positive Fuchsian.
 
 \begin{observation}\label{rem:bundle}
-    By a result of Goldman \cite{goldman1980discontinuous}, a representetion $\rho$ is positive Fuchsian if and only if the associated flat $\S$ bundle $E_\rho$, constructed as the quotient of $\widetilde{\Sigma}_n \times \S$ by the diagonal action of $\pi_1(\Sigma_n)$ given by deck transformation on the first factor and by $\rho$ on the second factor, has Euler class $2-2n$. This is also equivalent to the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_n$.
+    By a result of Goldman \cite{goldman1980discontinuous}, a representation $\rho$ is positive Fuchsian if and only if the associated flat $\S$ bundle $E_\rho$, constructed as the quotient of $\widetilde{\Sigma}_n \times \S$ by the diagonal action of $\pi_1(\Sigma_n)$ given by deck transformation on the first factor and by $\rho$ on the second factor, has Euler class $2-2n$. This is also equivalent to the existence of an orientation-preserving fiber bundle isomorphism between $E_\rho$ and the unit tangent bundle of $\Sigma_n$.
 \end{observation}
 \begin{proposition}
-    Let $M$ be an oriented, time-oriented, globally hyperbolic spacetime of genus $n\geq 2$ and let us endow a Cauchy surface $\Sigma$ with the orientation induced by the future normal vector. Then the left and right components of the holonomy $\rho=(\rho_l,\rho_r): \pi_1(\Sigma)\to\PSL\times\PSL$ are positive Fuchsian representetion.
+    Let $M$ be an oriented, time-oriented, globally hyperbolic spacetime of genus $n\geq 2$ and let us endow a Cauchy surface $\Sigma$ with the orientation induced by the future normal vector. Then the left and right components of the holonomy $\rho=(\rho_l,\rho_r): \pi_1(\Sigma)\to\PSL\times\PSL$ are positive Fuchsian representations.
 \end{proposition}
 \begin{proof}
-    By remark \ref{rem:bundle} we have to prove that the $\S$-flat bundles with holonomy $\rho_l$ and $\rho_r$ are isomorphic to the unit tangent bundle. We focus on $\rho_l$, the proof for $\rho_r$ is analogous.\\
+    By Remark \ref{rem:bundle} we have to prove that the $\S$-flat bundles with holonomy $\rho_l$ and $\rho_r$ are isomorphic to the unit tangent bundle. We focus on $\rho_l$, the proof for $\rho_r$ is analogous.\\
     Define $\Phi_l : T^1 \widetilde{\Sigma} \to \widetilde{\Sigma} \times \S$ in the following way: for an element $(x,v) \in T^1 \widetilde{\Sigma}$ let
     \[
         \xi(x,v) = (\xi^l(x,v), \xi^r(x,v)) \in \T
@@ -337,7 +337,7 @@ The last step for the classification result is that given a MGH spacetime, the l
 
 We conclude this section by stating the classification result. Let the \emph{deformation space} of MGH spacetimes of genus $n$ be:
 $$\mathcal{MGH}(\Sigma_n)=\{g\text{ MGH AdS metric on }\Sigma_r\times\R\}/\mathrm{Diff}_0(\Sigma_n\times\R)~,$$
-where the group of diffeomorphisms isotopic to the identity acts by pull-back. The holonomy map takes value in the space of representations of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ and is well-defined on the quotient $\mathcal{MGH}(\Sigma_r)$.
+where the group of diffeomorphisms isotopic to the identity acts by pull-back. The holonomy map takes value in the space of representations of $\pi_1(\Sigma_r)$ into $\PSL\times\PSL$ up to conjugation and is well-defined on the quotient $\mathcal{MGH}(\Sigma_r)$.
 We proved that the left and right components of the holonomy of elements of $\mathcal{MGH}(\Sigma_n)$ are positive Fuchsian representations, and the space of these representations up to conjugacy is identified with the Teichm\"uller space of $\Sigma_n$
 \[
     \mathcal{T}(\Sigma_n)\cong\{\rho:\pi_1(\Sigma_n)\to\PSL\text{ positive Fuchsian representations}\}/\PSL~.
