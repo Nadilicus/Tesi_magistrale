@@ -12,7 +12,7 @@ preserving the quadratic form $q = -det$. Therefore it induces a representation
 \[
     SL(2,\R)\times SL(2,\R) \to O(\mathcal{M}(2,\R),q).
 \]
-The kernel of this representation is given by $K=\{ (\1,\1),(-\1,-\1) \}$, and by dimensional argument it is the connected component of the identity:
+The kernel of this representation is given by $K=\{ (\1,\1),(-\1,-\1) \}$, and by dimensional argument the image of this map is the connected component of the identity:
 \[
     \text{Isom}_0(\H^{2,1}) \cong SO_0(\mathcal{M}(2,\R),q) \cong SL(2,\R)\times SL(2,\R) / K.
 \]
@@ -47,14 +47,14 @@ The equivariance is easily checked observing that $\text{Im}(AXB^{-1}) = A \cdot
     If $trX \neq 0$ then $X$ is diagonalizable with eigenvalues $0$ and $trX$. Moreover $\text{Ker}X$ and $\text{Im}X$ are the corresponding eigenspaces and it is easily seen that $\text{Ker}((trX)\1 -X) = \text{Im}X$ and $\text{Im}((trX)\1 -X) = \text{Ker}X$.
 \end{proof}
 
-Using the half-plane model for the hyperbolic space $\H^2$, $\S$ is identified to the boundaty at infinity $\partial \H^2$ and $\PSL$ corresponds to $\text{Isom}_0(\H^2)$, which acts on $\S$ in the canonical way.
-Therefore one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \partial \H^2$ and we can interpret the convergence to $\partial \A^{2,1}$ in the following way:
+Using the half-plane model for the hyperbolic space $\H^2$, $\S$ is identified with the boundaty at infinity $\partial \H^2$ and $\PSL$ corresponds to $\text{Isom}_0(\H^2)$, which acts on $\S$ in the canonical way.
+Therefore, one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \partial \H^2$ and we can interpret the convergence to $\partial \A^{2,1}$ in the following way:
 \begin{lemma} \label{lem:convergence}
     A sequence $[X_n] \in \A^{2,1}$ converges to $(x,y) \in \partial \A^{2,1} \cong \T$ if and only if for every $p\in\H^2$, $X_n(p) \to x$ and $X_n^{-1}(p) \to y$.
 \end{lemma}
 
 \begin{proof}
-    It suffices to check that the condition holds for some $p\in\H^2$ since the action of $\PSL$ on $\H^2$ is isometric. Therefore we can take $p=i\in\H^2$. Assume $\left[ X_n \right]$ converges projectively to $\left[ X \right] \in \partial\A^{2,1}$. This means that there is a sequence of real number such that
+    It suffices to check that the condition holds for some $p\in\H^2$ since the action of $\PSL$ on $\H^2$ is isometric. Therefore we can take $p=i\in\H^2$. Assume $\left[ X_n \right]$ converges projectively to $\left[ X \right] \in \partial\A^{2,1}$. This means that there is a sequence of real numbers $\lambda_n$ such that
     \[
        \lambda_n X_n = \lambda_n
        \begin{pmatrix}
@@ -64,14 +64,14 @@ Therefore one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \parti
             a & b \\ c & d
         \end{pmatrix} =X.
     \]
-    Without loss of generality, we can assume $\lambda_n a_n \to a \neq 0$. Then 
+    Without loss of generality, we can assume $\lambda_n a_n \to a \neq 0$. Then, using that $det(X)=ad-bc=0$, we have
     \[
         X(i) = \lim_{n\to \infty} \lambda_n \frac{a_n i + b_n}{c_n i + d_n} = \frac{ai +b}{ci+d} = \frac{ai + b}{ ci + \frac{bc}{a}} = \frac{a(ai+b)}{c(ai+b)} = \frac{a}{c}.
     \]
     Using the identification between $\S$ and $\R \cup \{ \infty \} = \partial_\infty \H^2$ we have that $\frac{a}{c} = \text{Im}(X)$. The convergence of $X_n^{-1}(i) \to \text{Ker}(X)$ follows from Lemma \ref{lem:inversion}.
 \end{proof}
 
-In this dimension $\partial\A^{2,1}$ is double ruled quadric. Given any $(x_0,y_0) \in \partial\A^{2,1}$ we refer to
+In this dimension, $\partial\A^{2,1}$ is double ruled quadric. Given any $(x_0,y_0) \in \partial\A^{2,1}$ we refer to
 \[
     \lambda_{y_0} := \{ (x,y_0) \ | \ x \in\S \}
 \]
@@ -86,7 +86,7 @@ as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings des
 Therefore a $C^1$ curve in $\partial\A^{2,1}$ is spacelike when it is locally the graph of an orientation preserving function, and timelike when it is locally the graph of an orientation reversing function.
 
 \section{Levi-Civita connection and cross-product}
-Any Lie group $G$ is equipped with two natural connection, the \textit{left-invariant connection} $D^l$ and the \textit{right-invariant connection} $D^r$. For example, $D^l$ is uniquely determined by the condition that left-invariant vector fields are parallel, and is left-invariant in the sense that
+Any Lie group $G$ is equipped with two natural connections, the \textit{left-invariant connection} $D^l$ and the \textit{right-invariant connection} $D^r$. For example, $D^l$ is uniquely determined by the condition that left-invariant vector fields are parallel, and is left-invariant in the sense that
 \[
     (L_g)_*(D^l_V W) = D^l_{(L_g)_*(V)} (L_g)_*(W),
 \]
@@ -95,7 +95,7 @@ where $L_g :G \to G$ is the left multiplication by $g$. The connection $D^l$ at 
     D^l_V W = \left. \frac{d}{dt} \right|_{t=0} (L_{g \gamma(t)^{-1}})_* (W_{\gamma(t)})
 \]
 where $\gamma(t)$ is a path with $\gamma(0) = g$ and $\gamma'(0) = V$.
-In an analogous way one define the right-invariant connection $D^r$. Both connections $D^l$ and $D^r$ are flat and compatible with any metric which is left-invariant or right-invariant respectively. But this connections are not torsion-fre, by computation one obtain that
+In an analogous way, one defines the right-invariant connection $D^r$. Both connections $D^l$ and $D^r$ are flat and compatible with any metric which is left-invariant or right-invariant respectively. But these connections are not torsion-fre; by computation one obtains that
 \[
     \tau^l (V,W) = - \left[ V,W \right]
 \]
@@ -113,7 +113,7 @@ Now, given a bi-invariant pseudo-Riemannian metric on $G$, its Levi-Civita conne
 \]
 In our case, $\PSL$ is equipped with a natural Lorentzian cross-product which can be used to rewrite the expression for the Levi-Civita connection. The cross-product on $\PSL$ is a $T \A^{2,1}$-valued 2-form $(V,W) \to V \boxtimes W$, which is defined by the equality
 \[
-    \langle V \boxtimes W , U \rangle = \Omega(V,W,U),
+    \langle V \boxtimes W , U \rangle = \Omega(V,W,U) \qquad \forall U \in T\A^{2,1} \ ,
 \]
 where $\langle \cdot, \cdot \rangle$ is the Anti-de Sitter metric and $\Omega$ is the associated volume form. In this setting
 \[
@@ -124,7 +124,7 @@ This permits to rewrite the expression for the Levi-Civita connection of leftinv
     \nabla_V W = - V \boxtimes W = D^l_V W - V \boxtimes W = D^r_V W + V \boxtimes W.
 \]
 \section{Geodesics in $\PSL$}
-Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroup of $\A^{2,1}$
+Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroups of $\A^{2,1}$
 (the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}). We get the following:
 \begin{itemize}
     \item Timelike geodesics are, up to conjugacy, of the form
@@ -162,21 +162,21 @@ To get a complete description of timelike geodesics it suffices to let the isome
     The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
 \end{proposition}
 \begin{proof}
-    We define the homeomorphism as follows. Given a pair $(p,q) \in \H^2\times\H^2$ associate to it the set
+    We define the homeomorphism as follows. Given a pair $(p,q) \in \H^2\times\H^2$, we associate to it the set
     \[
         L_{p,q} = \{X \in \PSL \ | X \cdot q = p\}.
     \]
     
     By a previous discussion, geodesics through the identity are of the form $L_{p,p}$ for some $p\in\H^2$. The action of $(A,B) \in \PSL \times \PSL$ sends $L_{p,q}$ to $L_{A\cdot p, B\cdot q}$ which implies that the map is equivariant under the action of $\PSL\times\PSL$, that $L_{p,q}$ is an unparametrized timelike geodesic and that all unparametrized timelike geodesics are of this form. This shows in particular that the map defined is surjective.
-    Suppose now that $L_{p,q} = L{p',q'}$ for some $(p,q) \neq (p',q')$. In particular there exists an isometry of $\H^2$ sending $p$ to $q$ and $p'$ to $q'$, which is unique since it fixes two points in $\H^2$. This gives a contradiction and therefore the map is injective.
+    Suppose now that $L_{p,q} = L_{p',q'}$ for some $(p,q) \neq (p',q')$. In particular, there exists an isometry of $\H^2$ sending $p$ to $q$ and $p'$ to $q'$, which is unique. This gives a contradiction and therefore the map is injective.
 \end{proof}
 
 \noindent\textit{Spacelike geodesics}.
-Let $l$ be a geodesic of $\H^2$. The one-parameter group of hyperbolic transormation fixing $l$ as an oriented geodesic is a spacelike geodesic through the identity. By an argument similar to the previous proposition, one proves that every spacelike geodesic is of the form
+Let $l$ be a geodesic of $\H^2$. The one-parameter group of hyperbolic transformations fixing $l$ as an oriented geodesic is a spacelike geodesic through the identity. By an argument similar to the previous proposition, one proves that every spacelike geodesic is of the form
 \[
     L_{l,j} = \{ X \in\PSL \ | \ X \cdot j = l \ \ \text{as oriented geodesics} \}
 \]
-where $l$ and $j$ are oriented geodesics of $\H^2$. Ecery spacelike geodesuc can be expressed in this form in two ways, as one can change the orientation of both $l$ and $j$. Every such choice corresponds to a choice of orientation for the spacelike geodesic. In other words, we can state the following:
+where $l$ and $j$ are oriented geodesics of $\H^2$. Every spacelike geodesic can be expressed in this form in two ways, as one can change the orientation of both $l$ and $j$. Every such choice corresponds to a choice of orientation for the spacelike geodesic. In other words, we can state the following:
 \begin{proposition}
     There is a homeomorphism between the space of oriented spacelike geodesics of $\A^{2,1}$ and the product of two copies of $\partial \H^2 \times \partial \H^2 \ \setminus \ \Delta$, the space of oriented geodesics of $\H^2$. 
     The homeomorphism is equivariant for the action of $Isom_0(\A^{2,1}) \cong \PSL \times \PSL$.
