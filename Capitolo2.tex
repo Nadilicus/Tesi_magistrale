@@ -15,11 +15,11 @@ We define
 \]
 that is a smooth connected submanifold of $\R^{n,2}$ of dimension $n+1$. The tangent space $T_x \H^{n,1}$ coincides with the orthogonal space
 \[
-x^\perp = \{ y\in\R^{n,2} \ | \ \langle x,y \rangle=0 \}.
+x^\perp = \{ y\in\R^{n,2} \ | \ \langle x,y \rangle_{n,2}=0 \}.
 \]
-The restriction of the symmetric form $\langle \cdot , \cdot \rangle$ to $T\H^{n,1}$ induces a Lorentzian metric on $\H^{n,1}$.\\
+The restriction of the symmetric form $\langle \cdot , \cdot \rangle_{n,2}$ to $T\H^{n,1}$ induces a Lorentzian metric on $\H^{n,1}$.\\
 We remark that the hyperbolic space $\H^n$ is isometrically embedded in $\H^{n,1}$ as the submanifold defined by $x_{n+2}=0,\ x_{n+1}>0$.\\
-The group $O(n,2)$ acts by isometries on $\H^{n,1}$. In particular if $x\in H^{n,1}$ and $v_1, \cdots , v_{n+1}$ is an orthonormal basis of $T_x \H^{n,1}$ then the linear transformation sending the standard basis to the basis $\ v_1,\cdots,v_{n+1},x \ $ is in $O(n,2)$. This shows that the action of $O(n,2)$ on $\H^{n,1}$ is transitive and the stabilizer of a point $x$ acts transitively on the space of orthonormal basis of $T_x\H^{n,1}$. 
+The group $O(n,2)$ acts by isometries on $\H^{n,1}$. In particular if $x\in \H^{n,1}$ and $v_1, \cdots , v_{n+1}$ is an orthonormal basis of $T_x \H^{n,1}$ then the linear transformation sending the standard basis to the basis $\ v_1,\cdots,v_{n+1},x \ $ is in $O(n,2)$. This shows that the action of $O(n,2)$ on $\H^{n,1}$ is transitive and the stabilizer of a point $x$ acts transitively on the space of orthonormal basis of $T_x\H^{n,1}$. 
 These facts imply that $\H^{n,1}$ has maximal isometry group and that the isometry group is $O(n,2)$ and, by Lemma \ref{lem:constant curvature}, $\H^{n,1}$ has constant curvature equal to $-1$.\\
 
 \section{The Klein model}
@@ -40,46 +40,6 @@ Like in hyperbolic geometry, the boundary of $\A^{n,2}$ is the projectivization 
 \]
 Isometries of $\A^{n,1}$ induce projective transformation which preserve $\partial \A^{n,1}$.\\
 
-\textit{The conformal Lorentzian structure of the boundary}.
-In analogy with hyperbolic geometry we shall equip $\partial \A^{n,1}$ with a conformal Lorentzian structure that extends the conformal Lorentzian structure defined on $\A^{n,1}$.\\
-Given $\ell= span(x) \in \R \text{P}^{n+1}$, the tangent space at $\ell$ has the canonical identification
-\[
-    T_{\ell}\R\text{P}^{n+1} \cong \text{Hom}(\ell,\R^{n+2}/\ell).
-\]
-When $\ell$ is timelike the quotient $\R^{n+2}/\ell$ is canonically identified with $\ell^\perp$. For any local section $\sigma : \A^{n,1} \to \R^{n,2}$ of the canonical projection one can define a metric over $T\A^{n,1}$ by
-\[
-    \langle \langle f,g \rangle \rangle_\sigma = \langle f(\sigma[x]),g(\sigma[x]) \rangle_{n,2}
-\]
-for $f,g \in T_{[x]}\A^{n,1} \cong \text{Hom}(\ell,\ell^\perp)$.
-If the section $\sigma$ has image in $\H^{n,1}$, then the aforementioned metric coincides with the pull-back of the metric over $\R^{n,2}$, since the differential of $\sigma $ identifies $T_{[x]}\A^{n,1}=T_x\H^{n,1}=x^\perp$. For a general section the identification does not hold, but we can recover a conformal metric via the formula: 
-\[
-    \langle \langle f,g \rangle \rangle_{\lambda\sigma}=\lambda^2\langle \langle f,g \rangle \rangle_{\sigma}
-\]
-for any function $\lambda$.\\
-When $\ell$ is lightlike there is no way to define a natural metric on $\R^{n,2}/\ell$. However, let
-\[
-    \mathbb{L} = \{ x\in\R^{n,2} \ | \ q_{n,2}=0 \}
-\]
-be the space of lightlike vectors, then $T_x \mathbb{L}$ is $\ell^\perp$ and contains $\ell$.
-In fact $T_\ell \partial\A^{n,1}$ is canonically identified $\text{Hom}(\ell, \ell^\perp / \ell)$. 
-The bilinear form of $\R^{n,2},$ when restricted to $\ell^{\perp},$ induces a non degenerate bilinear form of signature $(n-1,1)$ on $\ell^\perp/\ell.$
-We will denote such a restriction as $\langle v,w\rangle_{\ell^{\perp}/\ell}.$ \\
-We can now define a metric on $\partial\A^{n,1}$ for any section $\sigma:\partial\A^{n,1}\to \mathbb{L}$ of the canonical projection by the formula:
-\[
-    ((f,g))_{\sigma}=\langle f(\sigma[x]),g(\sigma[x])\rangle_{\ell^{\perp}/\ell},
-\]
-for all $f,g\in \text{Hom}(\ell, \ell^\perp/\ell).$ This metric can be viewed as the pull-back of the metric: 
-\[
-    ((f,g))_\sigma=\langle \sigma_*(f), \sigma_{\ast} (g)\rangle_{n,2},
-\] 
-since the degenerate metric on $T_x\mathbb{L}=\ell^\perp$ is, by construction, the pull-back of the metric of $\ell^{\perp}/\ell$ by the projection along the degenerate direction $\ell$.\\ 
-The relation valid for the metric on $\A^{n,1}$ also holds for the metric on $\partial\A^{n,1}$, that is: 
-\[
-    ((f,g))_{\lambda\sigma}=\lambda^2((f,g))_{\sigma},
-\] 
-and therefore the induced conformal class over $T\partial\A^{n,1}$ is well defined and independent of the choice of $\sigma$ and equips the tangent space of the boundary with a conformal Lorentzian metric. 
-Let $\sigma$ be a section of the projection $\pi:\R^{n,2}\to \R\text{P}^{n+1}$ defined in a neighborhood $U$ of a point $x\in\partial\A^{n,1}$. By construction the metric $((\cdot,\cdot))_\sigma$ over $\partial\A^{n,1}\cap U$ is the limit, as $y\to x$ for $y\in\A^{n,1}\cap U,$ of the conformal metric associated to $\sigma$ defined over $\A^{n,1}\cap U$.\\
-
 \section{The Poincaré model for the universal cover}
 Notice that $\H^{n,1}$ is not simply connected, being homeomorphic to $\R^n \times S^1$. Therefore $\A^{n,1}$ is not simply connected either, being its double quotient.
 Hence we aim to construct a simply connected model of Anti-de Sitter geometry, that is the universal cover of $\H^{n,1}$ and $\A^{n,1}$.
@@ -95,15 +55,15 @@ The metric of $\AS^{n,1}$ is a warped product of the form
 \]
 In this setting we have a central extension, that is a non split short exact sequence
 \[
-    0 \to \Z \to \text{Isom}\AS^{n,1} \to O(n,2) \to 1.
+    0 \to \Z \to \text{Isom}(\AS^{n,1}) \to O(n,2) \to 1.
 \]
 This tells us that $\AS^{n,1}$ has maximal isometry group, hence we have found a simply connected model for AdS geometry.
 Using the Poincaré model of the hyperbolic space (namely $\D^n$), $\AS^{n,1}$ has the model $\D^n \times \R$ equipped with the metric
 \[
     \frac{4}{(1-r^2)^2} (dx_1^2 + \cdots + dx_n^2) - \Big( \frac{1+r^2}{1-r^2} \Big)^2 dt^2.
 \]
-The Poincaré model of the AdS geometry is then the cylinger $\D^n \times \R$ equipped with this metric.
-It follows that each slice $\{ t=c \}$ is a totally geodesic copy of $\H^n$. Moreover the vector field $\partial / \partial t$ is a timelike non-vanishing vector field on $\AS^{n,1}$, which shows that $\AS^{n,1}$ is time-orientable. $\H^n$ and $\A^{n,1}$ are time orientable too, since time orientation are preserved by the action of the deck transformation of the covering $\AS^{n,1} \to \A^{n,1}$.
+The Poincaré model of the AdS geometry is then the cylinder $\D^n \times \R$ equipped with this metric.
+It follows that each slice $\{ t=c \}$ is a totally geodesic copy of $\H^n$. Moreover the vector field $\partial / \partial t$ is a timelike non-vanishing vector field on $\AS^{n,1}$, which shows that $\AS^{n,1}$ is time-orientable. $\H^n$ and $\A^{n,1}$ are time orientable too, since time orientation are preserved by the action of the deck transformations of the covering $\AS^{n,1} \to \A^{n,1}$.
 
 \section{Geodesics}\label{sec:geodesic}
 \textit{In the quadric model}. Given $x\in \H^{n,1}$ and $v \in T_x \H^{n,1}$ we want to determine the geodesic through $x$ with speed $v$.
@@ -122,14 +82,14 @@ if $q_{n,2}(v)= 1$ and
 \] 
 if $q_{n,2}(v)= -1$.\\
 
-\noindent \textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model follows that
+\noindent \textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model, it follows that
 \begin{itemize}
     \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$, are closed non-trivial loops and have length $\pi$,
     \item Spacelike geodesics correspond to lines that meet $\partial\A^{n,1}$ transversally in two points. They have infinite length, 
     \item Lightlike geodesics correspond to lines tangent to $\partial\A^{n,1}$.
 \end{itemize}
 In particular the light cone through a point $\left[ x \right] \in \A^{n,1}$ coincides with the cone of lines through $\left[ x \right]$ tangent to $\partial \A^{n,1}$.\\
-In an affine chart, timelike geodesics corresponds to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one-sheeted hyperboloid, or are asymptotic to it (tangent at infinity).\\
+In an affine chart, timelike geodesics correspond to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one-sheeted hyperboloid, or are asymptotic to it (tangent at infinity).\\
 
 \noindent \textit{Totally geodesic subspaces}. Let us briefly discuss more in general totally geodesics subspaces. By an argument analogous to the case of geodesics, totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1$. The negative index of $W$ can be either $2$ or $1$, for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty.
 We have several cases
@@ -144,7 +104,7 @@ Using the Poincaré model we can give an explicit description of lightlike geode
  \begin{theorem}\label{ConformalMetric} If two Lorentzian metrics $g,g^{\prime} $ on a manifold $M$ are conformal, then they have the same unparametrized lightlike geodesics.
  \end{theorem}
 
- Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric, and often more easy to manage in calculation, given by:
+Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by the conformally equivalent metric, and often more easy to manage in calculation, given by:
  \begin{equation}\label{hemispherical}
      \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
  \end{equation} 
@@ -152,7 +112,7 @@ Using the Poincaré model we can give an explicit description of lightlike geode
  As a consequence, unparametrized lightlike geodesics of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the condition that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
  \[
      t-t_0=d_{\mathbb{S}^n}(p,p_0)
- \] on the geodesic. In particular, these lightlike geodesics meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slice $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. \\
+ \] on the geodesic. In particular, these lightlike geodesics meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slices $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. \\
  By an analogous reasoning we can give an explicit description of a lightlike hyperplane in the Poincaré model: the lightlike plane having $(p_0,t_0)$ as a past endpoint, (where now $p_0$ is on the equator) is precisely $\{(p,t)\;|\;t-t_0=d_{\mathbb{S}^n}(p,p_0)\}$ and its future endpoint is $(-p_0,t+\pi.)$ 
 
 \section{Polarity in Anti-de Sitter space}
