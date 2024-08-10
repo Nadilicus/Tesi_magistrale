@@ -30,7 +30,83 @@ shows that harmonic maps are the solutions of
 \begin{equation}
     \frac{1}{\sqrt{det(g)}} \frac{\partial}{\partial x^\alpha}(\sqrt{det(g)} g^{\alpha\beta} \frac{\partial f^i}{\partial x^\beta}) + g^{\alpha\beta}(x) \Gamma^k_{ij}(f(x)) \frac{\partial f^i}{\partial x^\alpha}  \frac{\partial f^j}{\partial x^\beta} = 0 \ .
 \end{equation}
-We turn now our attention to the case where $M$ is a compact Riemannian surface.
+
+We turn now our attention to the case where $M$ is a compact surface. As a complex manifold $M$ admits complex coordinates $z=x + iy$ which define on the tangent space the vector fields
+\[
+\frac{\partial}{\partial z} = \frac{1}{2} \Big(\frac{\partial}{\partial x} -i \frac{\partial}{\partial y} \Big) \ , \qquad \frac{\partial}{\partial \overline{z}} = \frac{1}{2} \Big(\frac{\partial}{\partial x} + i \frac{\partial}{\partial y} \Big) ,
+\]
+and on the cotangent space the 1-forms
+\[
+dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
+\]
+\begin{definition}
+    A Riemannian metric $\langle \cdot , \cdot \rangle$ on a surface $M$ is called $\textit{conformal}$ if in local coordinates it can be written as
+    \[
+        \rho^2(z) dz \otimes d\overline{z}
+    \]
+    for a positive, real valued function $\rho(z)$. In particular we have that
+    \[
+    \begin{split}
+        \Big\langle \frac{\partial}{\partial z}, \frac{\partial}{\partial z} \Big\rangle & = 0 = \Big\langle \frac{\partial}{\partial \overline{z}}, \frac{\partial}{\partial \overline{z}} \Big\rangle \ , \\
+         \Big\langle \frac{\partial}{\partial z}, \frac{\partial}{\partial \overline{z}} \Big\rangle & = \rho^2(z).
+    \end{split}
+    \]
+\end{definition}
+\begin{observation}
+    Using real coordinates a conformal metric is written as 
+    \[
+        \rho^2(z) (dx \otimes dx + dy \otimes dy)
+    \]
+    and
+    \[
+    \begin{split}
+        \Big\langle \frac{\partial}{\partial x}, \frac{\partial}{\partial x} \Big\rangle & = \rho^2(z) = \Big\langle \frac{\partial}{\partial y}, \frac{\partial}{\partial y} \Big\rangle \ , \\
+         \Big\langle \frac{\partial}{\partial x}, \frac{\partial}{\partial y} \Big\rangle & = 0.
+    \end{split}
+    \]
+\end{observation}
+\red{------}
+\begin{definition}
+    Given $M$ a surface and $N$ a Riemannian manifold with a metric $\langle \cdot , \cdot \rangle_N$, a map $f:M \to N$ is called \textit{conformal} if
+    \[
+    \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x} \Big\rangle_N = \Big\langle \frac{\partial f}{\partial y}, \frac{\partial f}{\partial y} \Big\rangle_N \ , \qquad \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big\rangle_N = 0 \ .
+    \]
+    In local coordinates the metric on $N$ can be expressed as $g_{ij}df^i \otimes df^j$ and the conditions of conformality are
+    \[
+    g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} \frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
+    \]
+    \red{In complex coordinates these are : vedere se serve e se spostare sta cosa della conformalità -----}
+\end{definition}
+
+In complex coordinates Equation \ref{eq:harmonic} are written as
+\[
+\frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}}
+\]
+
+\begin{theorem}
+    Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then 
+    \[
+        \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^z
+    \]
+    is a holomorphic quadratic differential, i.e $\varphi(z)$ is a holomoprhic funztion. \\
+    If $f$ is a diffeomorphism the converse hold.
+\end{theorem}
+\begin{proof}
+    In local coordinates
+    \[
+        \varphi(z)dz^2 = g_{ij}(f(z)) \frac{\partial f^i}{\partial z}  \frac{\partial f^j}{\partial z} dz^2. 
+    \]
+    Differentiating in $\overline{z}$ we have
+    \[
+    \begin{split}
+       \frac{ \partial}{\partial \overline{z}} \Big(g_{ij}(f(z)) \frac{\partial f^i}{\partial z}  \frac{\partial f^j}{\partial z} \Big) & = 2 g_{ij} \frac{\partial^2 f^i}{\partial z \partial \overline{z}} \frac{\partial f^j}{\partial z} + \frac{\partial g_{ij}}{\partial x^k} \frac{\partial f^k}{\partial \overline{z}} \frac{\partial f^i}{\partial z} \frac{\partial f^j}{\partial z} \\
+       & = 2 g_{ij} \frac{\partial^2 f^i}{\partial z \partial \overline{z}} \frac{\partial f^j}{\partial z} + \Big(\frac{\partial g_{lj}}{\partial x^k} + \frac{\partial g_{lk}}{\partial x^j} + \frac{\partial g_{jk}}{\partial x^l} \Big) \frac{\partial f^k}{\partial \overline{z}} \frac{\partial f^l}{\partial z} \frac{\partial f^j}{\partial z}  \\
+       & = 2 g_{ij} \frac{\partial f^j}{\partial z} \Big( \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{kl}  \frac{\partial f^k}{\partial \overline{z}} \frac{\partial f^l}{\partial z} \Big) \ ,
+    \end{split}
+    \]
+    which is $0$ when $f$ is harmonic.
+    \red{fare in viceversa}
+\end{proof}
 
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
