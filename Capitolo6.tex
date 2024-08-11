@@ -80,8 +80,12 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
 
 In complex coordinates Equation \ref{eq:harmonic} are written as
 \[
-\frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} \qquad \forall i = 1, \cdots, n
+\frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n
 \]
+When $N$ is a surface with complex coordinates $w = u + iv$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$, and $k(z) = f^1(z) + if^2(z)$, Equation \ref{eq:harmonic} are
+\begin{equation} \label{eq:harmonic2}
+    \frac{\partial k}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma} \frac{\partial \sigma}{ \partial w} \frac{\partial k}{\partial z} \frac{\partial k}{\partial \overline{z}} = 0 \ .
+\end{equation}
 
 \begin{theorem}
     Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then 
@@ -105,7 +109,29 @@ In complex coordinates Equation \ref{eq:harmonic} are written as
     \end{split}
     \]
     which is $0$ when $f$ is harmonic.
-    \red{fare in viceversa}
+    Let now $N$ be a surface with complex coordinates $w = u + iv$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$ and let $k(z) = f^1(z) + if^2(z)$. Now $\varphi(z)$ can be written as $\sigma \frac{\partial k}{ \partial z} \frac{\partial \overline{k}}{\partial z}$ and differentiating in $\overline{z}$ we have
+    \[
+    \begin{split}
+        \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial k}{ \partial z}  \frac{\partial \overline{k}}{\partial z} \Big) & = 
+        \frac{\partial \sigma}{\partial w} \frac{\partial k}{\partial \overline{z}} \frac{\partial k}{ \partial z} \frac{\partial \overline{k}}{\partial z} +
+        \frac{\partial \sigma}{\partial \overline{w}} \frac{\partial \overline{k}}{\partial \overline{z}} \frac{\partial k}{ \partial z} \frac{\partial \overline{k}}{\partial z} +
+        \sigma \frac{\partial^2 k}{\partial \overline{z} \partial z} \frac{\partial \overline{k}}{\partial z} +
+        \sigma \frac{\partial k}{ \partial z} \frac{\partial^2 \overline{k}}{\partial \overline{z} \partial z} \\
+        & = \sigma \frac{\partial \overline{k}}{\partial \overline{z}} \Big( \frac{\partial^2 k}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial k}{\partial \overline{z}} \frac{\partial k}{ \partial z}  \Big) + 
+        \sigma \frac{\partial k}{ \partial z} \overline{ \Big(  \frac{\partial^2 k}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial k}{\partial \overline{z}} \frac{\partial k}{ \partial z}  \Big) }  \\
+        & = \sigma \frac{\partial \overline{k}}{\partial \overline{z}} P + \sigma \frac{\partial k}{ \partial z} \overline{P} \ ,
+    \end{split}
+    \]
+    where $P$ is the left member of Equation \ref{eq:harmonic2}.\\
+    Suppose now that $f$ is a diffeomorphism and that $\varphi$ is holomorphic. We therefore have
+    \[
+    \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial k}{ \partial z}  \frac{\partial \overline{k}}{\partial z} \Big) = 0 \ .
+    \]
+    If $f$ is not harmonic, $P\neq 0$ and we have
+    \[
+       \Big| \frac{\partial k}{ \partial z} \Big| = \Big| \frac{\partial \overline{k}}{ \partial z} \Big| = \Big| \frac{\partial k}{ \partial \overline{z}} \Big| \ .
+    \]
+    This implies that the Jacobian of $f$ is singular which contradics the hypothesis, hence $P=0$ and $f$ is harmonic.
 \end{proof}
 
 \section{CMC Surfaces}
