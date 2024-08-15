@@ -87,7 +87,7 @@ When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood o
     \frac{\partial w}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma} \frac{\partial \sigma}{ \partial w} \frac{\partial w}{\partial z} \frac{\partial w}{\partial \overline{z}} = 0 \ .
 \end{equation}
 
-\begin{theorem}
+\begin{theorem} \label{thm:HQD}
     Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then 
     \[
         \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^z
@@ -139,7 +139,7 @@ A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (
 \begin{theorem}\label{thm:CMC_foliation}
     Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
 \end{theorem}
-The proof of theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
+The proof of Theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
 Given a spacelike immersion $\sigma$, by Lemma \ref{lem:tub metric}
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B).
@@ -148,22 +148,20 @@ Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$, by direct computation one 
 \begin{equation} \label{eq:eigenvalues}
     \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \ \ \ \ \ \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
 \end{equation}
-In general one can find a relation between CMC and constant Gaussian curvature (CGC) surfaces, namely surfaces where the determinant of the shape operator is constant, see \cite{chen2017constantmeancurvaturefoliation}. Here we show a weaker result which will prove useful in the proof of the main result:
+In general one can find a relation between CMC surfaces and constant Gaussian curvature (CGC) surfaces, namely surfaces where $K = -1 - detB$ is constant, see \cite{chen2017constantmeancurvaturefoliation}. Here we show a weaker result which will prove useful in the proof of the main result:
 \begin{proposition} \label{prop:cmc to cgc}
-    Let $\sigma: S \to\A^{2,1}$ be a maximal surface. Then the normal evolution $\sigma_{t}$ at the time $t= \pi / 4$ is an immersion of constant Gaussian curvature $K = -2$.
+    Let $\sigma: S \to\A^{2,1}$ be a maximal surface. Then the normal evolution $\sigma_{t}$ at the time $t= -\pi / 4$ is an immersion of constant Gaussian curvature $K = -2$.
 \end{proposition}
 \begin{proof}
-    By Equation \ref{eq:eigenvalues} the Gaussian curvature at $x$ is given by
+    Since $\sigma$ determines a maximal surface $\mu(x) = - \lambda(x)$. By Equation \ref{eq:eigenvalues} the eigenvalues of $B_t$ at time $t=-\pi / 4$ are
     \[
-        K_t(x) = \frac{\lambda(x)\mu(x) + \lambda(x)\tan(t) + \mu(x)\tan(t) + \tan^2(t)}{1 - \lambda(x)\tan(t)- \mu(x)\tan(t) + \lambda(x)\mu(x)\tan^2(t)}.
+        \lambda_{-\frac{\pi}{4}}(x) = \frac{\lambda(x) -1}{1 +\lambda(x)} \qquad \mu_{-\frac{\pi}{4}}(x) = \frac{\mu(x)-1}{1 + \mu(x)} = \frac{\lambda(x) + 1}{-1 + \lambda(x)} \ .
     \]
-    Since $sigma$ gives a maximal surface, we have $\mu(x) = -\lambda(x)$ and therefore
+    The Gaussian curvature at $x$ is therefore given by
     \[
-        K_t(x) = \frac{\lambda(x)\mu(x) + \tan^2(t)}{1 + \lambda(x)\mu(x)\tan^2(t)}
+        K_{-\frac{\pi}{4}}(x) = - 1 - \frac{ \lambda^2(x) -1}{ \lambda^2(x) -1 } = -1 -1 = -2 \ .
     \]
-    \red{i conti non stanno tornando}
 \end{proof}
-\red{fare la prop al contrario, per superfici massimali}
 
 \section{Minimal Lagrangian diffeomorphism}
 
@@ -174,7 +172,7 @@ In general one can find a relation between CMC and constant Gaussian curvature (
 
 \red{|||}
 Consider the GMH spacetime $M$ whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
-First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc} $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
 \red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
 By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
 To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, the proof is the same for $\Pi_r$. To see this we can write the target metric
