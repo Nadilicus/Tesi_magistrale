@@ -1,7 +1,5 @@
 \chapter{Minimal Lagrangian diffeomorphism}
 
-\red{aggiungere intro? aggiungiere sezione su mappe armoniche e minimali}
-
 \section{Harmonic and minimal maps}
 In this section we will briefly introduce harmonic and minimal maps, which will prove useful in the proof of the main theorem.\\
 For this purpose let $(M,g)$ and $(N,h)$ be Riemannian manifolds. In local coordinates the metric tensors $g$ and $h$ are given by $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots, m}$ and $(h_{ij})_{i,j= 1,\cdots,n}$. Moreover let $(g^{\alpha \beta}) = (g_{\alpha \beta})^{-1}$ be the inverse metric tensor on $M$ and let $\Gamma^k_{ij}$ be the Christoffel symbols of the Levi Civita connection of $N$.\\
@@ -65,30 +63,31 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
     \end{split}
     \]
 \end{observation}
-\red{------}
-\begin{definition}
-    Given $M$ a surface and $N$ a Riemannian manifold with a metric $\langle \cdot , \cdot \rangle_N$, a map $f:M \to N$ is called \textit{conformal} if
-    \[
-    \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x} \Big\rangle_N = \Big\langle \frac{\partial f}{\partial y}, \frac{\partial f}{\partial y} \Big\rangle_N \ , \qquad \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big\rangle_N = 0 \ .
-    \]
-    In local coordinates the metric on $N$ can be expressed as $g_{ij}df^i \otimes df^j$ and the conditions of conformality are
-    \[
-    g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} \frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
-    \]
-    \red{In complex coordinates these are : vedere se serve e se spostare sta cosa della conformalità -----}
-\end{definition}
+%\red{------}
+%\begin{definition}
+%    Given $M$ a surface and $N$ a Riemannian manifold with a metric $\langle \cdot , \cdot \rangle_N$, a map $f:M \to N$ is called \textit{conformal} if
+%    \[
+%    \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x} \Big\rangle_N = \Big\langle \frac{\partial f}{\partial y}, \frac{\partial f}{\partial y} \Big\rangle_N \ , \qquad \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big\rangle_N = 0 \ .
+%    \]
+%    In local coordinates the metric on $N$ can be expressed as $g_{ij}df^i \otimes df^j$ and the conditions of conformality are
+%    \[
+%    g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} %\frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
+%    \]
+%    \red{In complex coordinates these are : vedere se serve e se spostare sta cosa della conformalità -----}
+%\end{definition}
 
 In complex coordinates Equation \ref{eq:harmonic} are written as
 \[
 \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n
 \]
+In particular whether a map is harmonic depends only on the Riemann surface structure of $M$, but does not need any conformal metric.\\
 When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$, Equation \ref{eq:harmonic} are
 \begin{equation} \label{eq:harmonic2}
     \frac{\partial w}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma} \frac{\partial \sigma}{ \partial w} \frac{\partial w}{\partial z} \frac{\partial w}{\partial \overline{z}} = 0 \ .
 \end{equation}
 
 \begin{theorem} \label{thm:HQD}
-    Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then 
+    Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then the \textit{Hopf differential} of $f$ 
     \[
         \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^z
     \]
@@ -109,7 +108,7 @@ When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood o
     \end{split}
     \]
     which is $0$ when $f$ is harmonic.
-    Let now $N$ be a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$. Now $\varphi(z)$ can be written as $\sigma(w) \frac{\partial w}{ \partial z} \frac{\partial \overline{w}}{\partial z}$ and differentiating in $\overline{z}$ we have
+    Let now $N$ be a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(w) \frac{\partial w}{ \partial z} \frac{\partial \overline{w}}{\partial z}$ and differentiating in $\overline{z}$ we have
     \[
     \begin{split}
         \frac{ \partial}{\partial \overline{z}}\Big(\sigma(w) \frac{\partial w}{ \partial z}  \frac{\partial \overline{w}}{\partial z} \Big) & = 
@@ -133,6 +132,12 @@ When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood o
     \]
     This implies that the Jacobian of $f$ is singular which contradics the hypothesis, hence $P=0$ and $f$ is harmonic.
 \end{proof}
+Before moving on and talk about minimal maps we state the following result on quadratic differential which can be found in \cite{taubes2004minimalsurfacesgermshyperbolic}:
+\begin{lemma} \label{lem:HQD}
+    Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
+\end{lemma}
+
+\red{aggiungiere la parte su mappe minimali}
 
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
@@ -165,19 +170,22 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
 
 \section{Minimal Lagrangian diffeomorphism}
 
-\red{da finire}
 \begin{definition}
     Let $h$ and $h'$ be two hyperbolic metrics on the closed surface $S$. A smooth map $f: (S,h) \to (S,h')$ is \textit{minimal Lagrangian} if its graph is a minimal Lagrangian submanifold of $S\times S$ with respect to the product metric $h \oplus h'$ and the symplectic form $\pi_l^*\omega_h - \pi_r^* \omega_{h'}$. 
 \end{definition}
 
-\red{|||}
-Consider the GMH spacetime $M$ whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
-First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
-\red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
-By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
-To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, the proof is the same for $\Pi_r$. To see this we can write the target metric
-\[
-    \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
-\]
-where we used that $B$ is traceless and therefore $\mathcal{J}B$ is $\I$-symmetric. Moreover $\mathcal{J} B$ is $I$-Codazzi. By \red{lemms} $- 2\I(\mathcal{J}B \cdot, \cdot)$ is the real part of the Hopf differential of $\Pi_l$ which is holomorphic since $\mathcal{J}B$ is $I$-Codazzi. Hence, by \red{lemma harmonic iff HQD} we have that $\Pi_l$ is harmonic.
-\red{|||}
+\begin{theorem}
+    Given a closed surface $\Sigma$ and two hyperbolic metrics $h$, $h'$ on it, there exist a minimal Lagrangian diffeomorphism $f_0 : (\Sigma,h) \to (\Sigma,h')$ isotopic to the identity.
+\end{theorem}
+\begin{proof}
+    Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
+    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+    \red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
+    By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
+    To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, since the proof is the same for $\Pi_r$. To see this we can write the target metric
+    \[
+        \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
+    \]
+    where we used that $B$ is traceless and therefore $\mathcal{J}B$ is $\I$-symmetric. Moreover $\mathcal{J} B$ is $I$-Codazzi and by Lemma \ref{lem:HQD} $- 2\I(\mathcal{J}B \cdot, \cdot)$ is the real part of the Hopf differential of $\Pi_l$ which is holomorphic since $\mathcal{J}B$ is $I$-Codazzi. Hence, by Theorem \ref{thm:HQD} we have that $\Pi_l$ is harmonic.
+\end{proof}
+
