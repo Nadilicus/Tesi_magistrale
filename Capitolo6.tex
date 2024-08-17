@@ -2,7 +2,7 @@
 
 \section{Harmonic and minimal maps}
 In this section we will briefly introduce harmonic and minimal maps, which will prove useful in the proof of the main theorem.\\
-For this purpose let $(M,g)$ and $(N,h)$ be Riemannian manifolds. In local coordinates the metric tensors $g$ and $h$ are given by $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots, m}$ and $(h_{ij})_{i,j= 1,\cdots,n}$. Moreover let $(g^{\alpha \beta}) = (g_{\alpha \beta})^{-1}$ be the inverse metric tensor on $M$ and let $\Gamma^k_{ij}$ be the Christoffel symbols of the Levi Civita connection of $N$.\\
+For this purpose let $(M,g)$ and $(N,h)$ be Riemannian manifolds. In local coordinates the metric tensors $g$ and $h$ are given by $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots, m}$ and $(h_{ij})_{i,j= 1,\cdots,n}$. Moreover let $(g^{\alpha \beta}) = (g^{-1})_{\alpha \beta}$ be the inverse metric tensor on $M$ and let $\Gamma^k_{ij}$ be the Christoffel symbols of the Levi Civita connection of $N$.\\
 \begin{definition}
     The \textit{energy density} of a map $f:M \to N$ is defined as
     \begin{equation}
@@ -20,16 +20,15 @@ For this purpose let $(M,g)$ and $(N,h)$ be Riemannian manifolds. In local coord
 \begin{definition}
     A map $f:M\to N$ is \textit{harmonic} if it is a critical point of the energy functional.
 \end{definition}
-As an harmonics map are critical points of $E$, a direct computation of
+As harmonic maps are critical points of $E$, a direct computation of
 \[
     \frac{d}{dt}E(f+ t\varphi) |_{t=0} = 0
 \]
 shows that harmonic maps are the solutions of
-\begin{equation}
+\begin{equation} \label{eq:harmonic}
     \frac{1}{\sqrt{det(g)}} \frac{\partial}{\partial x^\alpha}(\sqrt{det(g)} g^{\alpha\beta} \frac{\partial f^i}{\partial x^\beta}) + g^{\alpha\beta}(x) \Gamma^k_{ij}(f(x)) \frac{\partial f^i}{\partial x^\alpha}  \frac{\partial f^j}{\partial x^\beta} = 0 \ .
 \end{equation}
-
-We turn now our attention to the case where $M$ is a compact surface. As a complex manifold $M$ admits complex coordinates $z=x + iy$ which define on the tangent space the vector fields
+We turn now our attention to the case where $M$ is a compact surface. As a complex manifold $M$ admits complex coordinate $z=x + iy$ which define on the tangent space the vector fields
 \[
 \frac{\partial}{\partial z} = \frac{1}{2} \Big(\frac{\partial}{\partial x} -i \frac{\partial}{\partial y} \Big) \ , \qquad \frac{\partial}{\partial \overline{z}} = \frac{1}{2} \Big(\frac{\partial}{\partial x} + i \frac{\partial}{\partial y} \Big) ,
 \]
@@ -71,28 +70,28 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
 %    \]
 %    In local coordinates the metric on $N$ can be expressed as $g_{ij}df^i \otimes df^j$ and the conditions of conformality are
 %    \[
-%    g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} %\frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
+%        g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} \frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
 %    \]
 %    \red{In complex coordinates these are : vedere se serve e se spostare sta cosa della conformalità -----}
 %\end{definition}
 
-In complex coordinates Equation \ref{eq:harmonic} are written as
+\noindent In complex coordinates Equation \ref{eq:harmonic} is written as
 \[
-\frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n
+    \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n \ .
 \]
-In particular whether a map is harmonic depends only on the Riemann surface structure of $M$, but does not need any conformal metric.\\
-When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$, Equation \ref{eq:harmonic} are
+In particular whether a map is harmonic depends only on the Riemann surface structure of $M$, and not on the choice of a conformal metric.\\
+When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$, Equation \ref{eq:harmonic} becomes
 \begin{equation} \label{eq:harmonic2}
-    \frac{\partial w}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma} \frac{\partial \sigma}{ \partial w} \frac{\partial w}{\partial z} \frac{\partial w}{\partial \overline{z}} = 0 \ .
+    \frac{\partial f}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma(f(z))} \frac{\partial \sigma}{ \partial f} \frac{\partial f}{\partial z} \frac{\partial f}{\partial \overline{z}} = 0 \ ,
 \end{equation}
-
+where $w(z) = f^1(z) + i f^2(z)$.
 \begin{theorem} \label{thm:HQD}
-    Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then the \textit{Hopf differential} of $f$ 
+    Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then the \textit{Hopf differential} of $f$
     \[
         \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^z
     \]
-    is a holomorphic quadratic differential, i.e $\varphi(z)$ is a holomoprhic funztion. \\
-    If $f$ is a diffeomorphism the converse hold.
+    is a holomorphic quadratic differential, i.e $\varphi(z)$ is a holomophic function. \\
+    If $f$ is a diffeomorphism the converse holds.
 \end{theorem}
 \begin{proof}
     In local coordinates
@@ -107,28 +106,28 @@ When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood o
        & = 2 g_{ij} \frac{\partial f^j}{\partial z} \Big( \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{kl}  \frac{\partial f^k}{\partial \overline{z}} \frac{\partial f^l}{\partial z} \Big) \ ,
     \end{split}
     \]
-    which is $0$ when $f$ is harmonic.
-    Let now $N$ be a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(w) \frac{\partial w}{ \partial z} \frac{\partial \overline{w}}{\partial z}$ and differentiating in $\overline{z}$ we have
+    which is $0$ when $f$ is harmonic.\\
+    Let now $N$ be a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z}$ and differentiating in $\overline{z}$ we have
     \[
     \begin{split}
-        \frac{ \partial}{\partial \overline{z}}\Big(\sigma(w) \frac{\partial w}{ \partial z}  \frac{\partial \overline{w}}{\partial z} \Big) & = 
-        \frac{\partial \sigma}{\partial w} \frac{\partial w}{\partial \overline{z}} \frac{\partial w}{ \partial z} \frac{\partial \overline{w}}{\partial z} +
-        \frac{\partial \sigma}{\partial \overline{w}} \frac{\partial \overline{w}}{\partial \overline{z}} \frac{\partial w}{ \partial z} \frac{\partial \overline{w}}{\partial z} +
-        \sigma \frac{\partial^2 w}{\partial \overline{z} \partial z} \frac{\partial \overline{w}}{\partial z} +
-        \sigma \frac{\partial w}{ \partial z} \frac{\partial^2 \overline{w}}{\partial \overline{z} \partial z} \\
-        & = \sigma \frac{\partial \overline{w}}{\partial \overline{z}} \Big( \frac{\partial^2 w}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial w}{\partial \overline{z}} \frac{\partial w}{ \partial z}  \Big) + 
-        \sigma \frac{\partial w}{ \partial z} \overline{ \Big(  \frac{\partial^2 w}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial w}{\partial \overline{z}} \frac{\partial w}{ \partial z}  \Big) }  \\
-        & = \sigma \frac{\partial \overline{w}}{\partial \overline{z}} P + \sigma \frac{\partial w}{ \partial z} \overline{P} \ ,
+        \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial f}{ \partial z}  \frac{\partial \overline{f}}{\partial z} \Big) & = 
+        \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
+        \frac{\partial \sigma}{\partial \overline{f}} \frac{\partial \overline{f}}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
+        \sigma(f(z)) \frac{\partial^2 f}{\partial \overline{z} \partial z} \frac{\partial \overline{f}}{\partial z} +
+        \sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial^2 \overline{f}}{\partial \overline{z} \partial z} \\
+        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} \Big( \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) + 
+        \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{ \Big(  \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) }  \\
+        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} P + \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{P} \ ,
     \end{split}
     \]
-    where $P$ is the left member of Equation \ref{eq:harmonic2}.\\
+    where $P$ is the left hand side of Equation \ref{eq:harmonic2}.\\
     Suppose now that $f$ is a diffeomorphism and that $\varphi$ is holomorphic. We therefore have
     \[
-    \frac{ \partial}{\partial \overline{z}}\Big(\sigma(w) \frac{\partial w}{ \partial z}  \frac{\partial \overline{w}}{\partial z} \Big) = 0 \ .
+    \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial f}{ \partial z}  \frac{\partial \overline{f}}{\partial z} \Big) = 0 \ .
     \]
     If $f$ is not harmonic, $P\neq 0$ and we have
     \[
-       \Big| \frac{\partial w}{ \partial z} \Big| = \Big| \frac{\partial \overline{w}}{ \partial z} \Big| = \Big| \frac{\partial w}{ \partial \overline{z}} \Big| \ .
+       \Big| \frac{\partial f}{ \partial z} \Big| = \Big| \frac{\partial \overline{f}}{ \partial z} \Big| = \Big| \frac{\partial f}{ \partial \overline{z}} \Big| \ .
     \]
     This implies that the Jacobian of $f$ is singular which contradics the hypothesis, hence $P=0$ and $f$ is harmonic.
 \end{proof}
@@ -137,21 +136,74 @@ Before moving on and talk about minimal maps we state the following result on qu
     Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
 \end{lemma}
 
-\red{aggiungiere la parte su mappe minimali}
+\red{aggiungiere la parte su mappe minimali------}
+Let $M$ be a manifold, $N$ a Riemannian manifold with metric $\langle \cdot, \cdot \rangle$ and $f:M \to N$ a local embedding. Let $\widetilde{\omega}$ be the volume form on $f(M)$, and $\omega$, $e_1, \cdots , e_m$ a volume form and a frame positively oriented orthonormal frame on $M$. Then
+\[
+\begin{split}
+    \text{Vol}(f(M)) & = \int_{f(M)} \widetilde{\omega} = \int_M f^* \omega  = \int_M | f_* e_1 \wedge \cdots \wedge f_* e_m | \omega = \\
+    & = \int_M \langle f_* e_1 \wedge \cdots \wedge f_* e_m ,f_* e_1 \wedge \cdots \wedge f_* e_m \rangle ^{\frac{1}{2}} \omega \ ,
+\end{split}
+\]
+where $\langle v_1 \wedge \cdots \wedge v_m , w_1 \wedge \cdots \wedge w_m \rangle = det(\langle v_i,v_j \rangle)$.\\
+Let now $F: M \times (-\epsilon, \epsilon) \to N$ such that $f_t(\cdot) = F(\cdot,t)$ is a local embedding for all $t$, $f_0 = f$ and
+\[ supp F:= \overline{ \{ x\in M \ :\ F(x,t) \neq f(x) \ \text{for some} \ t\} }  \]
+is a compact subset of $M$. For easier computation suppose that in coordinates $f = id_M$. The variation of volume is then
+\[
+    \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} = \sum_{i=1}^m \int_M \frac{ \langle f_{t*} e_1 \wedge \cdots \wedge \frac{\partial}{\partial t} f_{t*} e_i \wedge \cdots \wedge f_{t*} e_m ,f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m \rangle }{| f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m |} \omega
+\]
+and putting $X_=\frac{\partial}{\partial t} f_{t*} |_{t=0} $ we have
+\[
+\begin{split}
+    \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} & = \sum_{i=1}^m \int_M \frac{ \langle e_1 \wedge \cdots \wedge \nabla^N_{e_i} X \wedge \cdots \wedge e_m , e_1 \wedge \cdots \wedge e_m \rangle }{| e_1 \wedge \cdots \wedge e_m |} \omega \\
+    & = \int_M \langle \nabla^N_{e_i}, e_i \rangle \ \omega = - \int_M \langle X, \nabla^N_{e_i} e_i \rangle \ \omega \ .
+\end{split}
+\]
+If we suppose moreover to be in normal coordinates we have $\nabla^M_{e_i} e_i = 0$ and therefore
+\[
+   \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0}  = - \int_M \langle X^\perp, \nabla^N_{e_i} e_i \rangle \ \omega \ . 
+\]
+\begin{definition}
+    A submanifold $M$ of a Riemannian manifold $N$ is called \textit{minimal} if it is a critical point of the volume functional i.e
+    \[
+        \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0}  = 0
+    \]
+    for all local variation of $M$.\\
+    Moreover, we say a map $f:M \to N$ is \textit{minimal} is $f(M)$ is a minimal submanifold of $N$.
+\end{definition}
+Now that the codimension of $M$ can be greater than one, similarly to the case of codimension one, for every choice of a vector field $\nu$ normal to $M$ one have
+\[
+    B_\nu : TM \to TM
+\]
+defined by $B_\nu(X) = (\nabla^N_X \nu)^\top$, and the \textit{mean curvature} of $M$ in the direction $\nu$ is
+\[
+    H_\nu := \frac{1}{m} tr(B_\nu) \ .
+\]
+\begin{theorem}
+    A submanifold $M$ of a Riemannian manifold $N$ is minimal if and only if the mean curvature of $M$ vanishes for all normal directions.
+\end{theorem}
+\begin{proof}
+    We fix an orthonormal basis $\nu_1 , \cdots, \nu_k$ of $T_x M^\perp$ and write $X^\perp = \xi^j \nu_j$.
+    Then
+    \[
+        -\langle X^\perp , \nabla^N_{e_i} e_i \rangle = \xi^j tr(B_{\nu_j}) = m \cdot \xi^j H_{\nu_j} \ ,
+    \]
+    and $M$ is therefore minimal is and only $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the thesis follows.
+\end{proof}
+\red{---------}
 
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
     Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
 \end{theorem}
-The proof of Theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negatime mean curvature, respectively.\\
+The proof of Theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negative mean curvature, respectively.\\
 Given a spacelike immersion $\sigma$, by Lemma \ref{lem:tub metric}
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B).
 \]
 Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$, by direct computation one find that
 \begin{equation} \label{eq:eigenvalues}
-    \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \ \ \ \ \ \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
+    \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \qquad \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
 \end{equation}
 In general one can find a relation between CMC surfaces and constant Gaussian curvature (CGC) surfaces, namely surfaces where $K = -1 - detB$ is constant, see \cite{chen2017constantmeancurvaturefoliation}. Here we show a weaker result which will prove useful in the proof of the main result:
 \begin{proposition} \label{prop:cmc to cgc}
@@ -179,7 +231,7 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
 \end{theorem}
 \begin{proof}
     Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
-    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphism. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
     \red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
     By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
     To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, since the proof is the same for $\Pi_r$. To see this we can write the target metric
@@ -188,4 +240,3 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
     \]
     where we used that $B$ is traceless and therefore $\mathcal{J}B$ is $\I$-symmetric. Moreover $\mathcal{J} B$ is $I$-Codazzi and by Lemma \ref{lem:HQD} $- 2\I(\mathcal{J}B \cdot, \cdot)$ is the real part of the Hopf differential of $\Pi_l$ which is holomorphic since $\mathcal{J}B$ is $I$-Codazzi. Hence, by Theorem \ref{thm:HQD} we have that $\Pi_l$ is harmonic.
 \end{proof}
-
