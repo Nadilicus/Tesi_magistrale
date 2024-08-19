@@ -282,4 +282,43 @@ We conclude this section with the following:
         K_g = \frac{K_\I}{det(A)}.
     \]
 \end{proposition}
-For a proof see \cite{Krasnov_2007}. Applying the proposition to the tensors $id \pm \mathcal{J} \circ B$, Equation (\ref{eq:deteminant differential projections}) shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate, are always hyperbolic.
+\begin{proof}
+    First we prove that the Levi-Civita connection of the metric $g$ is given by
+    \[
+        \nabla^g_X Y = A^{-1} \nabla^I_X(AY) \ .
+    \]
+    It is torsion-free, for all $X,Y$
+    \[
+    \begin{split}
+        \nabla^g_X Y - \nabla^g_Y X & =  A^{-1} \nabla^I_X(AY) - A^{-1} \nabla^I_Y(AX) \\
+        & = A^{-1} (\nabla^I_XA)Y + \nabla^I_X Y - A^{-1} (\nabla^I_YA)X - \nabla^I_Y X  \\
+        & = A^{-1} d^{\nabla^I}A(X,Y) +  \nabla^I_X Y - \nabla^I_Y X = 0 \ ,
+    \end{split}
+    \]
+    since $\nabla^I$ is torsion-free and $d^{\nabla^I}A = 0$. $\nabla^g$ is also compatible with $g$ since for all $X,Y,Z$
+    \[
+    \begin{split}
+        \partial_Z g(X,Y) & = \partial_Z I(AX,AY) \\
+        & = I(\nabla^I_Z(AX),AY) + I(AX,\nabla^I_Z(AY)) \\
+        & = g(A^{-1}\nabla^I_Z(AX),Y) + g(X,A^{-1}\nabla^I_Z(AY)) \\
+        & = g(\nabla^g_Z X,Y) + g(X, \nabla^g_Z Y) \ .
+    \end{split}
+    \]
+    Let now $(e_1, e_2)$ be an orthonormal frame on $S$ for the metric $\I$. It is known that for an orthonormal frame on a surface
+    \[
+        \nabla^I_X e_1 = \beta(X)e_2 \ , \qquad \nabla^I_X e_2 = -\beta(X)e_1 \ ,
+    \]
+    where $\beta$ is the connection $1$-form for the metric $\I$, and the curvature $K_I$ can be defined as $d\beta = -K_I \omega_I$, where $\omega_I$ is the volume form on $S$. Let now $(e_1', e_2') = (A^{-1} e_1, A^{-1} e_2)$ be the orthonormal frame for $g$, then
+    \[
+        \nabla^g_X e_1' = A^{-1} \nabla^I_X Ae_1' = \beta(X) A^{-1} e_2 = \beta(X) e_2' \ ,
+    \]
+    which shows that $\beta$ is also the connection form for $g$. It follows that 
+    \[
+        d\beta = - K_g \omega_g = - K_I \omega_I \ ,
+    \]
+    and therefore
+    \[
+        K_g = K_I \frac{w_I}{w_g} = \frac{K_I}{det A} \ .
+    \]
+\end{proof}
+Applying the proposition to the tensors $id \pm \mathcal{J} \circ B$, Equation (\ref{eq:deteminant differential projections}) shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate, are always hyperbolic.
