@@ -189,8 +189,43 @@ defined by $B_\nu(X) = (\nabla^N_X \nu)^\top$, and the \textit{mean curvature} o
     \]
     and $M$ is therefore minimal is and only $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the thesis follows.
 \end{proof}
-\red{---------}
 
+Let now $f:M \to N$ be an isometric immersion. We want to write the condition for the vanishing of the mean curvature, namely
+\[
+    (\nabla^N_{e_\alpha} e_\alpha)^\perp = 0
+\]
+Again we can take normal coordinates on $M$, which respect the following
+\[
+    \nabla^M_{\frac{\partial}{\partial x^\alpha}}  \frac{\partial}{\partial x^\beta} = 0 \ ,
+\]
+for all $\alpha, \beta = 1, \cdots, m$, and we can take
+\[
+    e_\alpha = f_*\Big( \frac{\partial}{\partial x^\alpha} \Big) = \frac{\partial f^i}{\partial x^\alpha} \frac{\partial}{\partial f^i} \ ,
+\]
+where $(f^1, \cdots, f^n)$ are local coordinates near $f(x)$.
+Since $f$ is an isometric immersion we have $f_* \nabla^M_X Y = \nabla^{f(M)}_{f_* X} f_* Y$, and
+\[
+\begin{split}
+    (\nabla^N_{e_i} e_i)^\perp & = \nabla^N_{e_i} e_i = \nabla^N_{\frac{\partial f^i}{\partial x^\alpha} \frac{\partial}{\partial f^i}}  \frac{\partial f^j}{\partial x^\alpha} \frac{\partial}{\partial f^j} = \\
+    & = \frac{\partial^2 f^j}{(\partial x^\alpha)^2} \frac{\partial}{\partial f^j} + \frac{\partial f^i}{\partial x^\alpha} \frac{\partial f^k}{\partial x^\alpha} \Gamma^j_{ik} \frac{\partial}{\partial f^j} \ ,
+\end{split}
+\]
+where $\Gamma^j_{ik}$ are the Christoffel symbols of $N$. Therefore we conclude that $f(M)$ has vanishing mean curvature if and only if
+\begin{equation}\label{eq:minimal}
+    \frac{\partial^2 f^j}{(\partial x^\alpha)^2} + \frac{\partial f^i}{\partial x^\alpha} \frac{\partial f^k}{\partial x^\alpha} \Gamma^j_{ik}  = 0 \ \ \ \text{for} \ j=1, \cdots, n \ .
+\end{equation}
+In arbitrary coordinates Equation \ref{eq:minimal} is written as
+\[
+    \frac{1}{\sqrt{det(g)}} \frac{\partial}{\partial x^\alpha}(\sqrt{det(g)} g^{\alpha\beta} \frac{\partial f^j}{\partial x^\beta}) + g^{\alpha\beta}(x) \Gamma^j_{ik}(f(x)) \frac{\partial f^i}{\partial x^\alpha}  \frac{\partial f^k}{\partial x^\beta} = 0  \ \ \ \text{for} \ j=1, \cdots, n \ ,
+\]
+where $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots,m}$ is the metric tensor on $M$.
+We can therefore conclude that an isometric immersion is minimal if and only if it is harmonic.\\
+Now let $M$ be a surface with metric $g$ and $N$ a Riemannian manifold with metric $h$. We say that a map $f:M \to N$ is \textit{conformal} if $f^* h = \lambda g$ where $\lambda$ is some positive function, namely the pull-back of the metric $h$ is \textit{conformal} to $g$. We already observed that the harmonicity of $f:M \to N$ when $M$ is a surface does not depend on the choice of conformal metric, we can therefore observe that an immersion $f:M \to N$ that is conformal and harmonic, is minimal. It suffices to substitute the metric $g$ on $M$ with the conformal metric $f^* h$, making $f$ an isometric immersion, and now the fact that $f$ is harmonic is now equivalent to it being minimal.\\
+To summarize we state the following
+\begin{theorem}
+    Let $M$ be a surface with metric $g$ and $N$ a Riemmanian manifold. If $f: M \to N$ is a conformal, harmonic immersion then it is minimal.
+\end{theorem}
+\red{end minimal---------}
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
