@@ -157,9 +157,14 @@ Before moving on and talk about minimal maps we prove the following result on qu
     \begin{equation}
         Y^i X^j \frac{\partial A_{kj}}{\partial x^i} - X^i Y^j \frac{\partial A_{kj}}{\partial x^i} = 0 \ \ \ \text{for} \ k = 1,2 \ ,
     \end{equation}
-    since the Christofell symbols are null. \red{da finire}
+    since the Christofell symbols are null. Evaluating $d^\nabla A$ on the pairs $(e_\alpha,e_\beta)$ we have that $d^\nabla A = 0$ if and only if
+    \[
+        \frac{\partial A_{11}}{ \partial x^2} = \frac{\partial A_{12}}{ \partial x^1} \ , \qquad \frac{\partial A_{11}}{ \partial x^1} = - \frac{\partial A_{12}}{ \partial x^2} \ ,
+    \]
+    which happens if and only if $\varphi$ is holomorphic.
 \end{proof}
 
+We now turn our attention to minimal maps.
 Let $M$ be a manifold, $N$ a Riemannian manifold with metric $\langle \cdot, \cdot \rangle$ and $f:M \to N$ a local embedding. Let $\widetilde{\omega}$ be the volume form on $f(M)$, and $\omega$, $e_1, \cdots , e_m$ a volume form and a frame positively oriented orthonormal frame on $M$. Then
 \[
 \begin{split}
