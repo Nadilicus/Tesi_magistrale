@@ -131,12 +131,35 @@ where $w(z) = f^1(z) + i f^2(z)$.
     \]
     This implies that the Jacobian of $f$ is singular which contradics the hypothesis, hence $P=0$ and $f$ is harmonic.
 \end{proof}
-Before moving on and talk about minimal maps we state the following result on quadratic differential which can be found in \cite{taubes2004minimalsurfacesgermshyperbolic}:
+Before moving on and talk about minimal maps we prove the following result on quadratic differential :
 \begin{lemma} \label{lem:HQD}
-    Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
+    Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$ which is $g$-symmetric, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
 \end{lemma}
+\begin{proof}
+    Take normal coordinates around a point $x$. In this coordinates $g=Id$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
+    \[
+        g(A\cdot , \cdot) = A_{11} (dx^1)^2 + 2 A_{12} dx^1 dx^2 + A_{22} (dx^2)^2 \ .
+    \]
+    Using complex coordinates $z = x^1 + i x^2$ we have
+    \[
+        (dx^1)^2 = \frac{dz^2 + 2dzd\overline{z} + d\overline{z}^2}{4} \ , \quad (dx^2)^2 = -\frac{dz^2 - 2dzd\overline{z} + d\overline{z}^2}{4} \ , \quad dx^1dx^2 = i \frac{d\overline{z}^2 - dz^2}{4} \ ,
+    \]
+    and therefore
+    \[
+        g(A\cdot , \cdot) = \Big( \frac{A_{11} - A_{22}}{4} - i \frac{A_{12}}{2} \Big)dz^2 + \Big( \frac{A_{11} + A_{22}}{4} \Big)dzd\overline{z} +  \Big( \frac{A_{11} - A_{22}}{4} + i \frac{A_{12}}{2} \Big) d\overline{z}^2 \ .
+    \]
+    So $g(A\cdot , \cdot)$ is the real part of a quadratic differential if and only if $\frac{A_{11} + A_{22}}{4} = 0$ which happens if and only if $A$ is traceless.\\
+    Let now $A$ be traceless, $A_{22}=- A_{11}$ and $g(A \cdot, \cdot)$ writes as
+    \[
+        g(A\cdot , \cdot) = \Big( \frac{A_{11}}{2} - i \frac{A_{12}}{2} \Big)dz^2 +  \Big( \frac{A_{11}}{2} + i \frac{A_{12}}{2} \Big) d\overline{z}^2 \ .
+    \]
+    Recall that $d^\nabla A = 0$ means that $\nabla_Y (AX) - \nabla_X (AY) - A(\left[X,Y\right]) = 0$, which in normal coordinates is
+    \begin{equation}
+        Y^i X^j \frac{\partial A_{kj}}{\partial x^i} - X^i Y^j \frac{\partial A_{kj}}{\partial x^i} = 0 \ \ \ \text{for} \ k = 1,2 \ ,
+    \end{equation}
+    since the Christofell symbols are null. \red{da finire}
+\end{proof}
 
-\red{aggiungiere la parte su mappe minimali------}
 Let $M$ be a manifold, $N$ a Riemannian manifold with metric $\langle \cdot, \cdot \rangle$ and $f:M \to N$ a local embedding. Let $\widetilde{\omega}$ be the volume form on $f(M)$, and $\omega$, $e_1, \cdots , e_m$ a volume form and a frame positively oriented orthonormal frame on $M$. Then
 \[
 \begin{split}
@@ -225,7 +248,7 @@ To summarize we state the following
 \begin{theorem}\label{thm:minimal}
     Let $M$ be a surface with metric $g$ and $N$ a Riemmanian manifold. If $f: M \to N$ is a conformal, harmonic immersion then it is minimal.
 \end{theorem}
-\red{end minimal---------}
+
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
