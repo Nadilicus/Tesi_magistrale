@@ -229,9 +229,11 @@ To summarize we state the following
 \section{CMC Surfaces}
 A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
-    Every MGH Anti-de Sitter manifold with compact Cauchy surface is uniquely foliated by closed CMC surfaces, where the mean curvature $H$ varies in $(-\infty,\infty)$. In particular every MGH Anti-de Sitter manifold with compact Cauchy surface admits a unique maximal surface.
+    Every MGH Anti-de Sitter manifold with compact Cauchy surface admits a maximal surface.
 \end{theorem}
-The proof of Theorem \ref{thm:CMC_foliation} can be found in \cite{barbot2004constant} and revolves around the existence of a pair of barriers, which are two surfaces with everywhere positive/negative mean curvature, respectively.\\
+The proof of Theorem \ref{thm:CMC_foliation} revolves around the existence of a pair of barriers which implies existence of a maximal surface. A pair of barriers is a pair of surfaces $\Sigma^+$, $\Sigma^-$ with everywhere positive/negative mean curvature, respectively, and such that $\Sigma^+$ is contained in the future of $\Sigma^-$.
+To do this one can take convex hull $C$ of a proper achronal meridian $\Lambda$ that defines $M$. This definition makes sense in affine chart, and in this setting it is well defined since $C \subset \Omega(\Lambda)$ which is contained in a Dirichlet domain. Now $\partial C$ is the union of $\Lambda$ and two surfaces $\partial_+ C$, $\partial_- C$ which are convex and concave respectively. Here a set is convex (resp. concave) if it is contained in the future (resp. past) of all its support planes. Convex (resp. concave) surfaces have non-positive (resp. non-negative) mean curvature. The quotient of $\partial_+ C$, $\partial_- C$ do not work as barriers since they are not smooth, but close to them one can find a pair of barriers.
+A detailed proof can be found in \cite{barbot2004constant}.
 Given a spacelike immersion $\sigma$, by Lemma \ref{lem:tub metric}
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B).
