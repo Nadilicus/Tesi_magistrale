@@ -222,7 +222,7 @@ where $(g_{\alpha \beta})_{\alpha,\beta = 1,\cdots,m}$ is the metric tensor on $
 We can therefore conclude that an isometric immersion is minimal if and only if it is harmonic.\\
 Now let $M$ be a surface with metric $g$ and $N$ a Riemannian manifold with metric $h$. We say that a map $f:M \to N$ is \textit{conformal} if $f^* h = \lambda g$ where $\lambda$ is some positive function, namely the pull-back of the metric $h$ is \textit{conformal} to $g$. We already observed that the harmonicity of $f:M \to N$ when $M$ is a surface does not depend on the choice of conformal metric, we can therefore observe that an immersion $f:M \to N$ that is conformal and harmonic, is minimal. It suffices to substitute the metric $g$ on $M$ with the conformal metric $f^* h$, making $f$ an isometric immersion, and now the fact that $f$ is harmonic is now equivalent to it being minimal.\\
 To summarize we state the following
-\begin{theorem}
+\begin{theorem}\label{thm:minimal}
     Let $M$ be a surface with metric $g$ and $N$ a Riemmanian manifold. If $f: M \to N$ is a conformal, harmonic immersion then it is minimal.
 \end{theorem}
 \red{end minimal---------}
@@ -267,7 +267,7 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
 \begin{proof}
     Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
     First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
-    \red{We now want to prove that the Gauss map is harmonic and conformal, which implies that it is minimal.}\\
+    We now want to prove that the Gauss map is harmonic and conformal, which, by Theorem \ref{thm:minimal} implies that it is minimal.\\
     By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
     To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, since the proof is the same for $\Pi_r$. To see this we can write the target metric
     \[
