@@ -338,5 +338,14 @@ We are now ready to prove the uniqueness
     \[
         \nabla_Y X = (id + b)^{-1} \nabla^h_Y ((id+b)X) \ .
     \]
+    Since $b$ is $h$-Codazzi, $(id-b)$ is $h$-Codazzi, and therefore
+    \[
+    \begin{split}
+        (d^\nabla \mathcal{J}B)(X,Y) & = (id + b)^{-1} \nabla^h_Y ((id+b)\mathcal{J}B X) - (id + b)^{-1} \nabla^h_X ((id+b)\mathcal{J}B Y) - \mathcal{J}B \left[ X,Y \right] \\
+        & = (id + b)^{-1} (\nabla^h_Y ((id-b) X) -  \nabla^h_X ((id-b) Y) -   (id - b) \left[ X,Y \right] ) \\
+        & = (id + b)^{-1}(d^{\nabla^h}(id-b))(X,Y) = 0 \ .
+    \end{split}
+    \]
+    Now, \red{$d^\nabla (\mathcal{J}B) = \mathcal{J} d^\nabla B$ da capire perchè}, therefore $B$ is $h$-Codazzi.
     \red{finire}
 \end{proof}
