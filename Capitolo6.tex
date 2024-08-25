@@ -314,5 +314,25 @@ We are now ready to prove the uniqueness
     Given a surface $\Sigma$ and two hyperbolic metrics $h, h'$ on it, the minimal Lagrangian diffeomorphism $\Phi : (\Sigma, h) \to (\Sigma, h')$ is unique.
 \end{theorem}
 \begin{proof}
-    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in \red{Lemma da mettere}. We now want to contruct a pair $(\I,\II)$ that define a maximal immersion such that the minimal Lagrangian diffeomorphism $f_0$ associated to it, as in the proof of Theorem \ref{thm:existence}, respect $f_0^* h' = h(b \cdot, b \cdot)$. This will imply that $f_0 = \Phi$.
+    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in \red{Lemma da mettere}. We now want to contruct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
+    Let $\I$ be the metric on $\Sigma$ defined by
+    \[
+        4 \I = h((id + b)\cdot , (id + b)\cdot ) \ ,
+    \]
+    let $\mathcal{J}$ be the complex structure defined on $\Sigma$ by $\I$ and $B$ the $(1,1)$-tensor defined by
+    \[
+        \mathcal{J} B = (id + b)^{-1} (id - b) \ .
+    \]
+    Here $\I$ and $B$ are well-defined at all points since $b$ has positive eigenvalues. Since $\text{det}(b)=1$, a direct computation in a basis where $b$ is diagonal shows that $\text{tr}(\mathcal{J} B) = 0 $, hence $B$ is $\I$-symmetric. Then we can set $\II = \I (B \cdot, \cdot)$.\\
+    We now have to prove that $\I$ and $B$ satisfy the Gauss-Codazzi equation, and that $B$ is traceless.
+    $\mathcal{J} B$ is $\I$-symmetric, indeed for $v,w$ tangent vectors we have
+    \[
+    \begin{split}
+        4I(\mathcal{J}B v,w) & = h((id + b) (id + b)^{-1} (id - b) v , (id + b)w) \\
+        & = h((id - b) v , (id + b)w) = h((id + b) v , (id - b)w) \\
+        & = 4 I (v, \mathcal{J}B w) \ ,
+    \end{split}
+    \]
+    and it follows that $B$ is traceless.
+    \red{finire}
 \end{proof}
