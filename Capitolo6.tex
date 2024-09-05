@@ -62,33 +62,21 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
     \end{split}
     \]
 \end{observation}
-%\red{------}
-%\begin{definition}
-%    Given $M$ a surface and $N$ a Riemannian manifold with a metric $\langle \cdot , \cdot \rangle_N$, a map $f:M \to N$ is called \textit{conformal} if
-%    \[
-%    \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x} \Big\rangle_N = \Big\langle \frac{\partial f}{\partial y}, \frac{\partial f}{\partial y} \Big\rangle_N \ , \qquad \Big\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big\rangle_N = 0 \ .
-%    \]
-%    In local coordinates the metric on $N$ can be expressed as $g_{ij}df^i \otimes df^j$ and the conditions of conformality are
-%    \[
-%        g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial x} = g_{ij}(f(z)) \frac{\partial f^i}{\partial y} \frac{\partial f^j}{\partial y} \ , \qquad g_{ij}(f(z)) \frac{\partial f^i}{\partial x} \frac{\partial f^j}{\partial y} = 0 \ .
-%    \]
-%    \red{In complex coordinates these are : vedere se serve e se spostare sta cosa della conformalità -----}
-%\end{definition}
 
 \noindent In complex coordinates Equation \ref{eq:harmonic} is written as
 \[
     \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n \ .
 \]
 In particular whether a map is harmonic depends only on the Riemann surface structure of $M$, and not on the choice of a conformal metric.\\
-When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline(w)$, Equation \ref{eq:harmonic} becomes
+When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \wedge d\overline{w}$, and $f$ is a local deffeomorphism, Equation \ref{eq:harmonic} becomes
 \begin{equation} \label{eq:harmonic2}
-    \frac{\partial f}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma(f(z))} \frac{\partial \sigma}{ \partial f} \frac{\partial f}{\partial z} \frac{\partial f}{\partial \overline{z}} = 0 \ ,
+    \frac{\partial^2 f}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma(f(z))} \frac{\partial \sigma}{ \partial w} \frac{\partial f}{\partial z} \frac{\partial f}{\partial \overline{z}} = 0 \ ,
 \end{equation}
 where $w(z) = f^1(z) + i f^2(z)$.
 \begin{theorem} \label{thm:HQD}
     Let $M$ be a surface and $N$ a Riemannian manifold with metric $\langle \cdot,\cdot \rangle_N$ or $(g_{ij})_{i,j = 1, \cdots , n}$ in local coordinates. If $f:M \to N$ is harmonic, then the \textit{Hopf differential} of $f$
     \[
-        \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^z
+        \varphi(z) dz^2 = \Big\langle \frac{\partial f}{\partial z},  \frac{\partial f}{\partial z} \Big\rangle_N dz^2
     \]
     is a holomorphic quadratic differential, i.e $\varphi(z)$ is a holomophic function. \\
     If $f$ is a diffeomorphism the converse holds.
@@ -107,16 +95,16 @@ where $w(z) = f^1(z) + i f^2(z)$.
     \end{split}
     \]
     which is $0$ when $f$ is harmonic.\\
-    Let now $N$ be a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \otimes d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z}$ and differentiating in $\overline{z}$ we have
+    Let now $N$ be a surface with complex coordinates $w = f^1 + if^2$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \wedge d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z}$ and differentiating in $\overline{z}$ we have
     \[
     \begin{split}
         \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial f}{ \partial z}  \frac{\partial \overline{f}}{\partial z} \Big) & = 
-        \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
-        \frac{\partial \sigma}{\partial \overline{f}} \frac{\partial \overline{f}}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
+        \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
+        \frac{\partial \sigma}{\partial \overline{w}} \frac{\partial \overline{f}}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
         \sigma(f(z)) \frac{\partial^2 f}{\partial \overline{z} \partial z} \frac{\partial \overline{f}}{\partial z} +
         \sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial^2 \overline{f}}{\partial \overline{z} \partial z} \\
-        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} \Big( \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) + 
-        \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{ \Big(  \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial f} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) }  \\
+        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} \Big( \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) + 
+        \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{ \Big(  \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) }  \\
         & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} P + \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{P} \ ,
     \end{split}
     \]
@@ -136,7 +124,7 @@ Before moving on and talk about minimal maps we prove the following result on qu
     Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$ which is $g$-symmetric, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
 \end{lemma}
 \begin{proof}
-    Take normal coordinates around a point $x$. In this coordinates $g=Id$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
+    Take normal coordinates around a point $x$. In this coordinates $g=\delta_{ij}$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
     \[
         g(A\cdot , \cdot) = A_{11} (dx^1)^2 + 2 A_{12} dx^1 dx^2 + A_{22} (dx^2)^2 \ .
     \]
@@ -151,13 +139,13 @@ Before moving on and talk about minimal maps we prove the following result on qu
     So $g(A\cdot , \cdot)$ is the real part of a quadratic differential if and only if $\frac{A_{11} + A_{22}}{4} = 0$ which happens if and only if $A$ is traceless.\\
     Let now $A$ be traceless, $A_{22}=- A_{11}$ and $g(A \cdot, \cdot)$ writes as
     \[
-        g(A\cdot , \cdot) = \Big( \frac{A_{11}}{2} - i \frac{A_{12}}{2} \Big)dz^2 +  \Big( \frac{A_{11}}{2} + i \frac{A_{12}}{2} \Big) d\overline{z}^2 \ .
+        g(A\cdot , \cdot) = \Big( \frac{A_{11}}{2} - i \frac{A_{12}}{2} \Big)dz^2 +  \Big( \frac{A_{11}}{2} + i \frac{A_{12}}{2} \Big) d\overline{z}^2 = \varphi dz^2 + \overline{\varphi} d \overline{z}^2 \ .
     \]
-    Recall that $d^\nabla A = 0$ means that $\nabla_Y (AX) - \nabla_X (AY) - A(\left[X,Y\right]) = 0$, which in normal coordinates is
+    Recall that $d^\nabla A = 0$ means that $\nabla_Y (AX) - \nabla_X (AY) - A(\left[X,Y\right]) = 0$ for all $X,Y \in \Gamma(TS)$, which in normal coordinates is
     \begin{equation}
         Y^i X^j \frac{\partial A_{kj}}{\partial x^i} - X^i Y^j \frac{\partial A_{kj}}{\partial x^i} = 0 \ \ \ \text{for} \ k = 1,2 \ ,
     \end{equation}
-    since the Christofell symbols are null. Evaluating $d^\nabla A$ on the pairs $(e_\alpha,e_\beta)$ we have that $d^\nabla A = 0$ if and only if
+    since the Christofell symbols are null. Evaluating $d^\nabla A$ on the pairs $(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial x^j})$ we have that $d^\nabla A = 0$ if and only if
     \[
         \frac{\partial A_{11}}{ \partial x^2} = \frac{\partial A_{12}}{ \partial x^1} \ , \qquad \frac{\partial A_{11}}{ \partial x^1} = - \frac{\partial A_{12}}{ \partial x^2} \ ,
     \]
@@ -165,7 +153,7 @@ Before moving on and talk about minimal maps we prove the following result on qu
 \end{proof}
 
 We now turn our attention to minimal maps.
-Let $M$ be a manifold, $N$ a Riemannian manifold with metric $\langle \cdot, \cdot \rangle$ and $f:M \to N$ a local embedding. Let $\widetilde{\omega}$ be the volume form on $f(M)$, and $\omega$, $e_1, \cdots , e_m$ a volume form and a frame positively oriented orthonormal frame on $M$. Then
+Let $M$ be a Riemannian manifold, $N$ a Riemannian manifold with metric $\langle \cdot, \cdot \rangle$ and $f:M \to N$ a local embedding. Let $\widetilde{\omega}$ be the volume form on $f(M)$, and $\omega$, $e_1, \cdots , e_m$ a volume form and a frame positively oriented orthonormal frame on $M$. Then
 \[
 \begin{split}
     \text{Vol}(f(M)) & = \int_{f(M)} \widetilde{\omega} = \int_M f^* \omega  = \int_M | f_* e_1 \wedge \cdots \wedge f_* e_m | \omega = \\
@@ -179,7 +167,7 @@ is a compact subset of $M$. For easier computation suppose that in coordinates $
 \[
     \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} = \sum_{i=1}^m \int_M \frac{ \langle f_{t*} e_1 \wedge \cdots \wedge \frac{\partial}{\partial t} f_{t*} e_i \wedge \cdots \wedge f_{t*} e_m ,f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m \rangle }{| f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m |} \omega
 \]
-and putting $X_=\frac{\partial}{\partial t} f_{t*} |_{t=0} $ we have
+and putting $X =\frac{\partial}{\partial t} f_{t*} |_{t=0} $ we have
 \[
 \begin{split}
     \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} & = \sum_{i=1}^m \int_M \frac{ \langle e_1 \wedge \cdots \wedge \nabla^N_{e_i} X \wedge \cdots \wedge e_m , e_1 \wedge \cdots \wedge e_m \rangle }{| e_1 \wedge \cdots \wedge e_m |} \omega \\
@@ -198,7 +186,7 @@ If we suppose moreover to be in normal coordinates we have $\nabla^M_{e_i} e_i =
     for all local variation of $M$.\\
     Moreover, we say a map $f:M \to N$ is \textit{minimal} is $f(M)$ is a minimal submanifold of $N$.
 \end{definition}
-Now that the codimension of $M$ can be greater than one, similarly to the case of codimension one, for every choice of a vector field $\nu$ normal to $M$ one have
+Now that the codimension of $M$ can be greater than one, similarly to the case of codimension one, for every choice of a vector field $\nu$ normal to $M$ one has
 \[
     B_\nu : TM \to TM
 \]
@@ -215,14 +203,14 @@ defined by $B_\nu(X) = (\nabla^N_X \nu)^\top$, and the \textit{mean curvature} o
     \[
         -\langle X^\perp , \nabla^N_{e_i} e_i \rangle = \xi^j tr(B_{\nu_j}) = m \cdot \xi^j H_{\nu_j} \ ,
     \]
-    and $M$ is therefore minimal is and only $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the thesis follows.
+    and $M$ is therefore minimal is and only $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the claim follows.
 \end{proof}
 
 Let now $f:M \to N$ be an isometric immersion. We want to write the condition for the vanishing of the mean curvature, namely
 \[
-    (\nabla^N_{e_\alpha} e_\alpha)^\perp = 0
+    (\nabla^N_{e_\alpha} e_\beta)^\perp = 0 \qquad \forall \alpha, \beta \ .
 \]
-Again we can take normal coordinates on $M$, which respect the following
+Again we can take normal coordinates on $M$, which, at a point, respect the following
 \[
     \nabla^M_{\frac{\partial}{\partial x^\alpha}}  \frac{\partial}{\partial x^\beta} = 0 \ ,
 \]
@@ -255,18 +243,18 @@ To summarize we state the following
 \end{theorem}
 
 \section{CMC Surfaces}
-A smoothly embedded spacelike surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
+We now turn back out attention to smoothly embedded spacelike surfaces in globally hyperbolic AdS spacetime. A surface $S$ has \textit{constant mean curvature} (CMC) if the trace of the shape operator $B$ is constant. A \textit{maximal surface} is a surface $S$ whose mean curvature is constantly equal to zero.
 \begin{theorem}\label{thm:CMC_foliation}
     Every MGH Anti-de Sitter manifold with compact Cauchy surface admits a maximal surface.
 \end{theorem}
 The proof of Theorem \ref{thm:CMC_foliation} revolves around the existence of a pair of barriers which implies existence of a maximal surface. A pair of barriers is a pair of surfaces $\Sigma^+$, $\Sigma^-$ with everywhere positive/negative mean curvature, respectively, and such that $\Sigma^+$ is contained in the future of $\Sigma^-$.
 To do this one can take convex hull $C$ of a proper achronal meridian $\Lambda$ that defines $M$. This definition makes sense in affine chart, and in this setting it is well defined since $C \subset \Omega(\Lambda)$ which is contained in a Dirichlet domain. Now $\partial C$ is the union of $\Lambda$ and two surfaces $\partial_+ C$, $\partial_- C$ which are convex and concave respectively. Here a set is convex (resp. concave) if it is contained in the future (resp. past) of all its support planes. Convex (resp. concave) surfaces have non-positive (resp. non-negative) mean curvature. The quotient of $\partial_+ C$, $\partial_- C$ do not work as barriers since they are not smooth, but close to them one can find a pair of barriers.
-A detailed proof can be found in \cite{barbot2004constant}.
+A detailed proof can be found in \cite{barbot2004constant}.\\
 Given a spacelike immersion $\sigma$, by Lemma \ref{lem:tub metric}
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B).
 \]
-Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$, by direct computation one find that
+Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$. By direct computation one find that
 \begin{equation} \label{eq:eigenvalues}
     \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \qquad \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
 \end{equation}
@@ -285,20 +273,24 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
     \]
 \end{proof}
 
-\section{Minimal Lagrangian diffeomorphism}
+\section{Minimal Lagrangian diffeomorphisms}
 
 \begin{definition}
     Let $h$ and $h'$ be two hyperbolic metrics on the closed surface $S$. A smooth map $f: (S,h) \to (S,h')$ is \textit{minimal Lagrangian} if its graph is a minimal Lagrangian submanifold of $S\times S$ with respect to the product metric $h \oplus h'$ and the symplectic form $\pi_l^*\omega_h - \pi_r^* \omega_{h'}$. 
 \end{definition}
 
 \begin{theorem}\label{thm:existence}
-    Given a closed surface $\Sigma$ and two hyperbolic metrics $h$, $h'$ on it, there exist a minimal Lagrangian diffeomorphism $f_0 : (\Sigma,h) \to (\Sigma,h')$ isotopic to the identity.
+    Given a closed surface $\Sigma$ and two hyperbolic metrics $h$, $h'$ on it, there exists a minimal Lagrangian diffeomorphism $f_0 : (\Sigma,h) \to (\Sigma,h')$ isotopic to the identity.
 \end{theorem}
 \begin{proof}
-    Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be the unique maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
-    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+    Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be a maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
+    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$ by normal evolution. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
     We now want to prove that the Gauss map is harmonic and conformal, which, by Theorem \ref{thm:minimal} implies that it is minimal.\\
-    By proposition \ref{prop:left right pull-back metric}, the pull-back metric of the product Riemannian metric has the expression $2(\I + \III)$. Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
+    The pull-back metric via the Gauss map is the sum of $\Pi_l^*g_{\H^2}$ and $\Pi_r^*g_{\H^2}$, which, by proposition \ref{prop:left right pull-back metric}, is given by
+    \[
+       \Pi_l^*g_{\H^2} + \Pi_r^*g_{\H^2} = 2I + 2I(\mathcal{J}B,\mathcal{J}B) = 2I + 2I(B,B)= 2(I+ \III) \ .
+    \]
+    Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
     To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, since the proof is the same for $\Pi_r$. To see this we can write the target metric
     \[
         \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
@@ -314,7 +306,7 @@ We are now ready to prove the uniqueness
     Given a surface $\Sigma$ and two hyperbolic metrics $h, h'$ on it, the minimal Lagrangian diffeomorphism $\Phi : (\Sigma, h) \to (\Sigma, h')$ is unique.
 \end{theorem}
 \begin{proof}
-    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in \red{Lemma da mettere}. We now want to contruct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since by \red{unicità sup max} and we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
+    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in \red{Lemma da mettere}. We now want to construct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since by \red{unicità sup max} and we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
     Let $\I$ be the metric on $\Sigma$ defined by
     \[
         4 \I = h((id + b)\cdot , (id + b)\cdot ) \ ,
@@ -327,7 +319,7 @@ We are now ready to prove the uniqueness
     \[
         b = (id+\mathcal{J}B)(id - \mathcal{J}B)^{-1} \ .
     \]  
-    We now have to prove that $\I$ and $B$ satisfy the Gauss-Codazzi equation, and that $B$ is traceless.
+    We now have to prove that $\I$ and $B$ satisfy the Gauss-Codazzi equations, and that $B$ is traceless.
     $\mathcal{J} B$ is $\I$-symmetric, indeed for $v,w$ tangent vectors we have
     \[
     \begin{split}
@@ -337,19 +329,19 @@ We are now ready to prove the uniqueness
     \end{split}
     \]
     and it follows that $B$ is traceless.\\
-    By \ref{prop:Gaussian curvature} the Levi-Civita connection $\nabla$ of $\I$ is
+    By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection $\nabla$ of $\I$ is
     \[
-        \nabla_Y X = (id + b)^{-1} \nabla^h_Y ((id+b)X) \ .
+        \nabla^I_Y X = (id + b)^{-1} \nabla^h_Y ((id+b)X) \ .
     \]
     Since $b$ is $h$-Codazzi, $(b-id)$ is $h$-Codazzi, and therefore
     \[
     \begin{split}
-        (d^\nabla \mathcal{J}B)(X,Y) & = (id + b)^{-1} \nabla^h_Y ((id+b)\mathcal{J}B X) - (id + b)^{-1} \nabla^h_X ((id+b)\mathcal{J}B Y) - \mathcal{J}B \left[ X,Y \right] \\
+        (d^{\nabla^I} \mathcal{J}B)(X,Y) & = (id + b)^{-1} (\nabla^h_Y ((id+b)\mathcal{J}B X) - \nabla^h_X ((id+b)\mathcal{J}B Y) ) - \mathcal{J}B \left[ X,Y \right] \\
         & = (id + b)^{-1} (\nabla^h_Y ((b-id) X) -  \nabla^h_X ((b-id) Y) - (b-id) \left[ X,Y \right] ) \\
         & = (id + b)^{-1}(d^{\nabla^h}(b-id))(X,Y) = 0 \ .
     \end{split}
     \]
-    Now, since $\mathcal{J}\nabla_Y(BX) = (\nabla_Y \mathcal{J})(BX)$, we have that $d^\nabla (\mathcal{J}B) = \mathcal{J} d^\nabla B$, and therefore $B$ is $h$-Codazzi.\\
+    Now, since $\mathcal{J}\nabla^I_Y(BX) = (\nabla^I_Y \mathcal{J})(BX)$, we have that $d^{\nabla^I} (\mathcal{J}B) = \mathcal{J} d^{\nabla^I} B$, and therefore $B$ is $h$-Codazzi.\\
     A simple computation shows that 
     \begin{equation}\label{eq:roba}
         (id+ \mathcal{J}B) = 2(id +b)^{-1} b  \ , \qquad (id- \mathcal{J}B) = 2(id +b)^{-1} \ ,
