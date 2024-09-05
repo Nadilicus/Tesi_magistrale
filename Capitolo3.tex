@@ -4,7 +4,7 @@
 In dimension three there is a special model which endows Anti-de Sitter space with a Lie group structure.
 Consider the vector space $\mathcal{M}(2,\R)$ of $2 \times 2$ matrices with real entries and the quadratic form $q= -det$ that has signature $(2,2)$.
 This gives an identification between $(\mathcal{M}(2,\R), -det)$ and $(\R^{2,2},q_{2,2})$, unique up to composition by elements in $O(2,2)$, and under this isomorphism $\H^{2,1}$ is identified with the Lie group $SL(2,\R)$.\\
-$SL(2,\R)\times SL(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication:
+$SL(2,\R)\times SL(2,\R)$ acts linearly on $\mathcal{M}(2,\R)$ by left and right multiplication
 \[
     (A,B) \cdot X := AXB^{-1}    
 \]
@@ -12,7 +12,7 @@ preserving the quadratic form $q = -det$. Therefore it induces a representation
 \[
     SL(2,\R)\times SL(2,\R) \to O(\mathcal{M}(2,\R),q).
 \]
-The kernel of this representation is given by $K=\{ (\1,\1),(-\1,-\1) \}$, and by dimensional argument the image of this map is the connected component of the identity:
+The kernel of this representation is given by $K=\{ (\1,\1),(-\1,-\1) \}$, and by dimensional argument, the image of this map is the connected component of the identity:
 \[
     \text{Isom}_0(\H^{2,1}) \cong SO_0(\mathcal{M}(2,\R),q) \cong SL(2,\R)\times SL(2,\R) / K.
 \]
@@ -54,7 +54,7 @@ Therefore, one can identify $\partial \A^{2,1}$ with $\partial \H^2 \times \part
 \end{lemma}
 
 \begin{proof}
-    It suffices to check that the condition holds for some $p\in\H^2$ since the action of $\PSL$ on $\H^2$ is isometric. Therefore we can take $p=i\in\H^2$. Assume $\left[ X_n \right]$ converges projectively to $\left[ X \right] \in \partial\A^{2,1}$. This means that there is a sequence of real numbers $\lambda_n$ such that
+    It suffices to check that the condition holds for some $p\in\H^2$ since the action of $\PSL$ on $\H^2$ is isometric and transitive. Therefore we can take $p=i\in\H^2$. Assume $\left[ X_n \right]$ converges projectively to $\left[ X \right] \in \partial\A^{2,1}$. This means that there is a sequence of real numbers $\lambda_n$ such that
     \[
        \lambda_n X_n = \lambda_n
        \begin{pmatrix}
@@ -79,7 +79,7 @@ as the \textit{left ruling} through $(x_0,y_0)$, and similarly we refer to
 \[
     \mu_{x_0} := \{ (x_0,y) \ | \ y \in\S \}
 \]
-as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings describe projective lines in $\mathbb{R}P^3$ which is cointained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1}$.
+as the \textit{right ruling} through $(x_0,y_0)$. The left and right rulings describe projective lines in $\mathbb{R} \text{P}^3$ which is cointained in $\partial\A^{2,1}$, hence lightlike for the conformal Lorentzian structure of $\partial\A^{2,1}$.
 \begin{proposition} \label{prop:angular}
     Let $\pi_l, \pi_r : \T \to\S$ be the canonical projections and $d\theta$ the angular form on $\R$. Then the symmetric product $\pi_l^*(d\theta)\pi_r^*(d\theta)$ is in the conformal class of $\partial\A^{2,1}$.
 \end{proposition}
@@ -95,7 +95,7 @@ where $L_g :G \to G$ is the left multiplication by $g$. The connection $D^l$ at 
     D^l_V W = \left. \frac{d}{dt} \right|_{t=0} (L_{g \gamma(t)^{-1}})_* (W_{\gamma(t)})
 \]
 where $\gamma(t)$ is a path with $\gamma(0) = g$ and $\gamma'(0) = V$.
-In an analogous way, one defines the right-invariant connection $D^r$. Both connections $D^l$ and $D^r$ are flat and compatible with any metric which is left-invariant or right-invariant respectively. But these connections are not torsion-fre; by computation one obtains that
+In an analogous way, one defines the right-invariant connection $D^r$. Both connections $D^l$ and $D^r$ are flat and compatible with any metric which is left-invariant or right-invariant respectively. But these connections are not torsion-free; by computation one obtains that
 \[
     \tau^l (V,W) = - \left[ V,W \right]
 \]
@@ -124,33 +124,32 @@ This permits to rewrite the expression for the Levi-Civita connection of leftinv
     \nabla_V W = - V \boxtimes W = D^l_V W - V \boxtimes W = D^r_V W + V \boxtimes W.
 \]
 \section{Geodesics in $\PSL$}
-Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroups of $\A^{2,1}$
-(the necessary tools in Lie groups theory are introduced in \cite{bonsanteseppi}). We get the following:
+Let us start by understanding the geodesics through the identity. Using the Lie group structure of $\A^{2,1}$ it suffices to understand the one-parameter subgroups of $\A^{2,1}$. We get the following:
 \begin{itemize}
     \item Timelike geodesics are, up to conjugacy, of the form
     \[ \begin{pmatrix}
         \text{cos}(t) & -\text{sin}(t) \\
         \text{sin}(t) & \text{cos}(t)
     \end{pmatrix} \]
-    under the identification of $\PSL$ with $Isom(\H^2)$ they are elliptic one-parameter groups fixing a point in $\H^2$.
-    \item Spacelike geodesics are, up to conjugacy
+    under the identification of $\PSL$ with $\text{Isom}(\H^2)$ they are elliptic one-parameter groups fixing a point in $\H^2$.
+    \item Spacelike geodesics are, up to conjugacy,
     \[ \begin{pmatrix}
         \text{cosh}(t) & \text{sinh}(t) \\
         \text{sinh}(t) & \text{cosh}(t)
-    \end{pmatrix} \]
+    \end{pmatrix}  \ ; \]
     these are hyperbolic one-parameter groups fixing two points in the boundary of $\H^2$
     \item Lightlike geodesics are the parabolic one-parameter groups conjugate to
     \[ \begin{pmatrix}
         1 & t \\
         0 & 1
-    \end{pmatrix} \]
+    \end{pmatrix} \ . \]
 \end{itemize}
 Using this description of timelike geodesics through $\1$, we can also interpret the duality in $\A^{2,1}$. Recalling that the dual plane of a point $A$ is the set of antipodal points along timelike geodesics through $A$, one sees that the dual plane of $\1$ consists of elliptic order-two isometries of $\H^2$. Equivalently, this is the set of (projective classes) of traceless matrices, that is (by the Cayley-Hamilton theorem)
 \[
     P_\1 = \{ [J]\in\PSL \ | \ J^2 = -\1 \}.
 \]
 The boundary at infinity of $P_\1$ is made of traceless matrices of rank 1.\\
-The stabilizer of $\1$ is the diagonal subgroup of $\PSL \times \PSL$, and it aso acts on the dual plane $P_\1$ by conjugation. Therefore the following statement is straightforward:
+The stabilizer of $\1$ is the diagonal subgroup of $\PSL \times \PSL$, and it also acts on the dual plane $P_\1$ by conjugation. Therefore, the following statement is straightforward:
 \begin{lemma}\label{lem:dual plane}
     The map from $\H^2$ to $P_\1$, sending $p\in\H^2$ to the elliptic order-two element in $\PSL$ fixing $p$, is a $\PSL$-equivariant isometry.
 \end{lemma}
