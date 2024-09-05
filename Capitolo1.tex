@@ -1,14 +1,14 @@
 \chapter{Preliminaries on Lorentzian geometry}
 
-The scope of this introductory chapter is to briefly recall basic facts about Lorentzian manifold as later on we will concetrate on Lorentzian manifolds with constant sectional curvature $K=-1$.
-We will show that, as in Riemannian geometry, Lorentzian manifold of constant sectional curvature are locally isometric. We will focus on Lorentzian manifold with maximal isometry group and we will show that generally there are manifolds with maximal isometry group that are not simply connected.
+The scope of this introductory chapter is to briefly recall basic facts about Lorentzian manifolds as later on we will concetrate on Lorentzian manifolds with constant sectional curvature $K=-1$.
+We will show that, as in Riemannian geometry, Lorentzian manifolds of constant sectional curvature are locally isometric. We will focus on Lorentzian manifolds with maximal isometry group and we will show that generally there are manifolds with maximal isometry group that are not simply connected.
 \section{Basic definitions}
 A \textit{Lorentzian metric} on a manifold of dimension $n+1$ is a non degenerate symmetric 2-tensor $g$ of signature $(n,1)$.
 A \textit{Lorentzian manifold} is a connected manifold $M$ equipped with a Lorentzian metric $g$.\\
 We say that a vector $0\neq v \in TM$ is \textit{spacelike, lightlike, timelike} if $g(v,v)$ is respectively positive, zero or negative.
 More generally we say that a linear subspace $V \in T_x M$ is \textit{spacelike, lightlike, timelike} if the restriction of $g_x$ to $V$ is positive definite, degenerate or indefinite, respectively.\\
 The set of lightlike vectors, together with the null vector, disconnects the tangent space $T_x M$ into three regions: two convex open cones formed by timelike vectors and the region of spacelike vectors.
-As a consequence the set of timelike vectors in $TM$ is either connected or has two connected componets.
+As a consequence the set of timelike vectors in $TM$ is either connected or has two connected components.
 In the latter case $M$ is said to be \textit{time-orientable}, and a \textit{time orientation} is a choice of one of these components.
 Vectors in the chosen component are said to be \textit{future-directed}, and vectors in the other component are said to be \textit{past-directed}.
 In analogy with tangent vectors, a differetiable curve is \textit{spacelike, lightlike, timelike} if the tangent vector is respectively spacelike, lightlike or timelike at every point. Moreover, we say that a curve is \textit{causal} if the tangent vector is timelike or lightlike at every point.  Given a point $x$ in a time-oriented Lorentzian manifold, we also define the \textit{future} of $x$ as the set $I^+(x)$ of points connected to $x$ by a future-directed causal curve. In an analogous way we define the \textit{past} $I^-(x)$ of $x$.\\
@@ -35,7 +35,7 @@ As a consequence of the lemma
 \end{corollary}
 \noindent In Chapter \ref{chapter:2} and \ref{chapter:3} we will construct explicit models for $K=-1$.\\
 Another consequence is that the group of isometries $\text{Isom}(M)$ can be realized as a subset of $\text{ISO}(T_{x_o}, TM)$, where $x_0 \in M$ and $\text{ISO}(T_{x_o}, TM)$ is the fiber bundle over $M$ whose fiber over $x$ is the space of linear isometries of $T_{x_0}M$ into $T_xM$.
-It follows that the maximal dimension of $\text{Isom}M$ is $\text{dim}(O(n+1)) + n +1 = (n+1)(n+2)/2$.\\
+It follows that the maximal dimension of $\text{Isom}(M)$ is $\text{dim}(O(n+1)) + n +1 = (n+1)(n+2)/2$.\\
 \begin{definition}
     A Lorentzian manifold M has \textit{maximal isometry group} if the action of Isom(M) is transitive and for every $x\in M$ every linear isometry $L: T_xM \to T_xM$ extends to an isometry of M.\\
     Equivalently $M$ has maximal isometry group if $\text{Isom}(M) \subset \text{ISO}(T_xM, TM)$ is a bijection.
@@ -63,7 +63,7 @@ For simply connected Lorentzian manifold there is the following classification r
 
 \begin{proof}
     Suppose $M$ is geodesically complete, then by lifting the metric to the universal cover $\widetilde{M}$ one gets a simply connected geodesically complete Lorentzian manifold of constant sectional curvature $K$ which is isometric to $M_K$. The covering map $p:M_K\to M$ is then a local isometry by construction. The converse is straightforward. \\   
-    Now let $\Gamma$ be $\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuously on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $\widetilde{M}$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
+    Now let $\Gamma$ be $\text{Aut}(p:M_K\to M),$ which is a discrete subgroup of Isom($M_K$). Thus $M$ is obtained as the quotient $M=M_{K}/\Gamma$, where $\Gamma$ acts freely and properly discontinuously on $M_K$. The isometry group of $M$ is isomorphic to $N(\Gamma)/\Gamma$, where by $N(\Gamma)$ we denote the normalizer of $\Gamma$ in Isom($M_K$). The isomorphism is based on the observation that any isometry of $M_K$ which normalizes $\Gamma$ descends to an isometry of $M$, and conversely the lifting of any isometry of $M$ must be in $N(\Gamma).$\\
     Hence the condition that $M$ has maximal isometry group is equivalent to the condition that every element $f$ of $\text{Isom}(M_K)$ descends to the quotient to an isometry of $M$. This is in turn equivalent to the condition that $f\Gamma f^{-1}=\Gamma$ for every $f\in \text{Isom}(M_K)$, which is the same as saying that $\Gamma$ is normal in $\text{Isom}(M_K)$.
 \end{proof}
 It follows that any isometry between connected open subsets of a Lorentzian manifold $M$ with
