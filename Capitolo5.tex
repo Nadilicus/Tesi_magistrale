@@ -1,7 +1,7 @@
 \chapter{Gauss map and spacelike immersions}
 
 \section{Spacelike surfaces in $\A^{2,1}$}
-In this section we will briefly talk about geometric property of immersed spacelike surfaces, that is the analogous of the theory for the Euclidean space.\\
+In this section we will briefly talk about geometric properties of immersed spacelike surfaces that is analogous to the theory for the Euclidean space.\\
 Let us denote with $\nabla$ the Levi-Civita connection of the Lorentzian metric of $\A^{2,1}$. Given a spacelike immersion $\sigma: S\to\A^{2,1}$ the pull-back metric $\I = \sigma^*(g_{\A^{2,1}})$ is called \textit{first fundamental form} of $\sigma$.
 The tangent bundle $TS$ is naturally identified to a subbundle of the pull-back $\sigma^*(TM)$, therefore we can define its normal bundle $N_\sigma$. Using the decomposition
 \[
@@ -11,11 +11,11 @@ the pull-back of the Levi-Civita connection $\nabla$, restricted to sections tan
 \begin{equation} \label{eq:levi}
     \nabla_V W= \nabla^\I_V W + \II(V,W)\nu \ ,
 \end{equation} 
-where the $(2,0)$-tensor $\II$ is called \textit{second fundamental form} of $\sigma$ and is defined as $\II(V,W)=\langle \nu, \nabla_V W \rangle$. The \textit{shape  operator} of $\sigma$ is a $(1,1)$-tensor $B$ defined as
+where the $(2,0)$-tensor $\II$ is called \textit{second fundamental form} of $\sigma$ and is defined as $\II(V,W)=\langle \nu, \nabla_V W \rangle$. The \textit{shape  operator} of $\sigma$ is the $(1,1)$-tensor $B$ defined as
 \[
-    B(V) = \nabla_V \nu \ ,
+    B(V) = \nabla_V \nu \ .
 \]
-which is well defined in $TS$ since $\langle \nu,\nu \rangle \cong -1$. The shape operator is related to the second fundamental form by
+The shape operator is related to the second fundamental form by
 \[
     \II(V,W) = \I(B(V),W) \ .
 \]
@@ -36,7 +36,7 @@ In particular, $B$ is diagonalisable and its eigenvalues are called principal cu
     \]
 \end{theorem}
 \begin{proof}
-    For easier computation suppose $S \subset \A^{2,1}$. For a $X\in T\A^{2,1}$, denote by $X^\top$ and $X^\perp$ the tangent and normal part of $X$ with respect to $TS$. Using Equation \ref{eq:levi} we have
+    For easier computations, suppose $S \subset \A^{2,1}$. For an $X\in T\A^{2,1}$, denote by $X^\top$ and $X^\perp$ the tangent and normal part of $X$ with respect to $TS$. Using Equation \ref{eq:levi} we have
         \[
         (\nabla_X \nabla_Y Z)^\top = \nabla^I_X \nabla^I_Y Z + \II(Y,Z) \nabla_X \nu \ ,
     \] 
@@ -58,7 +58,7 @@ In particular, $B$ is diagonalisable and its eigenvalues are called principal cu
         & = \langle R^I(X,Y)Z,W \rangle - \II(Y,Z) \II(X,W) + \II(X,Z) \II(Y,W) \ .
     \end{split}
     \]
-    Therefore the sectional curvature satisfy
+    Therefore the sectional curvature satisfies
     \[
         -1 = K_{\A^{2,1}} = K_I + \det(\I^{-1}\II) = K_I + \det B \ .
     \]
@@ -75,7 +75,7 @@ In particular, $B$ is diagonalisable and its eigenvalues are called principal cu
 
 As in the Euclidean space, the embedding data $I$ and $\II$ of a simply connected surface determines the immersion uniquely up to isometries of $\A^{2,1}$
 \begin{theorem}\label{thm:immersion of simply connected surface}
-    Let $S$ be a simply connected surface, let $\I$ be a Riemannian metric on $S$ and $\II$ be a symmetric $(2,0)$-tensor on $S$. If $\I$ and $\II$ satisfy the Gauss-Codazzi equations, then there exists a spacelike immersion $\sigma:S \to\A^{2,1}$ having $\I$ and $\II$ as first and second fundamental form. Moreover if $\sigma$ and $\sigma'$ are two such immersions, then there exists a time-preserving isometry $\varphi$ of $\A^{2,1}$ such that $\sigma' = \varphi \circ \sigma$.
+    Let $S$ be a simply connected surface, let $\I$ be a Riemannian metric on $S$ and $\II$ be a symmetric $(2,0)$-tensor on $S$. If $\I$ and $\II$ satisfy the Gauss-Codazzi equations, then there exists a spacelike immersion $\sigma:S \to\A^{2,1}$ having $\I$ and $\II$ as first and second fundamental form. Moreover, if $\sigma$ and $\sigma'$ are two such immersions, then there exists a time-preserving isometry $\varphi$ of $\A^{2,1}$ such that $\sigma' = \varphi \circ \sigma$.
 \end{theorem}
 
 \section{Germs of spacelike immersions}
@@ -86,7 +86,9 @@ We want to prove that the pair $(\I,\II)$ depends only on the \textit{germ} of $
 \begin{definition}
     A \textit{germ} of a spacelike immersion of $S$ into an AdS spacetime is an equivalent class of spacelike immersions $\sigma:S \to(M,g)$ by the following relation: $\sigma:S \to(M,g)$ and $\sigma':S \to(M',g')$ are equivalent if there exist open subsets $U \supset \sigma(S)$ in $M$ and $U' \supset \sigma'(S)$ in $M'$ and a time-preserving isometry $f:(U,g)\to(U',g')$ such that $\sigma' = f \circ \sigma$.
 \end{definition}
-Given a pair $(\I,\II)$ on $S$ and $\pi: \widetilde{S}\to S$ a universal cover, one can take the pair $(\pi^*\I, \pi^*\II)$ on $\widetilde{S}$ that clearly satisfies the Gauss-Codazzi equations. By the existence part of Theorem \ref{thm:immersion of simply connected surface} there exists a spacelike immersion $\widetilde{\sigma}: \widetilde{S} \to\A^{2,1}$ having immersion data $(\pi^*\I, \pi^*\II)$. As a concequence of the uniqueness part of Theorem \ref{thm:immersion of simply connected surface} we have that associeted to $\widetilde{\sigma}$ there is a map $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$ such that for every $\gamma \in \pi_1(S)$, $\widetilde{\sigma} \circ \gamma = \rho(\gamma) \circ \widetilde{\sigma}$. Moreover changing $\widetilde{\sigma}$ by post-composition with an isometry $f$ of $\A^{2,1}$ has the effect of conjugating $\rho$ by $f$.\\
+Given a pair $(\I,\II)$ on $S$ and $\pi: \widetilde{S}\to S$ a universal cover, one can take the pair $(\pi^*\I, \pi^*\II)$ on $\widetilde{S}$ that clearly satisfies the Gauss-Codazzi equations. By the existence part of Theorem \ref{thm:immersion of simply connected surface} there exists a spacelike immersion $\widetilde{\sigma}: \widetilde{S} \to\A^{2,1}$ having immersion data $(\pi^*\I, \pi^*\II)$.
+As a coscequence of the uniqueness part of Theorem \ref{thm:immersion of simply connected surface} we have that associeted to $\widetilde{\sigma}$ there is a map $\rho:\pi_1(S) \to \text{Isom}_0(\A^{2,1})$ such that for every $\gamma \in \pi_1(S)$, $\widetilde{\sigma} \circ \gamma = \rho(\gamma) \circ \widetilde{\sigma}$.
+Moreover changing $\widetilde{\sigma}$ by post-composition with an isometry $f$ of $\A^{2,1}$ has the effect of conjugating $\rho$ by $f$.
 Given $\sigma:S \to \A^{2,1}$ one can extend the immersion to an immersion of an open neighbourhood of $S \times\{0\}$ in $S\times\R$ into $\A^{2,1}$, by mapping $(x,t)$ to the point $\gamma(t)$ on the timelike geodesic $\gamma$ such that $\gamma(0)=\sigma(p)$ and $\gamma'(0)$ is the future unit normal vector $\nu$ of $\sigma$ at $x$.
 
 \begin{lemma}\label{lem:tub metric}
@@ -144,7 +146,7 @@ We can now define the Gauss map for spacelike surfaces in $\A^{2,1}$. Recall tha
 to the pair $(p,q) \in \H^2\times\H^2$. 
 \begin{definition}
     Let $\sigma :S \to\A^{2,1}$ be a spacelike immersion. The \textit{Gauss map} $G_\sigma : S \to \H^2 \times \H^2$ is defined as $G_\sigma(x) = (p,q)$ such that $L_{p,q}$ is the timelike geodesic orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$.\\
-    The components of the Gauss map, denoted by $\Pi_l, \Pi_r : S \to \A^{2,1}$, are called \textit{left} and \textit{right projections}. 
+    The components of the Gauss map, denoted by $\Pi_l, \Pi_r : S \to \H^2$, are called \textit{left} and \textit{right projections}. 
 \end{definition}
 The Gauss map $G_\sigma$ is natural with respect to the action of the isometry group, meaning that $G_{f\circ\sigma} = f \cdot G_\sigma$ for every $f \in\text{Isom}_0(\A^{2,1}) = \PSL\times\PSL$. The Gauss map is also invariant by reparametrization, in the sense that $G_{\sigma \circ \phi} = G_\sigma \circ \phi$ for a diffeomorphism $\phi:S'\to S$. Hence it makes sense to talk about the Gauss map of a spacelike surface in $\A^{2,1}$.
 
@@ -156,7 +158,7 @@ Geodesic leaving from $\1$ with velocity $\nu(p)$ meets $P_\1$ orthogonally at $
 \begin{lemma}\label{lem:Gaussid}
     Given a spacelike immersion $\sigma:S\to\A^{2,1}$, with future unit normal vector field $\nu$, if $\sigma(p)=\text{Id}$, then 
     \begin{equation}\label{eq:Gaussid}
-        G_\sigma(p)=G_{P_\text{Id}}(\exp(\frac{\pi}{2}\nu(p))).
+        G_\sigma(p)=G_{P_\1}(\exp(\frac{\pi}{2}\nu(p))).
     \end{equation}
 \end{lemma}
 %\begin{proof}
@@ -229,7 +231,7 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
     \[
         d \widehat{\Pi}_r(v) = \sum_i  d \nu_i(v) X_i (\1).
     \]
-    On the other hand, since left-invariant vector field are parallel for the left-invariant connection $D^l$, we have
+    On the other hand, since left-invariant vector fields are parallel for the left-invariant connection $D^l$, we have
     \[
         D^l_v \nu = \sum_i  d \nu_i(v) X_i (\sigma(x)).
     \]
@@ -241,7 +243,7 @@ in $\mathcal{T}(S)\times\mathcal{T}(S).$
     \[
         D^l_v \nu = \nabla_v \nu + v \boxtimes \nu = B(v) - \nu \boxtimes v = (B- \mathcal{J})v.
     \]
-    The last equality holds since $\nu$, $v$, $-Jv$ form a positive basis of $T\A^{2,1}$ and the norm of $\nu \boxtimes v$ it the product of those of $nu$ and $v$, which together imply that $\nu \boxtimes v = -Jv$.
+    The last equality holds since $\nu$, $v$, $-Jv$ form a positive basis of $T\A^{2,1}$ and the norm of $\nu \boxtimes v$ it the product of those of $\nu$ and $v$, which together imply that $\nu \boxtimes v = -Jv$.
     We can therefore conclude that
     \[
         \Pi_r^* g_{\H^2}(v,w) = \I ((B - \mathcal{J})v, (B - \mathcal{J})w) = \I((id + \mathcal{J}B)v, (id + \mathcal{J}B)w).
@@ -258,7 +260,7 @@ Since $B$ is $\I$-symmetric $\JJ\circ B$ is traceless, and therefore
 \det(B\pm\JJ)=1+\det B=-K_\I~.
 \end{equation}
 This shows that $\Pi_l$ is a local diffeomorphism at a point $x$ if and only if $\Pi_r$ is, which is the case if and only if the intrinsic curvature of $\I$ at $x$ is different from $0$.
-\item Since the trace of $id\pm\JJ B$ equals $2$, the differentials of $\Pi_l$ and $\Pi_r$ have either rank 2 or rank 1. (In fact, by \eqref{eq:deteminant differential projections}, when the differential of $\Pi_l$ has rank 1, the same holds for the differential of $\Pi_r$.) Hence the differential of the Gauss map $G:S\to\H^2\times\H^2$ is always non-singular.
+\item Since the trace of $id\pm\JJ B$ equals $2$, the differentials of $\Pi_l$ and $\Pi_r$ have either rank 2 or rank 1. (In fact, by Equation \eqref{eq:deteminant differential projections}, when the differential of $\Pi_l$ has rank 1, the same holds for the differential of $\Pi_r$.) Hence the differential of the Gauss map $G:S\to\H^2\times\H^2$ is always non-singular.
 \item If an immersed surface has the property that the curvature of the first fundamental form never vanishes, and if $\Pi_l$ and $\Pi_r$ are globally injective, then the image of $G$ is the graph of a  diffeomorphism $F_\sigma$ between two subsets of $\H^2$,  called the \emph{associated map}. From Equation \eqref{eq:deteminant differential projections}, the Jacobians of $\Pi_l$ and $\Pi_r$ are equal, hence the associated map is area-preserving.
 When $\Pi_l$ and $\Pi_r$ are only locally injective, but not globally, we still obtain an area-preserving local diffeomorphism $F_\sigma$ which is now defined between two hyperbolic surfaces.
 \item More generally, as a consequence of the previous points, the image of $G$ is always a \emph{Lagrangian submanifold} in $\H^2\times\H^2$ with respect to the symplectic form 
@@ -318,7 +320,7 @@ We conclude this section with the following:
     \]
     and therefore
     \[
-        K_g = K_I \frac{w_I}{w_g} = \frac{K_I}{det A} \ .
+        K_g = K_I \frac{\omega_I}{\omega_g} = \frac{K_I}{det A} \ .
     \]
 \end{proof}
 Applying the proposition to the tensors $id \pm \mathcal{J} \circ B$, Equation (\ref{eq:deteminant differential projections}) shows that the pull-back metrics defined in Proposition \ref{prop:left right pull-back metric}, when non-degenerate, are always hyperbolic.
