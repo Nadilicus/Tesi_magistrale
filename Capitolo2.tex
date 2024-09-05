@@ -29,7 +29,7 @@ Let us define
 Since $\{ \pm \1 \}$ is the center of $O(n,2)$, $\A^{n,1}$ has maximal isometry group and is therefore a model of constant sectional curvature $-1$.
 It can also be shown that the center of the isometry group of $\A^{n,1}$ is trivial, or equivalently that $\A^{n,1}$ is the quotient of its universal covering by the center of its isometry group. 
 It follows that it is the \emph{minimal} model of AdS geometry, in the sense that any other model is a covering of $\A^{n,1}$.\\
-By definition $\A^{n,1}$ is identified with the subset of $\mathbb{R} \text{P}^{n+1}$ given by the timelike direction of $\R^{n+2}$:
+By definition $\A^{n,1}$ is identified with the subset of $\mathbb{R} \text{P}^{n+1}$ given by the timelike direction of $\R^{n,2}$:
 \[
 \A^{n,1} = \{ \left[ x \right]\in \mathbb{R} \text{P}^{n+1} \ | \ q_{n,2}<0  \}.
 \]
@@ -57,7 +57,7 @@ In this setting we have a central extension, that is a non split short exact seq
     0 \to \Z \to \text{Isom}(\AS^{n,1}) \to O(n,2) \to 1.
 \]
 This tells us that $\AS^{n,1}$ has maximal isometry group, hence we have found a simply connected model for AdS geometry.
-Using the Poincaré model of the hyperbolic space (namely $\D^n$), $\AS^{n,1}$ has the model $\D^n \times \R$ equipped with the metric
+Using the Poincaré model of the hyperbolic space (namely $\D^n$), $\AS^{n,1}$ is isometric to $\D^n \times \R$ equipped with the metric
 \[
     \frac{4}{(1-r^2)^2} (dx_1^2 + \cdots + dx_n^2) - \Big( \frac{1+r^2}{1-r^2} \Big)^2 dt^2.
 \]
@@ -81,14 +81,14 @@ if $q_{n,2}(v)= 1$ and
 \] 
 if $q_{n,2}(v)= -1$.\\
 
-\noindent \textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model, it follows that
+\noindent \textit{In the Klein model}. In analogy with the hyperbolic case, geodesics in the Klein model are intersection of projective lines with the domain $\A^{n,1} \subset \mathbb{R}\text{P}^{n+1}$. From the study of geodesics in the quadric model, it follows that
 \begin{itemize}
-    \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$, are closed non-trivial loops and have length $\pi$,
+    \item Timelike geodesics correspond to projective lines that are entirely contained in $\A^{n,1}$; they are closed non-trivial loops and have length $\pi$,
     \item Spacelike geodesics correspond to lines that meet $\partial\A^{n,1}$ transversally in two points. They have infinite length, 
     \item Lightlike geodesics correspond to lines tangent to $\partial\A^{n,1}$.
 \end{itemize}
 In particular the light cone through a point $\left[ x \right] \in \A^{n,1}$ coincides with the cone of lines through $\left[ x \right]$ tangent to $\partial \A^{n,1}$.\\
-In an affine chart, timelike geodesics correspond to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one-sheeted hyperboloid, or are asymptotic to it (tangent at infinity).\\
+In an affine chart, timelike geodesics correspond to affine lines which are entirely contained in the Anti de Sitter space, and which are not asymptotic to its boundary; lightlike geodesics are tangent to the one-sheeted hyperboloid, or are asymptotic to it.\\
 
 \noindent \textit{Totally geodesic subspaces}. Let us briefly discuss more in general totally geodesics subspaces. By an argument analogous to the case of geodesics, totally geodesic subspaces of $\A^{n,1}$ of dimension $k$ are obtained as the intersection of $\A^{n,1}$ with the projectivisation $P(W)$ of a linear subspace $W$ of $\R^{n,2}$ of dimension $k+1$. The negative index of $W$ can be either $2$ or $1$, for otherwise the intersection $\A^{n,1}\cap P(W)$ would be empty.
 We have several cases
@@ -108,14 +108,14 @@ Because of Theorem \ref{ConformalMetric} we can replace the Poincaré metric by 
      \frac{4}{(1+r^2)^2}(dx_1^2+\dots+dx_n^2)-dt^2
  \end{equation} 
  Now we observe that the first term in Equation \ref{hemispherical} is exactly the form of the spherical metric on a hemisphere, pulled-back to the unit disk by the stereographic projection. We call such a metric hemispherical and we denote it by $g_{\mathbb{S}^n}$. Notice that the boundary of $\D^n$ is an equator for the hemispherical metric, and in fact it is the only equator completely contained in $(\D^n\cup\partial\D^n,g_{\mathbb{S}^n})$, a justification to the fact that we refer to it as \textit{the} equator.\\
- As a consequence, unparametrized lightlike geodesics of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the condition that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover: 
+ As a consequence, unparametrized lightlike geodesics of $\AS^{n,1}$, going through a point $(p_0,t_0)$ are characterized by the condition that they are mapped to spherical geodesic under the vertical projection $(p,t)\to p$ and moreover
  \[
      t-t_0=d_{\mathbb{S}^n}(p,p_0)
  \] on the geodesic. In particular, these lightlike geodesics meet the boundary of $\AS^{n,1}$ at the point that satisfies the above conditions such that $p$ is on the equator of the hemisphere: as an example, if $p_0$ is the center of the hemisphere, then the points at infinity of the lightcone over $(p_0,t_0)$ are the horizontal slices $t=t_{0}+\pi/2.$ This sphere is also the boundary of a hyperplane dual to $(p_0,t_0)$, in a sense that we will explain in the following section. \\
  By an analogous reasoning we can give an explicit description of a lightlike hyperplane in the Poincaré model: the lightlike plane having $(p_0,t_0)$ as a past endpoint, (where now $p_0$ is on the equator) is precisely $\{(p,t)\;|\;t-t_0=d_{\mathbb{S}^n}(p,p_0)\}$ and its future endpoint is $(-p_0,t+\pi.)$ 
 
 \section{Polarity in Anti-de Sitter space}
-The quadratic form $q_{n,2}$ induces a polarity on the projective space $\mathbb{R}P^{n,1}$, namely the correspondance which associates to the projective subspace $P(W)$ the subspace $P(W^ \perp)$. In particular this induces a duality between spacelike totally geodesic subspaces of $\A^{n,1}$: the dual of a spacelike $k$-dimensional subspace is a $n-k+1$-dimensional subspace.
+The quadratic form $q_{n,2}$ induces a polarity on the projective space $\mathbb{R} \text{P}^{n,1}$, namely the correspondance which associates to the projective subspace $P(W)$ the subspace $P(W^ \perp)$. In particular this induces a duality between spacelike totally geodesic subspaces of $\A^{n,1}$: the dual of a spacelike $k$-dimensional subspace is a $n-k+1$-dimensional subspace.
 We indicate with $P_{[x]}=P(x^\perp)$ the hyperplane dual to a point $[x]\in \A^{n,1}$.
 Projectively $P_{[x]}$ is characterised as the hyperplane spanned by the intersection of $\partial\A^{n-1,1}$ with the lightcone from $[x]$.
 More geometrically, it can be checked that $P_{[x]}$ is the set of antipodal points to $[x]$ along timelike geodesics through $[x]$. Also, every timelike geodesic
@@ -148,4 +148,4 @@ the exponential over $\A^{n,1}$ is surjective.\\
 \noindent\textit{In the universal cover}.
 Recall that the group of deck transformations for the covering $\AS^{n,1} \to \H^{n,1}$ is $\Z$, where a generator acts by translations of $2\pi$ in the $\R$ factor. Hence the  preimage of a spacelike plane $P\subset\A^{n,1}$ is the disjoint union of spacelike planes $(P^k)_{k\in\Z}$, enumerated so that the generator $\eta$ of $\Z$ acts by sending $P^k$ to $P^{k+1}$.
 Moreover each connected component of $\A^{n,1}\setminus\bigcup_{k\in\Z}P^k$ is a fundamental  domain for the action of deck transformations of the covering $\AS^{n,1}\to\A^{n,1}$.\\
-Take now $x\in \AS^{n,1}$ and apply the construction above with $P = P_{\pi'(x)}$ the plane dual to $pi'(x)$ in $\A^{n,1}$. We refer to the connected component of $\AS^{n,1} \setminus \bigcup_{k\in\Z}P_{\pi'(x)}^k$ containing $x$ as the \textit{Dirichlet domain} $R_x$ of $x$. By a small abuse of notation, we also denote the planes that bound $R_x$ by $P^+_x$ and $P^-_x$.
+Take now $x\in \AS^{n,1}$ and apply the construction above with $P = P_{\pi'(x)}$ the plane dual to $\pi'(x)$ in $\A^{n,1}$. We refer to the connected component of $\AS^{n,1} \setminus \bigcup_{k\in\Z}P_{\pi'(x)}^k$ containing $x$ as the \textit{Dirichlet domain} $R_x$ of $x$. By a small abuse of notation, we also denote the planes that bound $R_x$ by $P^+_x$ and $P^-_x$.
