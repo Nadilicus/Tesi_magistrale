@@ -103,9 +103,9 @@ where $w(z) = f^1(z) + i f^2(z)$.
         \frac{\partial \sigma}{\partial \overline{w}} \frac{\partial \overline{f}}{\partial \overline{z}} \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z} +
         \sigma(f(z)) \frac{\partial^2 f}{\partial \overline{z} \partial z} \frac{\partial \overline{f}}{\partial z} +
         \sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial^2 \overline{f}}{\partial \overline{z} \partial z} \\
-        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} \Big( \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) + 
+        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial z} \Big( \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) + 
         \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{ \Big(  \frac{\partial^2 f}{\partial \overline{z} \partial z} + \frac{1}{\sigma} \frac{\partial \sigma}{\partial w} \frac{\partial f}{\partial \overline{z}} \frac{\partial f}{ \partial z}  \Big) }  \\
-        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial \overline{z}} P + \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{P} \ ,
+        & = \sigma(f(z)) \frac{\partial \overline{f}}{\partial z} P + \sigma(f(z)) \frac{\partial f}{ \partial z} \overline{P} \ ,
     \end{split}
     \]
     where $P$ is the left hand side of Equation \ref{eq:harmonic2}.\\
@@ -113,7 +113,8 @@ where $w(z) = f^1(z) + i f^2(z)$.
     \[
     \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial f}{ \partial z}  \frac{\partial \overline{f}}{\partial z} \Big) = 0 \ .
     \]
-    If $f$ is not harmonic, $P\neq 0$ and we have
+    If $f$ is not harmonic, $P\neq 0$.
+    Since $|P|=|\overline{P}|$ and $\frac{ \partial}{\partial \overline{z}}\varphi = 0 $, we have
     \[
        \Big| \frac{\partial f}{ \partial z} \Big| = \Big| \frac{\partial \overline{f}}{ \partial z} \Big| = \Big| \frac{\partial f}{ \partial \overline{z}} \Big| \ .
     \]
@@ -121,7 +122,7 @@ where $w(z) = f^1(z) + i f^2(z)$.
 \end{proof}
 Before moving on and talk about minimal maps we prove the following result on quadratic differential :
 \begin{lemma} \label{lem:HQD}
-    Given a Riemannian metric $g$ on a surface and a $(1,1)$-tensor $A$ which is $g$-symmetric, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
+    Given a Riemannian metric $g$ on a surface $S$ and a $(1,1)$-tensor $A$ which is $g$-symmetric, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
 \end{lemma}
 \begin{proof}
     Take normal coordinates around a point $x$. In this coordinates $g=\delta_{ij}$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
@@ -171,10 +172,10 @@ and putting $X =\frac{\partial}{\partial t} f_{t*} |_{t=0} $ we have
 \[
 \begin{split}
     \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} & = \sum_{i=1}^m \int_M \frac{ \langle e_1 \wedge \cdots \wedge \nabla^N_{e_i} X \wedge \cdots \wedge e_m , e_1 \wedge \cdots \wedge e_m \rangle }{| e_1 \wedge \cdots \wedge e_m |} \omega \\
-    & = \int_M \langle \nabla^N_{e_i}, e_i \rangle \ \omega = - \int_M \langle X, \nabla^N_{e_i} e_i \rangle \ \omega \ .
+    & = \int_M \langle \nabla^N_{e_i} X, e_i \rangle \ \omega = - \int_M \langle X, \nabla^N_{e_i} e_i \rangle \ \omega \ .
 \end{split}
 \]
-If we suppose moreover to be in normal coordinates we have $\nabla^M_{e_i} e_i = 0$ and therefore
+Since the volume in invariant under reparametrization, we can take a parametriztion in which $X^\top =0$ and therefore
 \[
    \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0}  = - \int_M \langle X^\perp, \nabla^N_{e_i} e_i \rangle \ \omega \ . 
 \]
