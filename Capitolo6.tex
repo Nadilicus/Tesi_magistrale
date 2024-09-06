@@ -291,7 +291,7 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
     \[
        \Pi_l^*g_{\H^2} + \Pi_r^*g_{\H^2} = 2I + 2I(\mathcal{J}B,\mathcal{J}B) = 2I + 2I(B,B)= 2(I+ \III) \ .
     \]
-    Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det})I$, showing conformality.\\
+    Being $B$ traceless, by the Cayley-Hamilton theorem $B^2 + (\text{det}B)id = 0$. Now, using that $B$ is $\I$-symmetric, we have that $\III = -(\text{det}B)I$, showing conformality.\\
     To prove the harmonicity of the Gauss map it suffices to prove that the left and right projection are harmonic. We check the harmonicity of $\Pi_l$, since the proof is the same for $\Pi_r$. To see this we can write the target metric
     \[
         \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot) = \I(\cdot, \cdot) + \III(\cdot, \cdot) - 2\I(\mathcal{J}B \cdot, \cdot),
@@ -300,14 +300,63 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
 \end{proof}
 
 For the uniqueness of the minimal Lagrangian diffeomorphism we need the following:
-\red{mettere il lemma}
+\begin{lemma} \label{lem:Lagrangian shit}
+    Given a minimal Lagrangian diffeomorphism $\Phi : (S,h) \to (S,h')$ there is a $(1,1)$-tensor $b$ that is $h$-symmetric, $\det(b)=1$, $h$-Codazzi and satisfies
+    \[
+        \Phi^* h' = h(b \cdot, b \cdot) .
+    \]
+\end{lemma}
+\begin{proof}
+    One can always find a $b$ that is $h$-symmetric and such that $\Phi^* h' = h(b \cdot, b \cdot)$. Moreover $\det(b)=1$ since $\Phi$ is area preserving. Hence, we just need to prove that $b$ is $h$-Codazzi.\\
+    Since $\text{graph}(\Phi)$ is minimal in $(S,h) \times (S,h')$, the inclusion map is harmonic. A map is harmonic if and only if its factors are, therefore, since that $\text{graph} \simeq S$, we have that $id:(S,g) \to (S,h)$ and $\Phi:(S,g)\to (S,h')$ are harmonic, wher $g$ is the metric induced on $\text{graph}(\Phi)$.
+    Since the product metric is the sum of the metric tensor on each factor, we have that
+    \[
+        g = h + \Phi^* h' = h + h(b \cdot, b \cdot) \ .
+    \]
+    Define now $G = h((id+b)\cdot ,(id+b)\cdot )$ and $B = (id+b)^{-1}(b-id)$.
+    $B$ is $G$-symmetric, indeed for $v,w$ tangent vectors we have
+    \[
+    \begin{split}
+        G(B v,w) & = h((id + b) (id + b)^{-1} (b-id) v , (id + b)w) \\
+        & = h((b-id) v , (id + b)w) = h((id + b) v , (b-id)w) \\
+        & = G(v, B w) \ .
+    \end{split}
+    \]
+    Moreover, since $\text{det}(b)=1$, a direct computation in a basis where $b$ is diagonal shows that $B$ is traceless. 
+    Now we have that $(1+b)^2=1+2b+b^2 = (2 + tr(b))b$, hence $G$ is conformal to $g$:
+    \[
+        G= h((1+b)^2 \cdot, \cdot) = (2+tr(b))h(b \cdot , \cdot) \ ,
+    \]
+    and
+    \[
+        g= h + h(b^2 \cdot,\cdot) = tr(b)h(b\cdot, \cdot) \ .
+    \]
+    Therefore $id: (S,G)\to (S,h)$ is harmonic too.
+    Moreover, using that $id-B = 2(id+b)^{-1}$ we can write
+    \[
+        \frac{h}{4} = G((id-B) \cdot, (id-B) \cdot) = (1-\det(B))G + 2G(B \cdot , \cdot) \ .
+    \]
+    Hence, $G(B\cdot, \cdot)$ is the real part of a harmonic quadratic differential and, by Lemma \ref{lem:HQD}, $B$ is $G$-Codazzi. By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection of $h$ is given by
+    \[
+        \nabla^h_Y X= (id-B)^{-1} (\nabla^G_Y (id-B)X) \ ,
+    \]
+    hence
+    \[
+    \begin{split}
+        (d^{\nabla^h} b)(X,Y) & = (id - B)^{-1} (\nabla^G_Y ((id-B) b X) - \nabla^G_X ((id-B) b Y) ) - b \left[ X,Y \right] \\
+        & = (id -B)^{-1} (\nabla^G_Y ((id+B) X) -  \nabla^h_X ((id+B) Y) - (id+B) \left[ X,Y \right] ) \\
+        & = (id - B)^{-1}(d^{\nabla^G}(id+B))(X,Y) = 0 \ .
+    \end{split}
+    \]
+    where we used that $b = (id - B)^{-1}(id + B)$, so $b$ is $h$-Codazzi.
+\end{proof}
 
 We are now ready to prove the uniqueness
 \begin{theorem}
     Given a surface $\Sigma$ and two hyperbolic metrics $h, h'$ on it, the minimal Lagrangian diffeomorphism $\Phi : (\Sigma, h) \to (\Sigma, h')$ is unique.
 \end{theorem}
 \begin{proof}
-    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in \red{Lemma da mettere}. We now want to construct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since by \red{unicità sup max} and we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
+    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in Lemma \ref{lem:Lagrangian shit}. We now want to construct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since by \red{unicità sup max} and we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
     Let $\I$ be the metric on $\Sigma$ defined by
     \[
         4 \I = h((id + b)\cdot , (id + b)\cdot ) \ ,
@@ -318,7 +367,7 @@ We are now ready to prove the uniqueness
     \]
     Here $\I$ and $B$ are well-defined at all points since $b$ has positive eigenvalues. Since $\text{det}(b)=1$, a direct computation in a basis where $b$ is diagonal shows that $\text{tr}(\mathcal{J} B) = 0 $, hence $B$ is $\I$-symmetric. Hence we can set $\II = \I (B \cdot, \cdot)$. We can also write $b$ as
     \[
-        b = (id+\mathcal{J}B)(id - \mathcal{J}B)^{-1} \ .
+        b = (id - \mathcal{J}B)^{-1} (id+\mathcal{J}B) \ .
     \]  
     We now have to prove that $\I$ and $B$ satisfy the Gauss-Codazzi equations, and that $B$ is traceless.
     $\mathcal{J} B$ is $\I$-symmetric, indeed for $v,w$ tangent vectors we have
@@ -330,7 +379,7 @@ We are now ready to prove the uniqueness
     \end{split}
     \]
     and it follows that $B$ is traceless.\\
-    By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection $\nabla$ of $\I$ is
+    By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection $\nabla^I$ of $\I$ is
     \[
         \nabla^I_Y X = (id + b)^{-1} \nabla^h_Y ((id+b)X) \ .
     \]
@@ -347,10 +396,10 @@ We are now ready to prove the uniqueness
     \begin{equation}\label{eq:roba}
         (id+ \mathcal{J}B) = 2(id +b)^{-1} b  \ , \qquad (id- \mathcal{J}B) = 2(id +b)^{-1} \ ,
     \end{equation}
-     hence, by Theorem \ref{prop:Gaussian curvature} the curvature of $I$ is given by
+     hence, by Proposition \ref{prop:Gaussian curvature} the curvature of $I$ is given by
     \[
         K_I = \frac{-1}{\det((id+b)/2)} = -\det(id - \mathcal{J}B) = -1 - \det(B) \ .
     \]
     We have shown that the pair $(\I,\II)$ defines a maximal immersion.
-    Let now $f_0$ be the minimal Lagrangian diffeomorphism associated to the pair $(I,\II)$, the $(1,1)$ tensor associated to $f_0$ in \red{Lemma da mettere} is clearly $b_{f_0} = (id+\mathcal{J}B)(id-\mathcal{J}B)^{-1} = b$, hence $f_0 = \Phi$. The uniqueness of the maximal surface ensures that any other minimal Lagrangian diffeomorphism $\Phi'$ is equal, via the same construction, to $f_0=\Phi$, hence the uniqueness.
+    Let now $f_0$ be the minimal Lagrangian diffeomorphism associated to the pair $(I,\II)$, the $(1,1)$ tensor associated to $f_0$ in Lemma \ref{lem:Lagrangian shit} is clearly $b_{f_0} = (id+\mathcal{J}B)(id-\mathcal{J}B)^{-1} = b$, hence $f_0 = \Phi$. The uniqueness of the maximal surface ensures that any other minimal Lagrangian diffeomorphism $\Phi'$ is equal, via the same construction, to $f_0=\Phi$, hence the uniqueness.
 \end{proof}
