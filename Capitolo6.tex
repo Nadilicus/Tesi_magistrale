@@ -381,7 +381,7 @@ For the uniqueness of the minimal Lagrangian diffeomorphism we need the followin
 \end{lemma}
 \begin{proof}
     One can always find a $b$ that is $h$-symmetric and such that $\Phi^* h' = h(b \cdot, b \cdot)$. Moreover $\det(b)=1$ since $\Phi$ is area preserving. Hence, we just need to prove that $b$ is $h$-Codazzi.\\
-    Since $\text{graph}(\Phi)$ is minimal in $(S,h) \times (S,h')$, the inclusion map is harmonic. A map is harmonic if and only if its factors are, therefore, since that $\text{graph} \simeq S$, we have that $id:(S,g) \to (S,h)$ and $\Phi:(S,g)\to (S,h')$ are harmonic, wher $g$ is the metric induced on $\text{graph}(\Phi)$.
+    Since $\text{graph}(\Phi)$ is minimal in $(S,h) \times (S,h')$, the inclusion map is harmonic. A map is harmonic if and only if its factors are, therefore, since $\text{graph}(\Phi) \cong S$, we have that $id:(S,g) \to (S,h)$ and $\Phi:(S,g)\to (S,h')$ are harmonic, where $g$ is the metric induced on $\text{graph}(\Phi)$.
     Since the product metric is the sum of the metric tensor on each factor, we have that
     \[
         g = h + \Phi^* h' = h + h(b \cdot, b \cdot) \ .
@@ -396,20 +396,20 @@ For the uniqueness of the minimal Lagrangian diffeomorphism we need the followin
     \end{split}
     \]
     Moreover, since $\text{det}(b)=1$, a direct computation in a basis where $b$ is diagonal shows that $B$ is traceless. 
-    Now we have that $(1+b)^2=1+2b+b^2 = (2 + tr(b))b$, hence $G$ is conformal to $g$:
+    Now, since the mynimal polynomial of $b$ is $b^2 - tr(b) + 1 = 0$, we have that $(id+b)^2=id+2b+b^2 = (2 + tr(b))b$, hence $G$ is conformal to $g$ because
     \[
-        G= h((1+b)^2 \cdot, \cdot) = (2+tr(b))h(b \cdot , \cdot) \ ,
+        G= h((id+b)^2 \cdot, \cdot) = (2+tr(b))h(b \cdot , \cdot) \ ,
     \]
     and
     \[
         g= h + h(b^2 \cdot,\cdot) = tr(b)h(b\cdot, \cdot) \ .
     \]
     Therefore $id: (S,G)\to (S,h)$ is harmonic too.
-    Moreover, using that $id-B = 2(id+b)^{-1}$ we can write
+    Moreover, using that the mynimal polynomial of $B$ is $B^2 + \det(B)id=0$ since $B$ is traceless, and that $id-B = 2(id+b)^{-1}$, we can write
     \[
-        \frac{h}{4} = G((id-B) \cdot, (id-B) \cdot) = (1-\det(B))G + 2G(B \cdot , \cdot) \ .
+        \frac{h}{4} = G((id-B) \cdot, (id-B) \cdot) = (1-\det(B))G - 2G(B \cdot , \cdot) \ .
     \]
-    Hence, $G(B\cdot, \cdot)$ is the real part of a harmonic quadratic differential and, by Lemma \ref{lem:HQD}, $B$ is $G$-Codazzi. By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection of $h$ is given by
+    Hence, by Lemma \ref{thm:HQD} we have that $G(B\cdot, \cdot)$ is the real part of a harmonic quadratic differential and, by Lemma \ref{lem:HQD}, $B$ is $G$-Codazzi. By Proposition \ref{prop:Gaussian curvature} the Levi-Civita connection of $h$ is given by
     \[
         \nabla^h_Y X= (id-B)^{-1} (\nabla^G_Y (id-B)X) \ ,
     \]
