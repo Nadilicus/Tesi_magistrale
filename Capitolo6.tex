@@ -250,40 +250,21 @@ We now turn back out attention to smoothly embedded spacelike surfaces in global
 \end{theorem}
 The proof of Theorem \ref{thm:CMC_foliation} revolves around the existence of a pair of barriers which implies existence of a maximal surface. A pair of barriers is a pair of surfaces $\Sigma^+$, $\Sigma^-$ with everywhere positive/negative mean curvature, respectively, and such that $\Sigma^+$ is contained in the future of $\Sigma^-$.
 To do this one can take convex hull $C$ of a proper achronal meridian $\Lambda$ that defines $M$. This definition makes sense in affine chart, and in this setting it is well defined since $C \subset \Omega(\Lambda)$ which is contained in a Dirichlet domain. Now $\partial C$ is the union of $\Lambda$ and two surfaces $\partial_+ C$, $\partial_- C$ which are convex and concave respectively. Here a set is convex (resp. concave) if it is contained in the future (resp. past) of all its support planes. Convex (resp. concave) surfaces have non-positive (resp. non-negative) mean curvature. The quotient of $\partial_+ C$, $\partial_- C$ do not work as barriers since they are not smooth, but close to them one can find a pair of barriers.
-A detailed proof can be found in \cite{barbot2004constant}.\\
+A detailed proof can be found in \cite{barbot2004constant}. One general fact we obtain is that a maximal surface is always contained in the convex hull of its border at infinity.\\
 Now we want to prove that such maximal surface is also unique. We already know that given two surfaces $S_1, S_2$ in a MGH spacetime $M$, then the border at infinity of $dev(\widetilde{S_1})$ and $dev(\widetilde{S_2})$ coincide in $dev(\widetilde{M})\subset \A^{2,1}$. Therefore, is suffices to prove the uniqueness in $\A^{2,1}$. Moreover, we can take the problem in $\H^{2,1}$, once we choose a lifting of the border of $dev(\widetilde{S_1})$ and $dev(\widetilde{S_2})$.\\
-First we need to prove some Lemma:
-\begin{lemma} \label{lem:conv}
-    Let $S$ be a maximal surface in $\H^{2,1}$, then $S$ is included in the convex hull of $\partial_\infty S$.
-\end{lemma}
-\begin{proof}
-    Fix $x_0 \in S$ and $\dot{x}_0\in T_x S$ and let $(x(t))_{-\epsilon < t < \epsilon}$ be the geodesic in $S$ such that $x(0)= x_0$ and $x'(0)= \dot{x}_0$. Let now $\nu$ be a vector normal to $S$ at $x_0$, and let $\II$ be the second fundamental form of $S$ in $\H^{2,1}$. Then $\II(\dot{x}_0,\dot{x}_0)\nu$ is the orthogonal projection of $x''(0)$ to $T_{x_0} S$. We have
-    \[
-        \II(\dot{x}_0,\dot{x}_0)\nu = x''(0) - q_{2,2}(\dot{x}_0) x_0 \ .
-    \]
-    Let $\varphi$ be a linear form on $\R^{2,2}$ positive on $\partial_\infty S$, then
-    \[
-        \text{Hess}_{u_0}\varphi \big|_{S}(\dot{x}_0, \dot{x}_0) := \frac{d^2}{dt^2}\Big|_{t=0} \varphi(x(t)) = \varphi(u''(0)) = q_{2,2}(\dot{x}_0)\varphi(x_0) + \varphi(\II(\dot{x}_0, \dot{x}_0)\nu) \ .
-    \]
-    Since $S$ is maximal, the trace of $\II$ vanishes, therefore we have that
-    \[
-        \Delta \varphi \big|_S := \frac{1}{2} tr(\text{Hess}(\varphi)) \big|_S = \varphi \big|_S .
-    \]
-    Now, since by assumtion $\varphi$ is positive in a neighbourhood of $\partial_\infty S$, the maxumum principle implies that $\varphi$ is positive on $S$. \red{Therefore, S is included in $Conv(\partial_\infty S$)}.
-\end{proof}
-Let now $S_1$ and $S_2$ be lifting to $\H^{2,1}$ of two maximal surfaces in a MGH spacetime $(M,g)$, such that $\partial_\infty S_1 = \partial_\infty S_2$, and let $\rho$ be the lifting to $\text{Isom}(\H^{2,1})$ of the holonomy of $(M,g)$. 
+Let therefore $S_1$ and $S_2$ be lifting to $\H^{2,1}$ of two maximal surfaces in a MGH spacetime $(M,g)$, such that $\partial_\infty S_1 = \partial_\infty S_2$, and let $\rho$ be the lifting to $\text{Isom}(\H^{2,1})$ of the holonomy of $(M,g)$. 
 \begin{lemma}\label{lem:maxgen}
     The function 
     \[
-    \begin{split}
-        B: S_1 \times S_2 \to \R \\
-        (x,u) \to \langle x,y \rangle_{2,2}
-    \end{split}
+    \begin{array}{ccc}
+        B: S_1 \times S_2 & \to & \R \\
+        (x,u) & \to & \langle x,y \rangle_{2,2}
+    \end{array}
     \]
     is negative. Moreover, if $S_1 \neq S_2$ there is a pair $(x,y)$ such that $B(x,y) > -1$ and the function $B$ achieves its maximum.
 \end{lemma}
 \begin{proof}
-    By Proposition \ref{prop:invisible1} we know that for any $x\in S_1$ the border at infinity $\partial_\infty  S_1$ is contained in the region $U_x$ defined in Section \ref{sec:reg}. By definition of $U_x$ we have that $\langle x, \cdot \rangle_{2,2}$ is negative on $\partial_\infty S_1$. By Lemma \ref{lem:conv}, since $\partial_\infty S_1 = \partial_\infty S_2$, $S_2$ is included in $Conv(\partial_\infty S_1)$ and therefore $\langle x, \cdot \rangle_{2,2}$ is negative on $S_2$.\\
+    By Proposition \ref{prop:invisible1} we know that for any $x\in S_1$ the border at infinity $\partial_\infty  S_1$ is contained in the region $U_x$ defined in Section \ref{sec:reg}. By definition of $U_x$ we have that $\langle x, \cdot \rangle_{2,2}$ is negative on $\partial_\infty S_1$. Since $\partial_\infty S_1 = \partial_\infty S_2$, $S_2$ is included in $Conv(\partial_\infty S_2)= Conv(\partial_\infty S_1)$ and therefore $\langle x, \cdot \rangle_{2,2}$ is negative on $S_2$.\\
     Let now $S_1 \neq S_2$ and let $x$ be a point in $S_1$ which is not in $S_2$. Choose now an identification of $\H^{2,1}$ with $\D \times \mathbb{S}^1$ in which $x = (0,v_1)$ for some $v_1 \in S^1$. Recalling that $S_2$ is obtained as the graph of a function $f:\D \to \mathbb{S}^1$, there is a point in $S_2$ of the form $y=(0,v_2) = (0, f(0))$. Since $x\notin S_2$ we have $v_2 \neq v_1$ and therefore
     \[
         B(x,y)= \langle x,y \rangle _{2,2} = - \langle v_1, v_2 \rangle _{\mathbb{S}^1} > -1 \ .
@@ -301,10 +282,10 @@ We can now prove the uniqueness of the maximal surface:
 \begin{proof}
     Let $S_1$, $S_2$ be two different maximal surface. By Lemma \ref{lem:maxgen} there is a point $(x_0,y_0)\in S_1 \times S_2$ where $B$ achieves its maximum and 
     \[
-        -1 < B(x_0,y_0) < 0 \ .
+        -1 < \langle x_0,y_0 \rangle_{2,2} < 0 \ .
     \]
     Let $\dot{x}_0 \in T_{x_0}S_1$ and $\dot{y}_0 \in T_{y_0}S_2$, and let $(x(t))_{t\in(-\epsilon, \epsilon)}$ and $(y(t))_{t\in(-\epsilon, \epsilon)}$ be geodesics on $S_1$ and $S_2$ respectively, satisfying $x(0) = x_0$, $x'(0) = \dot{x}_0$ and $y(0) = y_0$, $y'(0) = \dot{y}_0$.
-    Since $B(x(t), y_0)$ is maximal at $t=0$, we have $\langle \dot{x}_0,y_0 \rangle_{2,2}$. Similarly. we have $\langle x_0, \dot{y}_0 \rangle_{2,2}$. We thus have that $T_{x_0}S_1$ and $T_{y_0}S_2$ are orhogonal to both $x_0$ and $y_0$, hence $T_{x_0}S_1 = T_{y_0}S_2$.\\
+    Since $B(x(t), y_0)$ is maximal at $t=0$, we have $\langle \dot{x}_0,y_0 \rangle_{2,2}$. Similarly. we have $\langle x_0, \dot{y}_0 \rangle_{2,2}$. We thus have that $T_{x_0}S_1$ and $T_{y_0}S_2$ are orhogonal to both $x_0$ and $y_0$. Since $x_0, y_0 \in \H^{2,1}$ are not  parallel we also have that $T_{x_0}S_1 = T_{y_0}S_2$.\\
     Denote now by $\II_1$ and $\II_2$ the second fundamental form of $S_1$ and $S_2$. Recall that
     \[
     \begin{split}
@@ -321,9 +302,19 @@ We can now prove the uniqueness of the maximal surface:
     \end{split}
     \]
     Our goal now is to find $\dot{x}_0$ and $\dot{y}_0$ such that this second derivative is positive, in contradiction with the fact that $(x_0, y_0)$ is a point of maximum.\\
-    \red{da finire}
+    Consider the quadratic form $\beta_1 : w \to \langle  \II_1(w,w)\nu , y_0 \rangle_{2,2}$. Since $S_1$ is maximal, $\II_1$ is traceless and so is $\beta_1$. Hence $\beta_1$ has opposite eigenvalues $\lambda, -\lambda$. Similarly $\beta_2 : w \to \langle \II_2(w,w)\nu , x_0 \rangle_{2,2}$ has opposite eigenvalues $\mu,-\mu$. Up to switching $S_1$ and $S_2$ we can suppose $\lambda \geq \mu \geq 0$. Now we can choose $\dot{x}_0$ and $\dot{y}_0$ such that
+    \[
+        q_{2,2}(\dot{x}_0) = 1 \ , \qquad \beta_1(\dot{x}_0)= \lambda \ , \qquad \dot{y}_0=\dot{x}_0 \ .
+    \] 
+    Since $\dot{y}_0$ is unitary, $\beta_2(\dot{y}_0) \geq - \mu \geq -\lambda$, and therefore
+    \[
+    \begin{split}
+        \frac{d^2}{dt^2}\Big|_{t=0} B(x(t),y(t)) & = \ 2\langle \dot{x}_0, \dot{y}_0 \rangle_{2,2} + 2\langle x_0, y_0 \rangle_{2,2} + \beta_1(\dot{x}_0) + \beta_2(\dot{y}_0) \\
+        & \geq 2\langle x_0, y_0 \rangle_{2,2} + 2 > 0 \ .
+    \end{split}
+    \]
+    This contradics the maximality of $B$ at $(x_0,y_0)$, hence the maximal surface is unique.
 \end{proof}
-
 Given now a spacelike immersion $\sigma$, recall by Lemma \ref{lem:tub metric} that
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B) \ .

@@ -1,1 +1,44 @@
 \chapter*{Introduction}
+\noindent A general problem in Teichm\"uller theory consists in finding canonical maps between hyperbolic surfaces. In particular it is known that in the isotopy class of the identity of a closed surface there are the minimal Lagrangian maps. More precisely, Labourie and Schoen observed independently that given a closed hyperbolic surface $S$ and two hyperbolic metrics $h, h'$ on it, there exists a unique diffeomorphism isotopic to the identity such that the graph is a minimal Lagrangian submanifold of $S \times S$ with respect to the product metric $\omega_h - \omega_{h'}$.
+Many proofs have been provided, and in this thesis we will concentrate on the proof in the context of Anti-de Sitter three dimensional geometry. In fact, minimal Lagrangian maps are closely related to maximal spacelike surfaces in maximal globally hyperbolic three-dimensional Anti-de Sitter spacetimes. \\
+
+In the first part of thesis we will define the three models of Anti-de Sitter geometry, which is a Lorentzian geometry of constant sectional curvature $-1$, and we will study their geometric properties. To define them we will denote by $\R ^{n,2}$ the real vector space $\R ^{n+2}$ equipped with the quadratic form
+\[
+q_{n,2}(x) = x_1^2 + \cdots + x_n^2 - x_{n+1}^2 - x_{n+2}^2.
+\]
+The Anti-de Sitter space is defined as
+\[
+\A^{n,1} := \{ x\in \R^{n,2} \ | \ q_{n,2}(x) = -1 \} / \{ \pm \1 \}
+\]
+In dimension three there is a special model which endows $\A^{2,1}$ with a Lie group structure.
+The vector space $\mathcal{M}(2,\R)$ of $2 \times 2$ matrices with real entries and the quadratic form $q= -det$ is identified to $(\R^{2,2},q_{2,2})$. Via this identification $\A^{2,1} \cong \PSL$, $\text{Isom}_0(\A^{2,1}) \cong \PSL \times \PSL$ and $\partial\A^{2,1}$, which is the projectivizazion of the matrices of rank 1, is diffeomorphic to $\T$. In this model the space of timelike geodesics is identified with $\H^2 \times \H^2$, which will prove useful in the definition of the Gauss map.\\
+
+In the second part, following the work of Goeffrey Mess in \cite{Mess}, we focus on the classification of maximal globally hyperbolic (MGH) AdS spacetimes of genus $n\geq 2$. These are three dimensional AdS manifolds that admit a closed surface $\Sigma$ of genus $n$ that intersects every inextensible timelike curve exacly once, maximal by isometric embedding.
+To do so, first we will prove that a spacetime is maximal globally hyperbolic if and only if is obtained as the quotient of the invisible domain of a proper achronal meridian in $\A^{2,1}$. Then we will prove that given a pair of representations of hyperbolic metrics $\rho=(\rho_l, \rho_r)$ on a surface $\Sigma$ there is a unique achronal meridian equivariant under the action of $\rho$, and that there is a unique MGH AdS spacetime $M_\rho$ with holonomy $\rho$ obtained as invisible domain. More precicely, the classification result, due to Mess, is the following:
+\begin{theorem*}
+Given a closed surface $\Sigma$ of genus $n\geq 2$, the holonomy map $$\rho:\mathcal{MGH}(\Sigma)\to\mathcal{T}(\Sigma)\times\mathcal{T}(\Sigma)$$ is a homeomorphism,
+\end{theorem*}
+\noindent where $\mathcal{MGH}(\Sigma)$ denotes the deformation space of MGH AdS metrics on $\Sigma\times \R$ and $\mathcal{T}(\Sigma)$ is the Teichm\"uller space of $\Sigma$.\\
+
+In the third part we will focus on the geometric properties of spacelike surfaces in AdS 3-manifolds. In analogy with Riemmanian geometry we will define on a spacelike surface the first fundamental form $\I$, the second fundamental form $\II$ and the shape operator $B$ and we will show that they satisfy the Gauss-Codazzi equations   
+    \[
+        K_\I = -1 - \text{det}B \ , \qquad d^{\nabla^\I}\II=0 \ .
+    \]
+We will then define the Gauss map $G_\sigma : S \to \H^2 \times \H^2$ associated to a spacelike surface as $G_\sigma(x) = (p,q)$ where the pair $(p,q)$ identifies the timelike geodesic orthogonal to $\text{Im}(d_x\sigma)$ at $\sigma(x)$. The components of the Gauss map, denoted by $\Pi_l, \Pi_r : S \to \H^2$, are called \textit{left} and \textit{right projections}.
+\begin{proposition*}
+    The pull-back metrics on $(S,I)$ via the left and right projections are be given by
+    \[
+        \Pi_l^*g_{\H^2}=I((\text{id}-\mathcal{J}B)\cdot,(\text{id}-\mathcal{J}B)\cdot),
+    \]
+        and
+    \[
+        \Pi_r^*(g_{\H^2})=I((\text{id}+\mathcal{J}B)\cdot,(\text{id}+\mathcal{J}B)\cdot),
+    \]
+where $\mathcal{J}$ is the almost-complex structure associated to $S$.
+\end{proposition*}
+This result will prove to be fundamental in the proof of the main theorem.\\
+
+In the last part we will introduce the last tools necessary for the proof of the main theorem. In particular we will introduce harmonic and minimal map and study their close relation, and we will prove the existence and uniqueness of maximal surfaces in MGH spacetimes, which are surfaces with null mean curvature. Then given a pair of representations of hyperbolic metrics $\rho=(\rho_l, \rho_r)$ on a surface $\Sigma$ we will take the unique MGH spacetime $M$ with holonomy $\rho$, and we will use the Gauss map associated to the unique maximal surface in $M$ to construct minimal Lagrangian diffeomorphism and prove the following:
+\begin{theorem*}
+    Given a closed surface $\Sigma$ and two hyperbolic metrics $h$, $h'$ on it, there exists a minimal Lagrangian diffeomorphism $f_0 : (\Sigma,h) \to (\Sigma,h')$ isotopic to the identity.
+\end{theorem*}
