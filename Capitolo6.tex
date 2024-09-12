@@ -39,9 +39,9 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
 \begin{definition}
     A Riemannian metric $\langle \cdot , \cdot \rangle$ on a surface $M$ is called $\textit{conformal}$ if in local coordinates it can be written as
     \[
-        \rho^2(z) dz \wedge d\overline{z}
+        \rho^2(z) dz d\overline{z}
     \]
-    for a positive, real valued function $\rho(z)$. In particular we have that
+    for a positive, real valued function $\rho(z)$. In particular, we have that
     \[
     \begin{split}
         \Big\langle \frac{\partial}{\partial z}, \frac{\partial}{\partial z} \Big\rangle & = 0 = \Big\langle \frac{\partial}{\partial \overline{z}}, \frac{\partial}{\partial \overline{z}} \Big\rangle \ , \\
@@ -52,7 +52,7 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
 \begin{observation}
     Using real coordinates a conformal metric is written as 
     \[
-        \rho^2(z) (dx \wedge dx + dy \wedge dy)
+        \rho^2(z) (dxdx + dydy)
     \]
     and
     \[
@@ -68,7 +68,7 @@ dz = dx + idy \ , \qquad d\overline{z} = dx - idy \ .
     \frac{\partial^2 f^i}{\partial z \partial \overline{z}} + \Gamma^i_{jk} (f(z)) \frac{\partial f^j}{\partial z} \frac{\partial f^k}{\partial \overline{z}} = 0 \qquad \forall i = 1, \cdots, n \ .
 \]
 In particular whether a map is harmonic depends only on the Riemann surface structure of $M$, and not on the choice of a conformal metric.\\
-When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \wedge d\overline{w}$, and $f$ is a local deffeomorphism, Equation \ref{eq:harmonic} becomes
+When $N$ is a surface with complex coordinates $w = u + iv$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw d\overline{w}$, and $f$ is a local deffeomorphism, Equation \ref{eq:harmonic} becomes
 \begin{equation} \label{eq:harmonic2}
     \frac{\partial^2 f}{ \partial z   \partial \overline{z}} + \frac{1}{\sigma(f(z))} \frac{\partial \sigma}{ \partial w} \frac{\partial f}{\partial z} \frac{\partial f}{\partial \overline{z}} = 0 \ ,
 \end{equation}
@@ -95,7 +95,7 @@ where $w(z) = f^1(z) + i f^2(z)$.
     \end{split}
     \]
     which is $0$ when $f$ is harmonic.\\
-    Let now $N$ be a surface with complex coordinates $w = f^1 + if^2$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw \wedge d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z}$ and differentiating in $\overline{z}$ we have
+    Let now $N$ be a surface with complex coordinates $w = f^1 + if^2$ in a neighbourhood of $f(z)$ and conformal metric $h(w) = \sigma(w) dw d\overline{w}$. Now $\varphi(z)$ can be written as $\sigma(f(z)) \frac{\partial f}{ \partial z} \frac{\partial \overline{f}}{\partial z}$ and differentiating in $\overline{z}$ we have
     \[
     \begin{split}
         \frac{ \partial}{\partial \overline{z}}\Big(\sigma(f(z)) \frac{\partial f}{ \partial z}  \frac{\partial \overline{f}}{\partial z} \Big) & = 
@@ -125,7 +125,7 @@ Before moving on and talk about minimal maps we prove the following result on qu
     Given a Riemannian metric $g$ on a surface $S$ and a $(1,1)$-tensor $A$ which is $g$-symmetric, $A$ is traceless if and only if $g(A \cdot, \cdot)$ is the real part of a quadratic differential for the conformal structure of $g$. Moreover the quadratic differential is holomorphic if and only if A is $g$-Codazzi.
 \end{lemma}
 \begin{proof}
-    Take normal coordinates around a point $x$. In this coordinates $g=\delta_{ij}$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
+    Take normal conformal coordinates around a point $x$. In this coordinates $g=\delta_{ij}$ and $A = (A_{ij})_{i,j=1,2}$ where $A_{12}=A_{21}$ since $A$ is $g$-symmetric. Then
     \[
         g(A\cdot , \cdot) = A_{11} (dx^1)^2 + 2 A_{12} dx^1 dx^2 + A_{22} (dx^2)^2 \ .
     \]
@@ -162,9 +162,9 @@ Let $M$ be a Riemannian manifold, $N$ a Riemannian manifold with metric $\langle
 \end{split}
 \]
 where $\langle v_1 \wedge \cdots \wedge v_m , w_1 \wedge \cdots \wedge w_m \rangle = det(\langle v_i,v_j \rangle)$.\\
-Let now $F: M \times (-\epsilon, \epsilon) \to N$ such that $f_t(\cdot) = F(\cdot,t)$ is a local embedding for all $t$, $f_0 = f$ and
+Let now $F: M \times (-\epsilon, \epsilon) \to N$ be such that $f_t(\cdot) = F(\cdot,t)$ is a local embedding for all $t$, $f_0 = f$ and
 \[ supp F:= \overline{ \{ x\in M \ :\ F(x,t) \neq f(x) \ \text{for some} \ t\} }  \]
-is a compact subset of $M$. For easier computation suppose that in coordinates $f = id_M$. The variation of volume is then
+is a compact subset of $M$. For easier computation suppose that $M$ is a submanifold of $N$ so that $f = id_M$. The variation of volume is then
 \[
     \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0} = \sum_{i=1}^m \int_M \frac{ \langle f_{t*} e_1 \wedge \cdots \wedge \frac{\partial}{\partial t} f_{t*} e_i \wedge \cdots \wedge f_{t*} e_m ,f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m \rangle }{| f_{t*} e_1 \wedge \cdots \wedge f_{t*} e_m |} \omega
 \]
@@ -175,7 +175,7 @@ and putting $X =\frac{\partial}{\partial t} f_{t*} |_{t=0} $ we have
     & = \int_M \langle \nabla^N_{e_i} X, e_i \rangle \ \omega = - \int_M \langle X, \nabla^N_{e_i} e_i \rangle \ \omega \ .
 \end{split}
 \]
-Since the volume in invariant under reparametrization, we can take a parametriztion in which $X^\top =0$ and therefore
+Since the volume in invariant under reparametrization, we can take assume that $X^\top =0$ and therefore
 \[
    \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0}  = - \int_M \langle X^\perp, \nabla^N_{e_i} e_i \rangle \ \omega \ . 
 \]
@@ -184,10 +184,10 @@ Since the volume in invariant under reparametrization, we can take a parametrizt
     \[
         \frac{d}{dt} \text{Vol}(f_t(M)) \Big|_{t=0}  = 0
     \]
-    for all local variation of $M$.\\
+    for all local variations of $M$.\\
     Moreover, we say a map $f:M \to N$ is \textit{minimal} is $f(M)$ is a minimal submanifold of $N$.
 \end{definition}
-Now that the codimension of $M$ can be greater than one, similarly to the case of codimension one, for every choice of a vector field $\nu$ normal to $M$ one has
+Similarly to the case of codimension one, for every choice of a vector field $\nu$ normal to $M$ one has
 \[
     B_\nu : TM \to TM
 \]
@@ -204,14 +204,14 @@ defined by $B_\nu(X) = (\nabla^N_X \nu)^\top$, and the \textit{mean curvature} o
     \[
         -\langle X^\perp , \nabla^N_{e_i} e_i \rangle = \xi^j tr(B_{\nu_j}) = m \cdot \xi^j H_{\nu_j} \ ,
     \]
-    and $M$ is therefore minimal is and only $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the claim follows.
+    and $M$ is therefore minimal if and only if $m \cdot \xi^j H_{\nu_j}$ vanishes for all choices of $\xi^j$, and the claim follows.
 \end{proof}
 
 Let now $f:M \to N$ be an isometric immersion. We want to write the condition for the vanishing of the mean curvature, namely
 \[
     (\nabla^N_{e_\alpha} e_\beta)^\perp = 0 \qquad \forall \alpha, \beta \ .
 \]
-Again we can take normal coordinates on $M$, which, at a point, respect the following
+Again we can take normal coordinates on $M$, which, at a point, satisfy the following
 \[
     \nabla^M_{\frac{\partial}{\partial x^\alpha}}  \frac{\partial}{\partial x^\beta} = 0 \ ,
 \]
@@ -249,8 +249,8 @@ We now turn back out attention to smoothly embedded spacelike surfaces in global
     Every MGH Anti-de Sitter manifold with compact Cauchy surface admits a maximal surface.
 \end{theorem}
 The proof of Theorem \ref{thm:CMC_foliation} revolves around the existence of a pair of barriers which implies existence of a maximal surface. A pair of barriers is a pair of surfaces $\Sigma^+$, $\Sigma^-$ with everywhere positive/negative mean curvature, respectively, and such that $\Sigma^+$ is contained in the future of $\Sigma^-$.
-To do this one can take convex hull $C$ of a proper achronal meridian $\Lambda$ that defines $M$. This definition makes sense in affine chart, and in this setting it is well defined since $C \subset \Omega(\Lambda)$ which is contained in a Dirichlet domain. Now $\partial C$ is the union of $\Lambda$ and two surfaces $\partial_+ C$, $\partial_- C$ which are convex and concave respectively. Here a set is convex (resp. concave) if it is contained in the future (resp. past) of all its support planes. Convex (resp. concave) surfaces have non-positive (resp. non-negative) mean curvature. The quotient of $\partial_+ C$, $\partial_- C$ do not work as barriers since they are not smooth, but close to them one can find a pair of barriers.
-A detailed proof can be found in \cite{barbot2004constant}. One general fact we obtain is that a maximal surface is always contained in the convex hull of its border at infinity.\\
+To do this one can take convex hull $C$ of a proper achronal meridian $\Lambda$ that defines $M$. This definition makes sense in affine chart, and in this setting it is well defined since $C \subset \Omega(\Lambda)$ which is contained in a Dirichlet domain. Now $\partial C$ is the union of $\Lambda$ and two surfaces $\partial_+ C$, $\partial_- C$ which are convex and concave respectively. Here a set is convex (resp. concave) if it is contained in the future (resp. past) of all its support planes. Convex (resp. concave) surfaces have non-positive (resp. non-negative) mean curvature. The quotient of $\partial_+ C$, $\partial_- C$ do not work as barriers since they are not smooth, but close to them one can find a pair of smooth barriers.
+A detailed proof can be found in \cite{barbot2004constant}. One general fact that follows is that a maximal surface is always contained in the convex hull of its border at infinity.\\
 Now we want to prove that such maximal surface is also unique. We already know that given two surfaces $S_1, S_2$ in a MGH spacetime $M$, then the border at infinity of $dev(\widetilde{S_1})$ and $dev(\widetilde{S_2})$ coincide in $dev(\widetilde{M})\subset \A^{2,1}$. Therefore, is suffices to prove the uniqueness in $\A^{2,1}$. Moreover, we can take the problem in $\H^{2,1}$, once we choose a lifting of the border of $dev(\widetilde{S_1})$ and $dev(\widetilde{S_2})$.\\
 Let therefore $S_1$ and $S_2$ be lifting to $\H^{2,1}$ of two maximal surfaces in a MGH spacetime $(M,g)$, such that $\partial_\infty S_1 = \partial_\infty S_2$, and let $\rho$ be the lifting to $\text{Isom}(\H^{2,1})$ of the holonomy of $(M,g)$. 
 \begin{lemma}\label{lem:maxgen}
@@ -258,7 +258,7 @@ Let therefore $S_1$ and $S_2$ be lifting to $\H^{2,1}$ of two maximal surfaces i
     \[
     \begin{array}{ccc}
         B: S_1 \times S_2 & \to & \R \\
-        (x,u) & \to & \langle x,y \rangle_{2,2}
+        (x,y) & \to & \langle x,y \rangle_{2,2}
     \end{array}
     \]
     is negative. Moreover, if $S_1 \neq S_2$ there is a pair $(x,y)$ such that $B(x,y) > -1$ and the function $B$ achieves its maximum.
@@ -269,11 +269,11 @@ Let therefore $S_1$ and $S_2$ be lifting to $\H^{2,1}$ of two maximal surfaces i
     \[
         B(x,y)= \langle x,y \rangle _{2,2} = - \langle v_1, v_2 \rangle _{\mathbb{S}^1} > -1 \ .
     \]
-    We now have to prove that $B$ achieves its maximum. Let $(x_n, y_n) \in S_1 \times S_2$  be a maximazing sequence fo $B$. Since $\rho$ acts co-compacly on $S_1$ and preserves $B$, we can suppose that $x_n$ is bounded in $S_1$. Up to extracting a subsequence, we can also assume that $u_n$ converges to $x\in S_1$. Assume by contradiction that $y_n$ is unbounded in $S_2$. Then, up to extracting a subsequence, there exists a sequence or real number $\epsilon_n \to 0$ such that $\epsilon_n y_n$ converges to a vector $y\in \partial_\infty S_2$. The precedent point implies that $-1 < B(x_n, y_n) < 0$ for $n$ sufficiently large, then $B(x_n, y_n)$ is bounded and we have
+    We now have to prove that $B$ achieves its maximum. Let $(x_n, y_n) \in S_1 \times S_2$  be a maximazing sequence of $B$. Since $\rho$ acts co-compacly on $S_1$ and preserves $B$, we can suppose that $x_n$ is bounded in $S_1$. Up to extracting a subsequence, we can also assume that $x_n$ converges to $x\in S_1$. Assume by contradiction that $y_n$ is unbounded in $S_2$. Then, up to extracting a subsequence, there exists a sequence or real number $\epsilon_n \to 0$ such that $\epsilon_n y_n$ converges to a vector $y\in \partial_\infty S_2$. This implies that $-1 < B(x_n, y_n) < 0$ for $n$ sufficiently large, then $B(x_n, y_n)$ is bounded and we have
     \[
         B(x,y) = \lim_{n\to +\infty} \epsilon_n B(x_n,y_n) = 0 .
     \]
-    The vector $y$ is thus in $u^\perp$, which implies that $y$ is not in $\partial_\infty S_1 = \partial_\infty S_2$, hence a contradiction.
+    The vector $y$ is thus in $x^\perp$, so $y$ is not in $U_x$ which by Proposition \ref{prop:invisible1} contains $\partial_\infty S_1 = \partial_\infty S_2$. So $y \notin \partial_\infty S_2$, hence a contradiction.
 \end{proof}
 We can now prove the uniqueness of the maximal surface:
 \begin{theorem} \label{lem:max}
@@ -285,13 +285,15 @@ We can now prove the uniqueness of the maximal surface:
         -1 < \langle x_0,y_0 \rangle_{2,2} < 0 \ .
     \]
     Let $\dot{x}_0 \in T_{x_0}S_1$ and $\dot{y}_0 \in T_{y_0}S_2$, and let $(x(t))_{t\in(-\epsilon, \epsilon)}$ and $(y(t))_{t\in(-\epsilon, \epsilon)}$ be geodesics on $S_1$ and $S_2$ respectively, satisfying $x(0) = x_0$, $x'(0) = \dot{x}_0$ and $y(0) = y_0$, $y'(0) = \dot{y}_0$.
-    Since $B(x(t), y_0)$ is maximal at $t=0$, we have $\langle \dot{x}_0,y_0 \rangle_{2,2}$. Similarly. we have $\langle x_0, \dot{y}_0 \rangle_{2,2}$. We thus have that $T_{x_0}S_1$ and $T_{y_0}S_2$ are orhogonal to both $x_0$ and $y_0$. Since $x_0, y_0 \in \H^{2,1}$ are not  parallel we also have that $T_{x_0}S_1 = T_{y_0}S_2$.\\
-    Denote now by $\II_1$ and $\II_2$ the second fundamental form of $S_1$ and $S_2$. Recall that
+    Since $B(x(t), y_0)$ is maximal at $t=0$, we have $\langle \dot{x}_0,y_0 \rangle_{2,2}$=0. Similarly. we have $\langle x_0, \dot{y}_0 \rangle_{2,2}$=0. We thus have that $T_{x_0}S_1$ and $T_{y_0}S_2$ are orhogonal to both $x_0$ and $y_0$. Since $x_0, y_0 \in \H^{2,1}$ are not  parallel we also have that $T_{x_0}S_1 = T_{y_0}S_2$.\\
+    Denote now by $\II_1$ and $\II_2$ the second fundamental form of $S_1$ and $S_2$.
+    The orthogonal projection of $x''(0)$ to $T_{x_0} S$ is given by $\II(\dot{x}_0,\dot{x}_0)\nu$, hence we have
     \[
-    \begin{split}
-        \II_1(\dot{x}_0,\dot{x}_0)\nu  & = x''(0) - q_{2,2}(\dot{x}_0) x_0 \\
-        \II_2(\dot{y}_0,\dot{y}_0)\nu  & = y''(0) - q_{2,2}(\dot{y}_0) y_0 \ .
-    \end{split}    
+        \II_1(\dot{x}_0,\dot{x}_0)\nu = x''(0) - q_{2,2}(\dot{x}_0) x_0 \ ,
+    \]
+    and similarly
+    \[
+        \II_2(\dot{y}_0,\dot{y}_0)\nu = y''(0) - q_{2,2}(\dot{y}_0) y_0 \ . 
     \]
     Then we have
     \[ 
@@ -319,7 +321,7 @@ Given now a spacelike immersion $\sigma$, recall by Lemma \ref{lem:tub metric} t
 \[
     B_t = (\cos(t) id + \sin(t) B)^{-1}(-\sin(t) id + \cos(t) B) \ .
 \]
-Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$. By direct computation one find that
+Let $\lambda(x)$, $\mu(x)$ be the eigenvalues of $B$. By direct computation one finds that
 \begin{equation} \label{eq:eigenvalues}
     \lambda_t(x) = \frac{\lambda(x)+\tan(t)}{1- \lambda(x)\tan(t)} \qquad \mu_t(x) = \frac{\mu(x)+\tan(t)}{1- \mu(x)\tan(t)} \ .
 \end{equation}
@@ -349,9 +351,13 @@ In general one can find a relation between CMC surfaces and constant Gaussian cu
 \end{theorem}
 \begin{proof}
     Consider the MGH spacetime $M$, with compact Cauchy surface $\Sigma$, whose holonomy $\rho = (\rho_l, \rho_r)$ induces $h$ and $h'$ as quotient metric in $\H^2 / \rho_l(\pi_1 \Sigma)$ and $\H^2 / \rho_r(\pi_1 \Sigma)$. Let now $\Sigma_0$ be a maximal surface in $M$, we want to prove that the associated map $f_0$ is a minimal Lagrangian diffeomorphism.\\
-    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$ by normal evolution. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
+    First we prove that $f_0$ is a diffeomorphism. By Proposition \ref{prop:cmc to cgc}, $\Sigma_0$ is obtained from a surface $\Sigma_1$ of constant Gaussian curvature equal to $-2$ by normal evolution. The right and left projection of the Gauss map are always local diffeomorphism on a surface with curvature everywhere different from $0$, 
+    %and by a topological argument the projections of the Gauss map associated to $\Sigma_1$ are diffeomorphisms. Now, recalling that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism. 
+    and, since $\Sigma_1$ is compact, the projections are proper which makes them embeddings, and ebbeddings from a compact surface to a connected surface are diffeomorphisms.
+    Now, recalling from Section \ref{sec:gauss map} that spacelike immersions which differ from one another by the normal evolution have the same image, we have that the projections are diffeomorphism for $\Sigma_0$, and therefore $f_0$ is a diffeomorphism.
+    Moreover the Lagrangian condition is equivalent to the fact that $f_0$ is area-preserving, and we proved in Section \ref{sec:gauss map} that this is always verified by the image of the Gauss map.\\
     We now want to prove that the Gauss map is harmonic and conformal, which, by Theorem \ref{thm:minimal} implies that it is minimal.\\
-    The pull-back metric via the Gauss map is the sum of $\Pi_l^*g_{\H^2}$ and $\Pi_r^*g_{\H^2}$, which, by proposition \ref{prop:left right pull-back metric}, is given by
+    The pull-back metric via the Gauss map is the sum of $\Pi_l^*g_{\H^2}$ and $\Pi_r^*g_{\H^2}$, which, by Proposition \ref{prop:left right pull-back metric}, is given by
     \[
        \Pi_l^*g_{\H^2} + \Pi_r^*g_{\H^2} = 2I + 2I(\mathcal{J}B,\mathcal{J}B) = 2I + 2I(B,B)= 2(I+ \III) \ .
     \]
@@ -387,7 +393,7 @@ For the uniqueness of the minimal Lagrangian diffeomorphism we need the followin
     \end{split}
     \]
     Moreover, since $\text{det}(b)=1$, a direct computation in a basis where $b$ is diagonal shows that $B$ is traceless. 
-    Now, since the mynimal polynomial of $b$ is $b^2 - tr(b) + 1 = 0$, we have that $(id+b)^2=id+2b+b^2 = (2 + tr(b))b$, hence $G$ is conformal to $g$ because
+    Now, since the minimal polynomial of $b$ is $b^2 - tr(b)b + id = 0$, we have that $(id+b)^2=id+2b+b^2 = (2 + tr(b))b$, hence $G$ is conformal to $g$ because
     \[
         G= h((id+b)^2 \cdot, \cdot) = (2+tr(b))h(b \cdot , \cdot) \ ,
     \]
@@ -396,7 +402,7 @@ For the uniqueness of the minimal Lagrangian diffeomorphism we need the followin
         g= h + h(b^2 \cdot,\cdot) = tr(b)h(b\cdot, \cdot) \ .
     \]
     Therefore $id: (S,G)\to (S,h)$ is harmonic too.
-    Moreover, using that the mynimal polynomial of $B$ is $B^2 + \det(B)id=0$ since $B$ is traceless, and that $id-B = 2(id+b)^{-1}$, we can write
+    Moreover, using that the minimal polynomial of $B$ is $B^2 + \det(B)id=0$ since $B$ is traceless, and that $id-B = 2(id+b)^{-1}$, we can write
     \[
         \frac{h}{4} = G((id-B) \cdot, (id-B) \cdot) = (1-\det(B))G - 2G(B \cdot , \cdot) \ .
     \]
@@ -420,7 +426,7 @@ We are now ready to prove the uniqueness
     Given a surface $\Sigma$ and two hyperbolic metrics $h, h'$ on it, the minimal Lagrangian diffeomorphism $\Phi : (\Sigma, h) \to (\Sigma, h')$ is unique.
 \end{theorem}
 \begin{proof}
-    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in Lemma \ref{lem:Lagrangian shit}. We now want to construct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$. Since by \red{unicità sup max} and we know by Theorem \ref{thm:existence} that $f_0$ is a minimal Lagrangian deffeomorphism, we will have that $f_0 = \Phi$.\\
+    Let $b$ be the unique $(1,1)$-tensor associated to $\Phi$ as in Lemma \ref{lem:Lagrangian shit}. We now want to construct a pair $(\I,\II)$ that define a maximal immersion such that the associated map $f_0$ respect $f_0^* h' = h(b \cdot, b \cdot)$.\\
     Let $\I$ be the metric on $\Sigma$ defined by
     \[
         4 \I = h((id + b)\cdot , (id + b)\cdot ) \ ,
